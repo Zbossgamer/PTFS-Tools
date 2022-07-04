@@ -344,7 +344,7 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
     local script = Instance.new('LocalScript')
     script.Parent = ScreenGui
 
-    local template = script.Parent.Player
+    local template = Player
     local toggle = Toggle
     local content = script.Parent.NewMiniMap.Content
     local localPlayer = game:GetService("Players").LocalPlayer
@@ -356,9 +356,9 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
 
     local function newPlayerDot(tag, HDG, ALT, Speed, Position)
         local newPlayer = template:Clone()
-        newPlayer.Parent = script.Parent.NewMiniMap.Content
+        newPlayer.Parent = Content
         newPlayer.Direction.Rotation = HDG
-        newPlayer.TextLabel.Text =  tag  .. ALT .. Speed  --Change for tag + altitude + Speed 
+        newPlayer.TextLabel.Text =  tag  .. ALT .. Speed  --Change for tag + altitude + Speed
         newPlayer.Position = Position
     end
 
@@ -413,7 +413,7 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
     for i,v in pairs(game.Players:GetPlayers()) do
         local pFrame = v.Character.HumanoidRootPart.CFrame
         if(GetPlaneFromPlayer(v) ~= nil) then
-            newPlayerDot(GetPlayerTAG(v),GetPlayerHDG(v), GetPlayerALT(v),GetPlayerSpeed(v),GetPlayerPosition(v,2))
+            newPlayerDot(GetPlayerTAG(v),GetPlayerHDG(v), GetPlayerALT(v),GetPlayerSpeed(v),GetPlayerPosition(v,1))
         end
         print("   ".. v.Name)
         if(GetPlaneFromPlayer(v) == nil) then
@@ -423,7 +423,7 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
             print("HDG:", GetPlayerHDG(v))
             print("ALT:", GetPlayerALT(v))
             print("SPE:", GetPlayerSpeed(v))
-            print("POS:", GetPlayerPosition(v,2))
+            print("POS:", GetPlayerPosition(v,1))
         end
     end
 
@@ -435,8 +435,9 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
         else
             toggle.BackgroundColor3 = Color3.new(1, 0, 0.0156863)
         end
+		print(updateState)
     end)
-    
+	
     sizeUp.MouseButton1Down:Connect(function()
         scale = scale + 1
     end)
@@ -445,19 +446,20 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
     end)
 
 
-    while updateState do				--Present issue resides with UI not showing position. Rescale UI
-        for i,v in content do
+    while true do				--Present issue resides with UI not showing position. Rescale UI
+        for i,v in pairs(content:GetChildren()) do
             if(v.Name == "Player") then
-                v.Destroy()
+                v:Destroy()
             end
         end
 
         for i,v in pairs(game.Players:GetPlayers()) do
             local pFrame = v.Character.HumanoidRootPart.CFrame
             if(GetPlaneFromPlayer(v) ~= nil) then
-                newPlayerDot(GetPlayerTAG(v),GetPlayerHDG(v), GetPlayerALT(v),GetPlayerSpeed(v),GetPlayerPosition(v,2))
+                newPlayerDot(GetPlayerTAG(v),GetPlayerHDG(v), GetPlayerALT(v),GetPlayerSpeed(v),GetPlayerPosition(v,1))
             end
         end
+		task.wait()
     end
 
 end
