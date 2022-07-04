@@ -357,8 +357,8 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
     local function newPlayerDot(tag, HDG, ALT, Speed, Position)
         local newPlayer = template:Clone()
         newPlayer.Parent = Content
-        newPlayer.Direction.Rotation = HDG
-        newPlayer.TextLabel.Text =  tag  .. ALT .. Speed  --Change for tag + altitude + Speed
+        newPlayer.Direction.Rotation = HDG +180
+        newPlayer.TextLabel.Text =  tag .." ".. (ALT).. " ".. Speed  
         newPlayer.Position = Position
     end
 
@@ -401,7 +401,7 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
         local posZ = localPlayer.Character.HumanoidRootPart.Position.Z
         local allX = player.Character.HumanoidRootPart.Position.X
         local allZ = player.Character.HumanoidRootPart.Position.Z
-        return UDim2.new(0.5 + (allX - posX) / 96355 * currentScale, 0, 0.5 + (allZ - posZ) / 92030 * currentScale, 0)
+        return UDim2.new(0.5 + (allX) / 96355 * currentScale, 0, 0.5 + (allZ) / 92030 * currentScale, 0) --I removed the (-posX and -PosZ to test position
     end
 
 
@@ -454,8 +454,8 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
         end
 
         for i,v in pairs(game.Players:GetPlayers()) do
-            local pFrame = v.Character.HumanoidRootPart.CFrame
             if(GetPlaneFromPlayer(v) ~= nil) then
+                local pFrame = v.Character.HumanoidRootPart.CFrame
                 newPlayerDot(GetPlayerTAG(v),GetPlayerHDG(v), GetPlayerALT(v),GetPlayerSpeed(v),GetPlayerPosition(v,1))
             end
         end
