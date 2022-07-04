@@ -345,7 +345,7 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
     script.Parent = ScreenGui
 
     local template = script.Parent.Player
-    local toggle = script.Parent.NewMiniMap.Toggle
+    local toggle = Toggle
     local content = script.Parent.NewMiniMap.Content
     local localPlayer = game:GetService("Players").LocalPlayer
     local sizeUp = script.Parent.SizeUp
