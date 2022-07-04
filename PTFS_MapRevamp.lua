@@ -340,128 +340,126 @@ SizeDown.TextSize = 14.000
 
 -- Scripts:
 
-local function ZNWKX_fake_script() -- ScreenGui.LocalScript 
-	local script = Instance.new('LocalScript', ScreenGui)
+local function OOPF_fake_script() -- ScreenGui.LocalScript
+    local script = Instance.new('LocalScript')
+    script.Parent = ScreenGui
 
-	local function OOPF_fake_script() -- ScreenGui.LocalScript 
-		local script = Instance.new('LocalScript', ScreenGui)
-	
-		local template = script.Parent.Player
-		local toggle = script.Parent.NewMiniMap.Toggle
-		local content = script.Parent.NewMiniMap.Content
-		local localPlayer = game:GetService("Players").LocalPlayer
-		local sizeUp = script.Parent.SizeUp
-		local sizeDown = script.Parent.SizeDown
-		
-		local updateState = false
-		local scale = 1
-	
-		local function newPlayerDot(tag, HDG, ALT, Speed, Position)
-			local newPlayer = template:Clone()
-			newPlayer.Parent = script.Parent.NewMiniMap.Content
-			newPlayer.Direction.Rotation = HDG
-			newPlayer.TextLabel.Text =  tag  .. ALT .. Speed  --Change for tag + altitude + Speed 
-			newPlayer.Position = Position
-		end
-	
-		local function GetPlaneFromPlayer(player)
-			for i,a in pairs(game.Workspace.Aircraft:GetChildren()) do
-				if (a.Main.Seats.PilotSeat.Occupant~= nil and a.Main.Seats.PilotSeat.Occupant.Parent == player.Character) then
-					return a
-	
-				end
-			end
-		end
-	
-		local function GetPlayerHDG(player)
-			if(GetPlaneFromPlayer(player) ~= nil) then
-				local pFrame = player.Character.HumanoidRootPart.CFrame
-				return math.floor(math.deg(math.atan2(pFrame.LookVector.X, pFrame.LookVector.Z)))* -1 +180
-			end
-		end
-	
-		local function GetPlayerALT(player)
-			if(GetPlaneFromPlayer(player) ~= nil) then
-				return math.ceil(GetPlaneFromPlayer(player).Main.Engine.Position.Y*1.8372)
-			end
-		end
-	
-		local function GetPlayerSpeed(player)
-			if(GetPlaneFromPlayer(player) ~= nil) then
-				return GetPlaneFromPlayer(player).Internal:GetAttribute("Speed")
-			end
-		end
-	
-		local function GetPlayerTAG(player)
-			if(GetPlaneFromPlayer(player) ~= nil) then
-				return GetPlaneFromPlayer(player).Name.. string.sub(player.tag.Value, string.len(player.tag.Value)-4)
-			end
-		end
-	
-		local function GetPlayerPosition(player, currentScale)
-			local posX = localPlayer.Character.HumanoidRootPart.Position.X
-			local posZ = localPlayer.Character.HumanoidRootPart.Position.Z
-			local allX = player.Character.HumanoidRootPart.Position.X
-			local allZ = player.Character.HumanoidRootPart.Position.Z
-			return UDim2.new(0.5 + (allX - posX) / 96355 * currentScale, 0, 0.5 + (allZ - posZ) / 92030 * currentScale, 0)
-		end
-	
-	
-	
-		local newTag = "def"
-	
-		print("\n-------------------------------------------------------------------") --Just a break to seperate each execution
-	
-		for i,v in pairs(game.Players:GetPlayers()) do
-			local pFrame = v.Character.HumanoidRootPart.CFrame
-			if(GetPlaneFromPlayer(v) ~= nil) then
-				newPlayerDot(GetPlayerTAG(v),GetPlayerHDG(v), GetPlayerALT(v),GetPlayerSpeed(v),GetPlayerPosition(v,2))
-			end
-			print("   ".. v.Name)
-			if(GetPlaneFromPlayer(v) == nil) then
-				print("~No Plane Found~")
-			else
-				print("TAG:", GetPlayerTAG(v))
-				print("HDG:", GetPlayerHDG(v))
-				print("ALT:", GetPlayerALT(v))
-				print("SPE:", GetPlayerSpeed(v))
-				print("POS:", GetPlayerPosition(v,2))
-			end
-		end
-	
-	
-		toggle.MouseButton1Down:Connect(function()
-			updateState = not updateState
-			if (updateState) then
-				toggle.BackgroundColor3 = Color3.new(0.0588235, 0.458824, 0)
-			else
-				toggle.BackgroundColor3 = Color3.new(1, 0, 0.0156863)
-			end
-		end)
-		
-		sizeUp.MouseButton1Down:Connect(function()
-			scale = scale + 1
-		end)
-		sizeDown.MouseButton1Down:Connect(function()
-			scale = scale - 1
-		end)
-	
-	
-		while updateState do				--Present issue resides with UI not showing position. Rescale UI
-			for i,v in content do
-				if(v.Name == "Player") then
-					v.Destroy()
-				end
-			end
-	
-			for i,v in pairs(game.Players:GetPlayers()) do
-				local pFrame = v.Character.HumanoidRootPart.CFrame
-				if(GetPlaneFromPlayer(v) ~= nil) then
-					newPlayerDot(GetPlayerTAG(v),GetPlayerHDG(v), GetPlayerALT(v),GetPlayerSpeed(v),GetPlayerPosition(v,2))
-				end
-			end
-		end
-	
-	end
+    local template = script.Parent.Player
+    local toggle = script.Parent.NewMiniMap.Toggle
+    local content = script.Parent.NewMiniMap.Content
+    local localPlayer = game:GetService("Players").LocalPlayer
+    local sizeUp = script.Parent.SizeUp
+    local sizeDown = script.Parent.SizeDown
+    
+    local updateState = false
+    local scale = 1
+
+    local function newPlayerDot(tag, HDG, ALT, Speed, Position)
+        local newPlayer = template:Clone()
+        newPlayer.Parent = script.Parent.NewMiniMap.Content
+        newPlayer.Direction.Rotation = HDG
+        newPlayer.TextLabel.Text =  tag  .. ALT .. Speed  --Change for tag + altitude + Speed 
+        newPlayer.Position = Position
+    end
+
+    local function GetPlaneFromPlayer(player)
+        for i,a in pairs(game.Workspace.Aircraft:GetChildren()) do
+            if (a.Main.Seats.PilotSeat.Occupant~= nil and a.Main.Seats.PilotSeat.Occupant.Parent == player.Character) then
+                return a
+
+            end
+        end
+    end
+
+    local function GetPlayerHDG(player)
+        if(GetPlaneFromPlayer(player) ~= nil) then
+            local pFrame = player.Character.HumanoidRootPart.CFrame
+            return math.floor(math.deg(math.atan2(pFrame.LookVector.X, pFrame.LookVector.Z)))* -1 +180
+        end
+    end
+
+    local function GetPlayerALT(player)
+        if(GetPlaneFromPlayer(player) ~= nil) then
+            return math.ceil(GetPlaneFromPlayer(player).Main.Engine.Position.Y*1.8372)
+        end
+    end
+
+    local function GetPlayerSpeed(player)
+        if(GetPlaneFromPlayer(player) ~= nil) then
+            return GetPlaneFromPlayer(player).Internal:GetAttribute("Speed")
+        end
+    end
+
+    local function GetPlayerTAG(player)
+        if(GetPlaneFromPlayer(player) ~= nil) then
+            return GetPlaneFromPlayer(player).Name.. string.sub(player.tag.Value, string.len(player.tag.Value)-4)
+        end
+    end
+
+    local function GetPlayerPosition(player, currentScale)
+        local posX = localPlayer.Character.HumanoidRootPart.Position.X
+        local posZ = localPlayer.Character.HumanoidRootPart.Position.Z
+        local allX = player.Character.HumanoidRootPart.Position.X
+        local allZ = player.Character.HumanoidRootPart.Position.Z
+        return UDim2.new(0.5 + (allX - posX) / 96355 * currentScale, 0, 0.5 + (allZ - posZ) / 92030 * currentScale, 0)
+    end
+
+
+
+    local newTag = "def"
+
+    print("\n-------------------------------------------------------------------") --Just a break to seperate each execution
+
+    for i,v in pairs(game.Players:GetPlayers()) do
+        local pFrame = v.Character.HumanoidRootPart.CFrame
+        if(GetPlaneFromPlayer(v) ~= nil) then
+            newPlayerDot(GetPlayerTAG(v),GetPlayerHDG(v), GetPlayerALT(v),GetPlayerSpeed(v),GetPlayerPosition(v,2))
+        end
+        print("   ".. v.Name)
+        if(GetPlaneFromPlayer(v) == nil) then
+            print("~No Plane Found~")
+        else
+            print("TAG:", GetPlayerTAG(v))
+            print("HDG:", GetPlayerHDG(v))
+            print("ALT:", GetPlayerALT(v))
+            print("SPE:", GetPlayerSpeed(v))
+            print("POS:", GetPlayerPosition(v,2))
+        end
+    end
+
+
+    toggle.MouseButton1Down:Connect(function()
+        updateState = not updateState
+        if (updateState) then
+            toggle.BackgroundColor3 = Color3.new(0.0588235, 0.458824, 0)
+        else
+            toggle.BackgroundColor3 = Color3.new(1, 0, 0.0156863)
+        end
+    end)
+    
+    sizeUp.MouseButton1Down:Connect(function()
+        scale = scale + 1
+    end)
+    sizeDown.MouseButton1Down:Connect(function()
+        scale = scale - 1
+    end)
+
+
+    while updateState do				--Present issue resides with UI not showing position. Rescale UI
+        for i,v in content do
+            if(v.Name == "Player") then
+                v.Destroy()
+            end
+        end
+
+        for i,v in pairs(game.Players:GetPlayers()) do
+            local pFrame = v.Character.HumanoidRootPart.CFrame
+            if(GetPlaneFromPlayer(v) ~= nil) then
+                newPlayerDot(GetPlayerTAG(v),GetPlayerHDG(v), GetPlayerALT(v),GetPlayerSpeed(v),GetPlayerPosition(v,2))
+            end
+        end
+    end
+
 end
-coroutine.wrap(ZNWKX_fake_script)()
+
+coroutine.wrap(OOPF_fake_script)()
