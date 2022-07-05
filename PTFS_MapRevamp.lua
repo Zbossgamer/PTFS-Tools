@@ -37,7 +37,6 @@ local Direction = Instance.new("Frame")
 local Frame = Instance.new("Frame")
 local Toggle = Instance.new("TextButton")
 local SizeUp = Instance.new("TextButton")
-local TextLabel_2 = Instance.new("TextLabel")
 local SizeDown = Instance.new("TextButton")
 
 --Properties:
@@ -46,11 +45,12 @@ ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 NewMiniMap.Name = "NewMiniMap"
+NewMiniMap.BorderSizePixel = 4
 NewMiniMap.Parent = ScreenGui
-NewMiniMap.AnchorPoint = Vector2.new(1, 0.5)
+NewMiniMap.AnchorPoint = Vector2.new(1, 1)
 NewMiniMap.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 NewMiniMap.ClipsDescendants = true
-NewMiniMap.Position = UDim2.new(1, 0, 0.5, 0)
+NewMiniMap.Position = UDim2.new(1, 0, 1, 0)
 NewMiniMap.Size = UDim2.new(0, 600, 0, 600)
 
 Content.Name = "Content"
@@ -265,6 +265,7 @@ Player.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
 Player.Position = UDim2.new(0.150000006, 0, 0.5, 0)
 Player.Size = UDim2.new(0.00499999989, 0, 0.00499999989, 0)
 Player.ZIndex = 2
+Player.Visible = false
 
 TextLabel.Parent = Player
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -294,21 +295,21 @@ Frame.Size = UDim2.new(1, 0, 0.5, 0)
 
 Toggle.Name = "Toggle"
 Toggle.Parent = ScreenGui
-Toggle.AnchorPoint = Vector2.new(1, 0)
-Toggle.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
-Toggle.Position = UDim2.new(1, 0, 0.0900000036, 0)
+Toggle.AnchorPoint = Vector2.new(1, 1)
+Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.Position = UDim2.new(1, 0, 1, 0)
 Toggle.Size = UDim2.new(0, 120, 0, 30)
 Toggle.ZIndex = 2
 Toggle.Font = Enum.Font.SourceSans
-Toggle.Text = "Toggle Update"
+Toggle.Text = "Toggle New Map"
 Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
 Toggle.TextSize = 14.000
 
 SizeUp.Name = "SizeUp"
-SizeUp.Parent = ScreenGui
-SizeUp.AnchorPoint = Vector2.new(1, 0)
+SizeUp.Parent = NewMiniMap
+SizeUp.AnchorPoint = Vector2.new(0, 1)
 SizeUp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SizeUp.Position = UDim2.new(0.925742567, 0, 0.0900000036, 0)
+SizeUp.Position = UDim2.new(0.05, 0, 1, 0)
 SizeUp.Size = UDim2.new(0, 30, 0, 30)
 SizeUp.ZIndex = 2
 SizeUp.Font = Enum.Font.SourceSans
@@ -316,21 +317,12 @@ SizeUp.Text = "+"
 SizeUp.TextColor3 = Color3.fromRGB(0, 0, 0)
 SizeUp.TextSize = 14.000
 
-TextLabel_2.Parent = ScreenGui
-TextLabel_2.AnchorPoint = Vector2.new(1, 0)
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.Position = UDim2.new(0.907178223, 0, 0.0912360996, 0)
-TextLabel_2.Size = UDim2.new(0, 51, 0, 29)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Size"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextSize = 14.000
 
 SizeDown.Name = "SizeDown"
-SizeDown.Parent = ScreenGui
-SizeDown.AnchorPoint = Vector2.new(1, 0)
+SizeDown.Parent = NewMiniMap
+SizeDown.AnchorPoint = Vector2.new(0, 1)
 SizeDown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SizeDown.Position = UDim2.new(0.875618815, 0, 0.0900000036, 0)
+SizeDown.Position = UDim2.new(0, 0, 1, 0)
 SizeDown.Size = UDim2.new(0, 30, 0, 30)
 SizeDown.ZIndex = 2
 SizeDown.Font = Enum.Font.SourceSans
@@ -348,18 +340,25 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
     local toggle = Toggle
     local content = script.Parent.NewMiniMap.Content
     local localPlayer = game:GetService("Players").LocalPlayer
-    local sizeUp = script.Parent.SizeUp
-    local sizeDown = script.Parent.SizeDown
+    local sizeUp = SizeUp
+    local sizeDown = SizeDown
     
     local updateState = false
     local scale = 1
-
+    
+    content.Active = true
+    content.Draggable = true --Yes I know they removed it but it still works.
+    content.Archivable = true
+    
     local function newPlayerDot(tag, HDG, ALT, Speed, Position)
         local newPlayer = template:Clone()
+        local newScale = 1/((scale*100)-10)
+        newPlayer.Visible = true
         newPlayer.Parent = Content
         newPlayer.Direction.Rotation = HDG +180
         newPlayer.TextLabel.Text =  tag .." ".. (ALT).. " ".. Speed  
         newPlayer.Position = Position
+        newPlayer.Size = UDim2.new(newScale,0,newScale,0)
     end
 
     local function GetPlaneFromPlayer(player)
@@ -404,10 +403,6 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
         return UDim2.new(0.5 + (allX) / 96355 * currentScale, 0, 0.5 + (allZ) / 92030 * currentScale, 0) --I removed the (-posX and -PosZ to test position
     end
 
-
-
-    local newTag = "def"
-
     print("\n-------------------------------------------------------------------") --Just a break to seperate each execution
 
     for i,v in pairs(game.Players:GetPlayers()) do
@@ -428,25 +423,24 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
     end
 
 
-    toggle.MouseButton1Down:Connect(function()
-        updateState = not updateState
-        if (updateState) then
-            toggle.BackgroundColor3 = Color3.new(0.0588235, 0.458824, 0)
-        else
-            toggle.BackgroundColor3 = Color3.new(1, 0, 0.0156863)
-        end
-		print(updateState)
+    Toggle.MouseButton1Down:Connect(function()
+        NewMiniMap.Visible = not NewMiniMap.Visible
+		print("epik")
     end)
 	
     sizeUp.MouseButton1Down:Connect(function()
         scale = scale + 1
+        content.Size = UDim2.new(scale,0,scale,0)
+        print("Size Up")
     end)
     sizeDown.MouseButton1Down:Connect(function()
         scale = scale - 1
+        content.Size = UDim2.new(scale,0,scale,0)
+        print("Size Down")
     end)
 
 
-    while true do				--Present issue resides with UI not showing position. Rescale UI
+    while true do				
         for i,v in pairs(content:GetChildren()) do
             if(v.Name == "Player") then
                 v:Destroy()
