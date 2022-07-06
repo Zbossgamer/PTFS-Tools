@@ -38,6 +38,7 @@ local Frame = Instance.new("Frame")
 local Toggle = Instance.new("TextButton")
 local SizeUp = Instance.new("TextButton")
 local SizeDown = Instance.new("TextButton")
+local ARTCC = Instance.new("ImageLabel")
 
 --Properties:
 
@@ -74,6 +75,16 @@ Image_2.BorderSizePixel = 0
 Image_2.Position = UDim2.new(0.625, 0, 0.125, 0)
 Image_2.Size = UDim2.new(0.125, 0, 0.125, 0)
 Image_2.Image = "http://www.roblox.com/asset/?id=8648053154"
+
+ARTCC.Name = "ARTCC"
+ARTCC.Parent = Content
+ARTCC.BackgroundTransparency = 1
+ARTCC.BorderSizePixel = 0
+ARTCC.Position = UDim2.new(-0.2, 0, 0, 0)
+ARTCC.Size = UDim2.new(1.33, 0, 1, 0)
+ARTCC.ZIndex = 1
+ARTCC.Image = "http://www.roblox.com/asset/?id=10130848980"
+
 
 Image_3.Name = "Image"
 Image_3.Parent = Image
