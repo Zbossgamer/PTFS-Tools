@@ -38,6 +38,7 @@ local Frame = Instance.new("Frame")
 local Toggle = Instance.new("TextButton")
 local SizeUp = Instance.new("TextButton")
 local SizeDown = Instance.new("TextButton")
+local ARTCC = Instance.new("ImageLabel")
 
 --Properties:
 
@@ -56,7 +57,7 @@ NewMiniMap.Size = UDim2.new(0, 600, 0, 600)
 Content.Name = "Content"
 Content.Parent = NewMiniMap
 Content.AnchorPoint = Vector2.new(0.5, 0.5)
-Content.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Content.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 Content.BorderSizePixel = 0
 Content.Position = UDim2.new(0.5, 0, 0.5, 0)
 Content.Size = UDim2.new(1, 0, 1, 0)
@@ -74,6 +75,16 @@ Image_2.BorderSizePixel = 0
 Image_2.Position = UDim2.new(0.625, 0, 0.125, 0)
 Image_2.Size = UDim2.new(0.125, 0, 0.125, 0)
 Image_2.Image = "http://www.roblox.com/asset/?id=8648053154"
+
+ARTCC.Name = "ARTCC"
+ARTCC.Parent = Content
+ARTCC.BackgroundTransparency = 1
+ARTCC.BorderSizePixel = 0
+ARTCC.Position = UDim2.new(-0.2, 0, 0, 0)
+ARTCC.Size = UDim2.new(1.33, 0, 1, 0)
+ARTCC.ZIndex = 1
+ARTCC.Image = "http://www.roblox.com/asset/?id=10130848980"
+
 
 Image_3.Name = "Image"
 Image_3.Parent = Image
@@ -261,6 +272,7 @@ Image_25.Image = "http://www.roblox.com/asset/?id=8648039613"
 
 Player.Name = "Player"
 Player.Parent = ScreenGui
+Player.AnchorPoint = Vector2.new(0.5,0.5)
 Player.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
 Player.Position = UDim2.new(0.150000006, 0, 0.5, 0)
 Player.Size = UDim2.new(0.00499999989, 0, 0.00499999989, 0)
@@ -273,6 +285,7 @@ TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(1, 0, 0, 0)
 TextLabel.Size = UDim2.new(5, 0, 5, 0)
 TextLabel.Font = Enum.Font.SourceSans
+TextLabel.RichText = true
 TextLabel.Text = "- Delta-2945 ALT SP"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextSize = 10.000
@@ -346,6 +359,8 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
     local updateState = false
     local scale = 1
     
+    Image.Position = UDim2.new(0.5 + (-49222.1) / 96355, 0, 0.5 + (-45890.8) / 92030, 0); --Map wasnt centered so I used the same position they did
+
     content.Active = true
     content.Draggable = true --Yes I know they removed it but it still works.
     content.Archivable = true
@@ -353,17 +368,37 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
     local function newPlayerDot(tag, HDG, ALT, Speed, Position)
         local newPlayer = template:Clone()
         local newScale = 1/((scale*100)-10)
+        local newAltitude
+        local newHeading
         newPlayer.Visible = true
         newPlayer.Parent = Content
         newPlayer.Direction.Rotation = HDG +180
-        newPlayer.TextLabel.Text =  tag .." ".. (ALT).. " ".. Speed  
         newPlayer.Position = Position
         newPlayer.Size = UDim2.new(newScale,0,newScale,0)
+
+        if(ALT< 1000) then
+            newAltitude = "00".. math.floor(ALT/100)
+            else if (ALT< 10000) then
+                newAltitude ="0".. math.floor(ALT/100)
+            else
+                newAltitude = math.floor(ALT/100)
+            end 
+        end
+        
+        if(HDG < 10) then
+            newHeading = "00" .. HDG
+            else if(HDG < 100) then
+                newHeading = "0".. HDG
+            else
+                newHeading = HDG
+            end
+        end
+        newPlayer.TextLabel.Text =  tag.."<br/>".. newHeading.." "..newAltitude.." ".. math.floor(Speed/10)
     end
 
     local function GetPlaneFromPlayer(player)
         for i,a in pairs(game.Workspace.Aircraft:GetChildren()) do
-            if (a.Main.Seats.PilotSeat.Occupant~= nil and a.Main.Seats.PilotSeat.Occupant.Parent == player.Character) then
+            if (a.Main:WaitForChild("Seats"):WaitForChild("PilotSeat").Occupant~= nil and a.Main:WaitForChild("Seats"):WaitForChild("PilotSeat").Occupant.Parent == player.Character) then
                 return a
 
             end
@@ -391,7 +426,7 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
 
     local function GetPlayerTAG(player)
         if(GetPlaneFromPlayer(player) ~= nil) then
-            return GetPlaneFromPlayer(player).Name.. string.sub(player.tag.Value, string.len(player.tag.Value)-4)
+            return GetPlaneFromPlayer(player).Name.." ".. string.sub(player.tag.Value, string.len(player.tag.Value)-4)
         end
     end
 
@@ -455,7 +490,7 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
         end
 		task.wait()
     end
-
 end
+
 
 coroutine.wrap(OOPF_fake_script)()
