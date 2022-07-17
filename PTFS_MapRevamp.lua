@@ -358,6 +358,8 @@ local function OOPF_fake_script() -- ScreenGui.LocalScript
     
     local updateState = false
     local scale = 1
+
+    localPlayer.PlayerGui.MiniMap.Enabled = false
     
     Image.Position = UDim2.new(0.5 + (-49222.1) / 96355, 0, 0.5 + (-45890.8) / 92030, 0); --Map wasnt centered so I used the same position they did
 
