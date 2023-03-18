@@ -352,6 +352,7 @@ local ATCScreen = {
 
 ATCScreen.ATCScreen.Name = "ATCScreen"
 ATCScreen.ATCScreen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ATCScreen.ATCScreen.Enabled = false
 ATCScreen.ATCScreen.DisplayOrder = 2
 ATCScreen.ATCScreen.ResetOnSpawn = false
 
@@ -362,13 +363,14 @@ ATCScreen.Player.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
 ATCScreen.Player.Position = UDim2.new(0.150000006, 0, 0.5, 0)
 ATCScreen.Player.Size = UDim2.new(0.00499999989, 0, 0.00499999989, 0)
 ATCScreen.Player.Visible = false
-ATCScreen.Player.ZIndex = 5
+ATCScreen.Player.ZIndex = 8
 
 ATCScreen.TextLabel.Parent = ATCScreen.Player
 ATCScreen.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ATCScreen.TextLabel.BackgroundTransparency = 1.000
 ATCScreen.TextLabel.Position = UDim2.new(1, 0, 0, 0)
 ATCScreen.TextLabel.Size = UDim2.new(5, 0, 5, 0)
+ATCScreen.TextLabel.ZIndex = 8
 ATCScreen.TextLabel.Font = Enum.Font.SourceSans
 ATCScreen.TextLabel.Text = "- Delta-2945 ALT SP"
 ATCScreen.TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -384,13 +386,13 @@ ATCScreen.Direction.BackgroundTransparency = 1.000
 ATCScreen.Direction.Position = UDim2.new(0.5, 0, 0.5, 0)
 ATCScreen.Direction.Rotation = 55.000
 ATCScreen.Direction.Size = UDim2.new(0.100000001, 0, 3, 0)
+ATCScreen.Direction.ZIndex = 8
 
 ATCScreen.Frame.Parent = ATCScreen.Direction
 ATCScreen.Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
 ATCScreen.Frame.Position = UDim2.new(0, 0, 0.5, 0)
 ATCScreen.Frame.Size = UDim2.new(1, 0, 0.5, 0)
-ATCScreen.Frame.ZIndex = 6
-
+ATCScreen.Frame.ZIndex = 8
 
 ATCScreen.Toggle.Name = "Toggle"
 ATCScreen.Toggle.Parent = ATCScreen.ATCScreen
@@ -412,8 +414,7 @@ ATCScreen.HeadingTool.BackgroundTransparency = 1.000
 ATCScreen.HeadingTool.Position = UDim2.new(0.25, 0, 0.5, 0)
 ATCScreen.HeadingTool.Size = UDim2.new(0.00999999978, 0, 0.200000003, 0)
 ATCScreen.HeadingTool.Visible = false
-ATCScreen.HeadingTool.ZIndex = 7
-
+ATCScreen.HeadingTool.ZIndex = 8
 
 ATCScreen.ImageLabel.Parent = ATCScreen.HeadingTool
 ATCScreen.ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -421,9 +422,9 @@ ATCScreen.ImageLabel.BackgroundTransparency = 1.000
 ATCScreen.ImageLabel.BorderSizePixel = 0
 ATCScreen.ImageLabel.Rotation = 180.000
 ATCScreen.ImageLabel.Size = UDim2.new(1, 0, 0.5, 0)
+ATCScreen.ImageLabel.ZIndex = 8
 ATCScreen.ImageLabel.Image = "http://www.roblox.com/asset/?id=10934094532"
 ATCScreen.ImageLabel.ImageColor3 = Color3.fromRGB(27, 42, 53)
-ATCScreen.ImageLabel.ZIndex = 7
 
 ATCScreen.Top.Name = "Top"
 ATCScreen.Top.Parent = ATCScreen.HeadingTool
@@ -432,7 +433,7 @@ ATCScreen.Top.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
 ATCScreen.Top.BorderSizePixel = 0
 ATCScreen.Top.Position = UDim2.new(0.5, 0, 0, 0)
 ATCScreen.Top.Size = UDim2.new(0.5, 0, 0.100000001, 0)
-ATCScreen.Top.ZIndex = 7
+ATCScreen.Top.ZIndex = 8
 
 ATCScreen.UICorner.CornerRadius = UDim.new(1, 0)
 ATCScreen.UICorner.Parent = ATCScreen.Top
@@ -446,7 +447,7 @@ ATCScreen.Bottom.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
 ATCScreen.Bottom.BorderSizePixel = 0
 ATCScreen.Bottom.Position = UDim2.new(0.5, 0, 0.5, 0)
 ATCScreen.Bottom.Size = UDim2.new(0.5, 0, 0.100000001, 0)
-ATCScreen.Bottom.ZIndex = 7
+ATCScreen.Bottom.ZIndex = 8
 
 ATCScreen.UIAspectRatioConstraint_2.Parent = ATCScreen.Bottom
 
@@ -456,11 +457,11 @@ ATCScreen.TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ATCScreen.TextLabel_2.BackgroundTransparency = 1.000
 ATCScreen.TextLabel_2.Position = UDim2.new(0.5, 0, 0.5, 0)
 ATCScreen.TextLabel_2.Size = UDim2.new(5, 0, 0.194000006, 0)
+ATCScreen.TextLabel_2.ZIndex = 8
 ATCScreen.TextLabel_2.Font = Enum.Font.SourceSansBold
 ATCScreen.TextLabel_2.Text = "360"
 ATCScreen.TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 ATCScreen.TextLabel_2.TextSize = 14.000
-ATCScreen.TextLabel_2.ZIndex = 7
 
 ATCScreen.UIAspectRatioConstraint_3.Parent = ATCScreen.TextLabel_2
 ATCScreen.UIAspectRatioConstraint_3.AspectRatio = 2.000
@@ -3663,6 +3664,13 @@ do -- ATCScreen.ATCScreen.Callsigns
 				["CathayPacific"] = "Cathay",
 				["Condor"] = "Condor",
 				["Delta"] = "Delta",
+				["Ryanair"] = "Ryanair",
+				["Scandinavian"] = "Scandinavian",
+				["Singapore"] = "Singapore",
+				["Southwest"] = "Southwest",
+				["Spirit"] = "Spirit Wings",
+				["Swiss"] = "Swiss",
+				["Thai"] = "Thai",
 				["EasyJet"] = "Easy",
 				["Emirates"] = "Emirates",
 				["Flybe"] = "Jersey",
@@ -3675,13 +3683,6 @@ do -- ATCScreen.ATCScreen.Callsigns
 			["NewZealand"] = "NewZealand",
 				["Qantas"] = "Qantas",
 				["Quatar"] = "Quatari",
-				["Ryanair"] = "Ryanair",
-				["Scandinavian"] = "Scandinavian",
-				["Singapore"] = "Singapore",
-				["Southwest"] = "Southwest",
-				["Spirit"] = "Spirit Wings",
-				["Swiss"] = "Swiss",
-				["Thai"] = "Thai",
 				["Tui"] = "Tomjet",
 				["Turkish"] = "Turkish",
 				["United"] = "United",
@@ -3700,11 +3701,25 @@ do -- ATCScreen.ATCScreen.Callsigns
 	end
 	fake_module_scripts[script] = module_script
 end
+do -- ATCScreen.ATCScreen.Players
+	local script = Instance.new('ModuleScript', ATCScreen.ATCScreen)
+	script.Name = "Players"
+	local function module_script()
+		local module = {
+			370213285, --Zbossgamer
+			
+		}
+		
+		return module
+		
+	end
+	fake_module_scripts[script] = module_script
+end
 
 
 -- Scripts:
 
-local function XCXC_fake_script() -- ATCScreen.ATCScreen.Core 
+local function FZKHAJQ_fake_script() -- ATCScreen.ATCScreen.Core 
 	local script = Instance.new('LocalScript', ATCScreen.ATCScreen)
 	local req = require
 	local require = function(obj)
@@ -3716,6 +3731,7 @@ local function XCXC_fake_script() -- ATCScreen.ATCScreen.Core
 	end
 
 	local Callsigns = require(script.Parent.Callsigns)
+	local Players = require(script.Parent.Players)
 	
 	local template = script.Parent.Player
 	local playerList = script.Parent.PlayerList
@@ -3745,15 +3761,26 @@ local function XCXC_fake_script() -- ATCScreen.ATCScreen.Core
 	oldMap.Enabled = false
 	template.TextLabel.RichText = true
 	
+	local whitelisted = false
+	for i, playerID in pairs(Players) do
+		if localPlayer.UserId == playerID then
+			script.Parent.Enabled = true
+			print("You are Whitelisted")
+			whitelisted = true
+		end
+	end
+	if not whitelisted then
+		print("You are not Whitelisted")
+		script.Parent:Destroy()
+	end
+	
 	--Checking of pilotUI is active
 	localPlayer.PlayerGui.ChildAdded:Connect(function(child)
-		print("UI added: "..child.Name)
 		if child.Name == "PilotScreen" then
 			pilotScreen = child
 		end
 	end)
 	localPlayer.PlayerGui.ChildRemoved:Connect(function(child)
-		print("UI removed: "..child.Name)
 		if child.Name == "PilotScreen" then
 			pilotScreen = false
 		end
@@ -3985,8 +4012,8 @@ local function XCXC_fake_script() -- ATCScreen.ATCScreen.Core
 	end
 	
 end
-coroutine.wrap(XCXC_fake_script)()
-local function NZHFOTW_fake_script() -- ATCScreen.NewMiniMap.UIButtons 
+coroutine.wrap(FZKHAJQ_fake_script)()
+local function IMEUTOA_fake_script() -- ATCScreen.NewMiniMap.UIButtons 
 	local script = Instance.new('LocalScript', ATCScreen.NewMiniMap)
 	local req = require
 	local require = function(obj)
@@ -4158,4 +4185,4 @@ local function NZHFOTW_fake_script() -- ATCScreen.NewMiniMap.UIButtons
 		task.wait()
 	end
 end
-coroutine.wrap(NZHFOTW_fake_script)()
+coroutine.wrap(IMEUTOA_fake_script)()
