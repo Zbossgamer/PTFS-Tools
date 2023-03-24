@@ -1792,6 +1792,7 @@ Route.TextXAlignment = Enum.TextXAlignment.Left
 
 RouteLine.Name = "RouteLine"
 RouteLine.Parent = ATCScreen
+RouteLine.Visible = false
 RouteLine.AnchorPoint = Vector2.new(0.5, 0.5)
 RouteLine.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RouteLine.BackgroundTransparency = 1.000
@@ -5066,15 +5067,13 @@ Route.FocusLost:Connect(function(enterPressed, _i)
 				local newLine = RouteLine:Clone()
 				newLine.Parent = Content
 				newLine.Name = "Routing"
-				print(1)
+				newLine.Visible = true
 				newLine.Position = wavepoint.Position
 				local nextPoint = routePoints[i+1]
-				print(2)
-				
+
 				local endPos = Vector2.new(Wavepoints[nextPoint].Position.X.Scale, -1* Wavepoints[nextPoint].Position.Y.Scale)
 				local Delta = endPos - Vector2.new(wavepoint.Position.X.Scale, -1* wavepoint.Position.Y.Scale)
 				
-				print(3)
 				newLine.Rotation = findRotaton(Delta)
 				newLine.Size = UDim2.new(.002, 0, 2*Delta.Magnitude)
 			end
