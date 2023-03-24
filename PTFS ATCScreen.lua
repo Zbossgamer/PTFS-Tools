@@ -189,6 +189,9 @@ local Wind = Instance.new("Frame")
 local label = Instance.new("TextLabel")
 local Direction_2 = Instance.new("TextLabel")
 local Speed = Instance.new("TextLabel")
+local Route = Instance.new("TextBox")
+local RouteLine = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
 
 --Properties:
 
@@ -215,7 +218,7 @@ TextLabel.ZIndex = 8
 TextLabel.Font = Enum.Font.SourceSans
 TextLabel.Text = "- Delta-2945 ALT SP"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextSize = 10.000
+TextLabel.TextSize = 11.000
 TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 TextLabel.TextYAlignment = Enum.TextYAlignment.Top
 
@@ -1772,6 +1775,34 @@ Speed.TextColor3 = Color3.fromRGB(255, 255, 255)
 Speed.TextScaled = true
 Speed.TextSize = 14.000
 Speed.TextWrapped = true
+
+Route.Name = "Route"
+Route.Parent = NewMiniMap
+Route.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+Route.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Route.BorderSizePixel = 0
+Route.Position = UDim2.new(0.0549999997, 0, 0, 0)
+Route.Size = UDim2.new(0.800000012, 0, 0.0700000003, 0)
+Route.Font = Enum.Font.SourceSansBold
+Route.PlaceholderText = "<Enter Route Here>"
+Route.Text = ""
+Route.TextColor3 = Color3.fromRGB(255, 255, 255)
+Route.TextSize = 14.000
+Route.TextXAlignment = Enum.TextXAlignment.Left
+
+RouteLine.Name = "RouteLine"
+RouteLine.Parent = ATCScreen
+RouteLine.AnchorPoint = Vector2.new(0.5, 0.5)
+RouteLine.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RouteLine.BackgroundTransparency = 1.000
+RouteLine.Position = UDim2.new(0.5, 0, 0.5, 0)
+RouteLine.Size = UDim2.new(0.00200000009, 0, 0.100000001, 0)
+
+Frame_2.Parent = RouteLine
+Frame_2.BackgroundColor3 = Color3.fromRGB(138, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Size = UDim2.new(1, 0, 0.5, 0)
+
 -- Gui to Lua
 -- Version: 3.2
 
@@ -2006,7 +2037,7 @@ local Gui = {
 --Properties:
 
 Gui.Wavepoints.Name = "Wavepoints"
-Gui.Wavepoints.Parent = Image
+Gui.Wavepoints.Parent = Content.Image
 Gui.Wavepoints.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.Wavepoints.BackgroundTransparency = 1.000
 Gui.Wavepoints.Size = UDim2.new(1, 0, 1, 0)
@@ -4487,6 +4518,7 @@ Gui.TextLabel_111.TextColor3 = Color3.fromRGB(0, 0, 0)
 Gui.TextLabel_111.TextSize = 10.000
 Gui.TextLabel_111.TextXAlignment = Enum.TextXAlignment.Right
 Gui.TextLabel_111.TextYAlignment = Enum.TextYAlignment.Top
+
 -- Module Scripts:
 
 local fake_module_scripts = {}
@@ -4548,13 +4580,12 @@ do -- ATCScreen.Players
 	script.Name = "Players"
 	local function module_script()
 		local module = {
-			370213285, --Zbossgamer
-			2355519465, --GOOSE
-			1199048459 --Tikfull
-		}
-		
-		return module
-		
+					370213285, --Zbossgamer
+					2355519465, --GOOSE
+					1199048459 --Tikfull
+				}
+				
+				return module
 	end
 	fake_module_scripts[script] = module_script
 end
@@ -4562,7 +4593,7 @@ end
 
 -- Scripts:
 
-local function ZQDETK_fake_script() -- ATCScreen.Core 
+local function CFYQDSZ_fake_script() -- ATCScreen.Core 
 	local script = Instance.new('LocalScript', ATCScreen)
 	local req = require
 	local require = function(obj)
@@ -4784,7 +4815,7 @@ local function ZQDETK_fake_script() -- ATCScreen.Core
 	end)
 	
 	sizeUp.MouseButton1Down:Connect(function()
-	   	scale = scale + 1
+		scale = scale + 1
 		local newScale = 1/((scale*100)*.7)
 		content.Size = UDim2.new(scale,0,scale,0)
 		for i,v in pairs(image.Wavepoints:GetChildren()) do
@@ -4794,7 +4825,7 @@ local function ZQDETK_fake_script() -- ATCScreen.Core
 		print("Size Up")
 	end)
 	sizeDown.MouseButton1Down:Connect(function()
-	    scale = scale - 1
+		scale = scale - 1
 		local newScale = 1/((scale*100)*.7)
 		content.Size = UDim2.new(scale,0,scale,0)
 		for i,v in pairs(image.Wavepoints:GetChildren()) do
@@ -4855,8 +4886,8 @@ local function ZQDETK_fake_script() -- ATCScreen.Core
 	end
 	
 end
-coroutine.wrap(ZQDETK_fake_script)()
-local function YUPG_fake_script() -- NewMiniMap.UIButtons 
+coroutine.wrap(CFYQDSZ_fake_script)()
+local function POVYBN_fake_script() -- NewMiniMap.UIButtons 
 	local script = Instance.new('LocalScript', NewMiniMap)
 	local req = require
 	local require = function(obj)
@@ -4876,7 +4907,8 @@ local function YUPG_fake_script() -- NewMiniMap.UIButtons
 	local B_Remove = NewMiniMap.Reset
 	local T_Search = NewMiniMap.TextBox
 	local HeadingTool = script.Parent.Parent.HeadingTool
-	
+	local Route = NewMiniMap.Route
+	local RouteLine = script.Parent.Parent.RouteLine
 	local defaultColor = Color3.new(0.105882, 0.164706, 0.207843)
 	local selectedColor = Color3.new(0.176471, 0.27451, 0.345098)
 	
@@ -4959,6 +4991,31 @@ local function YUPG_fake_script() -- NewMiniMap.UIButtons
 			HeadingTool.Visible = false
 		end
 	end)
+	
+	function findRotaton(Delta)
+    	local AbsDelta = Vector2.new(math.abs(Delta.X), math.abs(Delta.Y))
+    	local Rotatoion
+    	
+    	if Delta.X > 0 and Delta.Y >= 0 then -- (+,+) Top Right X=Op Y=Ag +0
+    		Rotation = math.atan2(AbsDelta.X, AbsDelta.Y)
+    		Rotation = Rotation + 0
+    	end
+    	if Delta.X >= 0 and Delta.Y < 0 then -- (+,-) Bot Right X=Ag Y=Op +90
+    		Rotation = math.atan2(AbsDelta.Y, AbsDelta.X)
+    		Rotation = Rotation + math.pi/2
+    	end
+    	if Delta.X <= 0 and Delta.Y <= 0 then -- (-,-) Bot Left X=Op Y=Ag +180
+    		Rotation = math.atan2(AbsDelta.X, AbsDelta.Y)
+    		Rotation = Rotation + math.pi
+    	end
+    	if Delta.X < 0 and Delta.Y > 0 then -- (-,+) Top Left X=Ag Y=Op +270
+    		Rotation = math.atan2(AbsDelta.Y, AbsDelta.X)
+    		Rotation = Rotation + math.pi + math.pi/2
+    	end
+    	
+    	return math.deg(Rotation)
+    end
+
 	Mouse.Button1Down:Connect(function()
 		if HState and not Calculating then
 			StartPos = Vector2.new(Mouse.X, Mouse.Y)
@@ -4969,27 +5026,8 @@ local function YUPG_fake_script() -- NewMiniMap.UIButtons
 		while HState and Calculating do
 			local EndPos = Vector2.new(Mouse.X, -1* Mouse.Y)
 			local Delta = EndPos - Vector2.new(StartPos.X, -1* StartPos.Y)
-			local AbsDelta = Vector2.new(math.abs(Delta.X), math.abs(Delta.Y)) 
 	
-			--tan-1(Op/Ag)
-			if Delta.X > 0 and Delta.Y >= 0 then -- (+,+) Top Right X=Op Y=Ag +0
-				Rotation = math.atan2(AbsDelta.X, AbsDelta.Y)
-				Rotation = Rotation + 0
-			end
-			if Delta.X >= 0 and Delta.Y < 0 then -- (+,-) Bot Right X=Ag Y=Op +90
-				Rotation = math.atan2(AbsDelta.Y, AbsDelta.X)
-				Rotation = Rotation + math.pi/2
-			end
-			if Delta.X <= 0 and Delta.Y <= 0 then -- (-,-) Bot Left X=Op Y=Ag +180
-				Rotation = math.atan2(AbsDelta.X, AbsDelta.Y)
-				Rotation = Rotation + math.pi
-			end
-			if Delta.X < 0 and Delta.Y > 0 then -- (-,+) Top Left X=Ag Y=Op +270
-				Rotation = math.atan2(AbsDelta.Y, AbsDelta.X)
-				Rotation = Rotation + math.pi + math.pi/2
-			end
-	
-			HeadingTool.Rotation = math.deg(Rotation)
+			HeadingTool.Rotation = findRotaton(Delta)
 			HeadingTool.TextLabel.Rotation = -HeadingTool.Rotation
 			HeadingTool.Size = UDim2.new(.01,0,0, 2*Delta.Magnitude)
 	
@@ -5005,6 +5043,50 @@ local function YUPG_fake_script() -- NewMiniMap.UIButtons
 		end
 	end)
 	
+	--Route tool
+Route.FocusLost:Connect(function(enterPressed, _i)
+	local input
+	local routePoints = {}
+	if enterPressed then
+		input =  string.upper(Route.Text)
+		routePoints = string.split(input, " ")
+		
+		--remove previous lines
+		for i , child in pairs(Content:GetChildren()) do
+			if child.Name == "Routing" then
+				child:Destroy()
+			end
+		end
+		
+		for i, point in pairs(routePoints) do
+			if Wavepoints[point] and i < table.maxn(routePoints) then
+				local wavepoint = Wavepoints[point]
+				print(point)
+				
+				local newLine = RouteLine:Clone()
+				newLine.Parent = Content
+				newLine.Name = "Routing"
+				print(1)
+				newLine.Position = wavepoint.Position
+				local nextPoint = routePoints[i+1]
+				print(2)
+				
+				local endPos = Vector2.new(Wavepoints[nextPoint].Position.X.Scale, -1* Wavepoints[nextPoint].Position.Y.Scale)
+				local Delta = endPos - Vector2.new(wavepoint.Position.X.Scale, -1* wavepoint.Position.Y.Scale)
+				
+				print(3)
+				newLine.Rotation = findRotaton(Delta)
+				newLine.Size = UDim2.new(.002, 0, 2*Delta.Magnitude)
+			end
+		end
+	else
+		return
+	end
+	
+	
+end)
+	
+	
 	--Wind
 	local Wind = NewMiniMap.Wind
 	local Speed = Wind.Speed
@@ -5019,4 +5101,4 @@ local function YUPG_fake_script() -- NewMiniMap.UIButtons
 		task.wait()
 	end
 end
-coroutine.wrap(YUPG_fake_script)()
+coroutine.wrap(POVYBN_fake_script)()
