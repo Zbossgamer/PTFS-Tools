@@ -4535,7 +4535,7 @@ do -- ATCScreen.Callsigns
 				["Air Canadian"] = "AirCanada",
 				["AirFranch"] = "AirFrans",
 				["Americano"] = "American",
-				["BritanAirways"] = "Speedbird",
+				["BritainAirways"] = "Speedbird",
 				["CafePacific"] = "Cathay",
 				["Doncor"] = "Condor",
 				["Belta"] = "Delta",
