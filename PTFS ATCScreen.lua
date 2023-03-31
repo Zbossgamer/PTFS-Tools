@@ -4584,9 +4584,10 @@ do -- ATCScreen.Players
 	local function module_script()
 		local module = {
 					370213285, --Zbossgamer
-					2355519465, --GOOSE
-					911617475, --123ABC / Maddem
-					1199048459 --Tikfull
+					2355519465, --GOOSE (800)
+					911617475, --123ABC / Maddem (559)
+					145129180, --eric / Legand (599)
+					1199048459 --Tikfull (559)
 				}
 				
 				return module
