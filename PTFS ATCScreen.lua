@@ -4587,6 +4587,7 @@ do -- ATCScreen.Players
 					2355519465, --GOOSE (800)
 					911617475, --123ABC / Maddem (559)
 					145129180, --eric / Legand (599)
+					301870637, --Syth / Jaydog (559)
 					1199048459 --Tikfull (559)
 				}
 				
