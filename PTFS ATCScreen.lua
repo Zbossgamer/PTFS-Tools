@@ -4558,7 +4558,7 @@ do -- ATCScreen.Callsigns
 				["Lifthansa"] = "Lufthansa",
 				["OldZealand"] = "NewZealand",
 				["Oantas"] = "Qantas",
-				["Oatar"] = "Quatari",
+				["Oatar"] = "Qatari",
 				["Tui"] = "Tomjet",
 				["Turkish"] = "Turkish",
 				["United"] = "United",
