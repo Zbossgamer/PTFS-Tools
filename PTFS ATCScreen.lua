@@ -4754,6 +4754,16 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 		end
 	end
 	
+	local function getPlayerOrigonalTag(player)
+	    if(GetPlaneFromPlayer(player) ~= nil) then
+    		local plane = GetPlaneFromPlayer(player)
+    		if Callsigns[plane.Name] then
+    			return Callsigns[plane.Name].." - ".. string.sub(player.tag.Value, string.len(player.tag.Value)-3)
+    		end
+    	end
+    	return player.tag.Value --default
+	end
+	
 	local function GetPlayerTAG(player)
     	if(GetPlaneFromPlayer(player) ~= nil) then
     		local plane = GetPlaneFromPlayer(player)
@@ -4884,7 +4894,7 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
     			local playerName = item.Player.Text
     			print(playerName)
     			if game:GetService("Players")[playerName].Character then
-    			    item.Tag.Text = GetPlayerTAG(game:GetService("Players")[playerName])
+    			    item.Tag.Text = getPlayerOrigonalTag(game:GetService("Players")[playerName])
     			end
     			print("done")
     		end
