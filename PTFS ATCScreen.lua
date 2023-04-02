@@ -1,5 +1,5 @@
 -- Gui to Lua
--- Version: 3.1
+-- Version: 3.2
 
 -- Instances:
 
@@ -316,7 +316,6 @@ PlayerList.AnchorPoint = Vector2.new(1, 0)
 PlayerList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PlayerList.Position = UDim2.new(1, 0, 0, 0)
 PlayerList.Size = UDim2.new(0.400000006, 0, 0.150000006, 0)
-PlayerList.Visible = false
 
 ScrollingFrame.Parent = PlayerList
 ScrollingFrame.Active = true
@@ -4582,7 +4581,7 @@ do -- ATCScreen.Players
 	local script = Instance.new('ModuleScript', ATCScreen)
 	script.Name = "Players"
 	local function module_script()
-		local module = {
+			local module = {
 					370213285, --Zbossgamer
 					2355519465, --GOOSE (800)
 					911617475, --123ABC / Maddem (559)
@@ -4666,52 +4665,59 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 		end
 	end)
 	
-	local function newPlayerDot(plane, tag, HDG, ALT, Speed, Position)
-		
-		local newPlayer = template:Clone() --creating new dot
-	
-		local newScale = 1/((scale*100)-10)
-		local newAltitude
-		local newHeading
-		newPlayer.Parent = content
-		newPlayer.Direction.Rotation = HDG +180
-		newPlayer.Position = Position
-		newPlayer.Size = UDim2.new(newScale,0,newScale,0)
-	
-	
-		if(ALT< 1000) then --Updating how altitude looks
-			newAltitude = "00".. math.floor(ALT/100)
-		else if (ALT< 10000) then
-				newAltitude ="0".. math.floor(ALT/100)
-			else
-				newAltitude = math.floor(ALT/100)
-			end 
-		end
-	
-		if(HDG < 10) then --Updating how heading looks
-			newHeading = "00" .. HDG
-		else if(HDG < 100) then
-				newHeading = "0".. HDG
-			else
-				newHeading = HDG
-			end
-		end
-		
-		
-		if not plane.Internal:GetAttribute("Taxi") then
-		newPlayer.TextLabel.Text =  tag.."<br/>".. newHeading.." "..newAltitude.." ".. math.floor(Speed/10)
-		else
-			newPlayer.TextLabel.Text =  tag.. "<br/> Taxi"
-		end
-	
-		--Conditions that change the look of aircraft
-		if not plane.Internal:GetAttribute("Taxi") or taxiState then
-			newPlayer.Visible = true
-		end
-		if plane.Internal:GetAttribute("Cruise") then
-			newPlayer.BackgroundColor3 = Color3.new(1, 0.164706, 0.180392)
-		end
-	end
+	local function newPlayerDot(plane, tag, HDG, ALT, Speed, Position, isLocalPlayer)
+    	
+    	local newPlayer = template:Clone() --creating new dot
+    
+    	local newScale = 1/((scale*100)-10)
+    	local newAltitude
+    	local newHeading
+    	newPlayer.Parent = content
+    	newPlayer.Direction.Rotation = HDG +180
+    	newPlayer.Position = Position
+    	newPlayer.Size = UDim2.new(newScale,0,newScale,0)
+    
+    
+    	if(ALT< 1000) then --Updating how altitude looks
+    		newAltitude = "00".. math.floor(ALT/100)
+    	else if (ALT< 10000) then
+    			newAltitude ="0".. math.floor(ALT/100)
+    		else
+    			newAltitude = math.floor(ALT/100)
+    		end 
+    	end
+    
+    	if(HDG < 10) then --Updating how heading looks
+    		newHeading = "00" .. HDG
+    	else if(HDG < 100) then
+    			newHeading = "0".. HDG
+    		else
+    			newHeading = HDG
+    		end
+    	end
+    	
+    	
+    	if not plane.Internal:GetAttribute("Taxi") then
+    	newPlayer.TextLabel.Text =  tag.."<br/>".. newHeading.." "..newAltitude.." ".. math.floor(Speed/10)
+    	else
+    		newPlayer.TextLabel.Text =  tag.. "<br/> Taxi"
+    	end
+    
+    	--Conditions that change the look of aircraft
+    	if not plane.Internal:GetAttribute("Taxi") or taxiState then
+    		newPlayer.Visible = true
+    	end
+    	if plane.Internal:GetAttribute("Cruise") then
+    		newPlayer.BackgroundColor3 = Color3.new(1, 0.164706, 0.180392)
+    	end
+    	
+    	if isLocalPlayer then
+    		newPlayer.BackgroundColor3 = Color3.new(0.827451, 0.482353, 0)
+    		newPlayer.Direction.Frame.BackgroundColor3 = Color3.new(0.827451, 0.482353, 0)
+    	end
+    end
+    
+
 	
 	
 	local function GetPlaneFromPlayer(player)
@@ -4749,24 +4755,23 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 	end
 	
 	local function GetPlayerTAG(player)
-		if(GetPlaneFromPlayer(player) ~= nil) then
-			local plane = GetPlaneFromPlayer(player)
-			for _,v in pairs(playerList.ScrollingFrame:GetChildren()) do --Checking if there is a custom Callign
-				if v:IsA("Frame") then
-					if v.Name == player.Name and v.TextBox.Text ~= "" then
-						print("Has a custom callsign ".. v.TextBox.Text ~= "")
-						return v.TextBox.Text
-					end 
-				end
-			end
-	
-			if Callsigns[plane.Name] then
-				return Callsigns[plane.Name].." - ".. string.sub(player.tag.Value, string.len(player.tag.Value)-3)
-			else
-				return player.tag.Value
-			end
-		end
-	end
+    	if(GetPlaneFromPlayer(player) ~= nil) then
+    		local plane = GetPlaneFromPlayer(player)
+    		for _,v in pairs(playerList.ScrollingFrame:GetChildren()) do --Checking if there is a custom Callign
+    			if v:IsA("Frame") then
+    				if v.Name == player.Name and v.TextBox.Text ~= "" then
+    					print("Has a custom callsign ".. v.TextBox.Text ~= "")
+    					return v.TextBox.Text
+    				end 
+    			end
+    		end
+    
+    		if Callsigns[plane.Name] then
+    			return Callsigns[plane.Name].." - ".. string.sub(player.tag.Value, string.len(player.tag.Value)-3)
+    		end
+    	end
+    	return player.tag.Value --default
+    end
 	
 	local function GetPlayerPosition(player, currentScale)
 		if(GetPlaneFromPlayer(player) ~= nil) then
@@ -4857,7 +4862,7 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 		print(t.Name .. " Removed")
 		playerList.ScrollingFrame:FindFirstChild(t.Name):Destroy()
 	end)
-	
+	print("-1")
 	for i,t in pairs(game:GetService("Players"):GetPlayers()) do
 		if t.Character then
 			local newItem = listTemplate:Clone()
@@ -4865,11 +4870,27 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 			newItem.Name = t.Name
 			newItem.Visible = true
 			newItem.Player.Text = t.Name
-			newItem.Tag.Text = t.tag.Value
+			print(GetPlayerTAG(t))
+			newItem.Tag.Text = GetPlayerTAG(t)
+			
 		end
-	end
-	
+	end 
+	print("Start")
 	while true do	
+	    
+	    for i , item in pairs(playerList.ScrollingFrame:GetChildren()) do
+	        print(item.Name)
+    		if item:IsA("Frame") then
+    			local playerName = item.Player.Text
+    			print(playerName)
+    			if game:GetService("Players")[playerName].Character then
+    			    item.Tag.Text = GetPlayerTAG(game:GetService("Players")[playerName])
+    			end
+    			print("done")
+    		end
+    	end
+    	
+
 		for i,v in pairs(content:GetChildren()) do
 			if(v.Name == "Player") then
 				v:Destroy()
@@ -4877,14 +4898,25 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 		end
 		for i,v in pairs(game:GetService("Players"):GetPlayers()) do
 			if v.Character then
+				
 				if GetPlaneFromPlayer(v) ~= nil then
-					local plane = GetPlaneFromPlayer(v)
-					local a = GetPlayerTAG(v)
-					local b = GetPlayerHDG(v)
-					local c = GetPlayerALT(v)
-					local d = GetPlayerSpeed(v)
-					local e = GetPlayerPosition(v,1)
-					newPlayerDot(plane,a,b,c,d,e)
+					local isLocalPlayer = false
+    				if v.Name == localPlayer.Name then
+    					isLocalPlayer = true
+    				end
+    				
+    				local plane = GetPlaneFromPlayer(v)
+    				local a = GetPlayerTAG(v)
+    				
+    				local nameGUI = game.workspace[v.Name].Head.clonegui.TextLabel
+                    nameGUI.Text = (a.. "\n".. v.Name)
+
+    				local b = GetPlayerHDG(v)
+    				local c = GetPlayerALT(v)
+    				local d = GetPlayerSpeed(v)
+    				local e = GetPlayerPosition(v,1)
+    				newPlayerDot(plane,a,b,c,d,e, isLocalPlayer)
+
 				end
 			end
 		end
