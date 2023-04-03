@@ -4532,7 +4532,7 @@ do -- ATCScreen.Callsigns
 		
 				["AirBalistic"] = "AirBaltic",
 				["Air Canadian"] = "AirCanada",
-				["AirFranch"] = "AirFrans",
+				["AirFrench"] = "AirFrans",
 				["Americano"] = "American",
 				["BritainAirways"] = "Speedbird",
 				["CafePacific"] = "Cathay",
