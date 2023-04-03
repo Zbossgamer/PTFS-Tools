@@ -4541,7 +4541,7 @@ do -- ATCScreen.Callsigns
 				["Ryanair"] = "Ryanair",
 				["Scandialien"] = "Scandinavian",
 				["Singadoor"] = "Singapore",
-				["Northwest"] = "Southwest",
+				["Northeast"] = "Southwest",
 				["Spirit"] = "Spirit Wings",
 				["Swiss"] = "Swiss",
 				["Thai"] = "Thai",
