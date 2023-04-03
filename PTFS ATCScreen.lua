@@ -4552,7 +4552,7 @@ do -- ATCScreen.Callsigns
 				["JetBloo"] = "JetBlue",
 				["KLN"] = "KLM",
 				["Koreen"] = "KoreanAir",
-				["KoreanCargo"] = "KoreanAir",
+				["KoreenCargo"] = "KoreanAir",
 				["KOT"] = "Pollot",
 				["Lifthansa"] = "Lufthansa",
 				["OldZealand"] = "NewZealand",
