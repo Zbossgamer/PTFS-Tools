@@ -198,7 +198,7 @@ local Frame_2 = Instance.new("Frame")
 ATCScreen.Name = "ATCScreen"
 ATCScreen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ATCScreen.DisplayOrder = 2
-ATCScreen.ResetOnSpawn = false
+ATCScreen.ResetOnSpawn = true
 
 Player.Name = "Player"
 Player.Parent = ATCScreen
@@ -4587,8 +4587,6 @@ do -- ATCScreen.Players
 					911617475, --123ABC / Maddem (559)
 					145129180, --eric / Legand (599)
 					301870637, --Syth / Jaydog (559)
-					477009532, --IronSiron (559)
-					984766902, --Kertz / keks (559)
 					1199048459 --Tikfull (559)
 				}
 				
@@ -4715,7 +4713,6 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
     	
     	if isLocalPlayer then
     		newPlayer.BackgroundColor3 = Color3.new(0.827451, 0.482353, 0)
-    		newPlayer.Direction.Frame.BackgroundColor3 = Color3.new(0.827451, 0.482353, 0)
     	end
     end
     
@@ -4754,16 +4751,6 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 			local plane = GetPlaneFromPlayer(player)
 			return plane.Internal:GetAttribute("Speed")
 		end
-	end
-	
-	local function getPlayerOrigonalTag(player)
-	    if(GetPlaneFromPlayer(player) ~= nil) then
-    		local plane = GetPlaneFromPlayer(player)
-    		if Callsigns[plane.Name] then
-    			return Callsigns[plane.Name].." - ".. string.sub(player.tag.Value, string.len(player.tag.Value)-3)
-    		end
-    	end
-    	return player.tag.Value --default
 	end
 	
 	local function GetPlayerTAG(player)
@@ -4894,14 +4881,11 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 	        print(item.Name)
     		if item:IsA("Frame") then
     			local playerName = item.Player.Text
-    			print(playerName)
-    			if game:GetService("Players")[playerName].Character then
-    			    item.Tag.Text = getPlayerOrigonalTag(game:GetService("Players")[playerName])
-    			end
+    			print("Player: " ..playerName)
+    			item.Tag.Text = GetPlayerTAG(game:GetService("Players")[playerName])
     			print("done")
     		end
     	end
-    	
 
 		for i,v in pairs(content:GetChildren()) do
 			if(v.Name == "Player") then
@@ -4909,29 +4893,30 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 			end
 		end
 		for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-			if v.Character then
-				
-				if GetPlaneFromPlayer(v) ~= nil then
-					local isLocalPlayer = false
-    				if v.Name == localPlayer.Name then
-    					isLocalPlayer = true
-    				end
-    				
-    				local plane = GetPlaneFromPlayer(v)
-    				local a = GetPlayerTAG(v)
-    				
-    				local nameGUI = game.workspace[v.Name].Head.clonegui.TextLabel
-                    nameGUI.Text = (a.. "\n".. v.Name)
-
-    				local b = GetPlayerHDG(v)
-    				local c = GetPlayerALT(v)
-    				local d = GetPlayerSpeed(v)
-    				local e = GetPlayerPosition(v,1)
-    				newPlayerDot(plane,a,b,c,d,e, isLocalPlayer)
-
+		if v.Character then
+			local nameGUI = game.workspace[v.Name].Head.clonegui.TextLabel
+		
+			if GetPlaneFromPlayer(v) ~= nil then
+				local isLocalPlayer = false
+				if v.Name == localPlayer.Name then
+					isLocalPlayer = true
 				end
+
+				local plane = GetPlaneFromPlayer(v)
+				local a = GetPlayerTAG(v)
+				nameGUI.Text = (a.. "\n".. v.Name)
+
+				local b = GetPlayerHDG(v)
+				local c = GetPlayerALT(v)
+				local d = GetPlayerSpeed(v)
+				local e = GetPlayerPosition(v,1)
+				newPlayerDot(plane,a,b,c,d,e, isLocalPlayer)
+			else
+				nameGUI.Text = (v.Name)
+
 			end
 		end
+	end
 		task.wait(.05)
 	end
 	
