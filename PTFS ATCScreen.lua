@@ -4544,7 +4544,7 @@ do -- ATCScreen.Callsigns
 				["Northeast"] = "Southwest",
 				["Spirit"] = "Spirit Wings",
 				["Swiss"] = "Swiss",
-				["Thai"] = "Thai",
+				["Thay"] = "Thai",
 				["HardJet"] = "Easy",
 				["Emarates"] = "Emirates",
 				["Flybe"] = "Jersey",
