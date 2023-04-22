@@ -1735,6 +1735,7 @@ Wind.Name = "Wind"
 Wind.Parent = NewMiniMap
 Wind.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
 Wind.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Wind.BorderSizePixel = 0
 Wind.Size = UDim2.new(0.0549999997, 0, 0.0700000003, 0)
 
 label.Name = "label"
@@ -4629,7 +4630,7 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 	
 	local updateState = false
 	local taxiState = true
-	local scale = 1
+	local scale = 5
 	
 	image.Position = UDim2.new(0.5 + (-49222.1) / 96355, 0, 0.5 + (-45890.8) / 92030, 0); --Map wasnt centered so I used the same position they did
 	
@@ -4669,7 +4670,7 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
     	
     	local newPlayer = template:Clone() --creating new dot
     
-    	local newScale = 1/((scale*100)-10)
+    	local newScale = 1/((math.pow(2, scale-5)*100)-10)
     	local newAltitude
     	local newHeading
     	newPlayer.Parent = content
@@ -4825,27 +4826,38 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 		
 	end)
 	
-	sizeUp.MouseButton1Down:Connect(function()
-		scale = scale + 1
-		local newScale = 1/((scale*100)*.7)
-		content.Size = UDim2.new(scale,0,scale,0)
-		for i,v in pairs(image.Wavepoints:GetChildren()) do
-			v.Size = UDim2.new(newScale, 0, newScale, 0)
-		end
-	
-		print("Size Up")
-	end)
-	sizeDown.MouseButton1Down:Connect(function()
-		scale = scale - 1
-		local newScale = 1/((scale*100)*.7)
-		content.Size = UDim2.new(scale,0,scale,0)
-		for i,v in pairs(image.Wavepoints:GetChildren()) do
-			v.Size = UDim2.new(newScale, 0, newScale, 0)
-		end
-	
-		print("Size Down")
-	end)
-	
+    local function ZoomOut()
+    	scale = scale - 1
+        local mapScale = math.pow(2, scale-5)
+        
+    	local newScale = 1/((mapScale*100)*.7)
+    	local currentPos = Vector2.new(content.Position.X.Offset, content.Position.Y.Offset)
+    	content.Size = UDim2.new(mapScale,0,mapScale,0)
+    	for i,v in pairs(image.Wavepoints:GetChildren()) do
+    		v.Size = UDim2.new(newScale, 0, newScale, 0)
+    	end
+    	content.Position = UDim2.new(0.5,currentPos.X * (mapScale/(math.pow(2, scale-4))) ,0.5,currentPos.Y * (mapScale/(math.pow(2, scale-4))))
+    
+    	print("Size Down")
+    end
+    
+    local function ZoomIn()
+    	scale = scale + 1
+        local mapScale = math.pow(2, scale-5)
+        
+    	local newScale = 1/((mapScale*100)*.7)
+    	local currentPos = Vector2.new(content.Position.X.Offset, content.Position.Y.Offset)
+    	content.Size = UDim2.new(mapScale,0,mapScale,0)
+    	for i,v in pairs(image.Wavepoints:GetChildren()) do
+    		v.Size = UDim2.new(newScale, 0, newScale, 0)
+    	end
+    	content.Position = UDim2.new(0.5,currentPos.X * (mapScale/(math.pow(2, scale-6))),0.5,currentPos.Y * (mapScale/(math.pow(2, scale-6))))
+    
+    	print("Size Up")
+    end
+    sizeUp.MouseButton1Down:Connect(ZoomIn)
+    sizeDown.MouseButton1Down:Connect(ZoomOut)
+    
 	game.Players.PlayerAdded:Connect(function(t)
 		print(t.Name .. " Added")
 		local newItem = listTemplate:Clone()
@@ -4862,7 +4874,7 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 		print(t.Name .. " Removed")
 		playerList.ScrollingFrame:FindFirstChild(t.Name):Destroy()
 	end)
-	print("-1")
+	
 	for i,t in pairs(game:GetService("Players"):GetPlayers()) do
 		if t.Character then
 			local newItem = listTemplate:Clone()
@@ -4877,6 +4889,7 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 	print("Start")
 	while true do	
 	    
+	    print("Check 1")
 	    for i , item in pairs(playerList.ScrollingFrame:GetChildren()) do
     		if item:IsA("Frame") then
     			local playerName = item.Player.Text
@@ -4885,37 +4898,52 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
     			end
     		end
     	end
+        print("Check 2")
 
 		for i,v in pairs(content:GetChildren()) do
 			if(v.Name == "Player") then
 				v:Destroy()
 			end
 		end
+	    print("Check 3")
+
+
 		for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-		if v.Character then
-			local nameGUI = game.workspace[v.Name].Head.clonegui.TextLabel
-		
-			if GetPlaneFromPlayer(v) ~= nil then
-				local isLocalPlayer = false
-				if v.Name == localPlayer.Name then
-					isLocalPlayer = true
-				end
-
-				local plane = GetPlaneFromPlayer(v)
-				local a = GetPlayerTAG(v)
-				nameGUI.Text = (a.. "\n".. v.Name)
-
-				local b = GetPlayerHDG(v)
-				local c = GetPlayerALT(v)
-				local d = GetPlayerSpeed(v)
-				local e = GetPlayerPosition(v,1)
-				newPlayerDot(plane,a,b,c,d,e, isLocalPlayer)
-			else
-				nameGUI.Text = (v.Name)
-
-			end
+    		if v.Character and game.workspace[v.Name] and game.workspace[v.Name]:WaitForChild("Head", .01) then
+    		    print("Check 3.")
+				local nameGUI = game.workspace[v.Name].Head.clonegui.TextLabel
+    		    print("Check 3.0")
+    			if GetPlaneFromPlayer(v) ~= nil then
+    				local isLocalPlayer = false
+    				if v.Name == localPlayer.Name then
+    					isLocalPlayer = true
+    				end
+                    print("Check 3.1")
+    				local plane = GetPlaneFromPlayer(v)
+    				local a = GetPlayerTAG(v)
+    				print("Check 3.2")
+    				nameGUI.Text = (a.. "\n".. v.Name)
+    
+    				local b = GetPlayerHDG(v)
+    				print("Check 3.3")
+    				local c = GetPlayerALT(v)
+    				print("Check 3.4")
+    				local d = GetPlayerSpeed(v)
+    				print("Check 3.5")
+    				local e = GetPlayerPosition(v,1)
+    				print("Check 3.6")
+    				newPlayerDot(plane,a,b,c,d,e, isLocalPlayer)
+    			else
+    			    print("Check 3.1b")
+    				nameGUI.Text = (v.Name)
+    				print("Check 3.2b")
+    
+    			end
+    			print("Check 3.7")
+    		end
 		end
-	end
+		
+        print("Check 4")
 		task.wait(.05)
 	end
 	
