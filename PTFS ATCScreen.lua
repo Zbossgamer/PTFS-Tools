@@ -4713,6 +4713,7 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
     	
     	if isLocalPlayer then
     		newPlayer.BackgroundColor3 = Color3.new(0.827451, 0.482353, 0)
+    		newPlayer.Direction.Frame.BackgroundColor3 = Color3.new(0.827451, 0.482353, 0)
     	end
     end
     
@@ -4869,7 +4870,6 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 			newItem.Name = t.Name
 			newItem.Visible = true
 			newItem.Player.Text = t.Name
-			print(GetPlayerTAG(t))
 			newItem.Tag.Text = GetPlayerTAG(t)
 			
 		end
@@ -4878,12 +4878,11 @@ local function CFYQDSZ_fake_script() -- ATCScreen.Core
 	while true do	
 	    
 	    for i , item in pairs(playerList.ScrollingFrame:GetChildren()) do
-	        print(item.Name)
     		if item:IsA("Frame") then
     			local playerName = item.Player.Text
-    			print("Player: " ..playerName)
-    			item.Tag.Text = GetPlayerTAG(game:GetService("Players")[playerName])
-    			print("done")
+    			if game:GetService("Players")[playerName].Character then
+    			    item.Tag.Text = GetPlayerTAG(game:GetService("Players")[playerName])
+    			end
     		end
     	end
 
