@@ -4588,7 +4588,8 @@ do -- ATCScreen.Players
 					911617475, --123ABC / Maddem (559)
 					145129180, --eric / Legand (599)
 					301870637, --Syth / Jaydog (559)
-					2745544660, --Walmart (Kertz tranfered ownership to him) (599)
+					984766902, -- Kertz (599)
+					2745544660, --Walmart (dx tranfered ownership to him) (599)
 					329704068, --Walmart Alt
 					1199048459 --Tikfull (559)
 				}
