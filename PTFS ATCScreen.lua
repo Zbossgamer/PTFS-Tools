@@ -535,7 +535,7 @@ LarnacaGround.Parent = Preset
 LarnacaGround.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 LarnacaGround.Size = UDim2.new(0, 200, 0, 50)
 LarnacaGround.Font = Enum.Font.SourceSansBold
-LarnacaGround.Text = "Larnaca Ground"
+LarnacaGround.Text = "Lazarus Center"
 LarnacaGround.TextColor3 = Color3.fromRGB(255, 255, 255)
 LarnacaGround.TextSize = 18.000
 
@@ -557,7 +557,7 @@ IzoloraniGround.Parent = Preset
 IzoloraniGround.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 IzoloraniGround.Size = UDim2.new(0, 200, 0, 50)
 IzoloraniGround.Font = Enum.Font.SourceSansBold
-IzoloraniGround.Text = "Izolirani Ground"
+IzoloraniGround.Text = "Izolorani Ground"
 IzoloraniGround.TextColor3 = Color3.fromRGB(255, 255, 255)
 IzoloraniGround.TextSize = 18.000
 
@@ -5173,12 +5173,12 @@ local UICorner_2 = Instance.new("UICorner")
 
 --Properties:
 
-Ground.Name = " Ground"
+Ground.Name = "Ground"
 Ground.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.SettingFrame.Settings.Theme
 Ground.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 Ground.Size = UDim2.new(0.800000012, 0, 0.150000006, 0)
 Ground.Font = Enum.Font.SourceSans
-Ground.Text = "     Ground"
+Ground.Text = "Ground"
 Ground.TextColor3 = Color3.fromRGB(255, 255, 255)
 Ground.TextSize = 18.000
 Ground.TextXAlignment = Enum.TextXAlignment.Left
