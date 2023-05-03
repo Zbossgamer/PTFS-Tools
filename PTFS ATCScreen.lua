@@ -552,7 +552,7 @@ NorsomCenter.TextSize = 18.000
 
 UICorner_16.Parent = NorsomCenter
 
-IzoloraniGround.Name = "Izolrani Ground"
+IzoloraniGround.Name = "Izolorani Ground"
 IzoloraniGround.Parent = Preset
 IzoloraniGround.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 IzoloraniGround.Size = UDim2.new(0, 200, 0, 50)
