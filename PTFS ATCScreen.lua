@@ -7619,7 +7619,7 @@ do -- ATCScreen.Callsigns
 			["Scandialien"] = "Scandinavian",
 			["Singadoor"] = "Singapore",
 			["Northeast"] = "Southwest",
-			["Spirit"] = "Spirit Wings",
+			["Sprit"] = "Spirit Wings",
 			["Bliss"] = "Swiss",
 			["Thay"] = "Thai",
 			["HardJet"] = "Easy",
