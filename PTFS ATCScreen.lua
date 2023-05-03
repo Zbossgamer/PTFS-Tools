@@ -7670,6 +7670,7 @@ do -- ATCScreen.Players
 			984766902, -- Kertz (599)
 			2745544660, --Walmart (dx tranfered ownership to him) (599)
 			329704068, --Walmart Alt
+			1568219666, --Dav_VC (800)
 			1199048459 --Tikfull (559)
             }
 		return module
@@ -7755,7 +7756,7 @@ do -- ATCScreen.PlayerData
         	["Scandialien"] = "Scandinavian",
         	["Singadoor"] = "Singapore",
         	["Northeast"] = "Southwest",
-        	["Spirit"] = "Spirit Wings",
+        	["Sprit"] = "Spirit Wings",
         	["Bliss"] = "Swiss",
         	["Thay"] = "Thai",
         	["HardJet"] = "Easy",
