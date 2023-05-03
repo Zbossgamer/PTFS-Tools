@@ -535,7 +535,7 @@ LarnacaGround.Parent = Preset
 LarnacaGround.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 LarnacaGround.Size = UDim2.new(0, 200, 0, 50)
 LarnacaGround.Font = Enum.Font.SourceSansBold
-LarnacaGround.Text = "Lazarus Center"
+LarnacaGround.Text = "Larnaca Ground"
 LarnacaGround.TextColor3 = Color3.fromRGB(255, 255, 255)
 LarnacaGround.TextSize = 18.000
 
@@ -557,7 +557,7 @@ IzoloraniGround.Parent = Preset
 IzoloraniGround.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 IzoloraniGround.Size = UDim2.new(0, 200, 0, 50)
 IzoloraniGround.Font = Enum.Font.SourceSansBold
-IzoloraniGround.Text = "Izolorani Ground"
+IzoloraniGround.Text = "Izolirani Ground"
 IzoloraniGround.TextColor3 = Color3.fromRGB(255, 255, 255)
 IzoloraniGround.TextSize = 18.000
 
@@ -5178,7 +5178,7 @@ Ground.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.Setti
 Ground.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 Ground.Size = UDim2.new(0.800000012, 0, 0.150000006, 0)
 Ground.Font = Enum.Font.SourceSans
-Ground.Text = "Ground"
+Ground.Text = "    Ground"
 Ground.TextColor3 = Color3.fromRGB(255, 255, 255)
 Ground.TextSize = 18.000
 Ground.TextXAlignment = Enum.TextXAlignment.Left
@@ -7670,6 +7670,8 @@ do -- ATCScreen.Players
 			984766902, -- Kertz (599)
 			2745544660, --Walmart (dx tranfered ownership to him) (599)
 			329704068, --Walmart Alt
+			1029957183, --The Trollster (599)
+			1568219666, --Dav_VC (800)
 			1199048459 --Tikfull (559)
             }
 		return module
