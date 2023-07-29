@@ -7672,7 +7672,8 @@ do -- ATCScreen.Players
 			329704068, --Walmart Alt
 			1029957183, --The Trollster (599)
 			1568219666, --Dav_VC (800)
-			1199048459 --Tikfull (559)
+			1199048459, --Tikfull (559)
+			994950354 --Vain_0/Gadget (10$)
             }
 		return module
 	end
