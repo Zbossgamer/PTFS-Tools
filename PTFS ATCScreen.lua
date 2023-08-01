@@ -365,7 +365,7 @@ Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Version.BackgroundTransparency = 1.000
 Version.Size = UDim2.new(0.200000003, 0, 0.100000001, 0)
 Version.Font = Enum.Font.SourceSans
-Version.Text = "V3.3"
+Version.Text = "V4.2"
 Version.TextColor3 = Color3.fromRGB(0, 0, 0)
 Version.TextSize = 14.000
 Version.TextYAlignment = Enum.TextYAlignment.Top
@@ -535,7 +535,7 @@ LarnacaGround.Parent = Preset
 LarnacaGround.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 LarnacaGround.Size = UDim2.new(0, 200, 0, 50)
 LarnacaGround.Font = Enum.Font.SourceSansBold
-LarnacaGround.Text = "Lazarus Center"
+LarnacaGround.Text = "Larnaca Ground"
 LarnacaGround.TextColor3 = Color3.fromRGB(255, 255, 255)
 LarnacaGround.TextSize = 18.000
 
@@ -557,7 +557,7 @@ IzoloraniGround.Parent = Preset
 IzoloraniGround.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 IzoloraniGround.Size = UDim2.new(0, 200, 0, 50)
 IzoloraniGround.Font = Enum.Font.SourceSansBold
-IzoloraniGround.Text = "Izolorani Ground"
+IzoloraniGround.Text = "Izolirani Ground"
 IzoloraniGround.TextColor3 = Color3.fromRGB(255, 255, 255)
 IzoloraniGround.TextSize = 18.000
 
@@ -5160,6 +5160,2442 @@ scaleValue1.Name = "scaleValue"
 scaleValue1.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen
 scaleValue1.Value = 6
 
+-- Gui to Lua
+-- Version: 3.5
+
+-- Instances:
+
+local Ground = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Button = Instance.new("Frame")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UICorner_2 = Instance.new("UICorner")
+
+--Properties:
+
+Ground.Name = "Ground"
+Ground.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.SettingFrame.Settings.Theme
+Ground.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
+Ground.Size = UDim2.new(0.800000012, 0, 0.150000006, 0)
+Ground.Font = Enum.Font.SourceSans
+Ground.Text = "    Ground"
+Ground.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ground.TextSize = 18.000
+Ground.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner.Parent = Ground
+
+Button.Name = "Button"
+Button.Parent = Ground
+Button.AnchorPoint = Vector2.new(0, 0.5)
+Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Button.Position = UDim2.new(0.800000012, 0, 0.5, 0)
+Button.Size = UDim2.new(0.5, 0, 0.800000012, 0)
+
+UIAspectRatioConstraint.Parent = Button
+
+UICorner_2.Parent = Button
+
+-- Gui to Lua
+-- Version: 3.5
+
+-- Instances:
+
+ Ground = Instance.new("Frame")
+ RockfordGround = Instance.new("ImageLabel")
+ TextLabel = Instance.new("TextLabel")
+ TextLabel_2 = Instance.new("TextLabel")
+ TextLabel_3 = Instance.new("TextLabel")
+ TextLabel_4 = Instance.new("TextLabel")
+ TextLabel_5 = Instance.new("TextLabel")
+ TextLabel_6 = Instance.new("TextLabel")
+ TextLabel_7 = Instance.new("TextLabel")
+ TextLabel_8 = Instance.new("TextLabel")
+ TextLabel_9 = Instance.new("TextLabel")
+ TextLabel_10 = Instance.new("TextLabel")
+ TextLabel_11 = Instance.new("TextLabel")
+ TextLabel_12 = Instance.new("TextLabel")
+ TextLabel_13 = Instance.new("TextLabel")
+ TextLabel_14 = Instance.new("TextLabel")
+ TextLabel_15 = Instance.new("TextLabel")
+ TextLabel_16 = Instance.new("TextLabel")
+ TextLabel_17 = Instance.new("TextLabel")
+ TextLabel_18 = Instance.new("TextLabel")
+ TextLabel_19 = Instance.new("TextLabel")
+ TextLabel_20 = Instance.new("TextLabel")
+ TextLabel_21 = Instance.new("TextLabel")
+ TextLabel_22 = Instance.new("TextLabel")
+ TextLabel_23 = Instance.new("TextLabel")
+ TextLabel_24 = Instance.new("TextLabel")
+ TextLabel_25 = Instance.new("TextLabel")
+ TextLabel_26 = Instance.new("TextLabel")
+ TextLabel_27 = Instance.new("TextLabel")
+ TextLabel_28 = Instance.new("TextLabel")
+ TextLabel_29 = Instance.new("TextLabel")
+ TextLabel_30 = Instance.new("TextLabel")
+ TextLabel_31 = Instance.new("TextLabel")
+ TextLabel_32 = Instance.new("TextLabel")
+ TextLabel_33 = Instance.new("TextLabel")
+ TextLabel_34 = Instance.new("TextLabel")
+ TextLabel_35 = Instance.new("TextLabel")
+ TextLabel_36 = Instance.new("TextLabel")
+ TokyoGround = Instance.new("ImageLabel")
+ TextLabel_37 = Instance.new("TextLabel")
+ TextLabel_38 = Instance.new("TextLabel")
+ TextLabel_39 = Instance.new("TextLabel")
+ TextLabel_40 = Instance.new("TextLabel")
+ TextLabel_41 = Instance.new("TextLabel")
+ TextLabel_42 = Instance.new("TextLabel")
+ TextLabel_43 = Instance.new("TextLabel")
+ TextLabel_44 = Instance.new("TextLabel")
+ TextLabel_45 = Instance.new("TextLabel")
+ TextLabel_46 = Instance.new("TextLabel")
+ TextLabel_47 = Instance.new("TextLabel")
+ TextLabel_48 = Instance.new("TextLabel")
+ TextLabel_49 = Instance.new("TextLabel")
+ TextLabel_50 = Instance.new("TextLabel")
+ TextLabel_51 = Instance.new("TextLabel")
+ TextLabel_52 = Instance.new("TextLabel")
+ TextLabel_53 = Instance.new("TextLabel")
+ TextLabel_54 = Instance.new("TextLabel")
+ TextLabel_55 = Instance.new("TextLabel")
+ TextLabel_56 = Instance.new("TextLabel")
+ TextLabel_57 = Instance.new("TextLabel")
+ TextLabel_58 = Instance.new("TextLabel")
+ TextLabel_59 = Instance.new("TextLabel")
+ TextLabel_60 = Instance.new("TextLabel")
+ TextLabel_61 = Instance.new("TextLabel")
+ TextLabel_62 = Instance.new("TextLabel")
+ TextLabel_63 = Instance.new("TextLabel")
+ TextLabel_64 = Instance.new("TextLabel")
+ TextLabel_65 = Instance.new("TextLabel")
+ TextLabel_66 = Instance.new("TextLabel")
+ TextLabel_67 = Instance.new("TextLabel")
+ TextLabel_68 = Instance.new("TextLabel")
+ TextLabel_69 = Instance.new("TextLabel")
+ TextLabel_70 = Instance.new("TextLabel")
+ TextLabel_71 = Instance.new("TextLabel")
+ TextLabel_72 = Instance.new("TextLabel")
+ TextLabel_73 = Instance.new("TextLabel")
+ TextLabel_74 = Instance.new("TextLabel")
+ TextLabel_75 = Instance.new("TextLabel")
+ TextLabel_76 = Instance.new("TextLabel")
+ TextLabel_77 = Instance.new("TextLabel")
+ TextLabel_78 = Instance.new("TextLabel")
+ TextLabel_79 = Instance.new("TextLabel")
+ TextLabel_80 = Instance.new("TextLabel")
+ TextLabel_81 = Instance.new("TextLabel")
+ TextLabel_82 = Instance.new("TextLabel")
+ TextLabel_83 = Instance.new("TextLabel")
+ TextLabel_84 = Instance.new("TextLabel")
+ TextLabel_85 = Instance.new("TextLabel")
+ TextLabel_86 = Instance.new("TextLabel")
+ TextLabel_87 = Instance.new("TextLabel")
+ TextLabel_88 = Instance.new("TextLabel")
+ TextLabel_89 = Instance.new("TextLabel")
+ TextLabel_90 = Instance.new("TextLabel")
+ TextLabel_91 = Instance.new("TextLabel")
+ TextLabel_92 = Instance.new("TextLabel")
+ TextLabel_93 = Instance.new("TextLabel")
+ TextLabel_94 = Instance.new("TextLabel")
+ PerthGround = Instance.new("ImageLabel")
+ TextLabel_95 = Instance.new("TextLabel")
+ TextLabel_96 = Instance.new("TextLabel")
+ TextLabel_97 = Instance.new("TextLabel")
+ TextLabel_98 = Instance.new("TextLabel")
+ TextLabel_99 = Instance.new("TextLabel")
+ TextLabel_100 = Instance.new("TextLabel")
+ TextLabel_101 = Instance.new("TextLabel")
+ TextLabel_102 = Instance.new("TextLabel")
+ TextLabel_103 = Instance.new("TextLabel")
+ TextLabel_104 = Instance.new("TextLabel")
+ TextLabel_105 = Instance.new("TextLabel")
+ TextLabel_106 = Instance.new("TextLabel")
+ TextLabel_107 = Instance.new("TextLabel")
+ TextLabel_108 = Instance.new("TextLabel")
+ TextLabel_109 = Instance.new("TextLabel")
+ TextLabel_110 = Instance.new("TextLabel")
+ TextLabel_111 = Instance.new("TextLabel")
+ TextLabel_112 = Instance.new("TextLabel")
+ TextLabel_113 = Instance.new("TextLabel")
+ TextLabel_114 = Instance.new("TextLabel")
+ TextLabel_115 = Instance.new("TextLabel")
+ TextLabel_116 = Instance.new("TextLabel")
+ TextLabel_117 = Instance.new("TextLabel")
+ TextLabel_118 = Instance.new("TextLabel")
+ TextLabel_119 = Instance.new("TextLabel")
+ TextLabel_120 = Instance.new("TextLabel")
+ TextLabel_121 = Instance.new("TextLabel")
+ TextLabel_122 = Instance.new("TextLabel")
+ TextLabel_123 = Instance.new("TextLabel")
+ TextLabel_124 = Instance.new("TextLabel")
+ TextLabel_125 = Instance.new("TextLabel")
+ TextLabel_126 = Instance.new("TextLabel")
+ TextLabel_127 = Instance.new("TextLabel")
+ TextLabel_128 = Instance.new("TextLabel")
+ TextLabel_129 = Instance.new("TextLabel")
+ LarnacaGround = Instance.new("ImageLabel")
+ TextLabel_130 = Instance.new("TextLabel")
+ TextLabel_131 = Instance.new("TextLabel")
+ TextLabel_132 = Instance.new("TextLabel")
+ TextLabel_133 = Instance.new("TextLabel")
+ TextLabel_134 = Instance.new("TextLabel")
+ TextLabel_135 = Instance.new("TextLabel")
+ TextLabel_136 = Instance.new("TextLabel")
+ TextLabel_137 = Instance.new("TextLabel")
+ TextLabel_138 = Instance.new("TextLabel")
+ TextLabel_139 = Instance.new("TextLabel")
+ TextLabel_140 = Instance.new("TextLabel")
+ TextLabel_141 = Instance.new("TextLabel")
+ TextLabel_142 = Instance.new("TextLabel")
+ TextLabel_143 = Instance.new("TextLabel")
+ TextLabel_144 = Instance.new("TextLabel")
+ TextLabel_145 = Instance.new("TextLabel")
+ TextLabel_146 = Instance.new("TextLabel")
+ TextLabel_147 = Instance.new("TextLabel")
+ TextLabel_148 = Instance.new("TextLabel")
+ TextLabel_149 = Instance.new("TextLabel")
+ TextLabel_150 = Instance.new("TextLabel")
+ TextLabel_151 = Instance.new("TextLabel")
+ TextLabel_152 = Instance.new("TextLabel")
+ TextLabel_153 = Instance.new("TextLabel")
+ IzoloraniGround = Instance.new("ImageLabel")
+ TextLabel_154 = Instance.new("TextLabel")
+ TextLabel_155 = Instance.new("TextLabel")
+ TextLabel_156 = Instance.new("TextLabel")
+ TextLabel_157  = Instance.new("TextLabel")
+ TextLabel_158 = Instance.new("TextLabel")
+ TextLabel_159 = Instance.new("TextLabel")
+ TextLabel_160 = Instance.new("TextLabel")
+ TextLabel_161 = Instance.new("TextLabel")
+ TextLabel_162 = Instance.new("TextLabel")
+ TextLabel_163 = Instance.new("TextLabel")
+ TextLabel_164 = Instance.new("TextLabel")
+ TextLabel_165 = Instance.new("TextLabel")
+ TextLabel_166 = Instance.new("TextLabel")
+ TextLabel_167 = Instance.new("TextLabel")
+ TextLabel_168 = Instance.new("TextLabel")
+ TextLabel_169 = Instance.new("TextLabel")
+ TextLabel_170 = Instance.new("TextLabel")
+ TextLabel_171 = Instance.new("TextLabel")
+ TextLabel_172 = Instance.new("TextLabel")
+ TextLabel_173 = Instance.new("TextLabel")
+ TextLabel_174 = Instance.new("TextLabel")
+ TextLabel_175 = Instance.new("TextLabel")
+ TextLabel_176 = Instance.new("TextLabel")
+ TextLabel_177 = Instance.new("TextLabel")
+ TextLabel_178 = Instance.new("TextLabel")
+ 
+ print("Instances Created")
+
+--Properties:
+
+Ground.Name = "Ground"
+Ground.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.NewMiniMap.Content.Image
+Ground.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Ground.Size = UDim2.new(1, 0, 1, 0)
+Ground.ZIndex = 3
+Ground.Visible = false
+
+RockfordGround.Name = "RockfordGround"
+RockfordGround.Parent = Ground
+RockfordGround.AnchorPoint = Vector2.new(0.5, 0.5)
+RockfordGround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RockfordGround.BackgroundTransparency = 1.000
+RockfordGround.Position = UDim2.new(0.381999999, 0, 0.713999987, 0)
+RockfordGround.Size = UDim2.new(0.0250000004, 0, 0.0299999993, 0)
+RockfordGround.ZIndex = 3
+RockfordGround.Image = "rbxassetid://13321644778"
+RockfordGround.ScaleType = Enum.ScaleType.Crop
+
+print("Creaded RFD Grounds")
+
+TextLabel.Parent = RockfordGround
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.339966506, 0, 0.734027565, 0)
+TextLabel.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel.ZIndex = 7
+TextLabel.Font = Enum.Font.Arial
+TextLabel.Text = "A1"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 10.000
+
+TextLabel_2.Parent = RockfordGround
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.417420387, 0, 0.746701837, 0)
+TextLabel_2.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_2.ZIndex = 7
+TextLabel_2.Font = Enum.Font.Arial
+TextLabel_2.Text = "A2"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 10.000
+
+TextLabel_3.Parent = RockfordGround
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.498394907, 0, 0.688963473, 0)
+TextLabel_3.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_3.ZIndex = 7
+TextLabel_3.Font = Enum.Font.Arial
+TextLabel_3.Text = "A3"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 10.000
+
+TextLabel_4.Parent = RockfordGround
+TextLabel_4.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0.454387039, 0, 0.518564939, 0)
+TextLabel_4.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_4.ZIndex = 7
+TextLabel_4.Font = Enum.Font.Arial
+TextLabel_4.Text = "A5"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 10.000
+
+TextLabel_5.Parent = RockfordGround
+TextLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0.459667981, 0, 0.576303303, 0)
+TextLabel_5.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_5.ZIndex = 7
+TextLabel_5.Font = Enum.Font.Arial
+TextLabel_5.Text = "A4"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 10.000
+
+TextLabel_6.Parent = RockfordGround
+TextLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(0.454387039, 0, 0.442519307, 0)
+TextLabel_6.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_6.ZIndex = 7
+TextLabel_6.Font = Enum.Font.Arial
+TextLabel_6.Text = "A6"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 10.000
+
+TextLabel_7.Parent = RockfordGround
+TextLabel_7.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(0.558245659, 0, 0.377739698, 0)
+TextLabel_7.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_7.ZIndex = 7
+TextLabel_7.Font = Enum.Font.Arial
+TextLabel_7.Text = "B6"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 10.000
+
+TextLabel_8.Parent = RockfordGround
+TextLabel_8.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(0.577609122, 0, 0.959347963, 0)
+TextLabel_8.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_8.ZIndex = 7
+TextLabel_8.Font = Enum.Font.Arial
+TextLabel_8.Text = "B1"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextSize = 10.000
+
+TextLabel_9.Parent = RockfordGround
+TextLabel_9.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Position = UDim2.new(0.577609122, 0, 0.834013462, 0)
+TextLabel_9.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_9.ZIndex = 7
+TextLabel_9.Font = Enum.Font.Arial
+TextLabel_9.Text = "B2"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextSize = 10.000
+
+TextLabel_10.Parent = RockfordGround
+TextLabel_10.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Position = UDim2.new(0.577609122, 0, 0.703045964, 0)
+TextLabel_10.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_10.ZIndex = 7
+TextLabel_10.Font = Enum.Font.Arial
+TextLabel_10.Text = "B3"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextSize = 10.000
+
+TextLabel_11.Parent = RockfordGround
+TextLabel_11.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.Position = UDim2.new(0.577609122, 0, 0.628408611, 0)
+TextLabel_11.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_11.ZIndex = 7
+TextLabel_11.Font = Enum.Font.Arial
+TextLabel_11.Text = "B4"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextSize = 10.000
+
+TextLabel_12.Parent = RockfordGround
+TextLabel_12.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.Position = UDim2.new(0.577609122, 0, 0.59742707, 0)
+TextLabel_12.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_12.ZIndex = 7
+TextLabel_12.Font = Enum.Font.Arial
+TextLabel_12.Text = "B5"
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.TextSize = 10.000
+
+TextLabel_13.Parent = RockfordGround
+TextLabel_13.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.Position = UDim2.new(0.558245659, 0, 0.19889164, 0)
+TextLabel_13.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_13.ZIndex = 7
+TextLabel_13.Font = Enum.Font.Arial
+TextLabel_13.Text = "B7"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextSize = 10.000
+
+TextLabel_14.Parent = RockfordGround
+TextLabel_14.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.Position = UDim2.new(0.558245659, 0, 0.13411203, 0)
+TextLabel_14.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_14.ZIndex = 7
+TextLabel_14.Font = Enum.Font.Arial
+TextLabel_14.Text = "B8"
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.TextSize = 10.000
+
+TextLabel_15.Parent = RockfordGround
+TextLabel_15.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 1.000
+TextLabel_15.Position = UDim2.new(0.558245659, 0, 0.103130475, 0)
+TextLabel_15.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_15.ZIndex = 7
+TextLabel_15.Font = Enum.Font.Arial
+TextLabel_15.Text = "B9"
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.TextSize = 10.000
+
+TextLabel_16.Parent = RockfordGround
+TextLabel_16.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BackgroundTransparency = 1.000
+TextLabel_16.Position = UDim2.new(0.382214069, 0, 0.617142618, 0)
+TextLabel_16.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_16.ZIndex = 7
+TextLabel_16.Font = Enum.Font.Arial
+TextLabel_16.Text = "A"
+TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.TextSize = 10.000
+
+TextLabel_17.Parent = RockfordGround
+TextLabel_17.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.BackgroundTransparency = 1.000
+TextLabel_17.Position = UDim2.new(0.382214069, 0, 0.428436816, 0)
+TextLabel_17.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_17.ZIndex = 7
+TextLabel_17.Font = Enum.Font.Arial
+TextLabel_17.Text = "A"
+TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.TextSize = 10.000
+
+TextLabel_18.Parent = RockfordGround
+TextLabel_18.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.BackgroundTransparency = 1.000
+TextLabel_18.Position = UDim2.new(0.523039281, 0, 0.273529053, 0)
+TextLabel_18.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_18.ZIndex = 7
+TextLabel_18.Font = Enum.Font.Arial
+TextLabel_18.Text = "B"
+TextLabel_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.TextSize = 10.000
+
+TextLabel_19.Parent = RockfordGround
+TextLabel_19.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.BackgroundTransparency = 1.000
+TextLabel_19.Position = UDim2.new(0.542402744, 0, 0.763600886, 0)
+TextLabel_19.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_19.ZIndex = 7
+TextLabel_19.Font = Enum.Font.Arial
+TextLabel_19.Text = "B"
+TextLabel_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.TextSize = 10.000
+
+TextLabel_20.Parent = RockfordGround
+TextLabel_20.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_20.BackgroundTransparency = 1.000
+TextLabel_20.Position = UDim2.new(0.663864493, 0, 0.103130519, 0)
+TextLabel_20.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_20.ZIndex = 7
+TextLabel_20.Font = Enum.Font.Arial
+TextLabel_20.Text = "E2"
+TextLabel_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_20.TextSize = 10.000
+
+TextLabel_21.Parent = RockfordGround
+TextLabel_21.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_21.BackgroundTransparency = 1.000
+TextLabel_21.Position = UDim2.new(0.663864493, 0, 0.208749443, 0)
+TextLabel_21.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_21.ZIndex = 7
+TextLabel_21.Font = Enum.Font.Arial
+TextLabel_21.Text = "E1"
+TextLabel_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_21.TextSize = 10.000
+
+TextLabel_22.Parent = RockfordGround
+TextLabel_22.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_22.BackgroundTransparency = 1.000
+TextLabel_22.Position = UDim2.new(0.663864493, 0, 0.646715939, 0)
+TextLabel_22.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_22.ZIndex = 7
+TextLabel_22.Font = Enum.Font.Arial
+TextLabel_22.Text = "D"
+TextLabel_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_22.TextSize = 10.000
+
+TextLabel_23.Parent = RockfordGround
+TextLabel_23.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_23.BackgroundTransparency = 1.000
+TextLabel_23.Position = UDim2.new(0.663864493, 0, 0.703046024, 0)
+TextLabel_23.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_23.ZIndex = 7
+TextLabel_23.Font = Enum.Font.Arial
+TextLabel_23.Text = "C"
+TextLabel_23.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_23.TextSize = 10.000
+
+TextLabel_24.Parent = RockfordGround
+TextLabel_24.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_24.BackgroundTransparency = 1.000
+TextLabel_24.Position = UDim2.new(0.776524663, 0, 0.657981932, 0)
+TextLabel_24.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_24.ZIndex = 7
+TextLabel_24.Font = Enum.Font.Arial
+TextLabel_24.Text = "F1"
+TextLabel_24.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_24.TextSize = 10.000
+
+TextLabel_25.Parent = RockfordGround
+TextLabel_25.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_25.BackgroundTransparency = 1.000
+TextLabel_25.Position = UDim2.new(0.760681808, 0, 0.242547482, 0)
+TextLabel_25.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_25.ZIndex = 7
+TextLabel_25.Font = Enum.Font.Arial
+TextLabel_25.Text = "F2"
+TextLabel_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_25.TextSize = 10.000
+
+TextLabel_26.Parent = RockfordGround
+TextLabel_26.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_26.BackgroundTransparency = 1.000
+TextLabel_26.Position = UDim2.new(0.790607154, 0, 0.377739727, 0)
+TextLabel_26.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_26.ZIndex = 7
+TextLabel_26.Font = Enum.Font.Arial
+TextLabel_26.Text = "F"
+TextLabel_26.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_26.TextSize = 10.000
+
+TextLabel_27.Parent = RockfordGround
+TextLabel_27.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_27.BackgroundTransparency = 1.000
+TextLabel_27.Position = UDim2.new(0.878622949, 0, 0.458010107, 0)
+TextLabel_27.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_27.ZIndex = 7
+TextLabel_27.Font = Enum.Font.Arial
+TextLabel_27.Text = "H"
+TextLabel_27.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_27.TextSize = 10.000
+
+TextLabel_28.Parent = RockfordGround
+TextLabel_28.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_28.BackgroundTransparency = 1.000
+TextLabel_28.Position = UDim2.new(0.878622949, 0, 0.586161077, 0)
+TextLabel_28.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_28.ZIndex = 7
+TextLabel_28.Font = Enum.Font.Arial
+TextLabel_28.Text = "G"
+TextLabel_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_28.TextSize = 10.000
+
+TextLabel_29.Parent = RockfordGround
+TextLabel_29.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_29.BackgroundTransparency = 1.000
+TextLabel_29.Position = UDim2.new(0.855738819, 0, 0.59742707, 0)
+TextLabel_29.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_29.ZIndex = 7
+TextLabel_29.Font = Enum.Font.Arial
+TextLabel_29.Text = "G1"
+TextLabel_29.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_29.TextSize = 10.000
+
+TextLabel_30.Parent = RockfordGround
+TextLabel_30.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_30.BackgroundTransparency = 1.000
+TextLabel_30.Position = UDim2.new(0.90150702, 0, 0.59742707, 0)
+TextLabel_30.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_30.ZIndex = 7
+TextLabel_30.Font = Enum.Font.Arial
+TextLabel_30.Text = "G1"
+TextLabel_30.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_30.TextSize = 10.000
+
+TextLabel_31.Parent = RockfordGround
+TextLabel_31.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_31.BackgroundTransparency = 1.000
+TextLabel_31.Position = UDim2.new(0.90150702, 0, 0.472092599, 0)
+TextLabel_31.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_31.ZIndex = 7
+TextLabel_31.Font = Enum.Font.Arial
+TextLabel_31.Text = "H1"
+TextLabel_31.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_31.TextSize = 10.000
+
+TextLabel_32.Parent = RockfordGround
+TextLabel_32.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_32.BackgroundTransparency = 1.000
+TextLabel_32.Position = UDim2.new(0.855738819, 0, 0.472092599, 0)
+TextLabel_32.Size = UDim2.new(0.0299999993, 0, 0.0300000012, 0)
+TextLabel_32.ZIndex = 7
+TextLabel_32.Font = Enum.Font.Arial
+TextLabel_32.Text = "H1"
+TextLabel_32.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_32.TextSize = 10.000
+
+TextLabel_33.Parent = RockfordGround
+TextLabel_33.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_33.BackgroundTransparency = 1.000
+TextLabel_33.Position = UDim2.new(0.595212281, 0, 0.988921285, 0)
+TextLabel_33.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_33.ZIndex = 7
+TextLabel_33.Font = Enum.Font.Arial
+TextLabel_33.Text = "36L"
+TextLabel_33.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_33.TextSize = 10.000
+
+TextLabel_34.Parent = RockfordGround
+TextLabel_34.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_34.BackgroundTransparency = 1.000
+TextLabel_34.Position = UDim2.new(0.725475609, 0, 0.746701837, 0)
+TextLabel_34.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_34.ZIndex = 7
+TextLabel_34.Font = Enum.Font.Arial
+TextLabel_34.Text = "36R"
+TextLabel_34.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_34.TextSize = 10.000
+
+TextLabel_35.Parent = RockfordGround
+TextLabel_35.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_35.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_35.BackgroundTransparency = 1.000
+TextLabel_35.Position = UDim2.new(0.725475609, 0, 0.0820066929, 0)
+TextLabel_35.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_35.ZIndex = 7
+TextLabel_35.Font = Enum.Font.Arial
+TextLabel_35.Text = "18L"
+TextLabel_35.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_35.TextSize = 10.000
+
+TextLabel_36.Parent = RockfordGround
+TextLabel_36.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_36.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_36.BackgroundTransparency = 1.000
+TextLabel_36.Position = UDim2.new(0.593451977, 0, 0.0820066929, 0)
+TextLabel_36.Size = UDim2.new(0.0370412692, 0, 0.0300000012, 0)
+TextLabel_36.ZIndex = 7
+TextLabel_36.Font = Enum.Font.Arial
+TextLabel_36.Text = "18R"
+TextLabel_36.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_36.TextSize = 10.000
+
+TokyoGround.Name = "TokyoGround"
+TokyoGround.Parent = Ground
+TokyoGround.AnchorPoint = Vector2.new(0.5, 0.5)
+TokyoGround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TokyoGround.BackgroundTransparency = 1.000
+TokyoGround.Position = UDim2.new(0.428000003, -1, 0.147499993, 0)
+TokyoGround.Size = UDim2.new(0.0399999991, 21, 0.0390000008, 1)
+TokyoGround.ZIndex = 3
+TokyoGround.Image = "rbxassetid://13321694110"
+TokyoGround.ScaleType = Enum.ScaleType.Crop
+
+TextLabel_37.Parent = TokyoGround
+TextLabel_37.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_37.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_37.BackgroundTransparency = 1.000
+TextLabel_37.Position = UDim2.new(0.670545876, 0, 0.681579828, 0)
+TextLabel_37.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_37.ZIndex = 7
+TextLabel_37.Font = Enum.Font.Arial
+TextLabel_37.Text = "F"
+TextLabel_37.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_37.TextSize = 10.000
+
+TextLabel_38.Parent = TokyoGround
+TextLabel_38.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_38.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_38.BackgroundTransparency = 1.000
+TextLabel_38.Position = UDim2.new(0.662233353, 0, 0.710673749, 0)
+TextLabel_38.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_38.ZIndex = 7
+TextLabel_38.Font = Enum.Font.Arial
+TextLabel_38.Text = "E"
+TextLabel_38.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_38.TextSize = 10.000
+
+TextLabel_39.Parent = TokyoGround
+TextLabel_39.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_39.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_39.BackgroundTransparency = 1.000
+TextLabel_39.Position = UDim2.new(0.914464153, 0, 0.407265604, 0)
+TextLabel_39.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_39.ZIndex = 7
+TextLabel_39.Font = Enum.Font.Arial
+TextLabel_39.Text = "D5"
+TextLabel_39.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_39.TextSize = 10.000
+
+TextLabel_40.Parent = TokyoGround
+TextLabel_40.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_40.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_40.BackgroundTransparency = 1.000
+TextLabel_40.Position = UDim2.new(0.883984782, 0, 0.509787083, 0)
+TextLabel_40.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_40.ZIndex = 7
+TextLabel_40.Font = Enum.Font.Arial
+TextLabel_40.Text = "D4"
+TextLabel_40.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_40.TextSize = 10.000
+
+TextLabel_41.Parent = TokyoGround
+TextLabel_41.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_41.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_41.BackgroundTransparency = 1.000
+TextLabel_41.Position = UDim2.new(0.793546727, 0, 0.760549068, 0)
+TextLabel_41.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_41.ZIndex = 7
+TextLabel_41.Font = Enum.Font.Arial
+TextLabel_41.Text = "D3"
+TextLabel_41.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_41.TextSize = 10.000
+
+TextLabel_42.Parent = TokyoGround
+TextLabel_42.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_42.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_42.BackgroundTransparency = 1.000
+TextLabel_42.Position = UDim2.new(0.803546727, 0, 0.78964299, 0)
+TextLabel_42.Size = UDim2.new(0.0289999993, 0, 0.0299999993, 0)
+TextLabel_42.ZIndex = 7
+TextLabel_42.Font = Enum.Font.Arial
+TextLabel_42.Text = "D2"
+TextLabel_42.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_42.TextSize = 10.000
+
+TextLabel_43.Parent = TokyoGround
+TextLabel_43.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_43.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_43.BackgroundTransparency = 1.000
+TextLabel_43.Position = UDim2.new(0.745647706, 0, 0.922735095, 0)
+TextLabel_43.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_43.ZIndex = 7
+TextLabel_43.Font = Enum.Font.Arial
+TextLabel_43.Text = "D1"
+TextLabel_43.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_43.TextSize = 10.000
+
+TextLabel_44.Parent = TokyoGround
+TextLabel_44.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_44.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_44.BackgroundTransparency = 1.000
+TextLabel_44.Position = UDim2.new(0.804212203, 0, 0.680466533, 0)
+TextLabel_44.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_44.ZIndex = 7
+TextLabel_44.Font = Enum.Font.Arial
+TextLabel_44.Text = "D"
+TextLabel_44.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_44.TextSize = 10.000
+
+TextLabel_45.Parent = TokyoGround
+TextLabel_45.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_45.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_45.BackgroundTransparency = 1.000
+TextLabel_45.Position = UDim2.new(0.757882118, 0, 0.864947617, 0)
+TextLabel_45.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_45.ZIndex = 7
+TextLabel_45.Font = Enum.Font.Arial
+TextLabel_45.Text = "D"
+TextLabel_45.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_45.TextSize = 10.000
+
+TextLabel_46.Parent = TokyoGround
+TextLabel_46.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_46.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_46.BackgroundTransparency = 1.000
+TextLabel_46.Position = UDim2.new(0.726900578, 0, 0.85931462, 0)
+TextLabel_46.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_46.ZIndex = 7
+TextLabel_46.Font = Enum.Font.Arial
+TextLabel_46.Text = "C"
+TextLabel_46.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_46.TextSize = 10.000
+
+TextLabel_47.Parent = TokyoGround
+TextLabel_47.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_47.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_47.BackgroundTransparency = 1.000
+TextLabel_47.Position = UDim2.new(0.763372889, 0, 0.759328723, 0)
+TextLabel_47.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_47.ZIndex = 7
+TextLabel_47.Font = Enum.Font.Arial
+TextLabel_47.Text = "C3"
+TextLabel_47.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_47.TextSize = 10.000
+
+TextLabel_48.Parent = TokyoGround
+TextLabel_48.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_48.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_48.BackgroundTransparency = 1.000
+TextLabel_48.Position = UDim2.new(0.747882118, 0, 0.779044271, 0)
+TextLabel_48.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_48.ZIndex = 7
+TextLabel_48.Font = Enum.Font.Arial
+TextLabel_48.Text = "C2"
+TextLabel_48.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_48.TextSize = 10.000
+
+TextLabel_49.Parent = TokyoGround
+TextLabel_49.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_49.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_49.BackgroundTransparency = 1.000
+TextLabel_49.Position = UDim2.new(0.742391348, 0, 0.759328723, 0)
+TextLabel_49.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_49.ZIndex = 7
+TextLabel_49.Font = Enum.Font.Arial
+TextLabel_49.Text = "C"
+TextLabel_49.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_49.TextSize = 10.000
+
+TextLabel_50.Parent = TokyoGround
+TextLabel_50.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_50.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_50.BackgroundTransparency = 1.000
+TextLabel_50.Position = UDim2.new(0.78745544, 0, 0.779044211, 0)
+TextLabel_50.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_50.ZIndex = 7
+TextLabel_50.Font = Enum.Font.Arial
+TextLabel_50.Text = "D"
+TextLabel_50.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_50.TextSize = 10.000
+
+TextLabel_51.Parent = TokyoGround
+TextLabel_51.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_51.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_51.BackgroundTransparency = 1.000
+TextLabel_51.Position = UDim2.new(0.649446726, 0, 0.563581645, 0)
+TextLabel_51.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_51.ZIndex = 7
+TextLabel_51.Font = Enum.Font.Arial
+TextLabel_51.Text = "B1"
+TextLabel_51.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_51.TextSize = 10.000
+
+TextLabel_52.Parent = TokyoGround
+TextLabel_52.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_52.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_52.BackgroundTransparency = 1.000
+TextLabel_52.Position = UDim2.new(0.584667087, 0, 0.522742331, 0)
+TextLabel_52.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_52.ZIndex = 7
+TextLabel_52.Font = Enum.Font.Arial
+TextLabel_52.Text = "B2"
+TextLabel_52.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_52.TextSize = 10.000
+
+TextLabel_53.Parent = TokyoGround
+TextLabel_53.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_53.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_53.BackgroundTransparency = 1.000
+TextLabel_53.Position = UDim2.new(0.567768097, 0, 0.498802036, 0)
+TextLabel_53.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_53.ZIndex = 7
+TextLabel_53.Font = Enum.Font.Arial
+TextLabel_53.Text = "B3"
+TextLabel_53.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_53.TextSize = 10.000
+
+TextLabel_54.Parent = TokyoGround
+TextLabel_54.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_54.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_54.BackgroundTransparency = 1.000
+TextLabel_54.Position = UDim2.new(0.552277327, 0, 0.49176079, 0)
+TextLabel_54.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_54.ZIndex = 7
+TextLabel_54.Font = Enum.Font.Arial
+TextLabel_54.Text = "B4"
+TextLabel_54.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_54.TextSize = 10.000
+
+TextLabel_55.Parent = TokyoGround
+TextLabel_55.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_55.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_55.BackgroundTransparency = 1.000
+TextLabel_55.Position = UDim2.new(0.533970058, 0, 0.479086518, 0)
+TextLabel_55.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_55.ZIndex = 7
+TextLabel_55.Font = Enum.Font.Arial
+TextLabel_55.Text = "B4N"
+TextLabel_55.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_55.TextSize = 10.000
+
+TextLabel_56.Parent = TokyoGround
+TextLabel_56.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_56.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_56.BackgroundTransparency = 1.000
+TextLabel_56.Position = UDim2.new(0.512846291, 0, 0.467820495, 0)
+TextLabel_56.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_56.ZIndex = 7
+TextLabel_56.Font = Enum.Font.Arial
+TextLabel_56.Text = "B5"
+TextLabel_56.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_56.TextSize = 10.000
+
+TextLabel_57.Parent = TokyoGround
+TextLabel_57.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_57.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_57.BackgroundTransparency = 1.000
+TextLabel_57.Position = UDim2.new(0.480456501, 0, 0.426981181, 0)
+TextLabel_57.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_57.ZIndex = 7
+TextLabel_57.Font = Enum.Font.Arial
+TextLabel_57.Text = "B6N"
+TextLabel_57.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_57.TextSize = 10.000
+
+TextLabel_58.Parent = TokyoGround
+TextLabel_58.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_58.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_58.BackgroundTransparency = 1.000
+TextLabel_58.Position = UDim2.new(0.512846291, 0, 0.448104948, 0)
+TextLabel_58.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_58.ZIndex = 7
+TextLabel_58.Font = Enum.Font.Arial
+TextLabel_58.Text = "B6"
+TextLabel_58.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_58.TextSize = 10.000
+
+TextLabel_59.Parent = TokyoGround
+TextLabel_59.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_59.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_59.BackgroundTransparency = 1.000
+TextLabel_59.Position = UDim2.new(0.446658432, 0, 0.39599961, 0)
+TextLabel_59.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_59.ZIndex = 7
+TextLabel_59.Font = Enum.Font.Arial
+TextLabel_59.Text = "B7"
+TextLabel_59.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_59.TextSize = 10.000
+
+TextLabel_60.Parent = TokyoGround
+TextLabel_60.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_60.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_60.BackgroundTransparency = 1.000
+TextLabel_60.Position = UDim2.new(0.426942885, 0, 0.386141837, 0)
+TextLabel_60.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_60.ZIndex = 7
+TextLabel_60.Font = Enum.Font.Arial
+TextLabel_60.Text = "B7N"
+TextLabel_60.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_60.TextSize = 10.000
+
+TextLabel_61.Parent = TokyoGround
+TextLabel_61.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_61.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_61.BackgroundTransparency = 1.000
+TextLabel_61.Position = UDim2.new(0.369204521, 0, 0.336852998, 0)
+TextLabel_61.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_61.ZIndex = 7
+TextLabel_61.Font = Enum.Font.Arial
+TextLabel_61.Text = "B8"
+TextLabel_61.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_61.TextSize = 10.000
+
+TextLabel_62.Parent = TokyoGround
+TextLabel_62.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_62.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_62.BackgroundTransparency = 1.000
+TextLabel_62.Position = UDim2.new(0.305833161, 0, 0.294605434, 0)
+TextLabel_62.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_62.ZIndex = 7
+TextLabel_62.Font = Enum.Font.Arial
+TextLabel_62.Text = "B10"
+TextLabel_62.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_62.TextSize = 10.000
+
+TextLabel_63.Parent = TokyoGround
+TextLabel_63.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_63.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_63.BackgroundTransparency = 1.000
+TextLabel_63.Position = UDim2.new(0.262177348, 0, 0.246724844, 0)
+TextLabel_63.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_63.ZIndex = 7
+TextLabel_63.Font = Enum.Font.Arial
+TextLabel_63.Text = "B11"
+TextLabel_63.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_63.TextSize = 10.000
+
+TextLabel_64.Parent = TokyoGround
+TextLabel_64.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_64.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_64.BackgroundTransparency = 1.000
+TextLabel_64.Position = UDim2.new(0.19598949, 0, 0.188986495, 0)
+TextLabel_64.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_64.ZIndex = 7
+TextLabel_64.Font = Enum.Font.Arial
+TextLabel_64.Text = "B12"
+TextLabel_64.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_64.TextSize = 10.000
+
+TextLabel_65.Parent = TokyoGround
+TextLabel_65.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_65.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_65.BackgroundTransparency = 1.000
+TextLabel_65.Position = UDim2.new(0.163599685, 0, 0.173495725, 0)
+TextLabel_65.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_65.ZIndex = 7
+TextLabel_65.Font = Enum.Font.Arial
+TextLabel_65.Text = "B12S"
+TextLabel_65.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_65.TextSize = 10.000
+
+TextLabel_66.Parent = TokyoGround
+TextLabel_66.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_66.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_66.BackgroundTransparency = 1.000
+TextLabel_66.Position = UDim2.new(0.115719102, 0, 0.124206886, 0)
+TextLabel_66.Size = UDim2.new(0.0328165032, 0, 0.0300000012, 0)
+TextLabel_66.ZIndex = 7
+TextLabel_66.Font = Enum.Font.Arial
+TextLabel_66.Text = "B13"
+TextLabel_66.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_66.TextSize = 10.000
+
+TextLabel_67.Parent = TokyoGround
+TextLabel_67.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_67.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_67.BackgroundTransparency = 1.000
+TextLabel_67.Position = UDim2.new(0.618465185, 0, 0.60442096, 0)
+TextLabel_67.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_67.ZIndex = 7
+TextLabel_67.Font = Enum.Font.Arial
+TextLabel_67.Text = "A1"
+TextLabel_67.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_67.TextSize = 10.000
+
+TextLabel_68.Parent = TokyoGround
+TextLabel_68.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_68.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_68.BackgroundTransparency = 1.000
+TextLabel_68.Position = UDim2.new(0.564951599, 0, 0.552315593, 0)
+TextLabel_68.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_68.ZIndex = 7
+TextLabel_68.Font = Enum.Font.Arial
+TextLabel_68.Text = "A2"
+TextLabel_68.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_68.TextSize = 10.000
+
+TextLabel_69.Parent = TokyoGround
+TextLabel_69.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_69.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_69.BackgroundTransparency = 1.000
+TextLabel_69.Position = UDim2.new(0.543827772, 0, 0.539641321, 0)
+TextLabel_69.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_69.ZIndex = 7
+TextLabel_69.Font = Enum.Font.Arial
+TextLabel_69.Text = "A3"
+TextLabel_69.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_69.TextSize = 10.000
+
+TextLabel_70.Parent = TokyoGround
+TextLabel_70.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_70.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_70.BackgroundTransparency = 1.000
+TextLabel_70.Position = UDim2.new(0.49876368, 0, 0.497393757, 0)
+TextLabel_70.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_70.ZIndex = 7
+TextLabel_70.Font = Enum.Font.Arial
+TextLabel_70.Text = "A5"
+TextLabel_70.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_70.TextSize = 10.000
+
+TextLabel_71.Parent = TokyoGround
+TextLabel_71.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_71.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_71.BackgroundTransparency = 1.000
+TextLabel_71.Position = UDim2.new(0.481864661, 0, 0.479086488, 0)
+TextLabel_71.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_71.ZIndex = 7
+TextLabel_71.Font = Enum.Font.Arial
+TextLabel_71.Text = "A6"
+TextLabel_71.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_71.TextSize = 10.000
+
+TextLabel_72.Parent = TokyoGround
+TextLabel_72.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_72.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_72.BackgroundTransparency = 1.000
+TextLabel_72.Position = UDim2.new(0.445250094, 0, 0.456554443, 0)
+TextLabel_72.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_72.ZIndex = 7
+TextLabel_72.Font = Enum.Font.Arial
+TextLabel_72.Text = "A7"
+TextLabel_72.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_72.TextSize = 10.000
+
+TextLabel_73.Parent = TokyoGround
+TextLabel_73.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_73.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_73.BackgroundTransparency = 1.000
+TextLabel_73.Position = UDim2.new(0.445250094, 0, 0.456554443, 0)
+TextLabel_73.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_73.ZIndex = 7
+TextLabel_73.Font = Enum.Font.Arial
+TextLabel_73.Text = "A7"
+TextLabel_73.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_73.TextSize = 10.000
+
+TextLabel_74.Parent = TokyoGround
+TextLabel_74.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_74.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_74.BackgroundTransparency = 1.000
+TextLabel_74.Position = UDim2.new(0.425534546, 0, 0.436838895, 0)
+TextLabel_74.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_74.ZIndex = 7
+TextLabel_74.Font = Enum.Font.Arial
+TextLabel_74.Text = "A7N"
+TextLabel_74.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_74.TextSize = 10.000
+
+TextLabel_75.Parent = TokyoGround
+TextLabel_75.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_75.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_75.BackgroundTransparency = 1.000
+TextLabel_75.Position = UDim2.new(0.352305412, 0, 0.386141807, 0)
+TextLabel_75.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_75.ZIndex = 7
+TextLabel_75.Font = Enum.Font.Arial
+TextLabel_75.Text = "A8"
+TextLabel_75.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_75.TextSize = 10.000
+
+TextLabel_76.Parent = TokyoGround
+TextLabel_76.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_76.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_76.BackgroundTransparency = 1.000
+TextLabel_76.Position = UDim2.new(0.26076901, 0, 0.315729201, 0)
+TextLabel_76.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_76.ZIndex = 7
+TextLabel_76.Font = Enum.Font.Arial
+TextLabel_76.Text = "A10"
+TextLabel_76.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_76.TextSize = 10.000
+
+TextLabel_77.Parent = TokyoGround
+TextLabel_77.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_77.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_77.BackgroundTransparency = 1.000
+TextLabel_77.Position = UDim2.new(0.218521446, 0, 0.276298136, 0)
+TextLabel_77.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_77.ZIndex = 7
+TextLabel_77.Font = Enum.Font.Arial
+TextLabel_77.Text = "A11"
+TextLabel_77.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_77.TextSize = 10.000
+
+TextLabel_78.Parent = TokyoGround
+TextLabel_78.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_78.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_78.BackgroundTransparency = 1.000
+TextLabel_78.Position = UDim2.new(0.146700576, 0, 0.218559787, 0)
+TextLabel_78.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_78.ZIndex = 7
+TextLabel_78.Font = Enum.Font.Arial
+TextLabel_78.Text = "A12"
+TextLabel_78.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_78.TextSize = 10.000
+
+TextLabel_79.Parent = TokyoGround
+TextLabel_79.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_79.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_79.BackgroundTransparency = 1.000
+TextLabel_79.Position = UDim2.new(0.0720632002, 0, 0.17349571, 0)
+TextLabel_79.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_79.ZIndex = 7
+TextLabel_79.Font = Enum.Font.Arial
+TextLabel_79.Text = "A13"
+TextLabel_79.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_79.TextSize = 10.000
+
+TextLabel_80.Parent = TokyoGround
+TextLabel_80.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_80.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_80.BackgroundTransparency = 1.000
+TextLabel_80.Position = UDim2.new(0.226970971, 0, 0.305871427, 0)
+TextLabel_80.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_80.ZIndex = 7
+TextLabel_80.Font = Enum.Font.Arial
+TextLabel_80.Text = "A"
+TextLabel_80.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_80.TextSize = 10.000
+
+TextLabel_81.Parent = TokyoGround
+TextLabel_81.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_81.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_81.BackgroundTransparency = 1.000
+TextLabel_81.Position = UDim2.new(0.414268523, 0, 0.467820466, 0)
+TextLabel_81.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_81.ZIndex = 7
+TextLabel_81.Font = Enum.Font.Arial
+TextLabel_81.Text = "A"
+TextLabel_81.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_81.TextSize = 10.000
+
+TextLabel_82.Parent = TokyoGround
+TextLabel_82.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_82.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_82.BackgroundTransparency = 1.000
+TextLabel_82.Position = UDim2.new(0.501580179, 0, 0.526967049, 0)
+TextLabel_82.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_82.ZIndex = 7
+TextLabel_82.Font = Enum.Font.Arial
+TextLabel_82.Text = "A"
+TextLabel_82.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_82.TextSize = 10.000
+
+TextLabel_83.Parent = TokyoGround
+TextLabel_83.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_83.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_83.BackgroundTransparency = 1.000
+TextLabel_83.Position = UDim2.new(0.394553006, 0, 0.385999581, 0)
+TextLabel_83.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_83.ZIndex = 7
+TextLabel_83.Font = Enum.Font.Arial
+TextLabel_83.Text = "B"
+TextLabel_83.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_83.TextSize = 10.000
+
+TextLabel_84.Parent = TokyoGround
+TextLabel_84.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_84.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_84.BackgroundTransparency = 1.000
+TextLabel_84.Position = UDim2.new(0.117127284, 0, 0.153495695, 0)
+TextLabel_84.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_84.ZIndex = 7
+TextLabel_84.Font = Enum.Font.Arial
+TextLabel_84.Text = "B"
+TextLabel_84.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_84.TextSize = 10.000
+
+TextLabel_85.Parent = TokyoGround
+TextLabel_85.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_85.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_85.BackgroundTransparency = 1.000
+TextLabel_85.Position = UDim2.new(0.598749638, 0, 0.563581586, 0)
+TextLabel_85.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_85.ZIndex = 7
+TextLabel_85.Font = Enum.Font.Arial
+TextLabel_85.Text = "B"
+TextLabel_85.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_85.TextSize = 10.000
+
+TextLabel_86.Parent = TokyoGround
+TextLabel_86.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_86.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_86.BackgroundTransparency = 1.000
+TextLabel_86.Position = UDim2.new(0.631114781, 0, 0.633699238, 0)
+TextLabel_86.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_86.ZIndex = 7
+TextLabel_86.Font = Enum.Font.Arial
+TextLabel_86.Text = "FS"
+TextLabel_86.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_86.TextSize = 10.000
+
+TextLabel_87.Parent = TokyoGround
+TextLabel_87.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_87.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_87.BackgroundTransparency = 1.000
+TextLabel_87.Position = UDim2.new(0.573401093, 0, 0.593154907, 0)
+TextLabel_87.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_87.ZIndex = 7
+TextLabel_87.Font = Enum.Font.Arial
+TextLabel_87.Text = "A"
+TextLabel_87.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_87.TextSize = 10.000
+
+TextLabel_88.Parent = TokyoGround
+TextLabel_88.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_88.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_88.BackgroundTransparency = 1.000
+TextLabel_88.Position = UDim2.new(0.0847374722, 0, 0.203069001, 0)
+TextLabel_88.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_88.ZIndex = 7
+TextLabel_88.Font = Enum.Font.Arial
+TextLabel_88.Text = "A"
+TextLabel_88.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_88.TextSize = 10.000
+
+TextLabel_89.Parent = TokyoGround
+TextLabel_89.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_89.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_89.BackgroundTransparency = 1.000
+TextLabel_89.Position = UDim2.new(0.0410816446, 0, 0.218559787, 0)
+TextLabel_89.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_89.ZIndex = 7
+TextLabel_89.Font = Enum.Font.Arial
+TextLabel_89.Text = "A14"
+TextLabel_89.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_89.TextSize = 10.000
+
+TextLabel_90.Parent = TokyoGround
+TextLabel_90.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_90.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_90.BackgroundTransparency = 1.000
+TextLabel_90.Position = UDim2.new(0.394553006, 0, 0.522742331, 0)
+TextLabel_90.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_90.ZIndex = 7
+TextLabel_90.Font = Enum.Font.Arial
+TextLabel_90.Text = "A7"
+TextLabel_90.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_90.TextSize = 10.000
+
+TextLabel_91.Parent = TokyoGround
+TextLabel_91.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_91.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_91.BackgroundTransparency = 1.000
+TextLabel_91.Position = UDim2.new(0.680428267, 0, 0.573439419, 0)
+TextLabel_91.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_91.ZIndex = 7
+TextLabel_91.Font = Enum.Font.Arial
+TextLabel_91.Text = "31"
+TextLabel_91.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_91.TextSize = 10.000
+
+TextLabel_92.Parent = TokyoGround
+TextLabel_92.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_92.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_92.BackgroundTransparency = 1.000
+TextLabel_92.Position = UDim2.new(0.101636529, 0, 0.101674855, 0)
+TextLabel_92.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_92.ZIndex = 7
+TextLabel_92.Font = Enum.Font.Arial
+TextLabel_92.Text = "13"
+TextLabel_92.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_92.TextSize = 10.000
+
+TextLabel_93.Parent = TokyoGround
+TextLabel_93.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_93.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_93.BackgroundTransparency = 1.000
+TextLabel_93.Position = UDim2.new(0.955037475, 0, 0.39599961, 0)
+TextLabel_93.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_93.ZIndex = 7
+TextLabel_93.Font = Enum.Font.Arial
+TextLabel_93.Text = "20"
+TextLabel_93.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_93.TextSize = 10.000
+
+TextLabel_94.Parent = TokyoGround
+TextLabel_94.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_94.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_94.BackgroundTransparency = 1.000
+TextLabel_94.Position = UDim2.new(0.748024344, 0, 0.98746562, 0)
+TextLabel_94.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_94.ZIndex = 7
+TextLabel_94.Font = Enum.Font.Arial
+TextLabel_94.Text = "02"
+TextLabel_94.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_94.TextSize = 10.000
+
+print("Creaded TKO Grounds")
+
+PerthGround.Name = "PerthGround"
+PerthGround.Parent = Ground
+PerthGround.AnchorPoint = Vector2.new(0.497999996, 0.50999999)
+PerthGround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PerthGround.BackgroundTransparency = 1.000
+PerthGround.Position = UDim2.new(0.697000027, 0, 0.273999989, 0)
+PerthGround.Size = UDim2.new(0.0340000018, 0, 0.0240000002, 0)
+PerthGround.ZIndex = 3
+PerthGround.Image = "rbxassetid://13321764693"
+PerthGround.ScaleType = Enum.ScaleType.Crop
+
+TextLabel_95.Parent = PerthGround
+TextLabel_95.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_95.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_95.BackgroundTransparency = 1.000
+TextLabel_95.Position = UDim2.new(0.435023546, 0, 0.66079843, 0)
+TextLabel_95.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_95.ZIndex = 7
+TextLabel_95.Font = Enum.Font.Arial
+TextLabel_95.Text = "D"
+TextLabel_95.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_95.TextSize = 10.000
+
+TextLabel_96.Parent = PerthGround
+TextLabel_96.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_96.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_96.BackgroundTransparency = 1.000
+TextLabel_96.Position = UDim2.new(0.511221945, 0, 0.742192149, 0)
+TextLabel_96.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_96.ZIndex = 7
+TextLabel_96.Font = Enum.Font.Arial
+TextLabel_96.Text = "D"
+TextLabel_96.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_96.TextSize = 10.000
+
+TextLabel_97.Parent = PerthGround
+TextLabel_97.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_97.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_97.BackgroundTransparency = 1.000
+TextLabel_97.Position = UDim2.new(0.568024337, 0, 0.892857194, 0)
+TextLabel_97.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_97.ZIndex = 7
+TextLabel_97.Font = Enum.Font.Arial
+TextLabel_97.Text = "D"
+TextLabel_97.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_97.TextSize = 10.000
+
+TextLabel_98.Parent = PerthGround
+TextLabel_98.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_98.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_98.BackgroundTransparency = 1.000
+TextLabel_98.Position = UDim2.new(0.329731226, 0, 0.629626393, 0)
+TextLabel_98.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_98.ZIndex = 7
+TextLabel_98.Font = Enum.Font.Arial
+TextLabel_98.Text = "D"
+TextLabel_98.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_98.TextSize = 10.000
+
+TextLabel_99.Parent = PerthGround
+TextLabel_99.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_99.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_99.BackgroundTransparency = 1.000
+TextLabel_99.Position = UDim2.new(0.254918247, 0, 0.579404712, 0)
+TextLabel_99.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_99.ZIndex = 7
+TextLabel_99.Font = Enum.Font.Arial
+TextLabel_99.Text = "D"
+TextLabel_99.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_99.TextSize = 10.000
+
+TextLabel_100.Parent = PerthGround
+TextLabel_100.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_100.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_100.BackgroundTransparency = 1.000
+TextLabel_100.Position = UDim2.new(0.114990294, 0, 0.513597012, 0)
+TextLabel_100.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_100.ZIndex = 7
+TextLabel_100.Font = Enum.Font.Arial
+TextLabel_100.Text = "F"
+TextLabel_100.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_100.TextSize = 10.000
+
+TextLabel_101.Parent = PerthGround
+TextLabel_101.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_101.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_101.BackgroundTransparency = 1.000
+TextLabel_101.Position = UDim2.new(0.299251854, 0, 0.659066677, 0)
+TextLabel_101.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_101.ZIndex = 7
+TextLabel_101.Font = Enum.Font.Arial
+TextLabel_101.Text = "G1"
+TextLabel_101.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_101.TextSize = 10.000
+
+TextLabel_102.Parent = PerthGround
+TextLabel_102.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_102.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_102.BackgroundTransparency = 1.000
+TextLabel_102.Position = UDim2.new(0.224438876, 0, 0.659066677, 0)
+TextLabel_102.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_102.ZIndex = 7
+TextLabel_102.Font = Enum.Font.Arial
+TextLabel_102.Text = "G2"
+TextLabel_102.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_102.TextSize = 10.000
+
+TextLabel_103.Parent = PerthGround
+TextLabel_103.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_103.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_103.BackgroundTransparency = 1.000
+TextLabel_103.Position = UDim2.new(0.268772483, 0, 0.340418845, 0)
+TextLabel_103.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_103.ZIndex = 7
+TextLabel_103.Font = Enum.Font.Arial
+TextLabel_103.Text = "B"
+TextLabel_103.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_103.TextSize = 10.000
+
+TextLabel_104.Parent = PerthGround
+TextLabel_104.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_104.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_104.BackgroundTransparency = 1.000
+TextLabel_104.Position = UDim2.new(0.224438876, 0, 0.499742746, 0)
+TextLabel_104.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_104.ZIndex = 7
+TextLabel_104.Font = Enum.Font.Arial
+TextLabel_104.Text = "B"
+TextLabel_104.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_104.TextSize = 10.000
+
+TextLabel_105.Parent = PerthGround
+TextLabel_105.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_105.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_105.BackgroundTransparency = 1.000
+TextLabel_105.Position = UDim2.new(0.311720699, 0, 0.198412746, 0)
+TextLabel_105.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_105.ZIndex = 7
+TextLabel_105.Font = Enum.Font.Arial
+TextLabel_105.Text = "B"
+TextLabel_105.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_105.TextSize = 10.000
+
+TextLabel_106.Parent = PerthGround
+TextLabel_106.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_106.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_106.BackgroundTransparency = 1.000
+TextLabel_106.Position = UDim2.new(0.633139372, 0, 0.468570679, 0)
+TextLabel_106.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_106.ZIndex = 7
+TextLabel_106.Font = Enum.Font.Arial
+TextLabel_106.Text = "C"
+TextLabel_106.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_106.TextSize = 10.000
+
+TextLabel_107.Parent = PerthGround
+TextLabel_107.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_107.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_107.BackgroundTransparency = 1.000
+TextLabel_107.Position = UDim2.new(0.804932117, 0, 0.563818693, 0)
+TextLabel_107.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_107.ZIndex = 7
+TextLabel_107.Font = Enum.Font.Arial
+TextLabel_107.Text = "C"
+TextLabel_107.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_107.TextSize = 10.000
+
+TextLabel_108.Parent = PerthGround
+TextLabel_108.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_108.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_108.BackgroundTransparency = 1.000
+TextLabel_108.Position = UDim2.new(0.498753101, 0, 0.406226546, 0)
+TextLabel_108.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_108.ZIndex = 7
+TextLabel_108.Font = Enum.Font.Arial
+TextLabel_108.Text = "C"
+TextLabel_108.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_108.TextSize = 10.000
+
+TextLabel_109.Parent = PerthGround
+TextLabel_109.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_109.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_109.BackgroundTransparency = 1.000
+TextLabel_109.Position = UDim2.new(0.329731226, 0, 0.313101044, 0)
+TextLabel_109.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_109.ZIndex = 7
+TextLabel_109.Font = Enum.Font.Arial
+TextLabel_109.Text = "C"
+TextLabel_109.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_109.TextSize = 10.000
+
+TextLabel_110.Parent = PerthGround
+TextLabel_110.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_110.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_110.BackgroundTransparency = 1.000
+TextLabel_110.Position = UDim2.new(0.385148287, 0, 0.406226546, 0)
+TextLabel_110.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_110.ZIndex = 7
+TextLabel_110.Font = Enum.Font.Arial
+TextLabel_110.Text = "C1"
+TextLabel_110.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_110.TextSize = 10.000
+
+TextLabel_111.Parent = PerthGround
+TextLabel_111.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_111.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_111.BackgroundTransparency = 1.000
+TextLabel_111.Position = UDim2.new(0.568024397, 0, 0.482424945, 0)
+TextLabel_111.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_111.ZIndex = 7
+TextLabel_111.Font = Enum.Font.Arial
+TextLabel_111.Text = "C2"
+TextLabel_111.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_111.TextSize = 10.000
+
+TextLabel_112.Parent = PerthGround
+TextLabel_112.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_112.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_112.BackgroundTransparency = 1.000
+TextLabel_112.Position = UDim2.new(0.73150456, 0, 0.579404712, 0)
+TextLabel_112.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_112.ZIndex = 7
+TextLabel_112.Font = Enum.Font.Arial
+TextLabel_112.Text = "C3"
+TextLabel_112.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_112.TextSize = 10.000
+
+TextLabel_113.Parent = PerthGround
+TextLabel_113.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_113.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_113.BackgroundTransparency = 1.000
+TextLabel_113.Position = UDim2.new(0.834026039, 0, 0.62789458, 0)
+TextLabel_113.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_113.ZIndex = 7
+TextLabel_113.Font = Enum.Font.Arial
+TextLabel_113.Text = "C4"
+TextLabel_113.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_113.TextSize = 10.000
+
+TextLabel_114.Parent = PerthGround
+TextLabel_114.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_114.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_114.BackgroundTransparency = 1.000
+TextLabel_114.Position = UDim2.new(0.962870598, 0, 0.690238714, 0)
+TextLabel_114.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_114.ZIndex = 7
+TextLabel_114.Font = Enum.Font.Arial
+TextLabel_114.Text = "C5"
+TextLabel_114.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_114.TextSize = 10.000
+
+TextLabel_115.Parent = PerthGround
+TextLabel_115.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_115.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_115.BackgroundTransparency = 1.000
+TextLabel_115.Position = UDim2.new(0.396231622, 0, 0.52918303, 0)
+TextLabel_115.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_115.ZIndex = 7
+TextLabel_115.Font = Enum.Font.Arial
+TextLabel_115.Text = "A1"
+TextLabel_115.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_115.TextSize = 10.000
+
+TextLabel_116.Parent = PerthGround
+TextLabel_116.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_116.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_116.BackgroundTransparency = 1.000
+TextLabel_116.Position = UDim2.new(0.577722311, 0, 0.598844995, 0)
+TextLabel_116.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_116.ZIndex = 7
+TextLabel_116.Font = Enum.Font.Arial
+TextLabel_116.Text = "A2"
+TextLabel_116.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_116.TextSize = 10.000
+
+TextLabel_117.Parent = PerthGround
+TextLabel_117.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_117.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_117.BackgroundTransparency = 1.000
+TextLabel_117.Position = UDim2.new(0.701025188, 0, 0.668116262, 0)
+TextLabel_117.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_117.ZIndex = 7
+TextLabel_117.Font = Enum.Font.Arial
+TextLabel_117.Text = "A3"
+TextLabel_117.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_117.TextSize = 10.000
+
+TextLabel_118.Parent = PerthGround
+TextLabel_118.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_118.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_118.BackgroundTransparency = 1.000
+TextLabel_118.Position = UDim2.new(0.804932117, 0, 0.729678998, 0)
+TextLabel_118.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_118.ZIndex = 7
+TextLabel_118.Font = Enum.Font.Arial
+TextLabel_118.Text = "A4"
+TextLabel_118.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_118.TextSize = 10.000
+
+TextLabel_119.Parent = PerthGround
+TextLabel_119.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_119.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_119.BackgroundTransparency = 1.000
+TextLabel_119.Position = UDim2.new(0.932391286, 0, 0.814145584, 0)
+TextLabel_119.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_119.ZIndex = 7
+TextLabel_119.Font = Enum.Font.Arial
+TextLabel_119.Text = "A5"
+TextLabel_119.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_119.TextSize = 10.000
+
+TextLabel_120.Parent = PerthGround
+TextLabel_120.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_120.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_120.BackgroundTransparency = 1.000
+TextLabel_120.Position = UDim2.new(0.454419494, 0, 0.598454297, 0)
+TextLabel_120.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_120.ZIndex = 7
+TextLabel_120.Font = Enum.Font.Arial
+TextLabel_120.Text = "A"
+TextLabel_120.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_120.TextSize = 10.000
+
+TextLabel_121.Parent = PerthGround
+TextLabel_121.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_121.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_121.BackgroundTransparency = 1.000
+TextLabel_121.Position = UDim2.new(0.73150456, 0, 0.740460396, 0)
+TextLabel_121.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_121.ZIndex = 7
+TextLabel_121.Font = Enum.Font.Arial
+TextLabel_121.Text = "A"
+TextLabel_121.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_121.TextSize = 10.000
+
+TextLabel_122.Parent = PerthGround
+TextLabel_122.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_122.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_122.BackgroundTransparency = 1.000
+TextLabel_122.Position = UDim2.new(0.645608187, 0, 0.769119282, 0)
+TextLabel_122.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_122.ZIndex = 7
+TextLabel_122.Font = Enum.Font.Arial
+TextLabel_122.Text = "E"
+TextLabel_122.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_122.TextSize = 10.000
+
+TextLabel_123.Parent = PerthGround
+TextLabel_123.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_123.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_123.BackgroundTransparency = 1.000
+TextLabel_123.Position = UDim2.new(0.511221945, 0, 0.66079843, 0)
+TextLabel_123.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_123.ZIndex = 7
+TextLabel_123.Font = Enum.Font.Arial
+TextLabel_123.Text = "D2"
+TextLabel_123.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_123.TextSize = 10.000
+
+TextLabel_124.Parent = PerthGround
+TextLabel_124.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_124.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_124.BackgroundTransparency = 1.000
+TextLabel_124.Position = UDim2.new(0.376835704, 0, 0.579404712, 0)
+TextLabel_124.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_124.ZIndex = 7
+TextLabel_124.Font = Enum.Font.Arial
+TextLabel_124.Text = "D1"
+TextLabel_124.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_124.TextSize = 10.000
+
+TextLabel_125.Parent = PerthGround
+TextLabel_125.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_125.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_125.BackgroundTransparency = 1.000
+TextLabel_125.Position = UDim2.new(0.376835704, 0, 0.579404712, 0)
+TextLabel_125.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_125.ZIndex = 7
+TextLabel_125.Font = Enum.Font.Arial
+TextLabel_125.Text = "D1"
+TextLabel_125.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_125.TextSize = 10.000
+
+TextLabel_126.Parent = PerthGround
+TextLabel_126.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_126.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_126.BackgroundTransparency = 1.000
+TextLabel_126.Position = UDim2.new(0.971183181, 0, 0.766437113, 0)
+TextLabel_126.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_126.ZIndex = 7
+TextLabel_126.Font = Enum.Font.Arial
+TextLabel_126.Text = "29"
+TextLabel_126.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_126.TextSize = 10.000
+
+TextLabel_127.Parent = PerthGround
+TextLabel_127.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_127.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_127.BackgroundTransparency = 1.000
+TextLabel_127.Position = UDim2.new(0.223053485, 0, 0.387176931, 0)
+TextLabel_127.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_127.ZIndex = 7
+TextLabel_127.Font = Enum.Font.Arial
+TextLabel_127.Text = "11"
+TextLabel_127.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_127.TextSize = 10.000
+
+TextLabel_128.Parent = PerthGround
+TextLabel_128.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_128.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_128.BackgroundTransparency = 1.000
+TextLabel_128.Position = UDim2.new(0.311720699, 0, 0.097969383, 0)
+TextLabel_128.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_128.ZIndex = 7
+TextLabel_128.Font = Enum.Font.Arial
+TextLabel_128.Text = "15"
+TextLabel_128.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_128.TextSize = 10.000
+
+TextLabel_129.Parent = PerthGround
+TextLabel_129.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_129.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_129.BackgroundTransparency = 1.000
+TextLabel_129.Position = UDim2.new(0.615128875, 0, 0.807999849, 0)
+TextLabel_129.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_129.ZIndex = 7
+TextLabel_129.Font = Enum.Font.Arial
+TextLabel_129.Text = "33"
+TextLabel_129.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_129.TextSize = 10.000
+
+print("Creaded Perth Ground")
+
+
+LarnacaGround.Name = "LarnacaGround"
+LarnacaGround.Parent = Ground
+LarnacaGround.AnchorPoint = Vector2.new(0.0439999998, 0.0399999991)
+LarnacaGround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LarnacaGround.BackgroundTransparency = 1.000
+LarnacaGround.Position = UDim2.new(0.72299999, 0, 0.846000016, 0)
+LarnacaGround.Size = UDim2.new(0.0219999999, 10, 0.0170000009, -1)
+LarnacaGround.ZIndex = 3
+LarnacaGround.Image = "rbxassetid://13321819117"
+LarnacaGround.ScaleType = Enum.ScaleType.Crop
+
+TextLabel_130.Parent = LarnacaGround
+TextLabel_130.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_130.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_130.BackgroundTransparency = 1.000
+TextLabel_130.Position = UDim2.new(0.291381806, 0, 0.546260536, 0)
+TextLabel_130.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_130.ZIndex = 7
+TextLabel_130.Font = Enum.Font.Arial
+TextLabel_130.Text = "D"
+TextLabel_130.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_130.TextSize = 10.000
+
+TextLabel_131.Parent = LarnacaGround
+TextLabel_131.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_131.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_131.BackgroundTransparency = 1.000
+TextLabel_131.Position = UDim2.new(0.0421211347, 0, 0.61948967, 0)
+TextLabel_131.Size = UDim2.new(0.0300000031, 0, 0.0300000012, 0)
+TextLabel_131.ZIndex = 7
+TextLabel_131.Font = Enum.Font.Arial
+TextLabel_131.Text = "D7"
+TextLabel_131.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_131.TextSize = 10.000
+
+TextLabel_132.Parent = LarnacaGround
+TextLabel_132.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_132.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_132.BackgroundTransparency = 1.000
+TextLabel_132.Position = UDim2.new(0.201253653, 0, 0.529361486, 0)
+TextLabel_132.Size = UDim2.new(0.0300000031, 0, 0.0300000012, 0)
+TextLabel_132.ZIndex = 7
+TextLabel_132.Font = Enum.Font.Arial
+TextLabel_132.Text = "D6"
+TextLabel_132.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_132.TextSize = 10.000
+
+TextLabel_133.Parent = LarnacaGround
+TextLabel_133.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_133.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_133.BackgroundTransparency = 1.000
+TextLabel_133.Position = UDim2.new(0.342078894, 0, 0.431722641, 0)
+TextLabel_133.Size = UDim2.new(0.0300000031, 0, 0.0300000012, 0)
+TextLabel_133.ZIndex = 7
+TextLabel_133.Font = Enum.Font.Arial
+TextLabel_133.Text = "D5"
+TextLabel_133.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_133.TextSize = 10.000
+
+TextLabel_134.Parent = LarnacaGround
+TextLabel_134.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_134.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_134.BackgroundTransparency = 1.000
+TextLabel_134.Position = UDim2.new(0.461780339, 0, 0.39041391, 0)
+TextLabel_134.Size = UDim2.new(0.0300000031, 0, 0.0300000012, 0)
+TextLabel_134.ZIndex = 7
+TextLabel_134.Font = Enum.Font.Arial
+TextLabel_134.Text = "D4"
+TextLabel_134.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_134.TextSize = 10.000
+
+TextLabel_135.Parent = LarnacaGround
+TextLabel_135.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_135.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_135.BackgroundTransparency = 1.000
+TextLabel_135.Position = UDim2.new(0.491353631, 0, 0.360371202, 0)
+TextLabel_135.Size = UDim2.new(0.0300000031, 0, 0.0300000012, 0)
+TextLabel_135.ZIndex = 7
+TextLabel_135.Font = Enum.Font.Arial
+TextLabel_135.Text = "D3"
+TextLabel_135.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_135.TextSize = 10.000
+
+TextLabel_136.Parent = LarnacaGround
+TextLabel_136.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_136.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_136.BackgroundTransparency = 1.000
+TextLabel_136.Position = UDim2.new(0.606830359, 0, 0.268365383, 0)
+TextLabel_136.Size = UDim2.new(0.0300000031, 0, 0.0300000012, 0)
+TextLabel_136.ZIndex = 7
+TextLabel_136.Font = Enum.Font.Arial
+TextLabel_136.Text = "D2"
+TextLabel_136.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_136.TextSize = 10.000
+
+TextLabel_137.Parent = LarnacaGround
+TextLabel_137.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_137.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_137.BackgroundTransparency = 1.000
+TextLabel_137.Position = UDim2.new(0.865948796, 0, 0.123784795, 0)
+TextLabel_137.Size = UDim2.new(0.0300000031, 0, 0.0300000012, 0)
+TextLabel_137.ZIndex = 7
+TextLabel_137.Font = Enum.Font.Arial
+TextLabel_137.Text = "D1"
+TextLabel_137.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_137.TextSize = 10.000
+
+TextLabel_138.Parent = LarnacaGround
+TextLabel_138.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_138.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_138.BackgroundTransparency = 1.000
+TextLabel_138.Position = UDim2.new(0.895522118, 0, 0.0937420726, 0)
+TextLabel_138.Size = UDim2.new(0.0300000031, 0, 0.0300000012, 0)
+TextLabel_138.ZIndex = 7
+TextLabel_138.Font = Enum.Font.Arial
+TextLabel_138.Text = "C1"
+TextLabel_138.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_138.TextSize = 10.000
+
+TextLabel_139.Parent = LarnacaGround
+TextLabel_139.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_139.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_139.BackgroundTransparency = 1.000
+TextLabel_139.Position = UDim2.new(0.834967256, 0, 0.22611779, 0)
+TextLabel_139.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_139.ZIndex = 7
+TextLabel_139.Font = Enum.Font.Arial
+TextLabel_139.Text = "C"
+TextLabel_139.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_139.TextSize = 10.000
+
+TextLabel_140.Parent = LarnacaGround
+TextLabel_140.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_140.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_140.BackgroundTransparency = 1.000
+TextLabel_140.Position = UDim2.new(0.694141984, 0, 0.267426521, 0)
+TextLabel_140.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_140.ZIndex = 7
+TextLabel_140.Font = Enum.Font.Arial
+TextLabel_140.Text = "D"
+TextLabel_140.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_140.TextSize = 10.000
+
+TextLabel_141.Parent = LarnacaGround
+TextLabel_141.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_141.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_141.BackgroundTransparency = 1.000
+TextLabel_141.Position = UDim2.new(0.558949769, 0, 0.419517756, 0)
+TextLabel_141.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_141.ZIndex = 7
+TextLabel_141.Font = Enum.Font.Arial
+TextLabel_141.Text = "C"
+TextLabel_141.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_141.TextSize = 10.000
+
+TextLabel_142.Parent = LarnacaGround
+TextLabel_142.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_142.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_142.BackgroundTransparency = 1.000
+TextLabel_142.Position = UDim2.new(0.548387885, 0, 0.365065277, 0)
+TextLabel_142.Size = UDim2.new(0.0285917539, 0, 0.0393883474, 0)
+TextLabel_142.ZIndex = 7
+TextLabel_142.Font = Enum.Font.Arial
+TextLabel_142.Text = "D"
+TextLabel_142.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_142.TextSize = 10.000
+
+TextLabel_143.Parent = LarnacaGround
+TextLabel_143.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_143.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_143.BackgroundTransparency = 1.000
+TextLabel_143.Position = UDim2.new(0.404042006, 0, 0.515278935, 0)
+TextLabel_143.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_143.ZIndex = 7
+TextLabel_143.Font = Enum.Font.Arial
+TextLabel_143.Text = "C4"
+TextLabel_143.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_143.TextSize = 10.000
+
+TextLabel_144.Parent = LarnacaGround
+TextLabel_144.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_144.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_144.BackgroundTransparency = 1.000
+TextLabel_144.Position = UDim2.new(0.474454641, 0, 0.449560493, 0)
+TextLabel_144.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_144.ZIndex = 7
+TextLabel_144.Font = Enum.Font.Arial
+TextLabel_144.Text = "C3"
+TextLabel_144.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_144.TextSize = 10.000
+
+TextLabel_145.Parent = LarnacaGround
+TextLabel_145.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_145.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_145.BackgroundTransparency = 1.000
+TextLabel_145.Position = UDim2.new(0.130841047, 0, 0.648593545, 0)
+TextLabel_145.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_145.ZIndex = 7
+TextLabel_145.Font = Enum.Font.Arial
+TextLabel_145.Text = "D"
+TextLabel_145.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_145.TextSize = 10.000
+
+TextLabel_146.Parent = LarnacaGround
+TextLabel_146.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_146.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_146.BackgroundTransparency = 1.000
+TextLabel_146.Position = UDim2.new(0.201253667, 0, 0.693657637, 0)
+TextLabel_146.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_146.ZIndex = 7
+TextLabel_146.Font = Enum.Font.Arial
+TextLabel_146.Text = "E1"
+TextLabel_146.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_146.TextSize = 10.000
+
+TextLabel_147.Parent = LarnacaGround
+TextLabel_147.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_147.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_147.BackgroundTransparency = 1.000
+TextLabel_147.Position = UDim2.new(0.0843687207, 0, 0.768764436, 0)
+TextLabel_147.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_147.ZIndex = 7
+TextLabel_147.Font = Enum.Font.Arial
+TextLabel_147.Text = "E2"
+TextLabel_147.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_147.TextSize = 10.000
+
+TextLabel_148.Parent = LarnacaGround
+TextLabel_148.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_148.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_148.BackgroundTransparency = 1.000
+TextLabel_148.Position = UDim2.new(0.199845418, 0, 0.813828528, 0)
+TextLabel_148.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_148.ZIndex = 7
+TextLabel_148.Font = Enum.Font.Arial
+TextLabel_148.Text = "E"
+TextLabel_148.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_148.TextSize = 10.000
+
+TextLabel_149.Parent = LarnacaGround
+TextLabel_149.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_149.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_149.BackgroundTransparency = 1.000
+TextLabel_149.Position = UDim2.new(0.527968228, 0, 0.648593545, 0)
+TextLabel_149.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_149.ZIndex = 7
+TextLabel_149.Font = Enum.Font.Arial
+TextLabel_149.Text = "B"
+TextLabel_149.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_149.TextSize = 10.000
+
+TextLabel_150.Parent = LarnacaGround
+TextLabel_150.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_150.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_150.BackgroundTransparency = 1.000
+TextLabel_150.Position = UDim2.new(0.744839072, 0, 0.515278995, 0)
+TextLabel_150.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_150.ZIndex = 7
+TextLabel_150.Font = Enum.Font.Arial
+TextLabel_150.Text = "A"
+TextLabel_150.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_150.TextSize = 10.000
+
+TextLabel_151.Parent = LarnacaGround
+TextLabel_151.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_151.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_151.BackgroundTransparency = 1.000
+TextLabel_151.Position = UDim2.new(0.847641528, 0, 0.0468003228, 0)
+TextLabel_151.Size = UDim2.new(0.0300000031, 0, 0.0300000012, 0)
+TextLabel_151.ZIndex = 7
+TextLabel_151.Font = Enum.Font.Arial
+TextLabel_151.Text = "24"
+TextLabel_151.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_151.TextSize = 10.000
+
+TextLabel_152.Parent = LarnacaGround
+TextLabel_152.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_152.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_152.BackgroundTransparency = 1.000
+TextLabel_152.Position = UDim2.new(0.0120739937, 0, 0.600866437, 0)
+TextLabel_152.Size = UDim2.new(0.0300000031, 0, 0.0300000012, 0)
+TextLabel_152.ZIndex = 7
+TextLabel_152.Font = Enum.Font.Arial
+TextLabel_152.Text = "06"
+TextLabel_152.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_152.TextSize = 10.000
+
+TextLabel_153.Parent = LarnacaGround
+TextLabel_153.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_153.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_153.BackgroundTransparency = 1.000
+TextLabel_153.Position = UDim2.new(0.630442202, 0, 0.340081751, 0)
+TextLabel_153.Size = UDim2.new(0.0300000031, 0, 0.0318776742, 0)
+TextLabel_153.ZIndex = 7
+TextLabel_153.Font = Enum.Font.Arial
+TextLabel_153.Text = "C2"
+TextLabel_153.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_153.TextSize = 10.000
+
+IzoloraniGround.Name = "IzoloraniGround"
+IzoloraniGround.Parent = Ground
+IzoloraniGround.AnchorPoint = Vector2.new(0.504999995, 0.490999997)
+IzoloraniGround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+IzoloraniGround.BackgroundTransparency = 1.000
+IzoloraniGround.Position = UDim2.new(0.973999977, 0, 0.537, 0)
+IzoloraniGround.Size = UDim2.new(0.0329999998, 5, 0.0219999999, 0)
+IzoloraniGround.ZIndex = 3
+IzoloraniGround.Image = "rbxassetid://13321910220"
+IzoloraniGround.ScaleType = Enum.ScaleType.Crop
+
+TextLabel_154.Parent = IzoloraniGround
+TextLabel_154.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_154.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_154.BackgroundTransparency = 1.000
+TextLabel_154.Position = UDim2.new(0.682268143, 0, 0.718247712, 0)
+TextLabel_154.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_154.ZIndex = 7
+TextLabel_154.Font = Enum.Font.Arial
+TextLabel_154.Text = "A"
+TextLabel_154.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_154.TextSize = 10.000
+
+TextLabel_155.Parent = IzoloraniGround
+TextLabel_155.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_155.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_155.BackgroundTransparency = 1.000
+TextLabel_155.Position = UDim2.new(0.435023546, 0, 0.643776476, 0)
+TextLabel_155.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_155.ZIndex = 7
+TextLabel_155.Font = Enum.Font.Arial
+TextLabel_155.Text = "B"
+TextLabel_155.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_155.TextSize = 10.000
+
+TextLabel_156.Parent = IzoloraniGround
+TextLabel_156.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_156.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_156.BackgroundTransparency = 1.000
+TextLabel_156.Position = UDim2.new(0.499068826, 0, 0.5182392, 0)
+TextLabel_156.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_156.ZIndex = 7
+TextLabel_156.Font = Enum.Font.Arial
+TextLabel_156.Text = "D"
+TextLabel_156.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_156.TextSize = 10.000
+
+TextLabel_157.Parent = IzoloraniGround
+TextLabel_157.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_157.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_157.BackgroundTransparency = 1.000
+TextLabel_157.Position = UDim2.new(0.650990188, 0, 0.454406708, 0)
+TextLabel_157.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_157.ZIndex = 7
+TextLabel_157.Font = Enum.Font.Arial
+TextLabel_157.Text = "E3"
+TextLabel_157.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_157.TextSize = 10.000
+
+TextLabel_158.Parent = IzoloraniGround
+TextLabel_158.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_158.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_158.BackgroundTransparency = 1.000
+TextLabel_158.Position = UDim2.new(0.362041712, 0, 0.441640198, 0)
+TextLabel_158.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_158.ZIndex = 7
+TextLabel_158.Font = Enum.Font.Arial
+TextLabel_158.Text = "D"
+TextLabel_158.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_158.TextSize = 10.000
+
+TextLabel_159.Parent = IzoloraniGround
+TextLabel_159.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_159.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_159.BackgroundTransparency = 1.000
+TextLabel_159.Position = UDim2.new(0.309911847, 0, 0.454406708, 0)
+TextLabel_159.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_159.ZIndex = 7
+TextLabel_159.Font = Enum.Font.Arial
+TextLabel_159.Text = "C"
+TextLabel_159.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_159.TextSize = 10.000
+
+TextLabel_160.Parent = IzoloraniGround
+TextLabel_160.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_160.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_160.BackgroundTransparency = 1.000
+TextLabel_160.Position = UDim2.new(0.320337832, 0, 0.392701954, 0)
+TextLabel_160.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_160.ZIndex = 7
+TextLabel_160.Font = Enum.Font.Arial
+TextLabel_160.Text = "D5"
+TextLabel_160.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_160.TextSize = 10.000
+
+TextLabel_161.Parent = IzoloraniGround
+TextLabel_161.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_161.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_161.BackgroundTransparency = 1.000
+TextLabel_161.Position = UDim2.new(0.435023576, 0, 0.441640198, 0)
+TextLabel_161.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_161.ZIndex = 7
+TextLabel_161.Font = Enum.Font.Arial
+TextLabel_161.Text = "D4"
+TextLabel_161.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_161.TextSize = 10.000
+
+TextLabel_162.Parent = IzoloraniGround
+TextLabel_162.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_162.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_162.BackgroundTransparency = 1.000
+TextLabel_162.Position = UDim2.new(0.585455537, 0, 0.49908945, 0)
+TextLabel_162.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_162.ZIndex = 7
+TextLabel_162.Font = Enum.Font.Arial
+TextLabel_162.Text = "D3"
+TextLabel_162.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_162.TextSize = 10.000
+
+TextLabel_163.Parent = IzoloraniGround
+TextLabel_163.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_163.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_163.BackgroundTransparency = 1.000
+TextLabel_163.Position = UDim2.new(0.734398067, 0, 0.575688481, 0)
+TextLabel_163.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_163.ZIndex = 7
+TextLabel_163.Font = Enum.Font.Arial
+TextLabel_163.Text = "D2"
+TextLabel_163.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_163.TextSize = 10.000
+
+TextLabel_164.Parent = IzoloraniGround
+TextLabel_164.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_164.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_164.BackgroundTransparency = 1.000
+TextLabel_164.Position = UDim2.new(0.817805886, 0, 0.611860216, 0)
+TextLabel_164.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_164.ZIndex = 7
+TextLabel_164.Font = Enum.Font.Arial
+TextLabel_164.Text = "D1"
+TextLabel_164.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_164.TextSize = 10.000
+
+TextLabel_165.Parent = IzoloraniGround
+TextLabel_165.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_165.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_165.BackgroundTransparency = 1.000
+TextLabel_165.Position = UDim2.new(0.84759438, 0, 0.548027694, 0)
+TextLabel_165.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_165.ZIndex = 7
+TextLabel_165.Font = Enum.Font.Arial
+TextLabel_165.Text = "E1"
+TextLabel_165.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_165.TextSize = 10.000
+
+TextLabel_166.Parent = IzoloraniGround
+TextLabel_166.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_166.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_166.BackgroundTransparency = 1.000
+TextLabel_166.Position = UDim2.new(0.723972082, 0, 0.484195173, 0)
+TextLabel_166.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_166.ZIndex = 7
+TextLabel_166.Font = Enum.Font.Arial
+TextLabel_166.Text = "E2"
+TextLabel_166.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_166.TextSize = 10.000
+
+TextLabel_167.Parent = IzoloraniGround
+TextLabel_167.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_167.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_167.BackgroundTransparency = 1.000
+TextLabel_167.Position = UDim2.new(0.542262137, 0, 0.409723938, 0)
+TextLabel_167.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_167.ZIndex = 7
+TextLabel_167.Font = Enum.Font.Arial
+TextLabel_167.Text = "E4"
+TextLabel_167.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_167.TextSize = 10.000
+
+TextLabel_168.Parent = IzoloraniGround
+TextLabel_168.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_168.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_168.BackgroundTransparency = 1.000
+TextLabel_168.Position = UDim2.new(0.46481204, 0, 0.377807677, 0)
+TextLabel_168.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_168.ZIndex = 7
+TextLabel_168.Font = Enum.Font.Arial
+TextLabel_168.Text = "E5"
+TextLabel_168.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_168.TextSize = 10.000
+
+TextLabel_169.Parent = IzoloraniGround
+TextLabel_169.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_169.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_169.BackgroundTransparency = 1.000
+TextLabel_169.Position = UDim2.new(0.177352995, 0, 0.262909174, 0)
+TextLabel_169.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_169.ZIndex = 7
+TextLabel_169.Font = Enum.Font.Arial
+TextLabel_169.Text = "E6"
+TextLabel_169.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_169.TextSize = 10.000
+
+TextLabel_170.Parent = IzoloraniGround
+TextLabel_170.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_170.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_170.BackgroundTransparency = 1.000
+TextLabel_170.Position = UDim2.new(0.128201962, 0, 0.230992913, 0)
+TextLabel_170.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_170.ZIndex = 7
+TextLabel_170.Font = Enum.Font.Arial
+TextLabel_170.Text = "E7"
+TextLabel_170.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_170.TextSize = 10.000
+
+TextLabel_171.Parent = IzoloraniGround
+TextLabel_171.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_171.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_171.BackgroundTransparency = 1.000
+TextLabel_171.Position = UDim2.new(0.278633922, 0, 0.579943955, 0)
+TextLabel_171.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_171.ZIndex = 7
+TextLabel_171.Font = Enum.Font.Arial
+TextLabel_171.Text = "C"
+TextLabel_171.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_171.TextSize = 10.000
+
+TextLabel_172.Parent = IzoloraniGround
+TextLabel_172.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_172.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_172.BackgroundTransparency = 1.000
+TextLabel_172.Position = UDim2.new(0.499068826, 0, 0.439512432, 0)
+TextLabel_172.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_172.ZIndex = 7
+TextLabel_172.Font = Enum.Font.Arial
+TextLabel_172.Text = "E"
+TextLabel_172.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_172.TextSize = 10.000
+
+TextLabel_173.Parent = IzoloraniGround
+TextLabel_173.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_173.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_173.BackgroundTransparency = 1.000
+TextLabel_173.Position = UDim2.new(0.37842539, 0, 0.392701924, 0)
+TextLabel_173.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_173.ZIndex = 7
+TextLabel_173.Font = Enum.Font.Arial
+TextLabel_173.Text = "E"
+TextLabel_173.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_173.TextSize = 10.000
+
+TextLabel_174.Parent = IzoloraniGround
+TextLabel_174.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_174.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_174.BackgroundTransparency = 1.000
+TextLabel_174.Position = UDim2.new(0.222035751, 0, 0.316102922, 0)
+TextLabel_174.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_174.ZIndex = 7
+TextLabel_174.Font = Enum.Font.Arial
+TextLabel_174.Text = "E"
+TextLabel_174.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_174.TextSize = 10.000
+
+TextLabel_175.Parent = IzoloraniGround
+TextLabel_175.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_175.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_175.BackgroundTransparency = 1.000
+TextLabel_175.Position = UDim2.new(0.786527932, 0, 0.548027694, 0)
+TextLabel_175.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_175.ZIndex = 7
+TextLabel_175.Font = Enum.Font.Arial
+TextLabel_175.Text = "E"
+TextLabel_175.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_175.TextSize = 10.000
+
+TextLabel_176.Parent = IzoloraniGround
+TextLabel_176.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_176.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_176.BackgroundTransparency = 1.000
+TextLabel_176.Position = UDim2.new(0.764186502, 0, 0.611860216, 0)
+TextLabel_176.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_176.ZIndex = 7
+TextLabel_176.Font = Enum.Font.Arial
+TextLabel_176.Text = "D"
+TextLabel_176.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_176.TextSize = 10.000
+
+TextLabel_177.Parent = IzoloraniGround
+TextLabel_177.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_177.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_177.BackgroundTransparency = 1.000
+TextLabel_177.Position = UDim2.new(0.97419548, 0, 0.548027694, 0)
+TextLabel_177.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_177.ZIndex = 7
+TextLabel_177.Font = Enum.Font.Arial
+TextLabel_177.Text = "28"
+TextLabel_177.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_177.TextSize = 10.000
+
+TextLabel_178.Parent = IzoloraniGround
+TextLabel_178.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_178.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_178.BackgroundTransparency = 1.000
+TextLabel_178.Position = UDim2.new(0.108839452, 0, 0.184182435, 0)
+TextLabel_178.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_178.ZIndex = 7
+TextLabel_178.Font = Enum.Font.Arial
+TextLabel_178.Text = "10"
+TextLabel_178.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_178.TextSize = 10.000
+
+
 -- Module Scripts:
 
 local fake_module_scripts = {}
@@ -5183,7 +7619,7 @@ do -- ATCScreen.Callsigns
 			["Scandialien"] = "Scandinavian",
 			["Singadoor"] = "Singapore",
 			["Northeast"] = "Southwest",
-			["Spirit"] = "Spirit Wings",
+			["Sprit"] = "Spirit Wings",
 			["Bliss"] = "Swiss",
 			["Thay"] = "Thai",
 			["HardJet"] = "Easy",
@@ -5238,7 +7674,7 @@ do -- ATCScreen.Players
 			1568219666, --Dav_VC (800)
 			1199048459, --Tikfull (559)
 			994950354 --Vain_0/Gadget (10$)
-		}
+            }
 		return module
 	end
 	fake_module_scripts[script] = module_script
@@ -5356,7 +7792,7 @@ do -- ATCScreen.PlayerData
         
         local function GetPlaneFromPlayer(player)
         	for i,plane in pairs(game:GetService("Workspace").Aircraft:GetChildren()) do
-        		if player.Character:FindFirstChild("HumanoidRootPart") and plane:IsA("Model") then 
+        		if player.Character:FindFirstChild("HumanoidRootPart") and plane:IsA("Model")  then 
         			local distance = (plane:WaitForChild("Main"):WaitForChild("Seats"):WaitForChild("PilotSeat").Position - player.Character.HumanoidRootPart.Position).Magnitude
         			if distance < 2 then
         				return plane
@@ -5712,8 +8148,11 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 
 		if not plane.Internal:GetAttribute("Taxi") then
 			newPlayer.TextLabel.Text =  tag.."<br/>".. newHeading.." "..newAltitude.." ".. math.floor(Speed/10)
-		else
-			newPlayer.TextLabel.Text =  tag.. "<br/> Taxi"
+		else if image.Ground.Visible == true then
+    			newPlayer.TextLabel.Text =  tag.. "<br/>".. math.floor(Speed) .." kts"
+			else
+			    newPlayer.TextLabel.Text =  tag.. "<br/> Taxi"
+			end
 		end
 
 		--Conditions that change the look of aircraft
@@ -5894,6 +8333,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 
 	local defaultButton = Themes.Default.Button
 	local VStarButton = Themes.VStars.Button
+	local GroundButton = Themes.Ground.Button
 
 	--Colors
 
@@ -5903,6 +8343,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 	local buttonDeselectColor = Color3.new(0, 0, 0)
 	local playerRedColor = Color3.new(1, 0, 0.0156863)
 	local playerBlueColor = Color3.new(0.0588235, 0, 0.890196)
+	local playerGreenColor = Color3.new(0.0088235, 0.584833336, 0.0088235)
 
 	Close.MouseButton1Down:Connect(function()
 		settingFrame.Visible = not settingFrame.Visible
@@ -5947,8 +8388,10 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 	defaultButton.Parent.MouseButton1Down:Connect(function()
 		defaultButton.BackgroundColor3 = buttonSelectedColor
 		VStarButton.BackgroundColor3 = buttonDeselectColor
+		GroundButton.BackgroundColor3 = buttonDeselectColor
 
 		Content.Image.VStar.Visible = false
+		Content.Image.Ground.Visible = false
 		NewMiniMap.BackgroundColor3 = menuSelectedColor
 		Content.BackgroundColor3 = menuSelectedColor
 
@@ -5971,13 +8414,43 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 	VStarButton.Parent.MouseButton1Down:Connect(function()
 		defaultButton.BackgroundColor3 = buttonDeselectColor
 		VStarButton.BackgroundColor3 = buttonSelectedColor
+		GroundButton.BackgroundColor3 = buttonDeselectColor
 		
 		Content.Image.VStar.Visible = true
+		Content.Image.Ground.Visible = false
 		NewMiniMap.BackgroundColor3 = Color3.new(0,0,0)
         Content.BackgroundColor3 = Color3.new(0,0,0)
 
 		ATCScreen.Player.BackgroundColor3 = playerBlueColor
 		ATCScreen.Player.Direction.Frame.BackgroundColor3 = playerBlueColor
+		ATCScreen.Player.TextLabel.TextColor3 = Color3.new(1,1,1)
+		
+		ATCScreen.HeadingTool.TextLabel.TextColor3 = Color3.new(1,1,1)
+		
+		for i,v in pairs(Content.Image.Wavepoints:GetDescendants()) do
+    		if v:IsA("TextLabel") then
+    			v.TextColor3 = Color3.new(1,1,1)
+    		end
+    		if v:IsA("ImageLabel") then
+    		    v.BackgroundTransparency = 0
+    		    v.BackgroundColor3 = Color3.new(0,0,0)
+    		    v.BorderColor3 = Color3.new(1,1,1)
+    		 end
+		end
+	end)
+	
+	GroundButton.Parent.MouseButton1Down:Connect(function()
+		defaultButton.BackgroundColor3 = buttonDeselectColor
+		VStarButton.BackgroundColor3 = buttonDeselectColor
+		GroundButton.BackgroundColor3 = buttonSelectedColor
+		
+		Content.Image.VStar.Visible = false
+		Content.Image.Ground.Visible = true
+		NewMiniMap.BackgroundColor3 = Color3.new(0,0,0)
+        Content.BackgroundColor3 = Color3.new(0,0,0)
+
+		ATCScreen.Player.BackgroundColor3 = playerGreenColor
+		ATCScreen.Player.Direction.Frame.BackgroundColor3 = playerGreenColor
 		ATCScreen.Player.TextLabel.TextColor3 = Color3.new(1,1,1)
 		
 		ATCScreen.HeadingTool.TextLabel.TextColor3 = Color3.new(1,1,1)
@@ -6026,6 +8499,7 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 	local Content = NewMiniMap.Content
 	local Background = Content.Image.Background
 	local Wavepoints = Content.Image.Wavepoints
+	local Ground = Content.Image.Ground
 	local B_Wavepoints = NewMiniMap.Wavepoint
 	local B_Heading = NewMiniMap.Heading
 	local B_Remove = NewMiniMap.Reset
@@ -6057,6 +8531,13 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 				B_Wavepoints.BackgroundColor3 = selectedColor
 			end
 		end
+		
+		for i, letter in pairs(Ground:GetDescendants()) do
+	        if letter:IsA("TextLabel") then
+	            letter.Visible = not letter.Visible
+	        end
+		end
+		
 		WState = not WState
 		print("Poof")
 	end)
