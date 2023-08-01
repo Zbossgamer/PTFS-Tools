@@ -7673,7 +7673,8 @@ do -- ATCScreen.Players
 			1029957183, --The Trollster (599)
 			1568219666, --Dav_VC (800)
 			1199048459, --Tikfull (559)
-			994950354 --Vain_0/Gadget (10$)
+			994950354, --Vain_0/Gadget (10$)
+			147164466 --Myzl / IceDragon (599)
             }
 		return module
 	end
