@@ -7986,21 +7986,22 @@ do -- ATCScreen.Players
 	local function module_script()
 		local module = {
 			370213285, --Zbossgamer
-            2355519465, --GOOSE (800)
-            911617475, --123ABC / Maddem (559)
-            145129180, --eric / Legand (599)
-            301870637, --Syth / Jaydog (559)
-            984766902, -- Kertz (599)
-            2745544660, --Walmart (dx tranfered ownership to him) (599)
-            329704068, --Walmart Alt
-            1029957183, --The Trollster (599)
-            1568219666, --Dav_VC (800)
-            1199048459, --Tikfull (559)
-            994950354, --Vain_0/Gadget (10$)
-            147164466, --Myzl / IceDragon (599)
-            1781698028, --NULL / N815 (10$)
-            225814032, --F35 / avjome (10$)
-            346414927  --Gooey / NUKE (690)
+	            2355519465, --GOOSE (800)
+	            911617475, --123ABC / Maddem (559)
+	            145129180, --eric / Legand (599)
+	            301870637, --Syth / Jaydog (559)
+	            984766902, -- Kertz (599)
+	            2745544660, --Walmart (dx tranfered ownership to him) (599)
+	            329704068, --Walmart Alt
+	            1029957183, --The Trollster (599)
+	            1568219666, --Dav_VC (800)
+	            1199048459, --Tikfull (559)
+	            994950354, --Vain_0/Gadget (10$)
+	            147164466, --Myzl / IceDragon (599)
+	            1781698028, --NULL / N815 (10$)
+	            225814032, --F35 / avjome (10$)
+	            346414927,  --Gooey / NUKE (690)
+	            502002593 --PILOT/Noobthenoob (599)
             }
 		return module
 	end
