@@ -7923,60 +7923,6 @@ TextLabel_179.TextSize = 10.000
 
 local fake_module_scripts = {}
 
-do -- ATCScreen.Callsigns
-	local script = Instance.new('ModuleScript', ATCScreen)
-	script.Name = "Callsigns"
-	local function module_script()
-		local module = {					--Every Time a plane has a special calsign that isnt "Firebird/Eagle"
-			--Airlines
-
-			["AirBalistic"] = "AirBaltic",
-			["Air Canadian"] = "AirCanada",
-			["AirFrench"] = "AirFrans",
-			["Americano"] = "American",
-			["BritainAirways"] = "Speedbird",
-			["CafePacific"] = "Cathay",
-			["Doncor"] = "Condor",
-			["Belta"] = "Delta",
-			["Byanair"] = "Ryanair",
-			["Scandialien"] = "Scandinavian",
-			["Singadoor"] = "Singapore",
-			["Northeast"] = "Southwest",
-			["Sprit"] = "Spirit Wings",
-			["Bliss"] = "Swiss",
-			["Thay"] = "Thai",
-			["HardJet"] = "Easy",
-			["Emarates"] = "Emirates",
-			["Flybe"] = "Jersey",
-			["Jet3"] = "Channex",
-			["JetBloo"] = "JetBlue",
-			["KLN"] = "KLM",
-			["Koreen"] = "KoreanAir",
-			["KoreenCargo"] = "KoreanAir",
-			["KOT"] = "Pollot",
-			["Lifthansa"] = "Lufthansa",
-			["OldZealand"] = "NewZealand",
-			["Oantas"] = "Qantas",
-			["Oatar"] = "Qatari",
-			["Tui"] = "Tomjet",
-			["Turkish"] = "Turkish",
-			["Reunited"] = "United",
-			["Wizz"] = "WizzAir",
-			["AerDingus"] = "Shamrock",
-
-			--Cargo
-
-			["VHL"] = "Worldstar",
-			["TedEx"] = "FedEx",
-			["SUS"] = "Ups",
-			["Airbus Beluga"] = "Supertransport",
-
-		}
-
-		return module
-	end
-	fake_module_scripts[script] = module_script
-end
 
 print("Players")
 
@@ -7986,22 +7932,22 @@ do -- ATCScreen.Players
 	local function module_script()
 		local module = {
 			370213285, --Zbossgamer
-	            2355519465, --GOOSE (800)
-	            911617475, --123ABC / Maddem (559)
-	            145129180, --eric / Legand (599)
-	            301870637, --Syth / Jaydog (559)
-	            984766902, -- Kertz (599)
-	            2745544660, --Walmart (dx tranfered ownership to him) (599)
-	            329704068, --Walmart Alt
-	            1029957183, --The Trollster (599)
-	            1568219666, --Dav_VC (800)
-	            1199048459, --Tikfull (559)
-	            994950354, --Vain_0/Gadget (10$)
-	            147164466, --Myzl / IceDragon (599)
-	            1781698028, --NULL / N815 (10$)
-	            225814032, --F35 / avjome (10$)
-	            346414927,  --Gooey / NUKE (690)
-	            502002593 --PILOT/Noobthenoob (599)
+            2355519465, --GOOSE (800)
+            911617475, --123ABC / Maddem (559)
+            145129180, --eric / Legand (599)
+            301870637, --Syth / Jaydog (559)
+            984766902, -- Kertz (599)
+            2745544660, --Walmart (dx tranfered ownership to him) (599)
+            329704068, --Walmart Alt
+            1029957183, --The Trollster (599)
+            1568219666, --Dav_VC (800)
+            1199048459, --Tikfull (559)
+            994950354, --Vain_0/Gadget (10$)
+            147164466, --Myzl / IceDragon (599)
+            1781698028, --NULL / N815 (10$)
+            225814032, --F35 / avjome (10$)
+            346414927,  --Gooey / NUKE (690)
+            502002593 --PILOT/Noobthenoob (599)
             }
 		return module
 	end
@@ -8251,23 +8197,25 @@ do -- ATCScreen.MapState
 		end
 
 		local function ScaleUp()
-			scaleValue.Value = scaleValue.Value + 1
-			local mapScale = math.pow(scaleFactor, scaleValue.Value-5)
-			local newScale = 1/((mapScale*100)*.9)
-            
-            module.mapScale = mapScale
-			module.itemScale = newScale
-			
-            localPlayer.PlayerGui.ATCScreen.Player.Size = UDim2.new(newScale,0,newScale,0)
+			if script.Parent then
+				scaleValue.Value = scaleValue.Value + 1
+				local mapScale = math.pow(scaleFactor, scaleValue.Value-5)
+				local newScale = 1/((mapScale*100)*.9)
+				
+				module.mapScale = mapScale
+				module.itemScale = newScale
+				
+				localPlayer.PlayerGui.ATCScreen.Player.Size = UDim2.new(newScale,0,newScale,0)
 
-			local currentPos = Vector2.new(content.Position.X.Offset, content.Position.Y.Offset)
-			content.Size = UDim2.new(mapScale,0,mapScale,0)
-			for i,v in pairs(image.Wavepoints:GetChildren()) do
-				v.Size = UDim2.new(newScale, 0, newScale, 0)
+				local currentPos = Vector2.new(content.Position.X.Offset, content.Position.Y.Offset)
+				content.Size = UDim2.new(mapScale,0,mapScale,0)
+				for i,v in pairs(image.Wavepoints:GetChildren()) do
+					v.Size = UDim2.new(newScale, 0, newScale, 0)
+				end
+				content.Position = UDim2.new(0.5,currentPos.X * (mapScale/(math.pow(scaleFactor, scaleValue.Value-6))),0.5,currentPos.Y * (mapScale/(math.pow(scaleFactor, scaleValue.Value-6))))
+				
+				print("Size Up: "..scaleValue.Value)
 			end
-			content.Position = UDim2.new(0.5,currentPos.X * (mapScale/(math.pow(scaleFactor, scaleValue.Value-6))),0.5,currentPos.Y * (mapScale/(math.pow(scaleFactor, scaleValue.Value-6))))
-            
-			print("Size Up: "..scaleValue.Value)
 		end
 		
 		local function SetScale(num)
@@ -8364,17 +8312,14 @@ BindToggleV.Name = "BindToggle"
 BindToggleV.Value = "F1"
 
 local BindTaxiV = Instance.new("StringValue")
-
 BindTaxiV.Name = "BindTaxi"
 BindTaxiV.Value = "F2"
 
 local BindWaveV = Instance.new("StringValue")
-
 BindWaveV.Name = "BindWave"
 BindWaveV.Value = "F3"
 
 local BindSettingsV = Instance.new("StringValue")
-
 BindSettingsV.Name = "BindSettings"
 BindSettingsV.Value = "K"
 
@@ -8393,7 +8338,7 @@ do -- ATCScreen.Keybinds
 
 		module.inputEntered = function(input, _inputBehavior)
 
-			if input.UserInputType == Enum.UserInputType.MouseWheel and module.isMouseInUI then
+			if script.Parent and input.UserInputType == Enum.UserInputType.MouseWheel and module.isMouseInUI then
 				if input.Position.Z == 1 then
 					return 1
 				else
@@ -8413,7 +8358,6 @@ do -- ATCScreen.Keybinds
 				end
 
 				if input.KeyCode.Name == BindTaxiV.Value then
-					print(input.KeyCode.Name .. " ~ ".. BindTaxiV.Value)
 					print("TaxiBind")
 					return "Taxi"
 				end
@@ -8427,10 +8371,7 @@ do -- ATCScreen.Keybinds
 
 		module.setNewBind = function(bind, key)
 			script[bind].Value = key.Name
-			print("AHHHHH The TaxiBind is Technically".. BindTaxiV.Value)
-			print("The Bind: "..bind.." Has been set to: "..script[bind].Value)
 		end
-
 
 		return module
 
@@ -8459,7 +8400,6 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
     
         print("0")
 
-	local Callsigns = require(script.Parent.Callsigns)
 	local Players = require(script.Parent.Players)
 	local PlayerData = require(script.Parent.PlayerData)
 	local MapState = require(script.Parent.MapState)
@@ -8510,11 +8450,7 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 
 
 	inputService.InputBegan:Connect(function(input, behavior)
-		print("Input Type: ".. input.UserInputType.Name)
-		print("Key Pressed: "..input.KeyCode.Name)	
-
 		local inputReturned = Keybinds.inputEntered(input, behavior)
-
 		--UI
 		if inputReturned == "UI" then
 			MapState.CycleState()
@@ -8523,7 +8459,6 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		if inputReturned == "Settings" then
 			settingFrame.Visible = not settingFrame.Visible
 		end
-		
 	end)
 
 
@@ -8663,15 +8598,17 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 
 
 	game.Players.PlayerAdded:Connect(function(t)
-		print(t.Name .. " Added")
-		local newItem = listTemplate:Clone()
-		newItem.Parent = playerList.ScrollingFrame
-		newItem.Name = t.Name
-		newItem.Visible = true
+		if(script.Parent) then
+			print(t.Name .. " Added")
+			local newItem = listTemplate:Clone()
+			newItem.Parent = playerList.ScrollingFrame
+			newItem.Name = t.Name
+			newItem.Visible = true
 
-		newItem.Player.Text = t.Name
-		task.wait(.1)
-		newItem.Tag.Text = t.tag.Value
+			newItem.Player.Text = t.Name
+			task.wait(.1)
+			newItem.Tag.Text = t.tag.Value
+		end
 	end)
 
 	game.Players.PlayerRemoving:Connect(function(t)
