@@ -224,7 +224,7 @@ ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 ScrollingFrame.BorderSizePixel = 4
 ScrollingFrame.Size = UDim2.new(1, 0, 1, 0)
-ScrollingFrame.CanvasSize = UDim2.new(4, 0, 0, 0)
+ScrollingFrame.CanvasSize = UDim2.new(8, 0, 0, 0)
 ScrollingFrame.ScrollBarThickness = 5
 
 UIListLayout.Parent = ScrollingFrame
@@ -239,7 +239,7 @@ Template.Parent = ATCScreen
 Template.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Template.BackgroundTransparency = 1.000
 Template.Position = UDim2.new(9.50111385e-08, 0, 0, 0)
-Template.Size = UDim2.new(0.0500000007, 0, 1, -5)
+Template.Size = UDim2.new(0.025, 0, 1, -5)
 Template.Visible = false
 
 Line.Name = "Line"
@@ -365,7 +365,7 @@ Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Version.BackgroundTransparency = 1.000
 Version.Size = UDim2.new(0.200000003, 0, 0.100000001, 0)
 Version.Font = Enum.Font.SourceSans
-Version.Text = "V4.2"
+Version.Text = "V4.3"
 Version.TextColor3 = Color3.fromRGB(0, 0, 0)
 Version.TextSize = 14.000
 Version.TextYAlignment = Enum.TextYAlignment.Top
@@ -432,7 +432,7 @@ UICorner_6.Parent = VStars
 Button_2.Name = "Button"
 Button_2.Parent = VStars
 Button_2.AnchorPoint = Vector2.new(0, 0.5)
-Button_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Button_2.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
 Button_2.Position = UDim2.new(0.800000012, 0, 0.5, 0)
 Button_2.Size = UDim2.new(0.5, 0, 0.800000012, 0)
 
@@ -576,16 +576,157 @@ UIGridLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
 UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout_2.CellSize = UDim2.new(0.400000006, 0, 0.150000006, 0)
 
-ComingSoon.Name = "Coming Soon"
-ComingSoon.Parent = Keybind
-ComingSoon.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
-ComingSoon.Size = UDim2.new(0, 200, 0, 50)
-ComingSoon.Font = Enum.Font.SourceSansBold
-ComingSoon.Text = "Coming Soon"
-ComingSoon.TextColor3 = Color3.fromRGB(255, 255, 255)
-ComingSoon.TextSize = 18.000
 
-UICorner_18.Parent = ComingSoon
+
+local BindHeading = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UICorner_2 = Instance.new("UICorner")
+local BindTaxi = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local UICorner_4 = Instance.new("UICorner")
+local BindToggle = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local UICorner_6 = Instance.new("UICorner")
+local BindWave = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local UICorner_8 = Instance.new("UICorner")
+
+--Properties:
+
+
+BindTaxi.Name = "BindTaxi"
+BindTaxi.Parent = Keybind
+BindTaxi.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
+BindTaxi.Size = UDim2.new(0.800000012, 0, 0.150000006, 0)
+BindTaxi.Font = Enum.Font.SourceSans
+BindTaxi.Text = "   Taxi"
+BindTaxi.TextColor3 = Color3.fromRGB(255, 255, 255)
+BindTaxi.TextSize = 18.000
+BindTaxi.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_3.Parent = BindTaxi
+
+TextLabel_2.Parent = BindTaxi
+TextLabel_2.AnchorPoint = Vector2.new(1, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.949999988, 0, 0.5, 0)
+TextLabel_2.Size = UDim2.new(0.5, 0, 0.800000012, 0)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "F2"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+
+UIAspectRatioConstraint_2.Parent = TextLabel_2
+
+UICorner_4.Parent = TextLabel_2
+
+BindToggle.Name = "BindToggle"
+BindToggle.Parent = Keybind
+BindToggle.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
+BindToggle.Size = UDim2.new(0.800000012, 0, 0.150000006, 0)
+BindToggle.Font = Enum.Font.SourceSans
+BindToggle.Text = "  Toggle UI"
+BindToggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+BindToggle.TextSize = 18.000
+BindToggle.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_5.Parent = BindToggle
+
+TextLabel_3.Parent = BindToggle
+TextLabel_3.AnchorPoint = Vector2.new(1, 0.5)
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.949999988, 0, 0.5, 0)
+TextLabel_3.Size = UDim2.new(0.5, 0, 0.800000012, 0)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "F1"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextSize = 14.000
+
+UIAspectRatioConstraint_3.Parent = TextLabel_3
+
+UICorner_6.Parent = TextLabel_3
+
+BindWave.Name = "BindWave"
+BindWave.Parent = Keybind
+BindWave.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
+BindWave.Size = UDim2.new(0.800000012, 0, 0.150000006, 0)
+BindWave.Font = Enum.Font.SourceSans
+BindWave.Text = "   Wavepoints"
+BindWave.TextColor3 = Color3.fromRGB(255, 255, 255)
+BindWave.TextSize = 18.000
+BindWave.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_7.Parent = BindWave
+
+TextLabel_4.Parent = BindWave
+TextLabel_4.AnchorPoint = Vector2.new(1, 0.5)
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.949999988, 0, 0.5, 0)
+TextLabel_4.Size = UDim2.new(0.5, 0, 0.800000012, 0)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "F3"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextSize = 14.000
+
+UIAspectRatioConstraint_4.Parent = TextLabel_4
+
+UICorner_8.Parent = TextLabel_4
+
+-- Gui to Lua
+-- Version: 3.5
+
+-- Instances:
+
+local BindSettings = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UICorner_2 = Instance.new("UICorner")
+
+--Properties:
+
+BindSettings.Name = "BindSettings"
+BindSettings.Parent = Keybind
+BindSettings.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
+BindSettings.Size = UDim2.new(0.800000012, 0, 0.150000006, 0)
+BindSettings.Font = Enum.Font.SourceSans
+BindSettings.Text = "   Settings"
+BindSettings.TextColor3 = Color3.fromRGB(255, 255, 255)
+BindSettings.TextSize = 18.000
+BindSettings.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner.Parent = BindSettings
+
+TextLabel.Parent = BindSettings
+TextLabel.AnchorPoint = Vector2.new(1, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.949999988, 0, 0.5, 0)
+TextLabel.Size = UDim2.new(0.5, 0, 0.800000012, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "K"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+UIAspectRatioConstraint.Parent = TextLabel
+
+UICorner_2.Parent = TextLabel
+------------------------------------------------------------------------------------
 
 NewMiniMap.Name = "NewMiniMap"
 NewMiniMap.Parent = ATCScreen
@@ -2197,10 +2338,10 @@ OCT.Size = UDim2.new(0.662, 0, 0.643999994, 0)
 OCT.ZIndex = 3
 OCT.Image = "http://www.roblox.com/asset/?id=13207695324"
 
------Wavepoints
-
+-----Wavepoints------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 -- Gui to Lua
--- Version: 3.2
+-- Version: 3.5
 
 -- Instances:
 
@@ -2218,7 +2359,7 @@ local Gui = {
 	TextLabel_5 = Instance.new("TextLabel"),
 	PIPER = Instance.new("ImageLabel"),
 	TextLabel_6 = Instance.new("TextLabel"),
-	GULEG = Instance.new("ImageLabel"),
+	DOGGO = Instance.new("ImageLabel"),
 	TextLabel_7 = Instance.new("TextLabel"),
 	HONDA = Instance.new("ImageLabel"),
 	TextLabel_8 = Instance.new("TextLabel"),
@@ -2252,7 +2393,7 @@ local Gui = {
 	TextLabel_22 = Instance.new("TextLabel"),
 	CYRIL = Instance.new("ImageLabel"),
 	TextLabel_23 = Instance.new("TextLabel"),
-	DOGGO = Instance.new("ImageLabel"),
+	DEL = Instance.new("ImageLabel"),
 	TextLabel_24 = Instance.new("TextLabel"),
 	BILLO = Instance.new("ImageLabel"),
 	TextLabel_25 = Instance.new("TextLabel"),
@@ -2322,7 +2463,7 @@ local Gui = {
 	TextLabel_57 = Instance.new("TextLabel"),
 	HOGGS = Instance.new("ImageLabel"),
 	TextLabel_58 = Instance.new("TextLabel"),
-	STACKS = Instance.new("ImageLabel"),
+	STACK = Instance.new("ImageLabel"),
 	TextLabel_59 = Instance.new("TextLabel"),
 	SEEKS = Instance.new("ImageLabel"),
 	TextLabel_60 = Instance.new("TextLabel"),
@@ -2366,7 +2507,7 @@ local Gui = {
 	TextLabel_79 = Instance.new("TextLabel"),
 	TRC = Instance.new("ImageLabel"),
 	TextLabel_80 = Instance.new("TextLabel"),
-	LOG = Instance.new("ImageLabel"),
+	GULEG = Instance.new("ImageLabel"),
 	TextLabel_81 = Instance.new("TextLabel"),
 	HMSQE = Instance.new("ImageLabel"),
 	TextLabel_82 = Instance.new("TextLabel"),
@@ -2426,8 +2567,12 @@ local Gui = {
 	TextLabel_109 = Instance.new("TextLabel"),
 	KIN = Instance.new("ImageLabel"),
 	TextLabel_110 = Instance.new("TextLabel"),
-	DEL = Instance.new("ImageLabel"),
+	LOG = Instance.new("ImageLabel"),
 	TextLabel_111 = Instance.new("TextLabel"),
+	HOT = Instance.new("ImageLabel"),
+	TextLabel_112 = Instance.new("TextLabel"),
+	ASP = Instance.new("ImageLabel"),
+	TextLabel_113 = Instance.new("TextLabel"),
 }
 
 --Properties:
@@ -2441,9 +2586,10 @@ Gui.Wavepoints.ZIndex = 3
 
 Gui.ASTRO.Name = "ASTRO"
 Gui.ASTRO.Parent = Gui.Wavepoints
+Gui.ASTRO.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.ASTRO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.ASTRO.BackgroundTransparency = 1.000
-Gui.ASTRO.Position = UDim2.new(0.345999986, 0, 0.158000007, 0)
+Gui.ASTRO.Position = UDim2.new(0.36059773, 0, 0.167584911, 0)
 Gui.ASTRO.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
 Gui.ASTRO.ZIndex = 2
 Gui.ASTRO.Image = "http://www.roblox.com/asset/?id=10164277616"
@@ -2453,7 +2599,7 @@ Gui.TextLabel.Parent = Gui.ASTRO
 Gui.TextLabel.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel.BackgroundTransparency = 1.000
-Gui.TextLabel.Position = UDim2.new(-0.100000001, 0, 0, 0)
+Gui.TextLabel.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel.ZIndex = 2
 Gui.TextLabel.Font = Enum.Font.SourceSans
@@ -2465,9 +2611,10 @@ Gui.TextLabel.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.NIKON.Name = "NIKON"
 Gui.NIKON.Parent = Gui.Wavepoints
+Gui.NIKON.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.NIKON.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.NIKON.BackgroundTransparency = 1.000
-Gui.NIKON.Position = UDim2.new(0.379999995, 0, 0.0299999993, 0)
+Gui.NIKON.Position = UDim2.new(0.399520814, 0, 0.0411597416, 0)
 Gui.NIKON.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
 Gui.NIKON.ZIndex = 2
 Gui.NIKON.Image = "http://www.roblox.com/asset/?id=10164277616"
@@ -2477,7 +2624,7 @@ Gui.TextLabel_2.Parent = Gui.NIKON
 Gui.TextLabel_2.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_2.BackgroundTransparency = 1.000
-Gui.TextLabel_2.Position = UDim2.new(-0.100000001, 0, 0, 0)
+Gui.TextLabel_2.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_2.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_2.ZIndex = 2
 Gui.TextLabel_2.Font = Enum.Font.SourceSans
@@ -2489,9 +2636,10 @@ Gui.TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.SHIBA.Name = "SHIBA"
 Gui.SHIBA.Parent = Gui.Wavepoints
+Gui.SHIBA.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.SHIBA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.SHIBA.BackgroundTransparency = 1.000
-Gui.SHIBA.Position = UDim2.new(0.300634921, 0, 0.085114643, 0)
+Gui.SHIBA.Position = UDim2.new(0.332652956, 0, 0.090757288, 0)
 Gui.SHIBA.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
 Gui.SHIBA.ZIndex = 2
 Gui.SHIBA.Image = "http://www.roblox.com/asset/?id=10164277616"
@@ -2501,7 +2649,7 @@ Gui.TextLabel_3.Parent = Gui.SHIBA
 Gui.TextLabel_3.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_3.BackgroundTransparency = 1.000
-Gui.TextLabel_3.Position = UDim2.new(-0.100000001, 0, 0, 0)
+Gui.TextLabel_3.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_3.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_3.ZIndex = 2
 Gui.TextLabel_3.Font = Enum.Font.SourceSans
@@ -2513,9 +2661,10 @@ Gui.TextLabel_3.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.SHELL.Name = "SHELL"
 Gui.SHELL.Parent = Gui.Wavepoints
+Gui.SHELL.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.SHELL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.SHELL.BackgroundTransparency = 1.000
-Gui.SHELL.Position = UDim2.new(0.227883592, 0, 0.0300000012, 0)
+Gui.SHELL.Position = UDim2.new(0.259797126, 0, 0.0294897277, 0)
 Gui.SHELL.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
 Gui.SHELL.ZIndex = 2
 Gui.SHELL.Image = "http://www.roblox.com/asset/?id=10164277616"
@@ -2525,7 +2674,7 @@ Gui.TextLabel_4.Parent = Gui.SHELL
 Gui.TextLabel_4.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_4.BackgroundTransparency = 1.000
-Gui.TextLabel_4.Position = UDim2.new(-0.100000001, 0, 0, 0)
+Gui.TextLabel_4.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_4.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_4.ZIndex = 2
 Gui.TextLabel_4.Font = Enum.Font.SourceSans
@@ -2537,9 +2686,10 @@ Gui.TextLabel_4.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.ONDER.Name = "ONDER"
 Gui.ONDER.Parent = Gui.Wavepoints
+Gui.ONDER.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.ONDER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.ONDER.BackgroundTransparency = 1.000
-Gui.ONDER.Position = UDim2.new(0.449999988, 0, 0.284999996, 0)
+Gui.ONDER.Position = UDim2.new(0.474372774, 0, 0.249274999, 0)
 Gui.ONDER.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
 Gui.ONDER.ZIndex = 2
 Gui.ONDER.Image = "http://www.roblox.com/asset/?id=10164277616"
@@ -2549,7 +2699,7 @@ Gui.TextLabel_5.Parent = Gui.ONDER
 Gui.TextLabel_5.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_5.BackgroundTransparency = 1.000
-Gui.TextLabel_5.Position = UDim2.new(-0.100000001, 0, 0, 0)
+Gui.TextLabel_5.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_5.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_5.ZIndex = 2
 Gui.TextLabel_5.Font = Enum.Font.SourceSans
@@ -2561,9 +2711,10 @@ Gui.TextLabel_5.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.PIPER.Name = "PIPER"
 Gui.PIPER.Parent = Gui.Wavepoints
+Gui.PIPER.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.PIPER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.PIPER.BackgroundTransparency = 1.000
-Gui.PIPER.Position = UDim2.new(0.368999988, 0, 0.245000005, 0)
+Gui.PIPER.Position = UDim2.new(0.383552372, 0, 0.226907462, 0)
 Gui.PIPER.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
 Gui.PIPER.ZIndex = 2
 Gui.PIPER.Image = "http://www.roblox.com/asset/?id=10164277616"
@@ -2573,7 +2724,7 @@ Gui.TextLabel_6.Parent = Gui.PIPER
 Gui.TextLabel_6.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_6.BackgroundTransparency = 1.000
-Gui.TextLabel_6.Position = UDim2.new(-0.100000001, 0, 0, 0)
+Gui.TextLabel_6.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_6.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_6.ZIndex = 2
 Gui.TextLabel_6.Font = Enum.Font.SourceSans
@@ -2583,25 +2734,26 @@ Gui.TextLabel_6.TextSize = 10.000
 Gui.TextLabel_6.TextXAlignment = Enum.TextXAlignment.Right
 Gui.TextLabel_6.TextYAlignment = Enum.TextYAlignment.Top
 
-Gui.GULEG.Name = "GULEG"
-Gui.GULEG.Parent = Gui.Wavepoints
-Gui.GULEG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Gui.GULEG.BackgroundTransparency = 1.000
-Gui.GULEG.Position = UDim2.new(0.257816583, 0, 0.197682545, 0)
-Gui.GULEG.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
-Gui.GULEG.ZIndex = 2
-Gui.GULEG.Image = "http://www.roblox.com/asset/?id=10164277616"
-Gui.GULEG.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Gui.DOGGO.Name = "DOGGO"
+Gui.DOGGO.Parent = Gui.Wavepoints
+Gui.DOGGO.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.DOGGO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.DOGGO.BackgroundTransparency = 1.000
+Gui.DOGGO.Position = UDim2.new(0.894999981, 0, 0.584196806, 0)
+Gui.DOGGO.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
+Gui.DOGGO.ZIndex = 2
+Gui.DOGGO.Image = "http://www.roblox.com/asset/?id=10164277616"
+Gui.DOGGO.ImageColor3 = Color3.fromRGB(0, 0, 0)
 
-Gui.TextLabel_7.Parent = Gui.GULEG
+Gui.TextLabel_7.Parent = Gui.DOGGO
 Gui.TextLabel_7.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_7.BackgroundTransparency = 1.000
-Gui.TextLabel_7.Position = UDim2.new(1.00229275, 0, -0.992063522, 0)
+Gui.TextLabel_7.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_7.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_7.ZIndex = 2
 Gui.TextLabel_7.Font = Enum.Font.SourceSans
-Gui.TextLabel_7.Text = "GULEG"
+Gui.TextLabel_7.Text = "DOGGO"
 Gui.TextLabel_7.TextColor3 = Color3.fromRGB(0, 0, 0)
 Gui.TextLabel_7.TextSize = 10.000
 Gui.TextLabel_7.TextXAlignment = Enum.TextXAlignment.Right
@@ -2609,9 +2761,10 @@ Gui.TextLabel_7.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.HONDA.Name = "HONDA"
 Gui.HONDA.Parent = Gui.Wavepoints
+Gui.HONDA.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.HONDA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.HONDA.BackgroundTransparency = 1.000
-Gui.HONDA.Position = UDim2.new(0.529999971, 0, 0.131999999, 0)
+Gui.HONDA.Position = UDim2.new(0.541240513, 0, 0.148134857, 0)
 Gui.HONDA.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
 Gui.HONDA.ZIndex = 2
 Gui.HONDA.Image = "http://www.roblox.com/asset/?id=10164277616"
@@ -2621,7 +2774,7 @@ Gui.TextLabel_8.Parent = Gui.HONDA
 Gui.TextLabel_8.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_8.BackgroundTransparency = 1.000
-Gui.TextLabel_8.Position = UDim2.new(-0.100000001, 0, 0, 0)
+Gui.TextLabel_8.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_8.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_8.ZIndex = 2
 Gui.TextLabel_8.Font = Enum.Font.SourceSans
@@ -2633,9 +2786,10 @@ Gui.TextLabel_8.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.CHILY.Name = "CHILY"
 Gui.CHILY.Parent = Gui.Wavepoints
+Gui.CHILY.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.CHILY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.CHILY.BackgroundTransparency = 1.000
-Gui.CHILY.Position = UDim2.new(0.560000002, 0, 0.0460000001, 0)
+Gui.CHILY.Position = UDim2.new(0.560202956, 0, 0.0586647652, 0)
 Gui.CHILY.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
 Gui.CHILY.ZIndex = 2
 Gui.CHILY.Image = "http://www.roblox.com/asset/?id=10164277616"
@@ -2645,7 +2799,7 @@ Gui.TextLabel_9.Parent = Gui.CHILY
 Gui.TextLabel_9.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_9.BackgroundTransparency = 1.000
-Gui.TextLabel_9.Position = UDim2.new(-0.100000001, 0, 0, 0)
+Gui.TextLabel_9.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_9.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_9.ZIndex = 2
 Gui.TextLabel_9.Font = Enum.Font.SourceSans
@@ -2657,9 +2811,10 @@ Gui.TextLabel_9.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.LETSE.Name = "LETSE"
 Gui.LETSE.Parent = Gui.Wavepoints
+Gui.LETSE.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.LETSE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.LETSE.BackgroundTransparency = 1.000
-Gui.LETSE.Position = UDim2.new(0.458999991, 0, 0.103, 0)
+Gui.LETSE.Position = UDim2.new(0.475370914, 0, 0.117987342, 0)
 Gui.LETSE.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
 Gui.LETSE.ZIndex = 2
 Gui.LETSE.Image = "http://www.roblox.com/asset/?id=10164277616"
@@ -2669,7 +2824,7 @@ Gui.TextLabel_10.Parent = Gui.LETSE
 Gui.TextLabel_10.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_10.BackgroundTransparency = 1.000
-Gui.TextLabel_10.Position = UDim2.new(0.451146394, 0, -0.992063522, 0)
+Gui.TextLabel_10.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_10.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_10.ZIndex = 2
 Gui.TextLabel_10.Font = Enum.Font.SourceSans
@@ -2681,10 +2836,11 @@ Gui.TextLabel_10.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.TINDR.Name = "TINDR"
 Gui.TINDR.Parent = Gui.Wavepoints
+Gui.TINDR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.TINDR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TINDR.BackgroundTransparency = 1.000
-Gui.TINDR.Position = UDim2.new(0.620000005, 0, 0.25, 0)
-Gui.TINDR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.TINDR.Position = UDim2.new(0.620000064, 0, 0.254260778, 0)
+Gui.TINDR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.TINDR.ZIndex = 2
 Gui.TINDR.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.TINDR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2693,7 +2849,7 @@ Gui.TextLabel_11.Parent = Gui.TINDR
 Gui.TextLabel_11.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_11.BackgroundTransparency = 1.000
-Gui.TextLabel_11.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_11.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_11.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_11.ZIndex = 2
 Gui.TextLabel_11.Font = Enum.Font.SourceSans
@@ -2705,9 +2861,10 @@ Gui.TextLabel_11.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.KNIFE.Name = "KNIFE"
 Gui.KNIFE.Parent = Gui.Wavepoints
+Gui.KNIFE.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.KNIFE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.KNIFE.BackgroundTransparency = 1.000
-Gui.KNIFE.Position = UDim2.new(0.528999984, 0, 0.263000011, 0)
+Gui.KNIFE.Position = UDim2.new(0.539244592, 0, 0.227879956, 0)
 Gui.KNIFE.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
 Gui.KNIFE.ZIndex = 2
 Gui.KNIFE.Image = "http://www.roblox.com/asset/?id=10164277616"
@@ -2717,7 +2874,7 @@ Gui.TextLabel_12.Parent = Gui.KNIFE
 Gui.TextLabel_12.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_12.BackgroundTransparency = 1.000
-Gui.TextLabel_12.Position = UDim2.new(-0.100000001, 0, 0, 0)
+Gui.TextLabel_12.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_12.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_12.ZIndex = 2
 Gui.TextLabel_12.Font = Enum.Font.SourceSans
@@ -2729,10 +2886,11 @@ Gui.TextLabel_12.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.STRAX.Name = "STRAX"
 Gui.STRAX.Parent = Gui.Wavepoints
+Gui.STRAX.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.STRAX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.STRAX.BackgroundTransparency = 1.000
-Gui.STRAX.Position = UDim2.new(0.639097214, 0, 0.303819448, 0)
-Gui.STRAX.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.STRAX.Position = UDim2.new(0.639097214, 0, 0.317000002, 0)
+Gui.STRAX.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.STRAX.ZIndex = 2
 Gui.STRAX.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.STRAX.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2741,7 +2899,7 @@ Gui.TextLabel_13.Parent = Gui.STRAX
 Gui.TextLabel_13.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_13.BackgroundTransparency = 1.000
-Gui.TextLabel_13.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_13.Position = UDim2.new(1.25, 0, -0.699999988, 0)
 Gui.TextLabel_13.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_13.ZIndex = 2
 Gui.TextLabel_13.Font = Enum.Font.SourceSans
@@ -2753,10 +2911,11 @@ Gui.TextLabel_13.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.TALIS.Name = "TALIS"
 Gui.TALIS.Parent = Gui.Wavepoints
+Gui.TALIS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.TALIS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TALIS.BackgroundTransparency = 1.000
-Gui.TALIS.Position = UDim2.new(0.77700001, 0, 0.375, 0)
-Gui.TALIS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.TALIS.Position = UDim2.new(0.787999988, 0, 0.381945014, 0)
+Gui.TALIS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.TALIS.ZIndex = 2
 Gui.TALIS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.TALIS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2765,7 +2924,7 @@ Gui.TextLabel_14.Parent = Gui.TALIS
 Gui.TextLabel_14.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_14.BackgroundTransparency = 1.000
-Gui.TextLabel_14.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_14.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_14.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_14.ZIndex = 2
 Gui.TextLabel_14.Font = Enum.Font.SourceSans
@@ -2777,10 +2936,11 @@ Gui.TextLabel_14.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.NOONU.Name = "NOONU"
 Gui.NOONU.Parent = Gui.Wavepoints
+Gui.NOONU.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.NOONU.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.NOONU.BackgroundTransparency = 1.000
-Gui.NOONU.Position = UDim2.new(0.822138906, 0, 0.277777791, 0)
-Gui.NOONU.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.NOONU.Position = UDim2.new(0.827000022, 0, 0.294098198, 0)
+Gui.NOONU.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.NOONU.ZIndex = 2
 Gui.NOONU.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.NOONU.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2789,7 +2949,7 @@ Gui.TextLabel_15.Parent = Gui.NOONU
 Gui.TextLabel_15.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_15.BackgroundTransparency = 1.000
-Gui.TextLabel_15.Position = UDim2.new(1.65051198, 0, 0.960061431, 0)
+Gui.TextLabel_15.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_15.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_15.ZIndex = 2
 Gui.TextLabel_15.Font = Enum.Font.SourceSans
@@ -2801,10 +2961,11 @@ Gui.TextLabel_15.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.SISTA.Name = "SISTA"
 Gui.SISTA.Parent = Gui.Wavepoints
+Gui.SISTA.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.SISTA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.SISTA.BackgroundTransparency = 1.000
-Gui.SISTA.Position = UDim2.new(0.855000019, 0, 0.360000014, 0)
-Gui.SISTA.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.SISTA.Position = UDim2.new(0.861000001, 0, 0.368665844, 0)
+Gui.SISTA.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.SISTA.ZIndex = 2
 Gui.SISTA.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.SISTA.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2813,7 +2974,7 @@ Gui.TextLabel_16.Parent = Gui.SISTA
 Gui.TextLabel_16.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_16.BackgroundTransparency = 1.000
-Gui.TextLabel_16.Position = UDim2.new(1.65051198, 0, 0.960061431, 0)
+Gui.TextLabel_16.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_16.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_16.ZIndex = 2
 Gui.TextLabel_16.Font = Enum.Font.SourceSans
@@ -2825,10 +2986,11 @@ Gui.TextLabel_16.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.KELLA.Name = "KELLA"
 Gui.KELLA.Parent = Gui.Wavepoints
+Gui.KELLA.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.KELLA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.KELLA.BackgroundTransparency = 1.000
-Gui.KELLA.Position = UDim2.new(0.88637501, 0, 0.277777791, 0)
-Gui.KELLA.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.KELLA.Position = UDim2.new(0.882000029, 0, 0.298184097, 0)
+Gui.KELLA.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.KELLA.ZIndex = 2
 Gui.KELLA.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.KELLA.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2837,7 +2999,7 @@ Gui.TextLabel_17.Parent = Gui.KELLA
 Gui.TextLabel_17.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_17.BackgroundTransparency = 1.000
-Gui.TextLabel_17.Position = UDim2.new(1.65051198, 0, 0.960061431, 0)
+Gui.TextLabel_17.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_17.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_17.ZIndex = 2
 Gui.TextLabel_17.Font = Enum.Font.SourceSans
@@ -2849,10 +3011,11 @@ Gui.TextLabel_17.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.SQUID.Name = "SQUID"
 Gui.SQUID.Parent = Gui.Wavepoints
+Gui.SQUID.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.SQUID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.SQUID.BackgroundTransparency = 1.000
-Gui.SQUID.Position = UDim2.new(0.926305592, 0, 0.197916687, 0)
-Gui.SQUID.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.SQUID.Position = UDim2.new(0.904999971, 0, 0.209315911, 0)
+Gui.SQUID.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.SQUID.ZIndex = 2
 Gui.SQUID.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.SQUID.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2861,7 +3024,7 @@ Gui.TextLabel_18.Parent = Gui.SQUID
 Gui.TextLabel_18.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_18.BackgroundTransparency = 1.000
-Gui.TextLabel_18.Position = UDim2.new(1.65051198, 0, 0.960061431, 0)
+Gui.TextLabel_18.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_18.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_18.ZIndex = 2
 Gui.TextLabel_18.Font = Enum.Font.SourceSans
@@ -2873,10 +3036,11 @@ Gui.TextLabel_18.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.WELLS.Name = "WELLS"
 Gui.WELLS.Parent = Gui.Wavepoints
+Gui.WELLS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.WELLS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.WELLS.BackgroundTransparency = 1.000
-Gui.WELLS.Position = UDim2.new(0.756166697, 0, 0.184027791, 0)
-Gui.WELLS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.WELLS.Position = UDim2.new(0.77700001, 0, 0.209315911, 0)
+Gui.WELLS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.WELLS.ZIndex = 2
 Gui.WELLS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.WELLS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2885,7 +3049,7 @@ Gui.TextLabel_19.Parent = Gui.WELLS
 Gui.TextLabel_19.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_19.BackgroundTransparency = 1.000
-Gui.TextLabel_19.Position = UDim2.new(0.0880118608, 0, 0.00520026684, 0)
+Gui.TextLabel_19.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_19.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_19.ZIndex = 2
 Gui.TextLabel_19.Font = Enum.Font.SourceSans
@@ -2897,10 +3061,11 @@ Gui.TextLabel_19.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.DUNKS.Name = "DUNKS"
 Gui.DUNKS.Parent = Gui.Wavepoints
+Gui.DUNKS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.DUNKS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.DUNKS.BackgroundTransparency = 1.000
-Gui.DUNKS.Position = UDim2.new(0.829999983, 0, 0.421999991, 0)
-Gui.DUNKS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.DUNKS.Position = UDim2.new(0.81400001, 0, 0.436083049, 0)
+Gui.DUNKS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.DUNKS.ZIndex = 2
 Gui.DUNKS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.DUNKS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2909,7 +3074,7 @@ Gui.TextLabel_20.Parent = Gui.DUNKS
 Gui.TextLabel_20.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_20.BackgroundTransparency = 1.000
-Gui.TextLabel_20.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_20.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_20.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_20.ZIndex = 2
 Gui.TextLabel_20.Font = Enum.Font.SourceSans
@@ -2921,10 +3086,11 @@ Gui.TextLabel_20.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.ROSMO.Name = "ROSMO"
 Gui.ROSMO.Parent = Gui.Wavepoints
+Gui.ROSMO.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.ROSMO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.ROSMO.BackgroundTransparency = 1.000
-Gui.ROSMO.Position = UDim2.new(0.938458383, 0, 0.378472209, 0)
-Gui.ROSMO.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.ROSMO.Position = UDim2.new(0.933000028, 0, 0.394202679, 0)
+Gui.ROSMO.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.ROSMO.ZIndex = 2
 Gui.ROSMO.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.ROSMO.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2933,7 +3099,7 @@ Gui.TextLabel_21.Parent = Gui.ROSMO
 Gui.TextLabel_21.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_21.BackgroundTransparency = 1.000
-Gui.TextLabel_21.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_21.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_21.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_21.ZIndex = 2
 Gui.TextLabel_21.Font = Enum.Font.SourceSans
@@ -2945,10 +3111,11 @@ Gui.TextLabel_21.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.CAMEL.Name = "CAMEL"
 Gui.CAMEL.Parent = Gui.Wavepoints
+Gui.CAMEL.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.CAMEL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.CAMEL.BackgroundTransparency = 1.000
-Gui.CAMEL.Position = UDim2.new(0.734000027, 0, 0.418000013, 0)
-Gui.CAMEL.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.CAMEL.Position = UDim2.new(0.74000001, 0, 0.430975705, 0)
+Gui.CAMEL.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.CAMEL.ZIndex = 2
 Gui.CAMEL.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.CAMEL.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2957,7 +3124,7 @@ Gui.TextLabel_22.Parent = Gui.CAMEL
 Gui.TextLabel_22.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_22.BackgroundTransparency = 1.000
-Gui.TextLabel_22.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_22.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_22.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_22.ZIndex = 2
 Gui.TextLabel_22.Font = Enum.Font.SourceSans
@@ -2969,10 +3136,11 @@ Gui.TextLabel_22.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.CYRIL.Name = "CYRIL"
 Gui.CYRIL.Parent = Gui.Wavepoints
+Gui.CYRIL.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.CYRIL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.CYRIL.BackgroundTransparency = 1.000
-Gui.CYRIL.Position = UDim2.new(0.790000021, 0, 0.488999993, 0)
-Gui.CYRIL.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.CYRIL.Position = UDim2.new(0.795000017, 0, 0.508607745, 0)
+Gui.CYRIL.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.CYRIL.ZIndex = 2
 Gui.CYRIL.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.CYRIL.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -2981,7 +3149,7 @@ Gui.TextLabel_23.Parent = Gui.CYRIL
 Gui.TextLabel_23.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_23.BackgroundTransparency = 1.000
-Gui.TextLabel_23.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_23.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_23.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_23.ZIndex = 2
 Gui.TextLabel_23.Font = Enum.Font.SourceSans
@@ -2991,25 +3159,27 @@ Gui.TextLabel_23.TextSize = 10.000
 Gui.TextLabel_23.TextXAlignment = Enum.TextXAlignment.Right
 Gui.TextLabel_23.TextYAlignment = Enum.TextYAlignment.Top
 
-Gui.DOGGO.Name = "DOGGO"
-Gui.DOGGO.Parent = Gui.Wavepoints
-Gui.DOGGO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Gui.DOGGO.BackgroundTransparency = 1.000
-Gui.DOGGO.Position = UDim2.new(0.895902812, 0, 0.607055545, 0)
-Gui.DOGGO.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
-Gui.DOGGO.ZIndex = 2
-Gui.DOGGO.Image = "http://www.roblox.com/asset/?id=10164277616"
-Gui.DOGGO.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Gui.DEL.Name = "DEL"
+Gui.DEL.Parent = Gui.Wavepoints
+Gui.DEL.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.DEL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.DEL.BackgroundTransparency = 1.000
+Gui.DEL.Position = UDim2.new(0.824000001, 0, 0.609733582, 0)
+Gui.DEL.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
+Gui.DEL.ZIndex = 2
+Gui.DEL.Image = "rbxassetid://12827017728"
+Gui.DEL.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Gui.DEL.ScaleType = Enum.ScaleType.Fit
 
-Gui.TextLabel_24.Parent = Gui.DOGGO
+Gui.TextLabel_24.Parent = Gui.DEL
 Gui.TextLabel_24.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_24.BackgroundTransparency = 1.000
-Gui.TextLabel_24.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_24.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_24.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_24.ZIndex = 2
 Gui.TextLabel_24.Font = Enum.Font.SourceSans
-Gui.TextLabel_24.Text = "DOGGO"
+Gui.TextLabel_24.Text = "DEL"
 Gui.TextLabel_24.TextColor3 = Color3.fromRGB(0, 0, 0)
 Gui.TextLabel_24.TextSize = 10.000
 Gui.TextLabel_24.TextXAlignment = Enum.TextXAlignment.Right
@@ -3017,10 +3187,11 @@ Gui.TextLabel_24.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.BILLO.Name = "BILLO"
 Gui.BILLO.Parent = Gui.Wavepoints
+Gui.BILLO.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.BILLO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.BILLO.BackgroundTransparency = 1.000
-Gui.BILLO.Position = UDim2.new(0.979236126, 0, 0.645249963, 0)
-Gui.BILLO.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.BILLO.Position = UDim2.new(1, 0, 0.630163014, 0)
+Gui.BILLO.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.BILLO.ZIndex = 2
 Gui.BILLO.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.BILLO.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3029,7 +3200,7 @@ Gui.TextLabel_25.Parent = Gui.BILLO
 Gui.TextLabel_25.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_25.BackgroundTransparency = 1.000
-Gui.TextLabel_25.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_25.Position = UDim2.new(0.400000006, 0, 0.75, 0)
 Gui.TextLabel_25.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_25.ZIndex = 2
 Gui.TextLabel_25.Font = Enum.Font.SourceSans
@@ -3041,10 +3212,11 @@ Gui.TextLabel_25.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.JUSTY.Name = "JUSTY"
 Gui.JUSTY.Parent = Gui.Wavepoints
+Gui.JUSTY.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.JUSTY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.JUSTY.BackgroundTransparency = 1.000
-Gui.JUSTY.Position = UDim2.new(0.906319499, 0, 0.693861127, 0)
-Gui.JUSTY.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.JUSTY.Position = UDim2.new(0.920000017, 0, 0.683279693, 0)
+Gui.JUSTY.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.JUSTY.ZIndex = 2
 Gui.JUSTY.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.JUSTY.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3053,7 +3225,7 @@ Gui.TextLabel_26.Parent = Gui.JUSTY
 Gui.TextLabel_26.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_26.BackgroundTransparency = 1.000
-Gui.TextLabel_26.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_26.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_26.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_26.ZIndex = 2
 Gui.TextLabel_26.Font = Enum.Font.SourceSans
@@ -3065,10 +3237,11 @@ Gui.TextLabel_26.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.JACKI.Name = "JACKI"
 Gui.JACKI.Parent = Gui.Wavepoints
+Gui.JACKI.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.JACKI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.JACKI.BackgroundTransparency = 1.000
-Gui.JACKI.Position = UDim2.new(0.876805604, 0, 0.825805545, 0)
-Gui.JACKI.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.JACKI.Position = UDim2.new(0.873999953, 0, 0.816071212, 0)
+Gui.JACKI.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.JACKI.ZIndex = 2
 Gui.JACKI.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.JACKI.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3077,7 +3250,7 @@ Gui.TextLabel_27.Parent = Gui.JACKI
 Gui.TextLabel_27.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_27.BackgroundTransparency = 1.000
-Gui.TextLabel_27.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_27.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_27.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_27.ZIndex = 2
 Gui.TextLabel_27.Font = Enum.Font.SourceSans
@@ -3089,10 +3262,11 @@ Gui.TextLabel_27.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.DEBUG.Name = "DEBUG"
 Gui.DEBUG.Parent = Gui.Wavepoints
+Gui.DEBUG.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.DEBUG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.DEBUG.BackgroundTransparency = 1.000
-Gui.DEBUG.Position = UDim2.new(0.977500081, 0, 0.82406944, 0)
-Gui.DEBUG.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.DEBUG.Position = UDim2.new(1, 0, 0.814028263, 0)
+Gui.DEBUG.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.DEBUG.ZIndex = 2
 Gui.DEBUG.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.DEBUG.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3101,7 +3275,7 @@ Gui.TextLabel_28.Parent = Gui.DEBUG
 Gui.TextLabel_28.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_28.BackgroundTransparency = 1.000
-Gui.TextLabel_28.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_28.Position = UDim2.new(0.400000006, 0, 0.75, 0)
 Gui.TextLabel_28.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_28.ZIndex = 2
 Gui.TextLabel_28.Font = Enum.Font.SourceSans
@@ -3113,10 +3287,11 @@ Gui.TextLabel_28.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.RENTS.Name = "RENTS"
 Gui.RENTS.Parent = Gui.Wavepoints
+Gui.RENTS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.RENTS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.RENTS.BackgroundTransparency = 1.000
-Gui.RENTS.Position = UDim2.new(0.776111186, 0, 0.744208336, 0)
-Gui.RENTS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.RENTS.Position = UDim2.new(0.785000026, 0, 0.734353364, 0)
+Gui.RENTS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.RENTS.ZIndex = 2
 Gui.RENTS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.RENTS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3125,7 +3300,7 @@ Gui.TextLabel_29.Parent = Gui.RENTS
 Gui.TextLabel_29.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_29.BackgroundTransparency = 1.000
-Gui.TextLabel_29.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_29.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_29.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_29.ZIndex = 2
 Gui.TextLabel_29.Font = Enum.Font.SourceSans
@@ -3137,10 +3312,11 @@ Gui.TextLabel_29.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.GRASS.Name = "GRASS"
 Gui.GRASS.Parent = Gui.Wavepoints
+Gui.GRASS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.GRASS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.GRASS.BackgroundTransparency = 1.000
-Gui.GRASS.Position = UDim2.new(0.694513977, 0, 0.771986127, 0)
-Gui.GRASS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.GRASS.Position = UDim2.new(0.704999983, 0, 0.773169398, 0)
+Gui.GRASS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.GRASS.ZIndex = 2
 Gui.GRASS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.GRASS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3149,7 +3325,7 @@ Gui.TextLabel_30.Parent = Gui.GRASS
 Gui.TextLabel_30.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_30.BackgroundTransparency = 1.000
-Gui.TextLabel_30.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_30.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_30.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_30.ZIndex = 2
 Gui.TextLabel_30.Font = Enum.Font.SourceSans
@@ -3161,10 +3337,11 @@ Gui.TextLabel_30.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.ANYMS.Name = "ANYMS"
 Gui.ANYMS.Parent = Gui.Wavepoints
+Gui.ANYMS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.ANYMS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.ANYMS.BackgroundTransparency = 1.000
-Gui.ANYMS.Position = UDim2.new(0.658055663, 0, 0.673027754, 0)
-Gui.ANYMS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.ANYMS.Position = UDim2.new(0.675000012, 0, 0.69145149, 0)
+Gui.ANYMS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.ANYMS.ZIndex = 2
 Gui.ANYMS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.ANYMS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3173,7 +3350,7 @@ Gui.TextLabel_31.Parent = Gui.ANYMS
 Gui.TextLabel_31.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_31.BackgroundTransparency = 1.000
-Gui.TextLabel_31.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_31.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_31.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_31.ZIndex = 2
 Gui.TextLabel_31.Font = Enum.Font.SourceSans
@@ -3185,10 +3362,11 @@ Gui.TextLabel_31.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.BOBUX.Name = "BOBUX"
 Gui.BOBUX.Parent = Gui.Wavepoints
+Gui.BOBUX.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.BOBUX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.BOBUX.BackgroundTransparency = 1.000
-Gui.BOBUX.Position = UDim2.new(0.915000021, 0, 0.884833336, 0)
-Gui.BOBUX.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.BOBUX.Position = UDim2.new(0.933000028, 0, 0.883488476, 0)
+Gui.BOBUX.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.BOBUX.ZIndex = 2
 Gui.BOBUX.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.BOBUX.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3197,7 +3375,7 @@ Gui.TextLabel_32.Parent = Gui.BOBUX
 Gui.TextLabel_32.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_32.BackgroundTransparency = 1.000
-Gui.TextLabel_32.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_32.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_32.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_32.ZIndex = 2
 Gui.TextLabel_32.Font = Enum.Font.SourceSans
@@ -3209,10 +3387,11 @@ Gui.TextLabel_32.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.MUONE.Name = "MUONE"
 Gui.MUONE.Parent = Gui.Wavepoints
+Gui.MUONE.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.MUONE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.MUONE.BackgroundTransparency = 1.000
-Gui.MUONE.Position = UDim2.new(0.913263917, 0, 0.94906944, 0)
-Gui.MUONE.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.MUONE.Position = UDim2.new(0.921000004, 0, 0.959077597, 0)
+Gui.MUONE.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.MUONE.ZIndex = 2
 Gui.MUONE.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.MUONE.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3221,7 +3400,7 @@ Gui.TextLabel_33.Parent = Gui.MUONE
 Gui.TextLabel_33.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_33.BackgroundTransparency = 1.000
-Gui.TextLabel_33.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_33.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_33.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_33.ZIndex = 2
 Gui.TextLabel_33.Font = Enum.Font.SourceSans
@@ -3233,10 +3412,11 @@ Gui.TextLabel_33.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.JAZZR.Name = "JAZZR"
 Gui.JAZZR.Parent = Gui.Wavepoints
+Gui.JAZZR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.JAZZR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.JAZZR.BackgroundTransparency = 1.000
-Gui.JAZZR.Position = UDim2.new(0.979236126, 0, 0.94906944, 0)
-Gui.JAZZR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.JAZZR.Position = UDim2.new(1, 0, 0.959077597, 0)
+Gui.JAZZR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.JAZZR.ZIndex = 2
 Gui.JAZZR.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.JAZZR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3245,7 +3425,7 @@ Gui.TextLabel_34.Parent = Gui.JAZZR
 Gui.TextLabel_34.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_34.BackgroundTransparency = 1.000
-Gui.TextLabel_34.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_34.Position = UDim2.new(0.400000006, 0, 0.75, 0)
 Gui.TextLabel_34.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_34.ZIndex = 2
 Gui.TextLabel_34.Font = Enum.Font.SourceSans
@@ -3257,10 +3437,11 @@ Gui.TextLabel_34.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.AQWRT.Name = "AQWRT"
 Gui.AQWRT.Parent = Gui.Wavepoints
+Gui.AQWRT.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.AQWRT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.AQWRT.BackgroundTransparency = 1.000
-Gui.AQWRT.Position = UDim2.new(0.65284729, 0, 0.891777754, 0)
-Gui.AQWRT.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.AQWRT.Position = UDim2.new(0.675000012, 0, 0.894724786, 0)
+Gui.AQWRT.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.AQWRT.ZIndex = 2
 Gui.AQWRT.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.AQWRT.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3269,7 +3450,7 @@ Gui.TextLabel_35.Parent = Gui.AQWRT
 Gui.TextLabel_35.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_35.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_35.BackgroundTransparency = 1.000
-Gui.TextLabel_35.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_35.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_35.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_35.ZIndex = 2
 Gui.TextLabel_35.Font = Enum.Font.SourceSans
@@ -3281,10 +3462,11 @@ Gui.TextLabel_35.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.JAMSI.Name = "JAMSI"
 Gui.JAMSI.Parent = Gui.Wavepoints
+Gui.JAMSI.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.JAMSI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.JAMSI.BackgroundTransparency = 1.000
-Gui.JAMSI.Position = UDim2.new(0.576458395, 0, 0.732055545, 0)
-Gui.JAMSI.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.JAMSI.Position = UDim2.new(0.598999977, 0, 0.732310355, 0)
+Gui.JAMSI.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.JAMSI.ZIndex = 2
 Gui.JAMSI.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.JAMSI.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3293,7 +3475,7 @@ Gui.TextLabel_36.Parent = Gui.JAMSI
 Gui.TextLabel_36.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_36.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_36.BackgroundTransparency = 1.000
-Gui.TextLabel_36.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_36.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_36.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_36.ZIndex = 2
 Gui.TextLabel_36.Font = Enum.Font.SourceSans
@@ -3305,10 +3487,11 @@ Gui.TextLabel_36.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.LAZER.Name = "LAZER"
 Gui.LAZER.Parent = Gui.Wavepoints
+Gui.LAZER.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.LAZER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.LAZER.BackgroundTransparency = 1.000
-Gui.LAZER.Position = UDim2.new(0.555625081, 0, 0.811916649, 0)
-Gui.LAZER.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.LAZER.Position = UDim2.new(0.592999995, 0, 0.814028263, 0)
+Gui.LAZER.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.LAZER.ZIndex = 2
 Gui.LAZER.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.LAZER.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3317,7 +3500,7 @@ Gui.TextLabel_37.Parent = Gui.LAZER
 Gui.TextLabel_37.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_37.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_37.BackgroundTransparency = 1.000
-Gui.TextLabel_37.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_37.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_37.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_37.ZIndex = 2
 Gui.TextLabel_37.Font = Enum.Font.SourceSans
@@ -3329,10 +3512,11 @@ Gui.TextLabel_37.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.FORIA.Name = "FORIA"
 Gui.FORIA.Parent = Gui.Wavepoints
+Gui.FORIA.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.FORIA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.FORIA.BackgroundTransparency = 1.000
-Gui.FORIA.Position = UDim2.new(0.555625081, 0, 0.961222172, 0)
-Gui.FORIA.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.FORIA.Position = UDim2.new(0.583000004, 0, 0.959077597, 0)
+Gui.FORIA.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.FORIA.ZIndex = 2
 Gui.FORIA.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.FORIA.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3341,7 +3525,7 @@ Gui.TextLabel_38.Parent = Gui.FORIA
 Gui.TextLabel_38.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_38.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_38.BackgroundTransparency = 1.000
-Gui.TextLabel_38.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_38.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_38.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_38.ZIndex = 2
 Gui.TextLabel_38.Font = Enum.Font.SourceSans
@@ -3353,10 +3537,11 @@ Gui.TextLabel_38.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.SAVES.Name = "SAVES"
 Gui.SAVES.Parent = Gui.Wavepoints
+Gui.SAVES.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.SAVES.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.SAVES.BackgroundTransparency = 1.000
-Gui.SAVES.Position = UDim2.new(0.479236186, 0, 0.81191659, 0)
-Gui.SAVES.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.SAVES.Position = UDim2.new(0.494999975, 0, 0.809942484, 0)
+Gui.SAVES.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.SAVES.ZIndex = 2
 Gui.SAVES.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.SAVES.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3365,7 +3550,7 @@ Gui.TextLabel_39.Parent = Gui.SAVES
 Gui.TextLabel_39.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_39.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_39.BackgroundTransparency = 1.000
-Gui.TextLabel_39.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_39.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_39.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_39.ZIndex = 2
 Gui.TextLabel_39.Font = Enum.Font.SourceSans
@@ -3377,10 +3562,11 @@ Gui.TextLabel_39.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.REAPR.Name = "REAPR"
 Gui.REAPR.Parent = Gui.Wavepoints
+Gui.REAPR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.REAPR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.REAPR.BackgroundTransparency = 1.000
-Gui.REAPR.Position = UDim2.new(0.479236186, 0, 0.978583276, 0)
-Gui.REAPR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.REAPR.Position = UDim2.new(0.494999975, 0, 0.980528474, 0)
+Gui.REAPR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.REAPR.ZIndex = 2
 Gui.REAPR.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.REAPR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3389,7 +3575,7 @@ Gui.TextLabel_40.Parent = Gui.REAPR
 Gui.TextLabel_40.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_40.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_40.BackgroundTransparency = 1.000
-Gui.TextLabel_40.Position = UDim2.new(0.782456458, 0, -0.862855315, 0)
+Gui.TextLabel_40.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_40.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_40.ZIndex = 2
 Gui.TextLabel_40.Font = Enum.Font.SourceSans
@@ -3401,10 +3587,11 @@ Gui.TextLabel_40.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.STOOD.Name = "STOOD"
 Gui.STOOD.Parent = Gui.Wavepoints
+Gui.STOOD.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.STOOD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.STOOD.BackgroundTransparency = 1.000
-Gui.STOOD.Position = UDim2.new(0.458402842, 0, 0.723374903, 0)
-Gui.STOOD.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.STOOD.Position = UDim2.new(0.456999958, 0, 0.726181626, 0)
+Gui.STOOD.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.STOOD.ZIndex = 2
 Gui.STOOD.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.STOOD.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3413,7 +3600,7 @@ Gui.TextLabel_41.Parent = Gui.STOOD
 Gui.TextLabel_41.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_41.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_41.BackgroundTransparency = 1.000
-Gui.TextLabel_41.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_41.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_41.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_41.ZIndex = 2
 Gui.TextLabel_41.Font = Enum.Font.SourceSans
@@ -3425,10 +3612,11 @@ Gui.TextLabel_41.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.RESTS.Name = "RESTS"
 Gui.RESTS.Parent = Gui.Wavepoints
+Gui.RESTS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.RESTS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.RESTS.BackgroundTransparency = 1.000
-Gui.RESTS.Position = UDim2.new(0.437569499, 0, 0.603583217, 0)
-Gui.RESTS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.RESTS.Position = UDim2.new(0.441000015, 0, 0.614840865, 0)
+Gui.RESTS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.RESTS.ZIndex = 2
 Gui.RESTS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.RESTS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3437,7 +3625,7 @@ Gui.TextLabel_42.Parent = Gui.RESTS
 Gui.TextLabel_42.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_42.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_42.BackgroundTransparency = 1.000
-Gui.TextLabel_42.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_42.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_42.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_42.ZIndex = 2
 Gui.TextLabel_42.Font = Enum.Font.SourceSans
@@ -3449,10 +3637,11 @@ Gui.TextLabel_42.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.SETHR.Name = "SETHR"
 Gui.SETHR.Parent = Gui.Wavepoints
+Gui.SETHR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.SETHR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.SETHR.BackgroundTransparency = 1.000
-Gui.SETHR.Position = UDim2.new(0.519999981, 0, 0.600000024, 0)
-Gui.SETHR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.SETHR.Position = UDim2.new(0.555000007, 0, 0.58930409, 0)
+Gui.SETHR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.SETHR.ZIndex = 2
 Gui.SETHR.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.SETHR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3461,7 +3650,7 @@ Gui.TextLabel_43.Parent = Gui.SETHR
 Gui.TextLabel_43.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_43.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_43.BackgroundTransparency = 1.000
-Gui.TextLabel_43.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_43.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_43.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_43.ZIndex = 2
 Gui.TextLabel_43.Font = Enum.Font.SourceSans
@@ -3473,10 +3662,11 @@ Gui.TextLabel_43.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.OCEEN.Name = "OCEEN"
 Gui.OCEEN.Parent = Gui.Wavepoints
+Gui.OCEEN.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.OCEEN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.OCEEN.BackgroundTransparency = 1.000
-Gui.OCEEN.Position = UDim2.new(0.639791667, 0, 0.568750024, 0)
-Gui.OCEEN.Size = UDim2.new(0.0200000014, 0, 0.0200000014, 0)
+Gui.OCEEN.Position = UDim2.new(0.636000037, 0, 0.566831648, 0)
+Gui.OCEEN.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.OCEEN.ZIndex = 2
 Gui.OCEEN.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.OCEEN.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3485,7 +3675,7 @@ Gui.TextLabel_44.Parent = Gui.OCEEN
 Gui.TextLabel_44.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_44.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_44.BackgroundTransparency = 1.000
-Gui.TextLabel_44.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_44.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_44.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_44.ZIndex = 2
 Gui.TextLabel_44.Font = Enum.Font.SourceSans
@@ -3497,10 +3687,11 @@ Gui.TextLabel_44.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.SILVA.Name = "SILVA"
 Gui.SILVA.Parent = Gui.Wavepoints
+Gui.SILVA.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.SILVA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.SILVA.BackgroundTransparency = 1.000
-Gui.SILVA.Position = UDim2.new(0.699999988, 0, 0.508000016, 0)
-Gui.SILVA.Size = UDim2.new(0.0200000014, 0, 0.0200000014, 0)
+Gui.SILVA.Position = UDim2.new(0.699000001, 0, 0.52290833, 0)
+Gui.SILVA.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.SILVA.ZIndex = 2
 Gui.SILVA.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.SILVA.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3509,7 +3700,7 @@ Gui.TextLabel_45.Parent = Gui.SILVA
 Gui.TextLabel_45.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_45.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_45.BackgroundTransparency = 1.000
-Gui.TextLabel_45.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_45.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_45.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_45.ZIndex = 2
 Gui.TextLabel_45.Font = Enum.Font.SourceSans
@@ -3521,10 +3712,11 @@ Gui.TextLabel_45.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.GAVIN.Name = "GAVIN"
 Gui.GAVIN.Parent = Gui.Wavepoints
+Gui.GAVIN.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.GAVIN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.GAVIN.BackgroundTransparency = 1.000
-Gui.GAVIN.Position = UDim2.new(0.579027772, 0, 0.520138919, 0)
-Gui.GAVIN.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.GAVIN.Position = UDim2.new(0.577000022, 0, 0.521886826, 0)
+Gui.GAVIN.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.GAVIN.ZIndex = 2
 Gui.GAVIN.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.GAVIN.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3533,7 +3725,7 @@ Gui.TextLabel_46.Parent = Gui.GAVIN
 Gui.TextLabel_46.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_46.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_46.BackgroundTransparency = 1.000
-Gui.TextLabel_46.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_46.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_46.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_46.ZIndex = 2
 Gui.TextLabel_46.Font = Enum.Font.SourceSans
@@ -3545,10 +3737,11 @@ Gui.TextLabel_46.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.INDEX.Name = "INDEX"
 Gui.INDEX.Parent = Gui.Wavepoints
+Gui.INDEX.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.INDEX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.INDEX.BackgroundTransparency = 1.000
-Gui.INDEX.Position = UDim2.new(0.430000007, 0, 0.485000014, 0)
-Gui.INDEX.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.INDEX.Position = UDim2.new(0.441000015, 0, 0.49635002, 0)
+Gui.INDEX.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.INDEX.ZIndex = 2
 Gui.INDEX.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.INDEX.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3557,7 +3750,7 @@ Gui.TextLabel_47.Parent = Gui.INDEX
 Gui.TextLabel_47.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_47.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_47.BackgroundTransparency = 1.000
-Gui.TextLabel_47.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_47.Position = UDim2.new(1.25, 0, -0.699999988, 0)
 Gui.TextLabel_47.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_47.ZIndex = 2
 Gui.TextLabel_47.Font = Enum.Font.SourceSans
@@ -3569,10 +3762,11 @@ Gui.TextLabel_47.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.EASTN.Name = "EASTN"
 Gui.EASTN.Parent = Gui.Wavepoints
+Gui.EASTN.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.EASTN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.EASTN.BackgroundTransparency = 1.000
-Gui.EASTN.Position = UDim2.new(0.372000009, 0, 0.603999972, 0)
-Gui.EASTN.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.EASTN.Position = UDim2.new(0.381999999, 0, 0.611776531, 0)
+Gui.EASTN.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.EASTN.ZIndex = 2
 Gui.EASTN.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.EASTN.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3581,7 +3775,7 @@ Gui.TextLabel_48.Parent = Gui.EASTN
 Gui.TextLabel_48.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_48.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_48.BackgroundTransparency = 1.000
-Gui.TextLabel_48.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_48.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_48.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_48.ZIndex = 2
 Gui.TextLabel_48.Font = Enum.Font.SourceSans
@@ -3593,10 +3787,11 @@ Gui.TextLabel_48.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.ENDER.Name = "ENDER"
 Gui.ENDER.Parent = Gui.Wavepoints
+Gui.ENDER.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.ENDER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.ENDER.BackgroundTransparency = 1.000
-Gui.ENDER.Position = UDim2.new(0.319999993, 0, 0.540000021, 0)
-Gui.ENDER.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.ENDER.Position = UDim2.new(0.313000023, 0, 0.517800987, 0)
+Gui.ENDER.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.ENDER.ZIndex = 2
 Gui.ENDER.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.ENDER.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3605,7 +3800,7 @@ Gui.TextLabel_49.Parent = Gui.ENDER
 Gui.TextLabel_49.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_49.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_49.BackgroundTransparency = 1.000
-Gui.TextLabel_49.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_49.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_49.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_49.ZIndex = 2
 Gui.TextLabel_49.Font = Enum.Font.SourceSans
@@ -3617,10 +3812,11 @@ Gui.TextLabel_49.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.INTER.Name = "INTER"
 Gui.INTER.Parent = Gui.Wavepoints
+Gui.INTER.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.INTER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.INTER.BackgroundTransparency = 1.000
-Gui.INTER.Position = UDim2.new(0.368125081, 0, 0.87441659, 0)
-Gui.INTER.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.INTER.Position = UDim2.new(0.380000025, 0, 0.866123497, 0)
+Gui.INTER.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.INTER.ZIndex = 2
 Gui.INTER.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.INTER.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3629,7 +3825,7 @@ Gui.TextLabel_50.Parent = Gui.INTER
 Gui.TextLabel_50.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_50.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_50.BackgroundTransparency = 1.000
-Gui.TextLabel_50.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_50.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_50.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_50.ZIndex = 2
 Gui.TextLabel_50.Font = Enum.Font.SourceSans
@@ -3641,10 +3837,11 @@ Gui.TextLabel_50.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.CRACK.Name = "CRACK"
 Gui.CRACK.Parent = Gui.Wavepoints
+Gui.CRACK.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.CRACK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.CRACK.BackgroundTransparency = 1.000
-Gui.CRACK.Position = UDim2.new(0.300416738, 0, 0.87441659, 0)
-Gui.CRACK.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.CRACK.Position = UDim2.new(0.311999977, 0, 0.867145002, 0)
+Gui.CRACK.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.CRACK.ZIndex = 2
 Gui.CRACK.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.CRACK.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3653,7 +3850,7 @@ Gui.TextLabel_51.Parent = Gui.CRACK
 Gui.TextLabel_51.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_51.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_51.BackgroundTransparency = 1.000
-Gui.TextLabel_51.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_51.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_51.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_51.ZIndex = 2
 Gui.TextLabel_51.Font = Enum.Font.SourceSans
@@ -3665,10 +3862,11 @@ Gui.TextLabel_51.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.HELPR.Name = "HELPR"
 Gui.HELPR.Parent = Gui.Wavepoints
+Gui.HELPR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.HELPR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.HELPR.BackgroundTransparency = 1.000
-Gui.HELPR.Position = UDim2.new(0.302152842, 0, 0.801499903, 0)
-Gui.HELPR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.HELPR.Position = UDim2.new(0.311999977, 0, 0.796663225, 0)
+Gui.HELPR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.HELPR.ZIndex = 2
 Gui.HELPR.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.HELPR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3677,7 +3875,7 @@ Gui.TextLabel_52.Parent = Gui.HELPR
 Gui.TextLabel_52.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_52.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_52.BackgroundTransparency = 1.000
-Gui.TextLabel_52.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_52.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_52.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_52.ZIndex = 2
 Gui.TextLabel_52.Font = Enum.Font.SourceSans
@@ -3689,10 +3887,11 @@ Gui.TextLabel_52.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.WAREZ.Name = "WAREZ"
 Gui.WAREZ.Parent = Gui.Wavepoints
+Gui.WAREZ.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.WAREZ.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.WAREZ.BackgroundTransparency = 1.000
-Gui.WAREZ.Position = UDim2.new(0.302152842, 0, 0.723374903, 0)
-Gui.WAREZ.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.WAREZ.Position = UDim2.new(0.313000023, 0, 0.736396253, 0)
+Gui.WAREZ.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.WAREZ.ZIndex = 2
 Gui.WAREZ.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.WAREZ.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3701,7 +3900,7 @@ Gui.TextLabel_53.Parent = Gui.WAREZ
 Gui.TextLabel_53.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_53.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_53.BackgroundTransparency = 1.000
-Gui.TextLabel_53.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_53.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_53.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_53.ZIndex = 2
 Gui.TextLabel_53.Font = Enum.Font.SourceSans
@@ -3713,10 +3912,11 @@ Gui.TextLabel_53.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.PARTS.Name = "PARTS"
 Gui.PARTS.Parent = Gui.Wavepoints
+Gui.PARTS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.PARTS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.PARTS.BackgroundTransparency = 1.000
-Gui.PARTS.Position = UDim2.new(0.302152842, 0, 0.659138799, 0)
-Gui.PARTS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.PARTS.Position = UDim2.new(0.311999977, 0, 0.674086332, 0)
+Gui.PARTS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.PARTS.ZIndex = 2
 Gui.PARTS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.PARTS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3725,7 +3925,7 @@ Gui.TextLabel_54.Parent = Gui.PARTS
 Gui.TextLabel_54.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_54.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_54.BackgroundTransparency = 1.000
-Gui.TextLabel_54.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_54.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_54.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_54.ZIndex = 2
 Gui.TextLabel_54.Font = Enum.Font.SourceSans
@@ -3737,10 +3937,11 @@ Gui.TextLabel_54.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.DEATH.Name = "DEATH"
 Gui.DEATH.Parent = Gui.Wavepoints
+Gui.DEATH.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.DEATH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.DEATH.BackgroundTransparency = 1.000
-Gui.DEATH.Position = UDim2.new(0.300416738, 0, 0.980319381, 0)
-Gui.DEATH.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.DEATH.Position = UDim2.new(0.294999987, 0, 0.965206444, 0)
+Gui.DEATH.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.DEATH.ZIndex = 2
 Gui.DEATH.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.DEATH.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3749,7 +3950,7 @@ Gui.TextLabel_55.Parent = Gui.DEATH
 Gui.TextLabel_55.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_55.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_55.BackgroundTransparency = 1.000
-Gui.TextLabel_55.Position = UDim2.new(-0.432821333, 0, 0.0920058489, 0)
+Gui.TextLabel_55.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_55.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_55.ZIndex = 2
 Gui.TextLabel_55.Font = Enum.Font.SourceSans
@@ -3761,10 +3962,11 @@ Gui.TextLabel_55.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.BEANS.Name = "BEANS"
 Gui.BEANS.Parent = Gui.Wavepoints
+Gui.BEANS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.BEANS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.BEANS.BackgroundTransparency = 1.000
-Gui.BEANS.Position = UDim2.new(0.219999999, 0, 0.649999976, 0)
-Gui.BEANS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.BEANS.Position = UDim2.new(0.23499997, 0, 0.665914536, 0)
+Gui.BEANS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.BEANS.ZIndex = 2
 Gui.BEANS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.BEANS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3773,7 +3975,7 @@ Gui.TextLabel_56.Parent = Gui.BEANS
 Gui.TextLabel_56.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_56.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_56.BackgroundTransparency = 1.000
-Gui.TextLabel_56.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_56.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_56.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_56.ZIndex = 2
 Gui.TextLabel_56.Font = Enum.Font.SourceSans
@@ -3785,10 +3987,11 @@ Gui.TextLabel_56.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.MLR.Name = "MLR"
 Gui.MLR.Parent = Gui.Wavepoints
+Gui.MLR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.MLR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.MLR.BackgroundTransparency = 1.000
-Gui.MLR.Position = UDim2.new(0.409999996, 0, 0.704999983, 0)
-Gui.MLR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.MLR.Position = UDim2.new(0.421000004, 0, 0.715966821, 0)
+Gui.MLR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.MLR.ZIndex = 2
 Gui.MLR.Image = "rbxassetid://12827049702"
 Gui.MLR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3798,7 +4001,7 @@ Gui.TextLabel_57.Parent = Gui.MLR
 Gui.TextLabel_57.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_57.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_57.BackgroundTransparency = 1.000
-Gui.TextLabel_57.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_57.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_57.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_57.ZIndex = 2
 Gui.TextLabel_57.Font = Enum.Font.SourceSans
@@ -3810,10 +4013,11 @@ Gui.TextLabel_57.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.HOGGS.Name = "HOGGS"
 Gui.HOGGS.Parent = Gui.Wavepoints
+Gui.HOGGS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.HOGGS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.HOGGS.BackgroundTransparency = 1.000
-Gui.HOGGS.Position = UDim2.new(0.187999994, 0, 0.949999988, 0)
-Gui.HOGGS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.HOGGS.Position = UDim2.new(0.207000047, 0, 0.933540702, 0)
+Gui.HOGGS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.HOGGS.ZIndex = 2
 Gui.HOGGS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.HOGGS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3822,7 +4026,7 @@ Gui.TextLabel_58.Parent = Gui.HOGGS
 Gui.TextLabel_58.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_58.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_58.BackgroundTransparency = 1.000
-Gui.TextLabel_58.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_58.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_58.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_58.ZIndex = 2
 Gui.TextLabel_58.Font = Enum.Font.SourceSans
@@ -3832,25 +4036,26 @@ Gui.TextLabel_58.TextSize = 10.000
 Gui.TextLabel_58.TextXAlignment = Enum.TextXAlignment.Right
 Gui.TextLabel_58.TextYAlignment = Enum.TextYAlignment.Top
 
-Gui.STACKS.Name = "STACKS"
-Gui.STACKS.Parent = Gui.Wavepoints
-Gui.STACKS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Gui.STACKS.BackgroundTransparency = 1.000
-Gui.STACKS.Position = UDim2.new(0.118402779, 0, 0.903986096, 0)
-Gui.STACKS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
-Gui.STACKS.ZIndex = 2
-Gui.STACKS.Image = "http://www.roblox.com/asset/?id=10164277616"
-Gui.STACKS.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Gui.STACK.Name = "STACK"
+Gui.STACK.Parent = Gui.Wavepoints
+Gui.STACK.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.STACK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.STACK.BackgroundTransparency = 1.000
+Gui.STACK.Position = UDim2.new(0.102999978, 0, 0.889617443, 0)
+Gui.STACK.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
+Gui.STACK.ZIndex = 2
+Gui.STACK.Image = "http://www.roblox.com/asset/?id=10164277616"
+Gui.STACK.ImageColor3 = Color3.fromRGB(0, 0, 0)
 
-Gui.TextLabel_59.Parent = Gui.STACKS
+Gui.TextLabel_59.Parent = Gui.STACK
 Gui.TextLabel_59.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_59.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_59.BackgroundTransparency = 1.000
-Gui.TextLabel_59.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_59.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_59.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_59.ZIndex = 2
 Gui.TextLabel_59.Font = Enum.Font.SourceSans
-Gui.TextLabel_59.Text = "STACKS"
+Gui.TextLabel_59.Text = "STACK"
 Gui.TextLabel_59.TextColor3 = Color3.fromRGB(0, 0, 0)
 Gui.TextLabel_59.TextSize = 10.000
 Gui.TextLabel_59.TextXAlignment = Enum.TextXAlignment.Right
@@ -3858,10 +4063,11 @@ Gui.TextLabel_59.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.SEEKS.Name = "SEEKS"
 Gui.SEEKS.Parent = Gui.Wavepoints
+Gui.SEEKS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.SEEKS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.SEEKS.BackgroundTransparency = 1.000
-Gui.SEEKS.Position = UDim2.new(0.137500003, 0, 0.751208305, 0)
-Gui.SEEKS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.SEEKS.Position = UDim2.new(0.130999982, 0, 0.775212288, 0)
+Gui.SEEKS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.SEEKS.ZIndex = 2
 Gui.SEEKS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.SEEKS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3870,7 +4076,7 @@ Gui.TextLabel_60.Parent = Gui.SEEKS
 Gui.TextLabel_60.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_60.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_60.BackgroundTransparency = 1.000
-Gui.TextLabel_60.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_60.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_60.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_60.ZIndex = 2
 Gui.TextLabel_60.Font = Enum.Font.SourceSans
@@ -3882,10 +4088,11 @@ Gui.TextLabel_60.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.GUESS.Name = "GUESS"
 Gui.GUESS.Parent = Gui.Wavepoints
+Gui.GUESS.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.GUESS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.GUESS.BackgroundTransparency = 1.000
-Gui.GUESS.Position = UDim2.new(0.230000004, 0, 0.529999971, 0)
-Gui.GUESS.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.GUESS.Position = UDim2.new(0.221999988, 0, 0.49635002, 0)
+Gui.GUESS.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.GUESS.ZIndex = 2
 Gui.GUESS.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.GUESS.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3894,7 +4101,7 @@ Gui.TextLabel_61.Parent = Gui.GUESS
 Gui.TextLabel_61.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_61.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_61.BackgroundTransparency = 1.000
-Gui.TextLabel_61.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_61.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_61.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_61.ZIndex = 2
 Gui.TextLabel_61.Font = Enum.Font.SourceSans
@@ -3906,10 +4113,11 @@ Gui.TextLabel_61.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.PACKT.Name = "PACKT"
 Gui.PACKT.Parent = Gui.Wavepoints
+Gui.PACKT.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.PACKT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.PACKT.BackgroundTransparency = 1.000
-Gui.PACKT.Position = UDim2.new(0.0159722213, 0, 0.869263887, 0)
-Gui.PACKT.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.PACKT.Position = UDim2.new(0.00299999025, 0, 0.848758399, 0)
+Gui.PACKT.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.PACKT.ZIndex = 2
 Gui.PACKT.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.PACKT.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3918,7 +4126,7 @@ Gui.TextLabel_62.Parent = Gui.PACKT
 Gui.TextLabel_62.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_62.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_62.BackgroundTransparency = 1.000
-Gui.TextLabel_62.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_62.Position = UDim2.new(2.0999999, 0, 0.75, 0)
 Gui.TextLabel_62.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_62.ZIndex = 2
 Gui.TextLabel_62.Font = Enum.Font.SourceSans
@@ -3930,10 +4138,11 @@ Gui.TextLabel_62.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.WASTE.Name = "WASTE"
 Gui.WASTE.Parent = Gui.Wavepoints
+Gui.WASTE.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.WASTE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.WASTE.BackgroundTransparency = 1.000
-Gui.WASTE.Position = UDim2.new(0.0160000008, 0, 0.970000029, 0)
-Gui.WASTE.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.WASTE.Position = UDim2.new(-0.00299999025, 0, 0.941712499, 0)
+Gui.WASTE.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.WASTE.ZIndex = 2
 Gui.WASTE.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.WASTE.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3942,7 +4151,7 @@ Gui.TextLabel_63.Parent = Gui.WASTE
 Gui.TextLabel_63.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_63.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_63.BackgroundTransparency = 1.000
-Gui.TextLabel_63.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_63.Position = UDim2.new(2.5, 0, 0.75, 0)
 Gui.TextLabel_63.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_63.ZIndex = 2
 Gui.TextLabel_63.Font = Enum.Font.SourceSans
@@ -3954,10 +4163,11 @@ Gui.TextLabel_63.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.GEORG.Name = "GEORG"
 Gui.GEORG.Parent = Gui.Wavepoints
+Gui.GEORG.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.GEORG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.GEORG.BackgroundTransparency = 1.000
-Gui.GEORG.Position = UDim2.new(0.0368055552, 0, 0.713013887, 0)
-Gui.GEORG.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.GEORG.Position = UDim2.new(0.0399999656, 0, 0.74252516, 0)
+Gui.GEORG.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.GEORG.ZIndex = 2
 Gui.GEORG.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.GEORG.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3966,7 +4176,7 @@ Gui.TextLabel_64.Parent = Gui.GEORG
 Gui.TextLabel_64.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_64.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_64.BackgroundTransparency = 1.000
-Gui.TextLabel_64.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_64.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_64.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_64.ZIndex = 2
 Gui.TextLabel_64.Font = Enum.Font.SourceSans
@@ -3978,10 +4188,11 @@ Gui.TextLabel_64.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.SHREK.Name = "SHREK"
 Gui.SHREK.Parent = Gui.Wavepoints
+Gui.SHREK.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.SHREK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.SHREK.BackgroundTransparency = 1.000
-Gui.SHREK.Position = UDim2.new(0.0370000005, 0, 0.610000014, 0)
-Gui.SHREK.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.SHREK.Position = UDim2.new(0.0330000371, 0, 0.628119946, 0)
+Gui.SHREK.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.SHREK.ZIndex = 2
 Gui.SHREK.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.SHREK.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -3990,7 +4201,7 @@ Gui.TextLabel_65.Parent = Gui.SHREK
 Gui.TextLabel_65.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_65.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_65.BackgroundTransparency = 1.000
-Gui.TextLabel_65.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_65.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_65.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_65.ZIndex = 2
 Gui.TextLabel_65.Font = Enum.Font.SourceSans
@@ -4002,10 +4213,11 @@ Gui.TextLabel_65.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.SPACE.Name = "SPACE"
 Gui.SPACE.Parent = Gui.Wavepoints
+Gui.SPACE.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.SPACE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.SPACE.BackgroundTransparency = 1.000
-Gui.SPACE.Position = UDim2.new(0.140000001, 0, 0.629999995, 0)
-Gui.SPACE.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.SPACE.Position = UDim2.new(0.130999982, 0, 0.647527993, 0)
+Gui.SPACE.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.SPACE.ZIndex = 2
 Gui.SPACE.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.SPACE.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4014,7 +4226,7 @@ Gui.TextLabel_66.Parent = Gui.SPACE
 Gui.TextLabel_66.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_66.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_66.BackgroundTransparency = 1.000
-Gui.TextLabel_66.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_66.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_66.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_66.ZIndex = 2
 Gui.TextLabel_66.Font = Enum.Font.SourceSans
@@ -4026,10 +4238,11 @@ Gui.TextLabel_66.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.CELAR.Name = "CELAR"
 Gui.CELAR.Parent = Gui.Wavepoints
+Gui.CELAR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.CELAR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.CELAR.BackgroundTransparency = 1.000
-Gui.CELAR.Position = UDim2.new(0.140000001, 0, 0.579999983, 0)
-Gui.CELAR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.CELAR.Position = UDim2.new(0.126000017, 0, 0.558659971, 0)
+Gui.CELAR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.CELAR.ZIndex = 2
 Gui.CELAR.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.CELAR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4038,7 +4251,7 @@ Gui.TextLabel_67.Parent = Gui.CELAR
 Gui.TextLabel_67.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_67.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_67.BackgroundTransparency = 1.000
-Gui.TextLabel_67.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_67.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_67.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_67.ZIndex = 2
 Gui.TextLabel_67.Font = Enum.Font.SourceSans
@@ -4050,10 +4263,11 @@ Gui.TextLabel_67.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.WELSH.Name = "WELSH"
 Gui.WELSH.Parent = Gui.Wavepoints
+Gui.WELSH.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.WELSH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.WELSH.BackgroundTransparency = 1.000
-Gui.WELSH.Position = UDim2.new(0.375, 0, 0.460000008, 0)
-Gui.WELSH.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.WELSH.Position = UDim2.new(0.381000042, 0, 0.452426612, 0)
+Gui.WELSH.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.WELSH.ZIndex = 2
 Gui.WELSH.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.WELSH.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4062,7 +4276,7 @@ Gui.TextLabel_68.Parent = Gui.WELSH
 Gui.TextLabel_68.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_68.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_68.BackgroundTransparency = 1.000
-Gui.TextLabel_68.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_68.Position = UDim2.new(1.25, 0, -0.699999988, 0)
 Gui.TextLabel_68.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_68.ZIndex = 2
 Gui.TextLabel_68.Font = Enum.Font.SourceSans
@@ -4074,10 +4288,11 @@ Gui.TextLabel_68.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.RENDR.Name = "RENDR"
 Gui.RENDR.Parent = Gui.Wavepoints
+Gui.RENDR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.RENDR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.RENDR.BackgroundTransparency = 1.000
-Gui.RENDR.Position = UDim2.new(0.375, 0, 0.330000013, 0)
-Gui.RENDR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.RENDR.Position = UDim2.new(0.381000042, 0, 0.334957123, 0)
+Gui.RENDR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.RENDR.ZIndex = 2
 Gui.RENDR.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.RENDR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4086,7 +4301,7 @@ Gui.TextLabel_69.Parent = Gui.RENDR
 Gui.TextLabel_69.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_69.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_69.BackgroundTransparency = 1.000
-Gui.TextLabel_69.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_69.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_69.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_69.ZIndex = 2
 Gui.TextLabel_69.Font = Enum.Font.SourceSans
@@ -4098,10 +4313,11 @@ Gui.TextLabel_69.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.PROBE.Name = "PROBE"
 Gui.PROBE.Parent = Gui.Wavepoints
+Gui.PROBE.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.PROBE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.PROBE.BackgroundTransparency = 1.000
-Gui.PROBE.Position = UDim2.new(0.400000006, 0, 0.389999986, 0)
-Gui.PROBE.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.PROBE.Position = UDim2.new(0.425999969, 0, 0.38092351, 0)
+Gui.PROBE.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.PROBE.ZIndex = 2
 Gui.PROBE.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.PROBE.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4110,7 +4326,7 @@ Gui.TextLabel_70.Parent = Gui.PROBE
 Gui.TextLabel_70.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_70.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_70.BackgroundTransparency = 1.000
-Gui.TextLabel_70.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_70.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_70.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_70.ZIndex = 2
 Gui.TextLabel_70.Font = Enum.Font.SourceSans
@@ -4122,10 +4338,11 @@ Gui.TextLabel_70.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.DINER.Name = "DINER"
 Gui.DINER.Parent = Gui.Wavepoints
+Gui.DINER.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.DINER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.DINER.BackgroundTransparency = 1.000
-Gui.DINER.Position = UDim2.new(0.529999971, 0, 0.389999986, 0)
-Gui.DINER.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.DINER.Position = UDim2.new(0.552999973, 0, 0.387052357, 0)
+Gui.DINER.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.DINER.ZIndex = 2
 Gui.DINER.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.DINER.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4134,7 +4351,7 @@ Gui.TextLabel_71.Parent = Gui.DINER
 Gui.TextLabel_71.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_71.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_71.BackgroundTransparency = 1.000
-Gui.TextLabel_71.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_71.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_71.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_71.ZIndex = 2
 Gui.TextLabel_71.Font = Enum.Font.SourceSans
@@ -4146,10 +4363,11 @@ Gui.TextLabel_71.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.YOUTH.Name = "YOUTH"
 Gui.YOUTH.Parent = Gui.Wavepoints
+Gui.YOUTH.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.YOUTH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.YOUTH.BackgroundTransparency = 1.000
-Gui.YOUTH.Position = UDim2.new(0.200000003, 0, 0.419999987, 0)
-Gui.YOUTH.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.YOUTH.Position = UDim2.new(0.177000001, 0, 0.401352972, 0)
+Gui.YOUTH.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.YOUTH.ZIndex = 2
 Gui.YOUTH.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.YOUTH.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4158,7 +4376,7 @@ Gui.TextLabel_72.Parent = Gui.YOUTH
 Gui.TextLabel_72.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_72.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_72.BackgroundTransparency = 1.000
-Gui.TextLabel_72.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_72.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_72.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_72.ZIndex = 2
 Gui.TextLabel_72.Font = Enum.Font.SourceSans
@@ -4170,10 +4388,11 @@ Gui.TextLabel_72.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.BLANK.Name = "BLANK"
 Gui.BLANK.Parent = Gui.Wavepoints
+Gui.BLANK.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.BLANK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.BLANK.BackgroundTransparency = 1.000
-Gui.BLANK.Position = UDim2.new(0.25, 0, 0.340000004, 0)
-Gui.BLANK.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.BLANK.Position = UDim2.new(0.263000041, 0, 0.339043111, 0)
+Gui.BLANK.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.BLANK.ZIndex = 2
 Gui.BLANK.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.BLANK.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4182,7 +4401,7 @@ Gui.TextLabel_73.Parent = Gui.BLANK
 Gui.TextLabel_73.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_73.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_73.BackgroundTransparency = 1.000
-Gui.TextLabel_73.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_73.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_73.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_73.ZIndex = 2
 Gui.TextLabel_73.Font = Enum.Font.SourceSans
@@ -4194,10 +4413,11 @@ Gui.TextLabel_73.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.THENR.Name = "THENR"
 Gui.THENR.Parent = Gui.Wavepoints
+Gui.THENR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.THENR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.THENR.BackgroundTransparency = 1.000
-Gui.THENR.Position = UDim2.new(0.0799999982, 0, 0.35800001, 0)
-Gui.THENR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.THENR.Position = UDim2.new(0.101000004, 0, 0.356408119, 0)
+Gui.THENR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.THENR.ZIndex = 2
 Gui.THENR.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.THENR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4206,7 +4426,7 @@ Gui.TextLabel_74.Parent = Gui.THENR
 Gui.TextLabel_74.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_74.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_74.BackgroundTransparency = 1.000
-Gui.TextLabel_74.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_74.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_74.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_74.ZIndex = 2
 Gui.TextLabel_74.Font = Enum.Font.SourceSans
@@ -4218,10 +4438,11 @@ Gui.TextLabel_74.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.EURAD.Name = "EURAD"
 Gui.EURAD.Parent = Gui.Wavepoints
+Gui.EURAD.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.EURAD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.EURAD.BackgroundTransparency = 1.000
-Gui.EURAD.Position = UDim2.new(0.209999993, 0, 0.217999995, 0)
-Gui.EURAD.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.EURAD.Position = UDim2.new(0.236000001, 0, 0.273668706, 0)
+Gui.EURAD.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.EURAD.ZIndex = 2
 Gui.EURAD.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.EURAD.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4230,7 +4451,7 @@ Gui.TextLabel_75.Parent = Gui.EURAD
 Gui.TextLabel_75.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_75.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_75.BackgroundTransparency = 1.000
-Gui.TextLabel_75.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_75.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_75.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_75.ZIndex = 2
 Gui.TextLabel_75.Font = Enum.Font.SourceSans
@@ -4242,10 +4463,11 @@ Gui.TextLabel_75.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.BULLY.Name = "BULLY"
 Gui.BULLY.Parent = Gui.Wavepoints
+Gui.BULLY.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.BULLY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.BULLY.BackgroundTransparency = 1.000
-Gui.BULLY.Position = UDim2.new(0.144999996, 0, 0.100000001, 0)
-Gui.BULLY.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.BULLY.Position = UDim2.new(0.167999953, 0, 0.163349599, 0)
+Gui.BULLY.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.BULLY.ZIndex = 2
 Gui.BULLY.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.BULLY.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4254,7 +4476,7 @@ Gui.TextLabel_76.Parent = Gui.BULLY
 Gui.TextLabel_76.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_76.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_76.BackgroundTransparency = 1.000
-Gui.TextLabel_76.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_76.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_76.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_76.ZIndex = 2
 Gui.TextLabel_76.Font = Enum.Font.SourceSans
@@ -4266,10 +4488,11 @@ Gui.TextLabel_76.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.FROOT.Name = "FROOT"
 Gui.FROOT.Parent = Gui.Wavepoints
+Gui.FROOT.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.FROOT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.FROOT.BackgroundTransparency = 1.000
-Gui.FROOT.Position = UDim2.new(0.0799999982, 0, 0.187999994, 0)
-Gui.FROOT.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.FROOT.Position = UDim2.new(0.102999978, 0, 0.249153376, 0)
+Gui.FROOT.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.FROOT.ZIndex = 2
 Gui.FROOT.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.FROOT.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4278,7 +4501,7 @@ Gui.TextLabel_77.Parent = Gui.FROOT
 Gui.TextLabel_77.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_77.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_77.BackgroundTransparency = 1.000
-Gui.TextLabel_77.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_77.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_77.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_77.ZIndex = 2
 Gui.TextLabel_77.Font = Enum.Font.SourceSans
@@ -4290,10 +4513,11 @@ Gui.TextLabel_77.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.ALDER.Name = "ALDER"
 Gui.ALDER.Parent = Gui.Wavepoints
+Gui.ALDER.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.ALDER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.ALDER.BackgroundTransparency = 1.000
-Gui.ALDER.Position = UDim2.new(0.200000003, 0, 0.870999992, 0)
-Gui.ALDER.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.ALDER.Position = UDim2.new(0.220999971, 0, 0.862037539, 0)
+Gui.ALDER.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.ALDER.ZIndex = 2
 Gui.ALDER.Image = "http://www.roblox.com/asset/?id=10164277616"
 Gui.ALDER.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4302,7 +4526,7 @@ Gui.TextLabel_78.Parent = Gui.ALDER
 Gui.TextLabel_78.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_78.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_78.BackgroundTransparency = 1.000
-Gui.TextLabel_78.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_78.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_78.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_78.ZIndex = 2
 Gui.TextLabel_78.Font = Enum.Font.SourceSans
@@ -4314,10 +4538,11 @@ Gui.TextLabel_78.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.RFD.Name = "RFD"
 Gui.RFD.Parent = Gui.Wavepoints
+Gui.RFD.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.RFD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.RFD.BackgroundTransparency = 1.000
-Gui.RFD.Position = UDim2.new(0.372000009, 0, 0.704999983, 0)
-Gui.RFD.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.RFD.Position = UDim2.new(0.382999957, 0, 0.720052719, 0)
+Gui.RFD.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.RFD.ZIndex = 2
 Gui.RFD.Image = "rbxassetid://12827049702"
 Gui.RFD.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4327,7 +4552,7 @@ Gui.TextLabel_79.Parent = Gui.RFD
 Gui.TextLabel_79.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_79.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_79.BackgroundTransparency = 1.000
-Gui.TextLabel_79.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_79.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_79.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_79.ZIndex = 2
 Gui.TextLabel_79.Font = Enum.Font.SourceSans
@@ -4339,10 +4564,11 @@ Gui.TextLabel_79.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.TRC.Name = "TRC"
 Gui.TRC.Parent = Gui.Wavepoints
+Gui.TRC.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.TRC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TRC.BackgroundTransparency = 1.000
-Gui.TRC.Position = UDim2.new(0.425000012, 0, 0.782999992, 0)
-Gui.TRC.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.TRC.Position = UDim2.new(0.42900005, 0, 0.788491428, 0)
+Gui.TRC.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.TRC.ZIndex = 2
 Gui.TRC.Image = "rbxassetid://12827049702"
 Gui.TRC.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4352,7 +4578,7 @@ Gui.TextLabel_80.Parent = Gui.TRC
 Gui.TextLabel_80.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_80.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_80.BackgroundTransparency = 1.000
-Gui.TextLabel_80.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_80.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_80.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_80.ZIndex = 2
 Gui.TextLabel_80.Font = Enum.Font.SourceSans
@@ -4362,26 +4588,26 @@ Gui.TextLabel_80.TextSize = 10.000
 Gui.TextLabel_80.TextXAlignment = Enum.TextXAlignment.Right
 Gui.TextLabel_80.TextYAlignment = Enum.TextYAlignment.Top
 
-Gui.LOG.Name = "LOG"
-Gui.LOG.Parent = Gui.Wavepoints
-Gui.LOG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Gui.LOG.BackgroundTransparency = 1.000
-Gui.LOG.Position = UDim2.new(0.372000009, 0, 0.978999972, 0)
-Gui.LOG.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
-Gui.LOG.ZIndex = 2
-Gui.LOG.Image = "rbxassetid://12827017728"
-Gui.LOG.ImageColor3 = Color3.fromRGB(0, 0, 0)
-Gui.LOG.ScaleType = Enum.ScaleType.Fit
+Gui.GULEG.Name = "GULEG"
+Gui.GULEG.Parent = Gui.Wavepoints
+Gui.GULEG.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.GULEG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.GULEG.BackgroundTransparency = 1.000
+Gui.GULEG.Position = UDim2.new(0.295726061, 0, 0.214264944, 0)
+Gui.GULEG.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.GULEG.ZIndex = 2
+Gui.GULEG.Image = "http://www.roblox.com/asset/?id=10164277616"
+Gui.GULEG.ImageColor3 = Color3.fromRGB(0, 0, 0)
 
-Gui.TextLabel_81.Parent = Gui.LOG
+Gui.TextLabel_81.Parent = Gui.GULEG
 Gui.TextLabel_81.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_81.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_81.BackgroundTransparency = 1.000
-Gui.TextLabel_81.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_81.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_81.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_81.ZIndex = 2
 Gui.TextLabel_81.Font = Enum.Font.SourceSans
-Gui.TextLabel_81.Text = "LOG"
+Gui.TextLabel_81.Text = "GULEG"
 Gui.TextLabel_81.TextColor3 = Color3.fromRGB(0, 0, 0)
 Gui.TextLabel_81.TextSize = 10.000
 Gui.TextLabel_81.TextXAlignment = Enum.TextXAlignment.Right
@@ -4389,10 +4615,11 @@ Gui.TextLabel_81.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.HMSQE.Name = "HMSQE"
 Gui.HMSQE.Parent = Gui.Wavepoints
+Gui.HMSQE.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.HMSQE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.HMSQE.BackgroundTransparency = 1.000
-Gui.HMSQE.Position = UDim2.new(0.476999998, 0, 0.657999992, 0)
-Gui.HMSQE.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.HMSQE.Position = UDim2.new(0.494999975, 0, 0.661828637, 0)
+Gui.HMSQE.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.HMSQE.ZIndex = 2
 Gui.HMSQE.Image = "rbxassetid://12827319665"
 Gui.HMSQE.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4402,7 +4629,7 @@ Gui.TextLabel_82.Parent = Gui.HMSQE
 Gui.TextLabel_82.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_82.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_82.BackgroundTransparency = 1.000
-Gui.TextLabel_82.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_82.Position = UDim2.new(1.25, 0, 0.75, 0)
 Gui.TextLabel_82.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_82.ZIndex = 2
 Gui.TextLabel_82.Font = Enum.Font.SourceSans
@@ -4414,10 +4641,11 @@ Gui.TextLabel_82.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.PYN.Name = "PYN"
 Gui.PYN.Parent = Gui.Wavepoints
+Gui.PYN.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.PYN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.PYN.BackgroundTransparency = 1.000
-Gui.PYN.Position = UDim2.new(0.460000008, 0, 0.569999993, 0)
-Gui.PYN.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.PYN.Position = UDim2.new(0.474999994, 0, 0.558659971, 0)
+Gui.PYN.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.PYN.ZIndex = 2
 Gui.PYN.Image = "rbxassetid://12827049702"
 Gui.PYN.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4427,7 +4655,7 @@ Gui.TextLabel_83.Parent = Gui.PYN
 Gui.TextLabel_83.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_83.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_83.BackgroundTransparency = 1.000
-Gui.TextLabel_83.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_83.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_83.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_83.ZIndex = 2
 Gui.TextLabel_83.Font = Enum.Font.SourceSans
@@ -4439,10 +4667,11 @@ Gui.TextLabel_83.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.ROM.Name = "ROM"
 Gui.ROM.Parent = Gui.Wavepoints
+Gui.ROM.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.ROM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.ROM.BackgroundTransparency = 1.000
-Gui.ROM.Position = UDim2.new(0.600000024, 0, 0.379999995, 0)
-Gui.ROM.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.ROM.Position = UDim2.new(0.610000074, 0, 0.376837581, 0)
+Gui.ROM.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.ROM.ZIndex = 2
 Gui.ROM.Image = "rbxassetid://12827017728"
 Gui.ROM.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4452,7 +4681,7 @@ Gui.TextLabel_84.Parent = Gui.ROM
 Gui.TextLabel_84.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_84.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_84.BackgroundTransparency = 1.000
-Gui.TextLabel_84.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_84.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_84.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_84.ZIndex = 2
 Gui.TextLabel_84.Font = Enum.Font.SourceSans
@@ -4464,10 +4693,11 @@ Gui.TextLabel_84.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.ROK.Name = "ROK"
 Gui.ROK.Parent = Gui.Wavepoints
+Gui.ROK.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.ROK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.ROK.BackgroundTransparency = 1.000
-Gui.ROK.Position = UDim2.new(0.300999999, 0, 0.601000011, 0)
-Gui.ROK.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.ROK.Position = UDim2.new(0.308999985, 0, 0.612797976, 0)
+Gui.ROK.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.ROK.ZIndex = 2
 Gui.ROK.Image = "rbxassetid://12827017728"
 Gui.ROK.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4477,7 +4707,7 @@ Gui.TextLabel_85.Parent = Gui.ROK
 Gui.TextLabel_85.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_85.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_85.BackgroundTransparency = 1.000
-Gui.TextLabel_85.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_85.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_85.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_85.ZIndex = 2
 Gui.TextLabel_85.Font = Enum.Font.SourceSans
@@ -4489,10 +4719,11 @@ Gui.TextLabel_85.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.NJF.Name = "NJF"
 Gui.NJF.Parent = Gui.Wavepoints
+Gui.NJF.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.NJF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.NJF.BackgroundTransparency = 1.000
-Gui.NJF.Position = UDim2.new(0.975000024, 0, 0.493999988, 0)
-Gui.NJF.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.NJF.Position = UDim2.new(0.99000001, 0, 0.495328516, 0)
+Gui.NJF.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.NJF.ZIndex = 2
 Gui.NJF.Image = "rbxassetid://12827049702"
 Gui.NJF.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4502,7 +4733,7 @@ Gui.TextLabel_86.Parent = Gui.NJF
 Gui.TextLabel_86.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_86.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_86.BackgroundTransparency = 1.000
-Gui.TextLabel_86.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_86.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_86.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_86.ZIndex = 2
 Gui.TextLabel_86.Font = Enum.Font.SourceSans
@@ -4514,10 +4745,11 @@ Gui.TextLabel_86.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.BLA.Name = "BLA"
 Gui.BLA.Parent = Gui.Wavepoints
+Gui.BLA.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.BLA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.BLA.BackgroundTransparency = 1.000
-Gui.BLA.Position = UDim2.new(0.372000009, 0, 0.787, 0)
-Gui.BLA.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.BLA.Position = UDim2.new(0.380000025, 0, 0.794620275, 0)
+Gui.BLA.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.BLA.ZIndex = 2
 Gui.BLA.Image = "rbxassetid://12827017728"
 Gui.BLA.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4527,7 +4759,7 @@ Gui.TextLabel_87.Parent = Gui.BLA
 Gui.TextLabel_87.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_87.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_87.BackgroundTransparency = 1.000
-Gui.TextLabel_87.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_87.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_87.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_87.ZIndex = 2
 Gui.TextLabel_87.Font = Enum.Font.SourceSans
@@ -4539,10 +4771,11 @@ Gui.TextLabel_87.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.RES.Name = "RES"
 Gui.RES.Parent = Gui.Wavepoints
+Gui.RES.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.RES.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.RES.BackgroundTransparency = 1.000
-Gui.RES.Position = UDim2.new(0.476999998, 0, 0.439999998, 0)
-Gui.RES.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.RES.Position = UDim2.new(0.509000003, 0, 0.457533985, 0)
+Gui.RES.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.RES.ZIndex = 2
 Gui.RES.Image = "rbxassetid://12827017728"
 Gui.RES.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4552,7 +4785,7 @@ Gui.TextLabel_88.Parent = Gui.RES
 Gui.TextLabel_88.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_88.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_88.BackgroundTransparency = 1.000
-Gui.TextLabel_88.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_88.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_88.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_88.ZIndex = 2
 Gui.TextLabel_88.Font = Enum.Font.SourceSans
@@ -4564,10 +4797,11 @@ Gui.TextLabel_88.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.CAN.Name = "CAN"
 Gui.CAN.Parent = Gui.Wavepoints
+Gui.CAN.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.CAN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.CAN.BackgroundTransparency = 1.000
-Gui.CAN.Position = UDim2.new(0.600000024, 0, 0.925000012, 0)
-Gui.CAN.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.CAN.Position = UDim2.new(0.617999971, 0, 0.926390469, 0)
+Gui.CAN.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.CAN.ZIndex = 2
 Gui.CAN.Image = "rbxassetid://12827017728"
 Gui.CAN.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4577,7 +4811,7 @@ Gui.TextLabel_89.Parent = Gui.CAN
 Gui.TextLabel_89.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_89.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_89.BackgroundTransparency = 1.000
-Gui.TextLabel_89.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_89.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_89.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_89.ZIndex = 2
 Gui.TextLabel_89.Font = Enum.Font.SourceSans
@@ -4589,10 +4823,11 @@ Gui.TextLabel_89.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.BAR.Name = "BAR"
 Gui.BAR.Parent = Gui.Wavepoints
+Gui.BAR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.BAR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.BAR.BackgroundTransparency = 1.000
-Gui.BAR.Position = UDim2.new(0.125, 0, 0.829999983, 0)
-Gui.BAR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.BAR.Position = UDim2.new(0.116000026, 0, 0.826285958, 0)
+Gui.BAR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.BAR.ZIndex = 2
 Gui.BAR.Image = "rbxassetid://12827017728"
 Gui.BAR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4602,7 +4837,7 @@ Gui.TextLabel_90.Parent = Gui.BAR
 Gui.TextLabel_90.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_90.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_90.BackgroundTransparency = 1.000
-Gui.TextLabel_90.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_90.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_90.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_90.ZIndex = 2
 Gui.TextLabel_90.Font = Enum.Font.SourceSans
@@ -4614,10 +4849,11 @@ Gui.TextLabel_90.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.HAW.Name = "HAW"
 Gui.HAW.Parent = Gui.Wavepoints
+Gui.HAW.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.HAW.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.HAW.BackgroundTransparency = 1.000
-Gui.HAW.Position = UDim2.new(0.119999997, 0, 0.425000012, 0)
-Gui.HAW.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.HAW.Position = UDim2.new(0.0999999866, 0, 0.434040129, 0)
+Gui.HAW.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.HAW.ZIndex = 2
 Gui.HAW.Image = "rbxassetid://12827017728"
 Gui.HAW.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4627,7 +4863,7 @@ Gui.TextLabel_91.Parent = Gui.HAW
 Gui.TextLabel_91.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_91.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_91.BackgroundTransparency = 1.000
-Gui.TextLabel_91.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_91.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_91.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_91.ZIndex = 2
 Gui.TextLabel_91.Font = Enum.Font.SourceSans
@@ -4639,10 +4875,11 @@ Gui.TextLabel_91.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.SAU.Name = "SAU"
 Gui.SAU.Parent = Gui.Wavepoints
+Gui.SAU.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.SAU.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.SAU.BackgroundTransparency = 1.000
-Gui.SAU.Position = UDim2.new(0.0199999996, 0, 0.790000021, 0)
-Gui.SAU.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.SAU.Position = UDim2.new(0.0299999733, 0, 0.788491428, 0)
+Gui.SAU.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.SAU.ZIndex = 2
 Gui.SAU.Image = "rbxassetid://12827049702"
 Gui.SAU.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4652,7 +4889,7 @@ Gui.TextLabel_92.Parent = Gui.SAU
 Gui.TextLabel_92.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_92.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_92.BackgroundTransparency = 1.000
-Gui.TextLabel_92.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_92.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_92.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_92.ZIndex = 2
 Gui.TextLabel_92.Font = Enum.Font.SourceSans
@@ -4664,10 +4901,11 @@ Gui.TextLabel_92.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.GVK.Name = "GVK"
 Gui.GVK.Parent = Gui.Wavepoints
+Gui.GVK.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.GVK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.GVK.BackgroundTransparency = 1.000
-Gui.GVK.Position = UDim2.new(0.0500000007, 0, 0.460000008, 0)
-Gui.GVK.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.GVK.Position = UDim2.new(0.0590000004, 0, 0.463662863, 0)
+Gui.GVK.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.GVK.ZIndex = 2
 Gui.GVK.Image = "rbxassetid://12827049702"
 Gui.GVK.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4677,7 +4915,7 @@ Gui.TextLabel_93.Parent = Gui.GVK
 Gui.TextLabel_93.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_93.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_93.BackgroundTransparency = 1.000
-Gui.TextLabel_93.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_93.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_93.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_93.ZIndex = 2
 Gui.TextLabel_93.Font = Enum.Font.SourceSans
@@ -4689,10 +4927,11 @@ Gui.TextLabel_93.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.ORG.Name = "ORG"
 Gui.ORG.Parent = Gui.Wavepoints
+Gui.ORG.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.ORG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.ORG.BackgroundTransparency = 1.000
-Gui.ORG.Position = UDim2.new(0.722000003, 0, 0.326999992, 0)
-Gui.ORG.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.ORG.Position = UDim2.new(0.716000021, 0, 0.332914263, 0)
+Gui.ORG.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.ORG.ZIndex = 2
 Gui.ORG.Image = "rbxassetid://12827017728"
 Gui.ORG.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4702,7 +4941,7 @@ Gui.TextLabel_94.Parent = Gui.ORG
 Gui.TextLabel_94.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_94.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_94.BackgroundTransparency = 1.000
-Gui.TextLabel_94.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_94.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_94.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_94.ZIndex = 2
 Gui.TextLabel_94.Font = Enum.Font.SourceSans
@@ -4714,9 +4953,10 @@ Gui.TextLabel_94.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.HME.Name = "HME"
 Gui.HME.Parent = Gui.Wavepoints
+Gui.HME.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.HME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.HME.BackgroundTransparency = 1.000
-Gui.HME.Position = UDim2.new(0.425000012, 0, 0.140000001, 0)
+Gui.HME.Position = UDim2.new(0.435000002, 0, 0.151999995, 0)
 Gui.HME.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
 Gui.HME.ZIndex = 2
 Gui.HME.Image = "rbxassetid://12827049702"
@@ -4727,7 +4967,7 @@ Gui.TextLabel_95.Parent = Gui.HME
 Gui.TextLabel_95.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_95.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_95.BackgroundTransparency = 1.000
-Gui.TextLabel_95.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_95.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_95.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_95.ZIndex = 2
 Gui.TextLabel_95.Font = Enum.Font.SourceSans
@@ -4739,10 +4979,11 @@ Gui.TextLabel_95.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.COC.Name = "COC"
 Gui.COC.Parent = Gui.Wavepoints
+Gui.COC.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.COC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.COC.BackgroundTransparency = 1.000
-Gui.COC.Position = UDim2.new(0.625, 0, 0.140000001, 0)
-Gui.COC.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.COC.Position = UDim2.new(0.671999991, 0, 0.197058216, 0)
+Gui.COC.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.COC.ZIndex = 2
 Gui.COC.Image = "rbxassetid://12827017728"
 Gui.COC.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4752,7 +4993,7 @@ Gui.TextLabel_96.Parent = Gui.COC
 Gui.TextLabel_96.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_96.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_96.BackgroundTransparency = 1.000
-Gui.TextLabel_96.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_96.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_96.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_96.ZIndex = 2
 Gui.TextLabel_96.Font = Enum.Font.SourceSans
@@ -4764,10 +5005,11 @@ Gui.TextLabel_96.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.PER.Name = "PER"
 Gui.PER.Parent = Gui.Wavepoints
+Gui.PER.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.PER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.PER.BackgroundTransparency = 1.000
-Gui.PER.Position = UDim2.new(0.68599999, 0, 0.264999986, 0)
-Gui.PER.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.PER.Position = UDim2.new(0.694000006, 0, 0.281840563, 0)
+Gui.PER.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.PER.ZIndex = 2
 Gui.PER.Image = "rbxassetid://12827049702"
 Gui.PER.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4777,7 +5019,7 @@ Gui.TextLabel_97.Parent = Gui.PER
 Gui.TextLabel_97.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_97.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_97.BackgroundTransparency = 1.000
-Gui.TextLabel_97.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_97.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_97.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_97.ZIndex = 2
 Gui.TextLabel_97.Font = Enum.Font.SourceSans
@@ -4789,10 +5031,11 @@ Gui.TextLabel_97.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.BTM.Name = "BTM"
 Gui.BTM.Parent = Gui.Wavepoints
+Gui.BTM.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.BTM.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.BTM.BackgroundTransparency = 1.000
-Gui.BTM.Position = UDim2.new(0.75999999, 0, 0.280999988, 0)
-Gui.BTM.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.BTM.Position = UDim2.new(0.769999981, 0, 0.287969351, 0)
+Gui.BTM.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.BTM.ZIndex = 2
 Gui.BTM.Image = "rbxassetid://12827017728"
 Gui.BTM.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4802,7 +5045,7 @@ Gui.TextLabel_98.Parent = Gui.BTM
 Gui.TextLabel_98.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_98.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_98.BackgroundTransparency = 1.000
-Gui.TextLabel_98.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_98.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_98.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_98.ZIndex = 2
 Gui.TextLabel_98.Font = Enum.Font.SourceSans
@@ -4814,10 +5057,11 @@ Gui.TextLabel_98.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.KEN.Name = "KEN"
 Gui.KEN.Parent = Gui.Wavepoints
+Gui.KEN.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.KEN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.KEN.BackgroundTransparency = 1.000
-Gui.KEN.Position = UDim2.new(0.372000009, 0, 0.560000002, 0)
-Gui.KEN.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.KEN.Position = UDim2.new(0.380000025, 0, 0.564788759, 0)
+Gui.KEN.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.KEN.ZIndex = 2
 Gui.KEN.Image = "rbxassetid://12827017728"
 Gui.KEN.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4827,7 +5071,7 @@ Gui.TextLabel_99.Parent = Gui.KEN
 Gui.TextLabel_99.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_99.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_99.BackgroundTransparency = 1.000
-Gui.TextLabel_99.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_99.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_99.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_99.ZIndex = 2
 Gui.TextLabel_99.Font = Enum.Font.SourceSans
@@ -4839,10 +5083,11 @@ Gui.TextLabel_99.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.TRE.Name = "TRE"
 Gui.TRE.Parent = Gui.Wavepoints
+Gui.TRE.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.TRE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TRE.BackgroundTransparency = 1.000
-Gui.TRE.Position = UDim2.new(0.875, 0, 0.5, 0)
-Gui.TRE.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.TRE.Position = UDim2.new(0.883000016, 0, 0.50962919, 0)
+Gui.TRE.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.TRE.ZIndex = 2
 Gui.TRE.Image = "rbxassetid://12827017728"
 Gui.TRE.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4852,7 +5097,7 @@ Gui.TextLabel_100.Parent = Gui.TRE
 Gui.TextLabel_100.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_100.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_100.BackgroundTransparency = 1.000
-Gui.TextLabel_100.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_100.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_100.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_100.ZIndex = 2
 Gui.TextLabel_100.Font = Enum.Font.SourceSans
@@ -4864,10 +5109,11 @@ Gui.TextLabel_100.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.IZO.Name = "IZO"
 Gui.IZO.Parent = Gui.Wavepoints
+Gui.IZO.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.IZO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.IZO.BackgroundTransparency = 1.000
-Gui.IZO.Position = UDim2.new(0.950999975, 0, 0.519999981, 0)
-Gui.IZO.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.IZO.Position = UDim2.new(0.975000083, 0, 0.544359267, 0)
+Gui.IZO.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.IZO.ZIndex = 2
 Gui.IZO.Image = "rbxassetid://12827049702"
 Gui.IZO.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4877,7 +5123,7 @@ Gui.TextLabel_101.Parent = Gui.IZO
 Gui.TextLabel_101.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_101.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_101.BackgroundTransparency = 1.000
-Gui.TextLabel_101.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_101.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_101.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_101.ZIndex = 2
 Gui.TextLabel_101.Font = Enum.Font.SourceSans
@@ -4889,10 +5135,11 @@ Gui.TextLabel_101.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.DIZ.Name = "DIZ"
 Gui.DIZ.Parent = Gui.Wavepoints
+Gui.DIZ.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.DIZ.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.DIZ.BackgroundTransparency = 1.000
-Gui.DIZ.Position = UDim2.new(1.00999999, 0, 0.540000021, 0)
-Gui.DIZ.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.DIZ.Position = UDim2.new(1.10000002, 0, 0.551509559, 0)
+Gui.DIZ.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.DIZ.ZIndex = 2
 Gui.DIZ.Image = "rbxassetid://12827017728"
 Gui.DIZ.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4902,7 +5149,7 @@ Gui.TextLabel_102.Parent = Gui.DIZ
 Gui.TextLabel_102.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_102.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_102.BackgroundTransparency = 1.000
-Gui.TextLabel_102.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_102.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_102.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_102.ZIndex = 2
 Gui.TextLabel_102.Font = Enum.Font.SourceSans
@@ -4914,10 +5161,11 @@ Gui.TextLabel_102.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.DET.Name = "DET"
 Gui.DET.Parent = Gui.Wavepoints
+Gui.DET.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.DET.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.DET.BackgroundTransparency = 1.000
-Gui.DET.Position = UDim2.new(0.980000019, 0, 0.699999988, 0)
-Gui.DET.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.DET.Position = UDim2.new(1, 0, 0.696558893, 0)
+Gui.DET.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.DET.ZIndex = 2
 Gui.DET.Image = "rbxassetid://12827017728"
 Gui.DET.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4927,7 +5175,7 @@ Gui.TextLabel_103.Parent = Gui.DET
 Gui.TextLabel_103.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_103.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_103.BackgroundTransparency = 1.000
-Gui.TextLabel_103.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_103.Position = UDim2.new(0.5, 0, 0.800000012, 0)
 Gui.TextLabel_103.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_103.ZIndex = 2
 Gui.TextLabel_103.Font = Enum.Font.SourceSans
@@ -4939,10 +5187,11 @@ Gui.TextLabel_103.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.VOX.Name = "VOX"
 Gui.VOX.Parent = Gui.Wavepoints
+Gui.VOX.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.VOX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.VOX.BackgroundTransparency = 1.000
-Gui.VOX.Position = UDim2.new(0.649999976, 0, 0.439999998, 0)
-Gui.VOX.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.VOX.Position = UDim2.new(0.637000024, 0, 0.452426612, 0)
+Gui.VOX.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.VOX.ZIndex = 2
 Gui.VOX.Image = "rbxassetid://12827017728"
 Gui.VOX.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4952,7 +5201,7 @@ Gui.TextLabel_104.Parent = Gui.VOX
 Gui.TextLabel_104.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_104.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_104.BackgroundTransparency = 1.000
-Gui.TextLabel_104.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_104.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_104.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_104.ZIndex = 2
 Gui.TextLabel_104.Font = Enum.Font.SourceSans
@@ -4964,10 +5213,11 @@ Gui.TextLabel_104.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.PFO.Name = "PFO"
 Gui.PFO.Parent = Gui.Wavepoints
+Gui.PFO.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.PFO.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.PFO.BackgroundTransparency = 1.000
-Gui.PFO.Position = UDim2.new(0.829999983, 0, 0.86500001, 0)
-Gui.PFO.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.PFO.Position = UDim2.new(0.833000004, 0, 0.862037539, 0)
+Gui.PFO.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.PFO.ZIndex = 2
 Gui.PFO.Image = "rbxassetid://12827049702"
 Gui.PFO.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -4977,11 +5227,11 @@ Gui.TextLabel_105.Parent = Gui.PFO
 Gui.TextLabel_105.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_105.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_105.BackgroundTransparency = 1.000
-Gui.TextLabel_105.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_105.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_105.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_105.ZIndex = 2
 Gui.TextLabel_105.Font = Enum.Font.SourceSans
-Gui.TextLabel_105.Text = "LCK"
+Gui.TextLabel_105.Text = "PFO"
 Gui.TextLabel_105.TextColor3 = Color3.fromRGB(0, 0, 0)
 Gui.TextLabel_105.TextSize = 10.000
 Gui.TextLabel_105.TextXAlignment = Enum.TextXAlignment.Right
@@ -4989,10 +5239,11 @@ Gui.TextLabel_105.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.DIR.Name = "DIR"
 Gui.DIR.Parent = Gui.Wavepoints
+Gui.DIR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.DIR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.DIR.BackgroundTransparency = 1.000
-Gui.DIR.Position = UDim2.new(0.639999986, 0, 0.970000029, 0)
-Gui.DIR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.DIR.Position = UDim2.new(0.643999934, 0, 0.981549978, 0)
+Gui.DIR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.DIR.ZIndex = 2
 Gui.DIR.Image = "rbxassetid://12827017728"
 Gui.DIR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -5002,7 +5253,7 @@ Gui.TextLabel_106.Parent = Gui.DIR
 Gui.TextLabel_106.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_106.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_106.BackgroundTransparency = 1.000
-Gui.TextLabel_106.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_106.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_106.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_106.ZIndex = 2
 Gui.TextLabel_106.Font = Enum.Font.SourceSans
@@ -5014,10 +5265,11 @@ Gui.TextLabel_106.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.HUT.Name = "HUT"
 Gui.HUT.Parent = Gui.Wavepoints
+Gui.HUT.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.HUT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.HUT.BackgroundTransparency = 1.000
-Gui.HUT.Position = UDim2.new(0.839999974, 0, 0.939999998, 0)
-Gui.HUT.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.HUT.Position = UDim2.new(0.828999996, 0, 0.929454863, 0)
+Gui.HUT.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.HUT.ZIndex = 2
 Gui.HUT.Image = "rbxassetid://12827017728"
 Gui.HUT.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -5027,7 +5279,7 @@ Gui.TextLabel_107.Parent = Gui.HUT
 Gui.TextLabel_107.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_107.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_107.BackgroundTransparency = 1.000
-Gui.TextLabel_107.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_107.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_107.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_107.ZIndex = 2
 Gui.TextLabel_107.Font = Enum.Font.SourceSans
@@ -5039,10 +5291,11 @@ Gui.TextLabel_107.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.CLR.Name = "CLR"
 Gui.CLR.Parent = Gui.Wavepoints
+Gui.CLR.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.CLR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.CLR.BackgroundTransparency = 1.000
-Gui.CLR.Position = UDim2.new(0.720000029, 0, 0.644999981, 0)
-Gui.CLR.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.CLR.Position = UDim2.new(0.738999963, 0, 0.652635455, 0)
+Gui.CLR.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.CLR.ZIndex = 2
 Gui.CLR.Image = "rbxassetid://12827017728"
 Gui.CLR.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -5052,7 +5305,7 @@ Gui.TextLabel_108.Parent = Gui.CLR
 Gui.TextLabel_108.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_108.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_108.BackgroundTransparency = 1.000
-Gui.TextLabel_108.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_108.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_108.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_108.ZIndex = 2
 Gui.TextLabel_108.Font = Enum.Font.SourceSans
@@ -5064,10 +5317,11 @@ Gui.TextLabel_108.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.LCK.Name = "LCK"
 Gui.LCK.Parent = Gui.Wavepoints
+Gui.LCK.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.LCK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.LCK.BackgroundTransparency = 1.000
-Gui.LCK.Position = UDim2.new(0.720000029, 0, 0.845000029, 0)
-Gui.LCK.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.LCK.Position = UDim2.new(0.735000074, 0, 0.84671545, 0)
+Gui.LCK.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.LCK.ZIndex = 2
 Gui.LCK.Image = "rbxassetid://12827049702"
 Gui.LCK.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -5077,7 +5331,7 @@ Gui.TextLabel_109.Parent = Gui.LCK
 Gui.TextLabel_109.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_109.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_109.BackgroundTransparency = 1.000
-Gui.TextLabel_109.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_109.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_109.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_109.ZIndex = 2
 Gui.TextLabel_109.Font = Enum.Font.SourceSans
@@ -5089,10 +5343,11 @@ Gui.TextLabel_109.TextYAlignment = Enum.TextYAlignment.Top
 
 Gui.KIN.Name = "KIN"
 Gui.KIN.Parent = Gui.Wavepoints
+Gui.KIN.AnchorPoint = Vector2.new(0.5, 0.5)
 Gui.KIN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.KIN.BackgroundTransparency = 1.000
-Gui.KIN.Position = UDim2.new(0.824000001, 0, 0.795000017, 0)
-Gui.KIN.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
+Gui.KIN.Position = UDim2.new(0.828000009, 0, 0.79564178, 0)
+Gui.KIN.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
 Gui.KIN.ZIndex = 2
 Gui.KIN.Image = "rbxassetid://12827017728"
 Gui.KIN.ImageColor3 = Color3.fromRGB(0, 0, 0)
@@ -5102,7 +5357,7 @@ Gui.TextLabel_110.Parent = Gui.KIN
 Gui.TextLabel_110.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_110.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_110.BackgroundTransparency = 1.000
-Gui.TextLabel_110.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_110.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_110.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_110.ZIndex = 2
 Gui.TextLabel_110.Font = Enum.Font.SourceSans
@@ -5112,31 +5367,84 @@ Gui.TextLabel_110.TextSize = 10.000
 Gui.TextLabel_110.TextXAlignment = Enum.TextXAlignment.Right
 Gui.TextLabel_110.TextYAlignment = Enum.TextYAlignment.Top
 
-Gui.DEL.Name = "DEL"
-Gui.DEL.Parent = Gui.Wavepoints
-Gui.DEL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Gui.DEL.BackgroundTransparency = 1.000
-Gui.DEL.Position = UDim2.new(0.810000002, 0, 0.61500001, 0)
-Gui.DEL.Size = UDim2.new(0.0199999996, 0, 0.0199999996, 0)
-Gui.DEL.ZIndex = 2
-Gui.DEL.Image = "rbxassetid://12827017728"
-Gui.DEL.ImageColor3 = Color3.fromRGB(0, 0, 0)
-Gui.DEL.ScaleType = Enum.ScaleType.Fit
+Gui.LOG.Name = "LOG"
+Gui.LOG.Parent = Gui.Wavepoints
+Gui.LOG.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.LOG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.LOG.BackgroundTransparency = 1.000
+Gui.LOG.Position = UDim2.new(0.376999974, 0, 0.975421131, 0)
+Gui.LOG.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
+Gui.LOG.ZIndex = 2
+Gui.LOG.Image = "rbxassetid://12827017728"
+Gui.LOG.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Gui.LOG.ScaleType = Enum.ScaleType.Fit
 
-Gui.TextLabel_111.Parent = Gui.DEL
+Gui.TextLabel_111.Parent = Gui.LOG
 Gui.TextLabel_111.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_111.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_111.BackgroundTransparency = 1.000
-Gui.TextLabel_111.Position = UDim2.new(0.956067562, 0, 0.960061431, 0)
+Gui.TextLabel_111.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_111.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_111.ZIndex = 2
 Gui.TextLabel_111.Font = Enum.Font.SourceSans
-Gui.TextLabel_111.Text = "DEL"
+Gui.TextLabel_111.Text = "LOG"
 Gui.TextLabel_111.TextColor3 = Color3.fromRGB(0, 0, 0)
 Gui.TextLabel_111.TextSize = 10.000
 Gui.TextLabel_111.TextXAlignment = Enum.TextXAlignment.Right
 Gui.TextLabel_111.TextYAlignment = Enum.TextYAlignment.Top
 
+Gui.HOT.Name = "HOT"
+Gui.HOT.Parent = Gui.Wavepoints
+Gui.HOT.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.HOT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.HOT.BackgroundTransparency = 1.000
+Gui.HOT.Position = UDim2.new(0.890999973, 0, 0.452426612, 0)
+Gui.HOT.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
+Gui.HOT.ZIndex = 2
+Gui.HOT.Image = "rbxassetid://12827017728"
+Gui.HOT.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Gui.HOT.ScaleType = Enum.ScaleType.Fit
+
+Gui.TextLabel_112.Parent = Gui.HOT
+Gui.TextLabel_112.AnchorPoint = Vector2.new(1, 0)
+Gui.TextLabel_112.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.TextLabel_112.BackgroundTransparency = 1.000
+Gui.TextLabel_112.Position = UDim2.new(1, 0, 0.800000012, 0)
+Gui.TextLabel_112.Size = UDim2.new(5, 0, 5, 0)
+Gui.TextLabel_112.ZIndex = 2
+Gui.TextLabel_112.Font = Enum.Font.SourceSans
+Gui.TextLabel_112.Text = "HOT"
+Gui.TextLabel_112.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.TextLabel_112.TextSize = 10.000
+Gui.TextLabel_112.TextXAlignment = Enum.TextXAlignment.Right
+Gui.TextLabel_112.TextYAlignment = Enum.TextYAlignment.Top
+
+Gui.ASP.Name = "ASP"
+Gui.ASP.Parent = Gui.Wavepoints
+Gui.ASP.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.ASP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.ASP.BackgroundTransparency = 1.000
+Gui.ASP.Position = UDim2.new(0.49000001, 0, 0.881445527, 0)
+Gui.ASP.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
+Gui.ASP.ZIndex = 2
+Gui.ASP.Image = "rbxassetid://12827017728"
+Gui.ASP.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Gui.ASP.ScaleType = Enum.ScaleType.Fit
+
+Gui.TextLabel_113.Parent = Gui.ASP
+Gui.TextLabel_113.AnchorPoint = Vector2.new(1, 0)
+Gui.TextLabel_113.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.TextLabel_113.BackgroundTransparency = 1.000
+Gui.TextLabel_113.Position = UDim2.new(1, 0, 0.800000012, 0)
+Gui.TextLabel_113.Size = UDim2.new(5, 0, 5, 0)
+Gui.TextLabel_113.ZIndex = 2
+Gui.TextLabel_113.Font = Enum.Font.SourceSans
+Gui.TextLabel_113.Text = "ASP"
+Gui.TextLabel_113.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.TextLabel_113.TextSize = 10.000
+Gui.TextLabel_113.TextXAlignment = Enum.TextXAlignment.Right
+Gui.TextLabel_113.TextYAlignment = Enum.TextYAlignment.Top
+-----------------------------------------------------------------
 local ResetButton = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
 
@@ -5159,6 +5467,7 @@ local scaleValue1 = Instance.new("IntValue")
 scaleValue1.Name = "scaleValue"
 scaleValue1.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen
 scaleValue1.Value = 6
+
 
 -- Gui to Lua
 -- Version: 3.5
@@ -5188,7 +5497,7 @@ UICorner.Parent = Ground
 Button.Name = "Button"
 Button.Parent = Ground
 Button.AnchorPoint = Vector2.new(0, 0.5)
-Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Button.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
 Button.Position = UDim2.new(0.800000012, 0, 0.5, 0)
 Button.Size = UDim2.new(0.5, 0, 0.800000012, 0)
 
@@ -5385,6 +5694,8 @@ UICorner_2.Parent = Button
  TextLabel_176 = Instance.new("TextLabel")
  TextLabel_177 = Instance.new("TextLabel")
  TextLabel_178 = Instance.new("TextLabel")
+ TextLabel_179 = Instance.new("TextLabel")
+
  
  print("Instances Created")
 
@@ -5850,7 +6161,7 @@ TokyoGround.BackgroundTransparency = 1.000
 TokyoGround.Position = UDim2.new(0.428000003, -1, 0.147499993, 0)
 TokyoGround.Size = UDim2.new(0.0399999991, 21, 0.0390000008, 1)
 TokyoGround.ZIndex = 3
-TokyoGround.Image = "rbxassetid://13321694110"
+TokyoGround.Image = "rbxassetid://14307920649"
 TokyoGround.ScaleType = Enum.ScaleType.Crop
 
 TextLabel_37.Parent = TokyoGround
@@ -7595,6 +7906,18 @@ TextLabel_178.Text = "10"
 TextLabel_178.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_178.TextSize = 10.000
 
+TextLabel_179.Parent = TokyoGround
+TextLabel_179.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_179.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_179.BackgroundTransparency = 1.000
+TextLabel_179.Position = UDim2.new(0.304760724, 0, 0.346130788, 0)
+TextLabel_179.Size = UDim2.new(0.0299999993, 0, 0.0299999993, 0)
+TextLabel_179.ZIndex = 7
+TextLabel_179.Font = Enum.Font.Arial
+TextLabel_179.Text = "A9"
+TextLabel_179.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_179.TextSize = 10.000
+
 
 -- Module Scripts:
 
@@ -7637,15 +7960,15 @@ do -- ATCScreen.Callsigns
 			["Oatar"] = "Qatari",
 			["Tui"] = "Tomjet",
 			["Turkish"] = "Turkish",
-			["United"] = "United",
+			["Reunited"] = "United",
 			["Wizz"] = "WizzAir",
 			["AerDingus"] = "Shamrock",
 
 			--Cargo
 
-			["DHL"] = "Worldstar",
-			["FedEx"] = "FedEx",
-			["UPS"] = "Ups",
+			["VHL"] = "Worldstar",
+			["TedEx"] = "FedEx",
+			["SUS"] = "Ups",
 			["Airbus Beluga"] = "Supertransport",
 
 		}
@@ -7663,21 +7986,21 @@ do -- ATCScreen.Players
 	local function module_script()
 		local module = {
 			370213285, --Zbossgamer
-			2355519465, --GOOSE (800)
-			911617475, --123ABC / Maddem (559)
-			145129180, --eric / Legand (599)
-			301870637, --Syth / Jaydog (559)
-			984766902, -- Kertz (599)
-			2745544660, --Walmart (dx tranfered ownership to him) (599)
-			329704068, --Walmart Alt
-			1029957183, --The Trollster (599)
-			1568219666, --Dav_VC (800)
-			1199048459, --Tikfull (559)
-			994950354, --Vain_0/Gadget (10$)
-			147164466, --Myzl / IceDragon (599)
-			1781698028, --NULL / N815 (10$)
-			225814032, --F35 / avjome (10$)
-			346414927  --Gooey / NUKE (690)
+            2355519465, --GOOSE (800)
+            911617475, --123ABC / Maddem (559)
+            145129180, --eric / Legand (599)
+            301870637, --Syth / Jaydog (559)
+            984766902, -- Kertz (599)
+            2745544660, --Walmart (dx tranfered ownership to him) (599)
+            329704068, --Walmart Alt
+            1029957183, --The Trollster (599)
+            1568219666, --Dav_VC (800)
+            1199048459, --Tikfull (559)
+            994950354, --Vain_0/Gadget (10$)
+            147164466, --Myzl / IceDragon (599)
+            1781698028, --NULL / N815 (10$)
+            225814032, --F35 / avjome (10$)
+            346414927  --Gooey / NUKE (690)
             }
 		return module
 	end
@@ -7762,12 +8085,12 @@ do -- ATCScreen.PlayerData
         	["Scandialien"] = "Scandinavian",
         	["Singadoor"] = "Singapore",
         	["Northeast"] = "Southwest",
-        	["Spirit"] = "Spirit Wings",
+        	["Sprit"] = "Spirit Wings",
         	["Bliss"] = "Swiss",
         	["Thay"] = "Thai",
         	["HardJet"] = "Easy",
         	["Emarates"] = "Emirates",
-        	["Flybe"] = "Jersey",
+        	["Flybee"] = "Jersey",
         	["Jet3"] = "Channex",
         	["JetBloo"] = "JetBlue",
         	["KLN"] = "KLM",
@@ -7778,17 +8101,17 @@ do -- ATCScreen.PlayerData
         	["OldZealand"] = "NewZealand",
         	["Oantas"] = "Qantas",
         	["Oatar"] = "Qatari",
-        	["Tui"] = "Tomjet",
-        	["Turkish"] = "Turkish",
-        	["United"] = "United",
-        	["Wizz"] = "WizzAir",
+        	["Lui"] = "Tomjet",
+        	["Turkey"] = "Turkish",
+        	["Reunited"] = "United",
+        	["Bizz"] = "WizzAir",
         	["AerDingus"] = "Shamrock",
         
         	--Cargo
         
-        	["DHL"] = "Worldstar",
-        	["FedEx"] = "FedEx",
-        	["UPS"] = "Ups",
+        	["VHL"] = "Worldstar",
+        	["TedEx"] = "FedEx",
+        	["SUS"] = "Ups",
         	["Airbus Beluga"] = "Supertransport",
         
         }
@@ -7819,7 +8142,11 @@ do -- ATCScreen.PlayerData
         		local plane = GetPlaneFromPlayer(player)
         		
         		if plane.Main.Engine then
-        			return math.ceil(plane.Main.Engine.Position.Y*1.8372)
+					for i, v in pairs(plane.Main:GetChildren()) do
+						if v.Name == "Engine" and v:IsA("Part") then
+							return (v.Position.Y*1.8372)
+						end
+					end
         		end
         	end
         end
@@ -7898,23 +8225,28 @@ do -- ATCScreen.MapState
 
 
 		local function ScaleDown()
-			scaleValue.Value = scaleValue.Value - 1
-			local mapScale = math.pow(scaleFactor, scaleValue.Value-5)
-			local newScale = 1/((mapScale*100)*.9)
-            
-            module.mapScale = mapScale
-			module.itemScale = newScale
-			
-            localPlayer.PlayerGui.ATCScreen.Player.Size = UDim2.new(newScale,0,newScale,0)
-			
-			local currentPos = Vector2.new(content.Position.X.Offset, content.Position.Y.Offset)
-			content.Size = UDim2.new(mapScale,0,mapScale,0)
-			for i,v in pairs(image.Wavepoints:GetChildren()) do
-				v.Size = UDim2.new(newScale, 0, newScale, 0)
+			if script.Parent then
+
+				scaleValue.Value = scaleValue.Value - 1
+				local mapScale = math.pow(scaleFactor, scaleValue.Value-5)
+				local newScale = 1/((mapScale*100)*.9)
+				
+				module.mapScale = mapScale
+				module.itemScale = newScale
+
+				
+				localPlayer.PlayerGui.ATCScreen.Player.Size = UDim2.new(newScale,0,newScale,0)
+				
+
+				local currentPos = Vector2.new(content.Position.X.Offset, content.Position.Y.Offset)
+				content.Size = UDim2.new(mapScale,0,mapScale,0)
+				for i,v in pairs(image.Wavepoints:GetChildren()) do
+					v.Size = UDim2.new(newScale, 0, newScale, 0)
+				end
+				content.Position = UDim2.new(0.5,currentPos.X * (mapScale/(math.pow(scaleFactor, scaleValue.Value-4))) ,0.5,currentPos.Y * (mapScale/(math.pow(scaleFactor, scaleValue.Value-4))))
+				
+				print("Size Down: "..scaleValue.Value)
 			end
-			content.Position = UDim2.new(0.5,currentPos.X * (mapScale/(math.pow(scaleFactor, scaleValue.Value-4))) ,0.5,currentPos.Y * (mapScale/(math.pow(scaleFactor, scaleValue.Value-4))))
-            
-			print("Size Down: "..scaleValue.Value)
 		end
 
 		local function ScaleUp()
@@ -8026,14 +8358,78 @@ do -- ATCScreen.MapState
 	fake_module_scripts[script] = module_script
 end
 
+local BindToggleV = Instance.new("StringValue")
+BindToggleV.Name = "BindToggle"
+BindToggleV.Value = "F1"
+
+local BindTaxiV = Instance.new("StringValue")
+
+BindTaxiV.Name = "BindTaxi"
+BindTaxiV.Value = "F2"
+
+local BindWaveV = Instance.new("StringValue")
+
+BindWaveV.Name = "BindWave"
+BindWaveV.Value = "F3"
+
+local BindSettingsV = Instance.new("StringValue")
+
+BindSettingsV.Name = "BindSettings"
+BindSettingsV.Value = "K"
 
 do -- ATCScreen.Keybinds
 	local script = Instance.new('ModuleScript', ATCScreen)
 	script.Name = "Keybinds"
 	local function module_script()
-		local module = {
 
+		local SettingsFrame = script.Parent.SettingFrame
+
+		local inputService = game:GetService("UserInputService")
+
+		local module = {
+			isMouseInUI = false,
 		}
+
+		module.inputEntered = function(input, _inputBehavior)
+
+			if input.UserInputType == Enum.UserInputType.MouseWheel and module.isMouseInUI then
+				if input.Position.Z == 1 then
+					return 1
+				else
+					return -1
+				end
+			end
+
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				if input.KeyCode.Name == BindSettingsV.Value then
+					print("SettingsBind")
+					return "Settings"
+				end
+
+				if input.KeyCode.Name ==  BindToggleV.Value then
+					print("UIBind")
+					return "UI"
+				end
+
+				if input.KeyCode.Name == BindTaxiV.Value then
+					print(input.KeyCode.Name .. " ~ ".. BindTaxiV.Value)
+					print("TaxiBind")
+					return "Taxi"
+				end
+
+				if input.KeyCode.Name == BindWaveV.Value then
+					print("WaveBind")
+					return "Wave"
+				end
+			end
+		end
+
+		module.setNewBind = function(bind, key)
+			script[bind].Value = key.Name
+			print("AHHHHH The TaxiBind is Technically".. BindTaxiV.Value)
+			print("The Bind: "..bind.." Has been set to: "..script[bind].Value)
+		end
+
 
 		return module
 
@@ -8041,6 +8437,10 @@ do -- ATCScreen.Keybinds
 	fake_module_scripts[script] = module_script
 end
 
+BindToggleV.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.Keybinds
+BindTaxiV.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.Keybinds
+BindWaveV.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.Keybinds
+BindSettingsV.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.Keybinds
 
 -- Scripts:
 print("Core")
@@ -8059,13 +8459,10 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
         print("0")
 
 	local Callsigns = require(script.Parent.Callsigns)
-	        
 	local Players = require(script.Parent.Players)
-	        
 	local PlayerData = require(script.Parent.PlayerData)
-	        
 	local MapState = require(script.Parent.MapState)
-	
+	local Keybinds = require(script.Parent.Keybinds)
 	local mapScale = script.Parent.scaleValue
     
     print("1")
@@ -8076,9 +8473,11 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 	local toggle = script.Parent.Toggle
 	local content = script.Parent.NewMiniMap.Content
 	local localPlayer = game:GetService("Players").LocalPlayer
+	local inputService = game:GetService("UserInputService")
 	local sizeUp = script.Parent.NewMiniMap.SizeUp
 	local sizeDown = script.Parent.NewMiniMap.SizeDown
 	local NewMiniMap = script.Parent.NewMiniMap
+	local settingFrame = script.Parent.SettingFrame
 	print("2")
 	
 	local image = content.Image
@@ -8101,6 +8500,57 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 	oldMap.Enabled = false
 	template.TextLabel.RichText = true
 
+	-------Map State / Keybinds --------
+
+
+	toggle.MouseButton1Down:Connect(function()
+		MapState.CycleState()
+	end)
+
+
+	inputService.InputBegan:Connect(function(input, behavior)
+		print("Input Type: ".. input.UserInputType.Name)
+		print("Key Pressed: "..input.KeyCode.Name)	
+
+		local inputReturned = Keybinds.inputEntered(input, behavior)
+
+		--UI
+		if inputReturned == "UI" then
+			MapState.CycleState()
+		end
+		--Settings
+		if inputReturned == "Settings" then
+			settingFrame.Visible = not settingFrame.Visible
+		end
+		
+	end)
+
+
+	inputService.InputChanged:Connect(function(input, behavior)
+			local inputReturned = Keybinds.inputEntered(input, behavior)
+			
+			--Scroll
+			if inputReturned == 1 then
+				MapState.ScaleUp()
+			elseif inputReturned == -1 then
+				MapState.ScaleDown()
+			end
+
+			task.wait()
+	end)
+
+	content.MouseEnter:Connect(function()
+		Keybinds.isMouseInUI = true
+	end)
+	
+	content.MouseLeave:Connect(function()
+		Keybinds.isMouseInUI = false
+	end)
+
+	sizeUp.MouseButton1Down:Connect(MapState.ScaleUp)
+	sizeDown.MouseButton1Down:Connect(MapState.ScaleDown)
+
+
 	------Checking Whitelist -----
 	
 	print("4")
@@ -8121,6 +8571,8 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
     
     print("5")
     
+	--Dot Creator
+
 	local function newPlayerDot(plane, tag, HDG, ALT, Speed, Position, isLocalPlayer)
 
 		local newPlayer = template:Clone() --creating new dot
@@ -8179,21 +8631,31 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		end
 	end
 
+	local function setTaxiFrame()
+		local selectedColor = Color3.new(0.176471, 0.27451, 0.345098)
+		local deselectedColor = Color3.new(0.105882, 0.164706, 0.207843)
+
+		if taxiState then
+			taxi.BackgroundColor3 = deselectedColor
+		else
+			taxi.BackgroundColor3 = selectedColor
+		end
+	end
+
 	taxi.MouseButton1Down:Connect(function()
 		taxiState = not taxiState
+		setTaxiFrame()
 	end)
 
-    print("6")
-
-	-------Map State --------
-
-	toggle.MouseButton1Down:Connect(function()
-		MapState.CycleState()
+	inputService.InputBegan:Connect(function(input, behavior)
+		local inputReturned = Keybinds.inputEntered(input, behavior)
+		if inputReturned == "Taxi" then
+			taxiState = not taxiState
+			setTaxiFrame()
+		end
 	end)
 
-	sizeUp.MouseButton1Down:Connect(MapState.ScaleUp)
-	sizeDown.MouseButton1Down:Connect(MapState.ScaleDown)
-
+	
 	-------Player Added/Removed Scripts
 	
 	print("7")
@@ -8223,15 +8685,12 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 
 	for i,t in pairs(game:GetService("Players"):GetPlayers()) do
 		if t.Character then
-		  print("8.1")
 			local newItem = listTemplate:Clone()
 			newItem.Parent = playerList.ScrollingFrame
 			newItem.Name = t.Name
 			newItem.Visible = true
 			newItem.Player.Text = t.Name
-			print("8.5")
 			newItem.Tag.Text = PlayerData.GetPlayerTAG(t)
-            print("8.6")
 		end
 	end 
 
@@ -8292,13 +8751,6 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 			end
 		end
 
-		
-		
-		print("X: "..Content.Position.X.Offset .. " Y: ".. Content.Position.Y.Offset)
-		print("Scale: "..mapScale.Value)
-		print("Exact Scale: "..MapState.mapScale)
-		print("Item Scale: "..MapState.itemScale)
-		
 		task.wait(.05)
 	end
 end
@@ -8321,6 +8773,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 	local inputService = game:GetService("UserInputService")
 	local Values = require(script.Parent.Values)
 	local MapState = require(ATCScreen.MapState)
+	local Keybinds = require(ATCScreen.Keybinds)
 
 	--UI Elements
 	local ATCScreen = script.Parent.Parent
@@ -8329,7 +8782,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 	local settingFrame = script.Parent
 	local Themes = settingFrame.Settings.Theme
 	local Presets = settingFrame.Settings.Preset
-	local Keybinds = settingFrame.Settings.Keybind
+	local KeybindFrame = settingFrame.Settings.Keybind
 	local ThemeButton = settingFrame.Settings.ThemeButton
 	local PresetButton = settingFrame.Settings.PresetButton
 	local KeybindButton = settingFrame.Settings.KeybindButton
@@ -8344,7 +8797,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
     local menuSelectedColor = Color3.new(0.235294, 0.352941, 0.494118)
 	local defaultColor = Color3.new(0.105882, 0.164706, 0.207843)
 	local buttonSelectedColor = Color3.new(0, 0.5, 0)
-	local buttonDeselectColor = Color3.new(0, 0, 0)
+	local buttonDeselectColor = Color3.new(0.415686, 0.415686, 0.415686)
 	local playerRedColor = Color3.new(1, 0, 0.0156863)
 	local playerBlueColor = Color3.new(0.0588235, 0, 0.890196)
 	local playerGreenColor = Color3.new(0.0088235, 0.584833336, 0.0088235)
@@ -8360,7 +8813,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 
 		Themes.Visible = true
 		Presets.Visible = false
-		Keybinds.Visible = false
+		KeybindFrame.Visible = false
 	end)
 
 	PresetButton.MouseButton1Down:Connect(function()
@@ -8370,7 +8823,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 
 		Themes.Visible = false
 		Presets.Visible = true
-		Keybinds.Visible = false
+		KeybindFrame.Visible = false
 	end)
 
 	KeybindButton.MouseButton1Down:Connect(function()
@@ -8380,7 +8833,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 
 		Themes.Visible = false
 		Presets.Visible = false
-		Keybinds.Visible = true
+		KeybindFrame.Visible = true
 	end)
 	
 	settingFrame.Settings.ResetButton.MouseButton1Down:Connect(function()
@@ -8388,8 +8841,11 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 	    	Content.Position = UDim2.new(0.5,0,0.5,0)
 	end)
 	
+	local defaultSetting = "default"
 
-	defaultButton.Parent.MouseButton1Down:Connect(function()
+	local function setDefault()
+		defaultSetting = "default"
+
 		defaultButton.BackgroundColor3 = buttonSelectedColor
 		VStarButton.BackgroundColor3 = buttonDeselectColor
 		GroundButton.BackgroundColor3 = buttonDeselectColor
@@ -8413,9 +8869,11 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
     		    v.BackgroundTransparency = 1
     		 end
     	end
-	end)
+	end
 
-	VStarButton.Parent.MouseButton1Down:Connect(function()
+	local function setVStar()
+		defaultSetting = "vstar"
+
 		defaultButton.BackgroundColor3 = buttonDeselectColor
 		VStarButton.BackgroundColor3 = buttonSelectedColor
 		GroundButton.BackgroundColor3 = buttonDeselectColor
@@ -8441,9 +8899,9 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
     		    v.BorderColor3 = Color3.new(1,1,1)
     		 end
 		end
-	end)
-	
-	GroundButton.Parent.MouseButton1Down:Connect(function()
+	end
+
+	local function setGround()
 		defaultButton.BackgroundColor3 = buttonDeselectColor
 		VStarButton.BackgroundColor3 = buttonDeselectColor
 		GroundButton.BackgroundColor3 = buttonSelectedColor
@@ -8469,18 +8927,56 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
     		    v.BorderColor3 = Color3.new(1,1,1)
     		 end
 		end
-	end)
+	end
+
+	defaultButton.Parent.MouseButton1Down:Connect(setDefault)
+
+	VStarButton.Parent.MouseButton1Down:Connect(setVStar)
 	
-	while true do
-    	for i , button in pairs(Presets:GetChildren()) do
-    		if button:IsA("TextButton") then
-    			button.MouseButton1Down:Connect(function()
-    				MapState.SetScale(Values[button.Name].Scale)
-    				Content.Position = Values[button.Name].Position
-    			end)
-    		end
-    	end
-    	task.wait()
+	GroundButton.Parent.MouseButton1Down:Connect(setGround)
+	
+
+	for i, button in pairs(KeybindFrame:GetChildren()) do
+		if button:IsA("TextButton") then
+			button.MouseButton1Down:Connect(function()
+				button.BackgroundColor3 = defaultColor
+				button.TextLabel.Text = "< >"
+				
+				local inputed 
+
+				inputed = inputService.InputBegan:Connect(function(input, behavior)
+					if input.UserInputType == Enum.UserInputType.Keyboard then
+
+						button.TextLabel.Text = input.KeyCode.Name
+						Keybinds.setNewBind(button.Name, input.KeyCode)
+						button.BackgroundColor3 = menuSelectedColor
+
+						inputed:Disconnect()
+					end
+				end)
+
+			end)
+		end
+	end
+
+
+	for i , button in pairs(Presets:GetChildren()) do
+		if button:IsA("TextButton") then
+			button.MouseButton1Down:Connect(function()
+				if string.sub(button.Name, string.len(button.Name)-5) == "Ground" then
+				 setGround()
+
+				elseif defaultSetting == "default" then
+					setDefault()
+				
+				else
+					setVStar()
+					string.sub(button.Name, string.len(button.Name)-5)
+				end
+				MapState.SetScale(Values[button.Name].Scale)
+				Content.Position = Values[button.Name].Position
+			end)
+		end
 	end
 end
 
@@ -8516,6 +9012,10 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 	local selectedColor = Color3.new(0.176471, 0.27451, 0.345098)
 
 	local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
+	local inputService = game:GetService("UserInputService")
+	local Keybinds = require(script.Parent.Parent.Keybinds)
+
+	
 
 	--Reset
 	B_Remove.MouseButton1Down:Connect(function()
@@ -8523,9 +9023,8 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 	end)
 
 	--Wavepoints
-
 	local WState = false
-	B_Wavepoints.MouseButton1Down:Connect(function()
+	local function toggleWaveState()
 		for i,Point in pairs(Wavepoints:GetChildren()) do
 			if WState then
 				Point.Visible = false
@@ -8544,7 +9043,16 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 		
 		WState = not WState
 		print("Poof")
+	end
+
+	inputService.InputBegan:Connect(function(input, behavior)
+		local inputReturned = Keybinds.inputEntered(input, behavior)
+		if inputReturned == "Wave" then
+			toggleWaveState()
+		end
 	end)
+
+	B_Wavepoints.MouseButton1Down:Connect(toggleWaveState)
 
 	-- Search
 
@@ -8571,36 +9079,10 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 	end)
 
 	--Heading
-
-	local HState = false
-	B_Heading.MouseButton1Down:Connect(function()
-		if HState then
-			Content.Active = true
-			Content.Draggable = true --Yes I know they removed it but it still works.
-			Content.Archivable = true
-			B_Heading.BackgroundColor3 = defaultColor
-		else
-			Content.Active = false
-			Content.Draggable = false --Yes I know they removed it but it still works.
-			Content.Archivable = false
-			B_Heading.BackgroundColor3 = selectedColor
-		end
-		HState = not HState
-	end)
-
-	--Heading Tool
-
 	local Calculating = false
 	local StartPos
 	local Distance = 50
 	local Rotation = 0
-
-	Mouse.Button1Up:Connect(function()
-		if HState then
-			Calculating = false
-			HeadingTool.Visible = false
-		end
-	end)
 
 	local function findRotaton(Delta)
 		local AbsDelta = Vector2.new(math.abs(Delta.X), math.abs(Delta.Y))
@@ -8626,15 +9108,17 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 		return math.deg(Rotation)
 	end
 
-
-	Mouse.Button1Down:Connect(function()
-		if HState and not Calculating then
-			StartPos = Vector2.new(Mouse.X, Mouse.Y)
-			HeadingTool.Position = UDim2.new(0,StartPos.X,0,StartPos.Y)
-			Calculating = true
-			HeadingTool.Visible = true
+	inputService.InputBegan:Connect(function(input)
+		if input.UserInputType.Name == "MouseButton3" then
+			if not Calculating then
+				StartPos = Vector2.new(Mouse.X, Mouse.Y)
+				HeadingTool.Position = UDim2.new(0,StartPos.X,0,StartPos.Y)
+				Calculating = true
+				HeadingTool.Visible = true
+			end
 		end
-		while HState and Calculating do
+		
+		while Calculating do
 			local EndPos = Vector2.new(Mouse.X, -1* Mouse.Y)
 			local Delta = EndPos - Vector2.new(StartPos.X, -1* StartPos.Y)
 
@@ -8652,7 +9136,17 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 			end
 			task.wait()
 		end
+
 	end)
+
+	inputService.InputEnded:Connect(function(input)
+		if input.UserInputType.Name == "MouseButton3" then
+
+			Calculating = false
+			HeadingTool.Visible = false
+		end
+	end)
+	
 
 	--Route tool
 	Route.FocusLost:Connect(function(enterPressed, _i)
@@ -8717,6 +9211,7 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 		end
 		task.wait()
 	end
+	
 end
 coroutine.wrap(SVSQEHB_fake_script)()
 
