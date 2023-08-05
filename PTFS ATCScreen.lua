@@ -7947,6 +7947,7 @@ do -- ATCScreen.Players
             1781698028, --NULL / N815 (10$)
             225814032, --F35 / avjome (10$)
             346414927,  --Gooey / NUKE (690)
+	    3423448035, --SYNTH (599)
             502002593 --PILOT/Noobthenoob (599)
             }
 		return module
