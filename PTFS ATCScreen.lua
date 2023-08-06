@@ -7950,6 +7950,7 @@ do -- ATCScreen.Players
 	    3423448035, --SYNTH (599)
 	    1572849198, --Play (599)
             110833249, --fpsBlues (599)
+	    2918276131, --bkip/beef (599)
             502002593 --PILOT/Noobthenoob (599)
             }
 		return module
