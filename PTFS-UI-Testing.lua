@@ -1066,7 +1066,7 @@ local function DNAF_fake_script() -- Piloting.Pilot Script
 					end
 					
 					--Speed
-					--setSpeed(targetSpeed)
+					setSpeed(targetSpeed)
 				else
 					mouseFrame.BackgroundColor3 = color1
 				end
