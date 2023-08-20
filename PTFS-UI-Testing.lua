@@ -9042,10 +9042,22 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		end
 
 		if plane.Internal:GetAttribute("Taxi") then
-		 	if image.Ground.Visible == true then
-				playerDot.TextLabel.Text =  tag.. "<br/>".. math.floor(Speed) .." kts"
+			if textStyle == "Default" then
+				if Iteration%2==0 then
+					playerDot.TextLabel.Text = tag.."<br/> Taxi "..math.floor(Speed/10)
+				else
+					playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. Aircraft
+				end
 			else
-			    playerDot.TextLabel.Text =  tag.. "<br/> Taxi"
+				if Iteration%2==0 then
+					playerDot.TextLabel.Text = tag.."<br/> Taxi "..math.floor(Speed/10)
+				else
+					if PlayerData.AircraftCode[Aircraft] then
+						playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. PlayerData.AircraftCode[Aircraft]
+					else
+						playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. Aircraft
+					end
+				end
 			end
 		end
 
@@ -9318,6 +9330,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		ATCScreen.Player.BackgroundColor3 = playerRedColor
 		ATCScreen.Player.Direction.Frame.BackgroundColor3 = playerRedColor
 		ATCScreen.Player.TextLabel.TextColor3 = Color3.new(0,0,0)
+		ATCScreen.Player.TextLine.BackgroundColor3 = Color3.new(0,0,0)
 		for i,Dot in pairs(Content.Dots:GetChildren()) do
 			Dot.BackgroundColor3 = playerRedColor
 			Dot.Direction.Frame.BackgroundColor3 = playerRedColor
@@ -9352,6 +9365,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		ATCScreen.Player.BackgroundColor3 = playerBlueColor
 		ATCScreen.Player.Direction.Frame.BackgroundColor3 = playerBlueColor
 		ATCScreen.Player.TextLabel.TextColor3 = Color3.new(1,1,1)
+		ATCScreen.Player.TextLine.BackgroundColor3 = Color3.new(1,1,1)
 		for i,Dot in pairs(Content.Dots:GetChildren()) do
 			Dot.BackgroundColor3 = playerBlueColor
 			Dot.Direction.Frame.BackgroundColor3 = playerBlueColor
@@ -9386,6 +9400,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		ATCScreen.Player.BackgroundColor3 = playerGreenColor
 		ATCScreen.Player.Direction.Frame.BackgroundColor3 = playerGreenColor
 		ATCScreen.Player.TextLabel.TextColor3 = Color3.new(1,1,1)
+		ATCScreen.Player.TextLine.BackgroundColor3 = Color3.new(1,1,1)
 		for i,Dot in pairs(Content.Dots:GetChildren()) do
 			Dot.BackgroundColor3 = playerGreenColor
 			Dot.Direction.Frame.BackgroundColor3 = playerGreenColor
