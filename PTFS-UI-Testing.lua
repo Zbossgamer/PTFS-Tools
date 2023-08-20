@@ -9114,6 +9114,13 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		end
 	end)
 
+	game.Players.PlayerRemoving:Connect(function(t)
+		if(script.Parent) and content.Dots[t.Name] then
+			content.Dots[t.Name]:Destroy()
+			print(t.Name.." Dot Destroyed")
+		end
+	end)
+
 	------Initializing the Playerlist----------
 	
 	print("8")
