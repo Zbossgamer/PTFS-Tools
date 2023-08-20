@@ -117,7 +117,10 @@ TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(1, 0, 0, 0)
 TextLabel.Size = UDim2.new(5, 0, 5, 0)
 TextLabel.ZIndex = 8
-TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Font = Enum.Font.Roboto
+TextLabel.FontFace.Bold = true
+
+
 TextLabel.Text = "- Delta-2945 ALT SP"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextSize = 11.000
@@ -282,7 +285,7 @@ Destination.Position = UDim2.new(0, 0, 0.810000002, 0)
 Destination.Size = UDim2.new(1, 0, 0.150000006, 0)
 Destination.Font = Enum.Font.SourceSans
 Destination.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-Destination.Text = ""
+Destination.Text = "----"
 Destination.TextColor3 = Color3.fromRGB(0, 0, 0)
 Destination.TextSize = 14.000
 Destination.PlaceholderText = "<Destination>"
@@ -613,7 +616,7 @@ Short.LayoutOrder = 2
 Short.Position = UDim2.new(0.75, 0, 0.5, 0)
 Short.Size = UDim2.new(0.550000012, 0, 0.699999988, 0)
 Short.Font = Enum.Font.SourceSans
-Short.Text = "DAL-1234 \n ALT SP"
+Short.Text = "DAL1234 \n ALT SP"
 Short.TextColor3 = Color3.fromRGB(255, 255, 255)
 Short.TextSize = 10.000
 
@@ -8327,37 +8330,67 @@ do -- ATCScreen.PlayerData
 			   short = "A3ST"
 			}
 		 }
+
+		 local baseTags = {
+			["Apollo"] = "APO", --Aeropro (Canada) / Air Posh (Serbia)
+			["Baron"] = "BRO", --2Excel (UK) / Browser Flight Service (US)
+			["Cobra"] = "COB", --C0BRA JET (Egypt)
+			["Dolphin"] = "DOL", --Million Air - Dollar Sign (USA)
+			["Eagle"] = "EAG", --like 5 diffrent companies (UK)
+			["Firebird"] = "FIR", --Not a thing
+			["Gyro"] = "GYR", --Gyrafrance (France)
+			["Havoc"] = "HAV", --Havilah (Nigeria) / Hamlin (UK)
+			["Iceburg"] = "ICB", --Iceberg Aurways (Iceland)
+			["Jester"] = "JSR", --AVA Air (Matrinique) / JetStar Moldova
+			["Kestral"] = "KES", -- Kallat (Libyan Arab Jamahiriya)
+			["Lancer"] = "LCR", --Libac (Libyan Arab Jamahiriya)
+			["Mantis"] = "MAN", --Mannion (USA)
+
+			["Osprey"] = "OSP", --Not a thing
+			["Python"] = "PYT", --Not a thing
+			["Quake"] = "QUA", --Quessar (Mexico)
+			["Raider"] = "RAD", --Alada (Angola)
+			["Striker"] = "STR", --Like 4 difrent ones (Kazastan / France / Jordan / Brazil
+
+			["Uplift"] = "UPL", --Pilot School (Ukraine)
+			["Vixen"] = "VIX", --Not a thing
+			["Warlock"] = "WRL", --Not a thing
+			["Xenon"] = "XON", --Not a thing
+			["Yeti"] = "YTI", --Not a thing
+			["Zenith"] = "ZEN" --Not a thing
+		}
+
         module.AircraftCode = {
-			["Boeing 777"] = "B773",
-			["MD-90"] = "MD90",
-			["Bombardier Learjet 45"] = "LJ45",
-			["Boeing 787"] = "B789",
-			["Bombardier CRJ700"] = "CL65",
-			["Boeing 757"] = "B753",
-			["A320"] = "A320",
+			["Boeing 777"] = "B773/H",
+			["MD-90"] = "MD90/H",
+			["Bombardier Learjet 45"] = "LJ45/M",
+			["Boeing 787"] = "B789/H",
+			["Bombardier CRJ700"] = "CL65/M",
+			["Boeing 757"] = "B753/H",
+			["A320"] = "A320/M",
 			["UH-60"] = "H60",
-			["A220"] = "A220",
-			["A330"] = "A330",
-			["A340"] = "A340",
-			["A350"] = "A350",
-			["A380"] = "A380",
-			["Boeing 737"] = "B734",
-			["Boeing 747"] = "B748",
-			["Boeing 767"] = "B763",
-			["Concorde"] = "CONC",
-			["MD-11"] = "MD11",
-			["Airbus Beluga"] = "A3ST",
+			["A220"] = "A220/M",
+			["A330"] = "A330/H",
+			["A340"] = "A340/H",
+			["A350"] = "A350/H",
+			["A380"] = "A380/J",
+			["Boeing 737"] = "B734/M",
+			["Boeing 747"] = "B748/H",
+			["Boeing 767"] = "B763/H",
+			["Concorde"] = "CONC/H",
+			["MD-11"] = "MD11/H",
+			["Airbus Beluga"] = "A3ST/H",
 			["Bell 412"] = "B412",
 			["Chinook"] = "H47",
 			["H135"] = "EC35",
-			["Cessna 172"] = "C172",
-			["Cessna 182"] = "C182",
-			["Cessna Caravan"] = "C208",
-			["Cirrus Vision SF50"] = "SF50",
-			["DHC-6 Twin Otter"] = "DHC6",
-			["Extra 300s"] = "E300",
-			["Piper Cub"] = "J3",
-			["Piper PA-28"] = "P28A",
+			["Cessna 172"] = "C172/L",
+			["Cessna 182"] = "C182/L",
+			["Cessna Caravan"] = "C208/L",
+			["Cirrus Vision SF50"] = "SF50/M",
+			["DHC-6 Twin Otter"] = "DHC6/L",
+			["Extra 300s"] = "E300/L",
+			["Piper Cub"] = "J3/L",
+			["Piper PA-28"] = "P28A/L",
 			["A-10 Warthog"] = "A10",
 			["B2 Spirit"] = "B2",
 			["Eurofighter Typhoon"] = "EUFI",
@@ -8373,7 +8406,7 @@ do -- ATCScreen.PlayerData
 			["F4 Phantom"] = "F4",
 			["English Electric Lightning"] = "LTGN",
 			["F4U Corsair"] = "CORS",
-			["Fokker Dr1"] = "DR1",
+			["Fokker Dr1"] = "DR1/M",
 			["Hawker Siddeley Harrier"] = "HAR",
 			["Hawker Hurricane"] = "HURI",
 			["Mig-15"] = "MG15",
@@ -8382,6 +8415,7 @@ do -- ATCScreen.PlayerData
 			["SR-71 Blackbird"] = "SR71",
 			["UFO"] = "UFO"
 		}
+
         
         local function GetPlaneFromPlayer(player)
         	for i,plane in pairs(game:GetService("Workspace").Aircraft:GetChildren()) do
@@ -8453,13 +8487,21 @@ do -- ATCScreen.PlayerData
         				end 
         			end
         		end
-        
+				
         		if Callsigns[plane.Name] then
 					if TextStyle.Default.BackgroundColor3 == Color3.new(0, 0.5, 0) then
 						return Callsigns[plane.Name].default.." - ".. string.sub(player.tag.Value, string.len(player.tag.Value)-3)
 					else
-						return Callsigns[plane.Name].short.." - ".. string.sub(player.tag.Value, string.len(player.tag.Value)-3)
+						return Callsigns[plane.Name].short.."".. string.sub(player.tag.Value, string.len(player.tag.Value)-3)
 					end
+				
+				elseif TextStyle.Default.BackgroundColor3 ~= Color3.new(0, 0.5, 0) then
+					local tag = string.sub(player.tag.value, 1, string.len(player.tag.value)-5)
+
+					if baseTags[tag] then
+						return baseTags[tag]..string.sub(player.tag.Value, string.len(player.tag.Value)-3)
+					end
+					
         		end
         	end
         	return player.tag.Value --default
@@ -8915,24 +8957,24 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		end
 
 		
-		if textStyle == "Default" then
-			if Iteration%2==0 then
-				playerDot.TextLabel.Text = tag.."<br/>"..newHeading.." "..newAltitude.." "..math.floor(Speed/10)
-			else
-				playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. Aircraft
-			end
-		else
-			if Iteration%2==0 then
-				playerDot.TextLabel.Text = tag.."<br/>".." "..newAltitude.." "..math.floor(Speed/10)
-			else
-				if PlayerData.AircraftCode[Aircraft] then
-					playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. PlayerData.AircraftCode[Aircraft]
+		if playerList.ScrollingFrame:FindFirstChild(player.Name) then
+			if textStyle == "Default" then
+				if Iteration%2==0 then
+					playerDot.TextLabel.Text = tag.."<br/>"..newHeading.." "..newAltitude.." "..math.floor(Speed/10)
 				else
 					playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. Aircraft
 				end
+			else
+				if Iteration%2==0 then
+					playerDot.TextLabel.Text = tag.."<br/>".." "..newAltitude.." "..math.floor(Speed/10)
+				else
+					if PlayerData.AircraftCode[Aircraft] then
+						playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. PlayerData.AircraftCode[Aircraft]
+					else
+						playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. Aircraft
+					end
+				end
 			end
-
-		
 		end
 
 		if plane.Internal:GetAttribute("Taxi") then
@@ -8993,7 +9035,7 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 	print("7")
 
 	game.Players.PlayerAdded:Connect(function(t)
-		if(script.Parent) then
+		if(script.Parent) and t.Character then
 			print(t.Name .. " Added")
 			local newItem = listTemplate:Clone()
 			newItem.Parent = playerList.ScrollingFrame
@@ -9003,11 +9045,6 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 			newItem.Player.Text = t.Name
 			task.wait(.1)
 			newItem.Tag.Text = t.tag.Value
-			if GetPlaneFromPlayer(t) then
-				item.Aircraft.Text = GetPlaneFromPlayer(t):GetAttribute("Name")
-			else
-				item.Aircraft.Text = "No Plane"
-			end
 		end
 	end)
 
@@ -9042,7 +9079,7 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		for i , item in pairs(playerList.ScrollingFrame:GetChildren()) do
 			if item:IsA("Frame") then
 				local playerName = item.Player.Text
-				if game:GetService("Players")[playerName].Character then
+				if game:GetService("Players"):FindFirstChild(playerName) and game:GetService("Players")[playerName].Character then
 					item.Tag.Text = PlayerData.GetPlayerDefaultTag(game:GetService("Players")[playerName])
 
 					if PlayerData.GetPlaneFromPlayer(game:GetService("Players")[item.name]) then
@@ -9070,10 +9107,10 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 
 						if Iteration%2==0 then
 							Default.Text = "Delta-1234 \n HED ALT SP"
-							Short.Text = "DAL-1234 \n ALT SP"
+							Short.Text = "DAL1234 \n ALT SP"
 						else
 							Default.Text = "Delta-1234 \n DEST AIRCRAFT"
-							Short.Text = "DAL-1234 \n DEST AIRC"
+							Short.Text = "DAL1234 \n DEST AIRC"
 						end
 					end
 
@@ -9208,6 +9245,11 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		ATCScreen.Player.BackgroundColor3 = playerRedColor
 		ATCScreen.Player.Direction.Frame.BackgroundColor3 = playerRedColor
 		ATCScreen.Player.TextLabel.TextColor3 = Color3.new(0,0,0)
+		for i,Dot in pairs(Content.Dots:GetChildren()) do
+			Dot.BackgroundColor3 = playerRedColor
+			Dot.Direction.Frame.BackgroundColor3 = playerRedColor
+			Dot.TextLabel.TextColor3 = Color3.new(0,0,0)
+		end
 		
 		ATCScreen.HeadingTool.TextLabel.TextColor3 = Color3.new(0,0,0)
 		
@@ -9236,6 +9278,11 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		ATCScreen.Player.BackgroundColor3 = playerBlueColor
 		ATCScreen.Player.Direction.Frame.BackgroundColor3 = playerBlueColor
 		ATCScreen.Player.TextLabel.TextColor3 = Color3.new(1,1,1)
+		for i,Dot in pairs(Content.Dots:GetChildren()) do
+			Dot.BackgroundColor3 = playerBlueColor
+			Dot.Direction.Frame.BackgroundColor3 = playerBlueColor
+			Dot.TextLabel.TextColor3 = Color3.new(1,1,1)
+		end
 		
 		ATCScreen.HeadingTool.TextLabel.TextColor3 = Color3.new(1,1,1)
 		
@@ -9264,6 +9311,11 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		ATCScreen.Player.BackgroundColor3 = playerGreenColor
 		ATCScreen.Player.Direction.Frame.BackgroundColor3 = playerGreenColor
 		ATCScreen.Player.TextLabel.TextColor3 = Color3.new(1,1,1)
+		for i,Dot in pairs(Content.Dots:GetChildren()) do
+			Dot.BackgroundColor3 = playerGreenColor
+			Dot.Direction.Frame.BackgroundColor3 = playerGreenColor
+			Dot.TextLabel.TextColor3 = Color3.new(1,1,1)
+		end
 		
 		ATCScreen.HeadingTool.TextLabel.TextColor3 = Color3.new(1,1,1)
 		
@@ -9459,7 +9511,7 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 	end
 
 	inputService.InputBegan:Connect(function(input)
-		if input.UserInputType.Name == "MouseButton3" then
+		if input.UserInputType.Name == "MouseButton3" and script.Parent then
 			if not Calculating then
 				StartPos = Vector2.new(Mouse.X, Mouse.Y)
 				HeadingTool.Position = UDim2.new(0,StartPos.X,0,StartPos.Y)
