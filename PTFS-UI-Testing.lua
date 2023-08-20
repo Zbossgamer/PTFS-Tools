@@ -102,6 +102,7 @@ ATCScreen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ATCScreen.DisplayOrder = 2
 ATCScreen.ResetOnSpawn = true
 
+-------------------------------------------------------------------Player Dot
 Player.Name = "Player"
 Player.Parent = ATCScreen
 Player.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -112,20 +113,39 @@ Player.Visible = false
 Player.ZIndex = 8
 
 TextLabel.Parent = Player
+TextLabel.AnchorPoint = Vector2.new(1, 0.5)
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(1, 0, 0, 0)
-TextLabel.Size = UDim2.new(5, 0, 5, 0)
+TextLabel.Position = UDim2.new(4, 20, 1, -20)
+TextLabel.Size = UDim2.new(5, 0, 3, 0)
 TextLabel.ZIndex = 8
 TextLabel.Font = Enum.Font.Roboto
 TextLabel.FontFace.Bold = true
-
-
 TextLabel.Text = "- Delta-2945 ALT SP"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextSize = 11.000
 TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 TextLabel.TextYAlignment = Enum.TextYAlignment.Top
+
+local TextLine = Instance.new("Frame")
+local Balls = Instance.new("Frame")
+
+TextLine.Name = "TextLine"
+TextLine.Parent = Player
+TextLine.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLine.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLine.BackgroundTransparency = 1.000
+TextLine.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLine.Rotation = 55.000
+TextLine.Size = UDim2.new(0.100000001, 0, 3, 0)
+TextLine.ZIndex = 8
+
+Balls.Parent = TextLine
+Balls.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Balls.BorderSizePixel = 0
+Balls.Position = UDim2.new(0, 0, 0.6, 0)
+Balls.Size = UDim2.new(.5, 0, 0.4, 0)
+Balls.ZIndex = 7
 
 Direction.Name = "Direction"
 Direction.Parent = Player
@@ -142,6 +162,8 @@ Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
 Frame.Position = UDim2.new(0, 0, 0.5, 0)
 Frame.Size = UDim2.new(1, 0, 0.5, 0)
 Frame.ZIndex = 8
+
+-------------------------------------------------------------------Player Dot ^^
 
 Toggle.Name = "Toggle"
 Toggle.Parent = ATCScreen
@@ -327,7 +349,7 @@ Frame_2.BackgroundColor3 = Color3.fromRGB(138, 0, 0)
 Frame_2.BorderSizePixel = 0
 Frame_2.Size = UDim2.new(1, 0, 0.5, 0)
 Frame_2.BackgroundTransparency = 1
-Frame_2.ZIndex = 5
+Frame_2.ZIndex = 1
 
 SettingFrame.Name = "SettingFrame"
 SettingFrame.Parent = ATCScreen
@@ -8849,6 +8871,7 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		if inputReturned == "Settings" then
 			settingFrame.Visible = not settingFrame.Visible
 		end
+	
 	end)
 
 
@@ -8911,6 +8934,30 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
     
     print("5")
     
+	local function findRotaton(Delta)
+		local AbsDelta = Vector2.new(math.abs(Delta.X), math.abs(Delta.Y))
+		local Rotatoion
+
+		if Delta.X > 0 and Delta.Y >= 0 then -- (+,+) Top Right X=Op Y=Ag +0
+			Rotation = math.atan2(AbsDelta.X, AbsDelta.Y)
+			Rotation = Rotation + 0
+		end
+		if Delta.X >= 0 and Delta.Y < 0 then -- (+,-) Bot Right X=Ag Y=Op +90
+			Rotation = math.atan2(AbsDelta.Y, AbsDelta.X)
+			Rotation = Rotation + math.pi/2
+		end
+		if Delta.X <= 0 and Delta.Y <= 0 then -- (-,-) Bot Left X=Op Y=Ag +180
+			Rotation = math.atan2(AbsDelta.X, AbsDelta.Y)
+			Rotation = Rotation + math.pi
+		end
+		if Delta.X < 0 and Delta.Y > 0 then -- (-,+) Top Left X=Ag Y=Op +270
+			Rotation = math.atan2(AbsDelta.Y, AbsDelta.X)
+			Rotation = Rotation + math.pi + math.pi/2
+		end
+
+		return math.deg(Rotation)
+	end
+
 	--Dot Creator
 
 	local function updatePlayerDot(player, plane, tag, HDG, ALT, Speed, Position, isLocalPlayer)
@@ -8925,18 +8972,35 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		if content.Dots:WaitForChild(player.Name, .1) then --Using existing dot
 			 playerDot = content.Dots[player.Name]
 		else
-			 playerDot = template:Clone() --creating new dot
+			playerDot = template:Clone() --creating new dot
 			playerDot.Parent = content.Dots
 			playerDot.Name = (player.Name)
 
-			playerDot.Active = true
-			playerDot.Draggable = true --Yes I know they removed it but it still works.
-			playerDot.Archivable = true
+			playerDot.TextLabel.Active = true
+			playerDot.TextLabel.Draggable = true 
+			playerDot.TextLabel.Archivable = true
+
+			playerDot.TextLabel.MouseEnter:Connect(function()
+				content.Active = false
+				content.Draggable = false 
+				content.Archivable = false
+			end)
+			playerDot.TextLabel.MouseLeave:Connect(function()
+				content.Active = true
+				content.Draggable = true 
+				content.Archivable = true
+			end)
 
 		end
 		playerDot.Direction.Rotation = HDG +180
 		playerDot.Position = Position
 		playerDot.Size = UDim2.new(newScale,0,newScale,0)
+
+		local delta = Vector2.new(playerDot.TextLabel.Position.X.Offset,-playerDot.TextLabel.Position.Y.Offset)
+		local rotation = findRotaton(delta)
+		local scale = delta.Magnitude
+		playerDot.TextLine.Rotation = rotation +180
+		playerDot.TextLine.Size = UDim2.new(.3,0,0,scale*1.25)
 
 		if(ALT< 1000) then --Updating how altitude looks
 			newAltitude = "00".. math.floor(ALT/100)
@@ -8988,6 +9052,8 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		--Conditions that change the look of aircraft
 		if not plane.Internal:GetAttribute("Taxi") or taxiState then
 			playerDot.Visible = true
+		else
+			playerDot.Visible = false
 		end
 		if plane.Internal:GetAttribute("Cruise") then
 		    if playerDot.BackgroundColor3 == Color3.new(0.0588235, 0, 0.890196) then
@@ -9248,6 +9314,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		for i,Dot in pairs(Content.Dots:GetChildren()) do
 			Dot.BackgroundColor3 = playerRedColor
 			Dot.Direction.Frame.BackgroundColor3 = playerRedColor
+			Dot.TextLine.Frame.BackgroundColor3 = Color3.new(0,0,0)
 			Dot.TextLabel.TextColor3 = Color3.new(0,0,0)
 		end
 		
@@ -9281,6 +9348,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		for i,Dot in pairs(Content.Dots:GetChildren()) do
 			Dot.BackgroundColor3 = playerBlueColor
 			Dot.Direction.Frame.BackgroundColor3 = playerBlueColor
+			Dot.TextLine.Frame.BackgroundColor3 = Color3.new(1,1,1)
 			Dot.TextLabel.TextColor3 = Color3.new(1,1,1)
 		end
 		
@@ -9314,6 +9382,7 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		for i,Dot in pairs(Content.Dots:GetChildren()) do
 			Dot.BackgroundColor3 = playerGreenColor
 			Dot.Direction.Frame.BackgroundColor3 = playerGreenColor
+			Dot.TextLine.Frame.BackgroundColor3 = Color3.new(1,1,1)
 			Dot.TextLabel.TextColor3 = Color3.new(1,1,1)
 		end
 		
@@ -9573,7 +9642,7 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 					local newLine = RouteLine:Clone()
 					newLine.Parent = Content
 					newLine.Name = "Routing"
-					newLine.Position = wavepoint.Position
+					newLine.Position = wavepoint.Position - UDim2.new(.01,0,0,0)
 					newLine.Frame.BackgroundTransparency = 0
 					local nextPoint = routePoints[i+1]
 
