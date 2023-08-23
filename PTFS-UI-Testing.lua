@@ -82,7 +82,6 @@ local SizeUp = Instance.new("TextButton")
 local SizeDown = Instance.new("TextButton")
 local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
 local Wavepoint = Instance.new("TextButton")
-local Heading = Instance.new("TextButton")
 local TextBox_2 = Instance.new("TextBox")
 local Reset = Instance.new("TextButton")
 local Taxi = Instance.new("TextButton")
@@ -185,7 +184,7 @@ HeadingTool.BackgroundTransparency = 1.000
 HeadingTool.Position = UDim2.new(0.25, 0, 0.5, 0)
 HeadingTool.Size = UDim2.new(0.00999999978, 0, 0.200000003, 0)
 HeadingTool.Visible = false
-HeadingTool.ZIndex = 8
+HeadingTool.ZIndex = 9
 
 ImageLabel.Parent = HeadingTool
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -193,7 +192,7 @@ ImageLabel.BackgroundTransparency = 1.000
 ImageLabel.BorderSizePixel = 0
 ImageLabel.Rotation = 180.000
 ImageLabel.Size = UDim2.new(1, 0, 0.5, 0)
-ImageLabel.ZIndex = 8
+ImageLabel.ZIndex = 9
 ImageLabel.Image = "http://www.roblox.com/asset/?id=10934094532"
 ImageLabel.ImageColor3 = Color3.fromRGB(27, 42, 53)
 
@@ -204,7 +203,7 @@ Top.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
 Top.BorderSizePixel = 0
 Top.Position = UDim2.new(0.5, 0, 0, 0)
 Top.Size = UDim2.new(0.5, 0, 0.100000001, 0)
-Top.ZIndex = 8
+Top.ZIndex = 9
 
 UICorner.CornerRadius = UDim.new(1, 0)
 UICorner.Parent = Top
@@ -218,7 +217,7 @@ Bottom.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
 Bottom.BorderSizePixel = 0
 Bottom.Position = UDim2.new(0.5, 0, 0.5, 0)
 Bottom.Size = UDim2.new(0.5, 0, 0.100000001, 0)
-Bottom.ZIndex = 8
+Bottom.ZIndex = 9
 
 UIAspectRatioConstraint_2.Parent = Bottom
 
@@ -228,7 +227,8 @@ TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.Position = UDim2.new(0.5, 0, 0.5, 0)
 TextLabel_2.Size = UDim2.new(5, 0, 0.194000006, 0)
-TextLabel_2.ZIndex = 8
+TextLabel_2.ZIndex = 9
+
 TextLabel_2.Font = Enum.Font.SourceSansBold
 TextLabel_2.Text = "360"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -241,7 +241,7 @@ PlayerList.Name = "PlayerList"
 PlayerList.Parent = ATCScreen
 PlayerList.AnchorPoint = Vector2.new(1, 0)
 PlayerList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PlayerList.Position = UDim2.new(1, 0, 0, 0)
+PlayerList.Position = UDim2.new(1, 0, 0.85, 0)
 PlayerList.Size = UDim2.new(0.400000006, 0, 0.150000006, 0)
 
 ScrollingFrame.Parent = PlayerList
@@ -420,7 +420,7 @@ Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Version.BackgroundTransparency = 1.000
 Version.Size = UDim2.new(0.200000003, 0, 0.100000001, 0)
 Version.Font = Enum.Font.SourceSans
-Version.Text = "V5"
+Version.Text = "V5.0.5"
 Version.TextColor3 = Color3.fromRGB(0, 0, 0)
 Version.TextSize = 14.000
 Version.TextYAlignment = Enum.TextYAlignment.Top
@@ -926,7 +926,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.949999988, 0, 0.5, 0)
 TextLabel.Size = UDim2.new(0.5, 0, 0.800000012, 0)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "K"
+TextLabel.Text = "F4"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextSize = 14.000
 
@@ -942,7 +942,7 @@ NewMiniMap.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 NewMiniMap.BorderColor3 = Color3.fromRGB(27, 42, 53)
 NewMiniMap.BorderSizePixel = 4
 NewMiniMap.ClipsDescendants = true
-NewMiniMap.Position = UDim2.new(1, 0, 1, 0)
+NewMiniMap.Position = UDim2.new(1, 0, .85, 0)
 NewMiniMap.Size = UDim2.new(0.400000006, 0, 0.850000024, 0)
 
 SizeUp.Name = "SizeUp"
@@ -983,22 +983,11 @@ Wavepoint.Text = "W"
 Wavepoint.TextColor3 = Color3.fromRGB(255, 255, 255)
 Wavepoint.TextSize = 14.000
 
-Heading.Name = "Heading"
-Heading.Parent = NewMiniMap
-Heading.AnchorPoint = Vector2.new(0, 1)
-Heading.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
-Heading.Position = UDim2.new(0.200000003, 0, 1, 0)
-Heading.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
-Heading.ZIndex = 5
-Heading.Font = Enum.Font.SourceSansBold
-Heading.Text = "H"
-Heading.TextColor3 = Color3.fromRGB(255, 255, 255)
-Heading.TextSize = 14.000
 
 TextBox_2.Parent = NewMiniMap
 TextBox_2.AnchorPoint = Vector2.new(0, 1)
 TextBox_2.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
-TextBox_2.Position = UDim2.new(0.25, 0, 1, 0)
+TextBox_2.Position = UDim2.new(0.2, 0, 1, 0)
 TextBox_2.Size = UDim2.new(0.209999993, 0, 0.0500000007, 0)
 TextBox_2.ZIndex = 5
 TextBox_2.Font = Enum.Font.SourceSans
@@ -8646,12 +8635,16 @@ do -- ATCScreen.MapState
 		module.ScaleDown = ScaleDown
 
 
+		local defaultPosition = UDim2.new(1,0,.85,0)
+		local lowPosition = UDim2.new(1,0,1,0)
+
 		module.setState = function(State)
 			if State == "Pilot" then --ATC > Pilot
 				module.State = "Pilot"
 
 				NewMiniMap.Visible = true
 				NewMiniMap.Size = pilotSize
+				NewMiniMap.Position = lowPosition
 				playerList.Visible = false
 				oldMap.Enabled = false
 
@@ -8661,6 +8654,7 @@ do -- ATCScreen.MapState
 
 				NewMiniMap.Visible = false
 				NewMiniMap.Size = ATCSize
+				NewMiniMap.Position = lowPosition
 				playerList.Visible = false
 				oldMap.Enabled = true
 
@@ -8670,6 +8664,7 @@ do -- ATCScreen.MapState
 
 				NewMiniMap.Visible = true
 				NewMiniMap.Size = ATCSize
+				NewMiniMap.Position = defaultPosition
 				playerList.Visible = true
 				oldMap.Enabled = false
 
@@ -8682,6 +8677,7 @@ do -- ATCScreen.MapState
 
 				NewMiniMap.Visible = true
 				NewMiniMap.Size = pilotSize
+				NewMiniMap.Position = lowPosition
 				playerList.Visible = false
 				oldMap.Enabled = false
 
@@ -8691,6 +8687,7 @@ do -- ATCScreen.MapState
 
 					NewMiniMap.Visible = false
 					NewMiniMap.Size = ATCSize
+					NewMiniMap.Position = lowPosition
 					playerList.Visible = false
 					oldMap.Enabled = true
 
@@ -8700,6 +8697,7 @@ do -- ATCScreen.MapState
 
 					NewMiniMap.Visible = true
 					NewMiniMap.Size = ATCSize
+					NewMiniMap.Position = defaultPosition
 					playerList.Visible = true
 					oldMap.Enabled = false
 
@@ -9127,7 +9125,7 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 	end)
 
 	game.Players.PlayerRemoving:Connect(function(t)
-		if(script.Parent) and content.Dots[t.Name] then
+		if(script.Parent) and content.Dots:FindFirstChild(t.Name) then
 			content.Dots[t.Name]:Destroy()
 			print(t.Name.." Dot Destroyed")
 		end
@@ -9182,7 +9180,7 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 				
 				local nameGUI = game.workspace[player.Name].Head.clonegui.TextLabel
 				
-				if PlayerData.GetPlaneFromPlayer(player) ~= nil then
+				if PlayerData.GetPlaneFromPlayer(player) ~= nil and playerList.ScrollingFrame:FindFirstChild(player.Name) then
 
 					if os.time()-baseTime == 2 then
 						local Default = TextStyle.Default
@@ -9494,7 +9492,6 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 	local Wavepoints = Content.Image.Wavepoints
 	local Ground = Content.Image.Ground
 	local B_Wavepoints = NewMiniMap.Wavepoint
-	local B_Heading = NewMiniMap.Heading
 	local B_Remove = NewMiniMap.Reset
 	local T_Search = NewMiniMap.TextBox
 	local B_Settings = NewMiniMap.Settings
@@ -9601,13 +9598,15 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 		return math.deg(Rotation)
 	end
 
-	inputService.InputBegan:Connect(function(input)
-		if input.UserInputType.Name == "MouseButton3" and script.Parent then
+	inputService.InputBegan:Connect(function(input, behavior)
+		if input.UserInputType.Name == "MouseButton2" then
+			print("Mouse2")
 			if not Calculating then
 				StartPos = Vector2.new(Mouse.X, Mouse.Y)
 				HeadingTool.Position = UDim2.new(0,StartPos.X,0,StartPos.Y)
 				Calculating = true
 				HeadingTool.Visible = true
+				print("Heading On")
 			end
 		end
 		
@@ -9633,7 +9632,7 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 	end)
 
 	inputService.InputEnded:Connect(function(input)
-		if input.UserInputType.Name == "MouseButton3" then
+		if input.UserInputType.Name == "MouseButton2" then
 
 			Calculating = false
 			HeadingTool.Visible = false
@@ -9684,7 +9683,7 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 
 	--Settings
 	local function settingToggle()
-		local settingsFrame =script.Parent.Parent.SettingFrame
+		local settingsFrame = script.Parent.Parent.SettingFrame
 		settingsFrame.Visible = not settingsFrame.Visible
 
 	end
