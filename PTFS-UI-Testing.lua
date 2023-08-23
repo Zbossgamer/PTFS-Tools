@@ -8119,9 +8119,16 @@ do -- ATCScreen.Players
             994950354, --Vain_0/Gadget (10$)
             147164466, --Myzl / IceDragon (599)
             1781698028, --NULL / N815 (10$)
-            225814032, --F35 / avjome (10$)
+            4947610673, --F35 / avjome / Aviator (10$)
             346414927,  --Gooey / NUKE (690)
-            502002593 --PILOT/Noobthenoob (599)
+	    3423448035, --SYNTH (599)
+	    1572849198, --Play (599)
+	    2918276131, --bkip/beef (599)
+            502002593, --PILOT/Noobthenoob (599)
+	    224702919, --Wingless/Alan (Free)
+	    3700792089, --Bloodstone ($10)
+	    254658903, --gamergang / desis (599)
+            273079054 --Forest / Black ($10)
             }
 		return module
 	end
