@@ -8367,13 +8367,13 @@ do -- ATCScreen.PlayerData
 			["Kestral"] = "KES", -- Kallat (Libyan Arab Jamahiriya)
 			["Lancer"] = "LCR", --Libac (Libyan Arab Jamahiriya)
 			["Mantis"] = "MAN", --Mannion (USA)
-
+			["Nitro"] = "NTR",
 			["Osprey"] = "OSP", --Not a thing
 			["Python"] = "PYT", --Not a thing
 			["Quake"] = "QUA", --Quessar (Mexico)
 			["Raider"] = "RAD", --Alada (Angola)
 			["Striker"] = "STR", --Like 4 difrent ones (Kazastan / France / Jordan / Brazil
-
+			["Talon"] = "TAL",
 			["Uplift"] = "UPL", --Pilot School (Ukraine)
 			["Vixen"] = "VIX", --Not a thing
 			["Warlock"] = "WRL", --Not a thing
