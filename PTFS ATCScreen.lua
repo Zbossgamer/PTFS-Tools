@@ -7951,11 +7951,13 @@ do -- ATCScreen.Players
 	    1572849198, --Play (599)
 	    2918276131, --bkip/beef (599)
             502002593, --PILOT/Noobthenoob (599)
-	    224702919, --Wingless/Alan (Free)
+	    224702919, --Wingless/Alan (Free -Competition)
 	    3700792089, --Bloodstone ($10)
 	    254658903, --gamergang / desis (599)
             273079054, --Forest / Black ($10)
-	    2592661840 --Joshua ($11)
+	    2592661840, --Joshua ($11)
+	    1253430349, --Hoffstorm (Free -Giveaway)
+	    4753297211 --Quickknight / Jackss (280 -Discount for helping)
 
             }
 		return module
