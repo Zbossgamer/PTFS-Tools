@@ -9081,7 +9081,7 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		if plane.Internal:GetAttribute("Taxi") then
 			if textStyle == "Default" then
 				if Iteration%2==0 then
-					playerDot.TextLabel.Text = tag.."<br/> Taxi "..math.floor(Speed/10)
+					playerDot.TextLabel.Text = tag.."<br/> Taxi "..math.floor(Speed)
 				else
 					playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. Aircraft
 				end
