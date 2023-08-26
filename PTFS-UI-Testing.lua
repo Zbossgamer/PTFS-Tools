@@ -420,7 +420,7 @@ Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Version.BackgroundTransparency = 1.000
 Version.Size = UDim2.new(0.200000003, 0, 0.100000001, 0)
 Version.Font = Enum.Font.SourceSans
-Version.Text = "V5.0.5"
+Version.Text = "V5"
 Version.TextColor3 = Color3.fromRGB(0, 0, 0)
 Version.TextSize = 14.000
 Version.TextYAlignment = Enum.TextYAlignment.Top
@@ -2713,7 +2713,7 @@ local Gui = {
 	TextLabel_78 = Instance.new("TextLabel"),
 	RFD = Instance.new("ImageLabel"),
 	TextLabel_79 = Instance.new("TextLabel"),
-	TRC = Instance.new("ImageLabel"),
+	TRN = Instance.new("ImageLabel"),
 	TextLabel_80 = Instance.new("TextLabel"),
 	GULEG = Instance.new("ImageLabel"),
 	TextLabel_81 = Instance.new("TextLabel"),
@@ -4770,19 +4770,19 @@ Gui.TextLabel_79.TextSize = 10.000
 Gui.TextLabel_79.TextXAlignment = Enum.TextXAlignment.Right
 Gui.TextLabel_79.TextYAlignment = Enum.TextYAlignment.Top
 
-Gui.TRC.Name = "TRC"
-Gui.TRC.Parent = Gui.Wavepoints
-Gui.TRC.AnchorPoint = Vector2.new(0.5, 0.5)
-Gui.TRC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Gui.TRC.BackgroundTransparency = 1.000
-Gui.TRC.Position = UDim2.new(0.42900005, 0, 0.788491428, 0)
-Gui.TRC.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
-Gui.TRC.ZIndex = 2
-Gui.TRC.Image = "rbxassetid://12827049702"
-Gui.TRC.ImageColor3 = Color3.fromRGB(0, 0, 0)
-Gui.TRC.ScaleType = Enum.ScaleType.Fit
+Gui.TRN.Name = "TRN"
+Gui.TRN.Parent = Gui.Wavepoints
+Gui.TRN.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.TRN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.TRN.BackgroundTransparency = 1.000
+Gui.TRN.Position = UDim2.new(0.42900005, 0, 0.788491428, 0)
+Gui.TRN.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
+Gui.TRN.ZIndex = 2
+Gui.TRN.Image = "rbxassetid://12827049702"
+Gui.TRN.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Gui.TRN.ScaleType = Enum.ScaleType.Fit
 
-Gui.TextLabel_80.Parent = Gui.TRC
+Gui.TextLabel_80.Parent = Gui.TRN
 Gui.TextLabel_80.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_80.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_80.BackgroundTransparency = 1.000
@@ -4790,7 +4790,7 @@ Gui.TextLabel_80.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_80.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_80.ZIndex = 2
 Gui.TextLabel_80.Font = Enum.Font.SourceSans
-Gui.TextLabel_80.Text = "TRC"
+Gui.TextLabel_80.Text = "TRN"
 Gui.TextLabel_80.TextColor3 = Color3.fromRGB(0, 0, 0)
 Gui.TextLabel_80.TextSize = 10.000
 Gui.TextLabel_80.TextXAlignment = Enum.TextXAlignment.Right
@@ -8121,18 +8121,18 @@ do -- ATCScreen.Players
             1781698028, --NULL / N815 (10$)
             225814032, --F35 / avjome / Aviator / XBGamer (10$)
             346414927,  --Gooey / NUKE (690)
-	    3423448035, --SYNTH (599)
-	    1572849198, --Play (599)
-	    2918276131, --bkip/beef (599)
+        3423448035, --SYNTH (599)
+        1572849198, --Play (599)
+        2918276131, --bkip/beef (599)
             502002593, --PILOT/Noobthenoob (599)
-	    224702919, --Wingless/Alan (Free -Competition)
-	    3700792089, --Bloodstone ($10)
-	    254658903, --gamergang / desis (599)
+        224702919, --Wingless/Alan (Free -Competition)
+        3700792089, --Bloodstone ($10)
+        254658903, --gamergang / desis (599)
             273079054, --Forest / Black ($10)
-	    2592661840, --Joshua ($11)
-	    4142105384, --LilTator / dogPixel (Free -Giveaway)
-	    4753297211, --Quickknight / Jackss (280 -Discount for helping)
-	    1653554400 --Tony / Griffin (280 -Discount for helping)
+        2592661840, --Joshua ($11)
+        4142105384, --LilTator / dogPixel (Free -Giveaway)
+        4753297211, --Quickknight / Jackss (280 -Discount for helping)
+        1653554400 --Tony / Griffin (280 -Discount for helping)
             }
 		return module
 	end
@@ -8385,18 +8385,18 @@ do -- ATCScreen.PlayerData
         module.AircraftCode = {
 			["Boeing 777"] = "B773/H",
 			["MD-90"] = "MD90/H",
-			["Bombardier Learjet 45"] = "LJ45/M",
+			["Bombardier Learjet 45"] = "LJ45",
 			["Boeing 787"] = "B789/H",
-			["Bombardier CRJ700"] = "CL65/M",
+			["Bombardier CRJ700"] = "CL65",
 			["Boeing 757"] = "B753/H",
-			["A320"] = "A320/M",
+			["A320"] = "A320",
 			["UH-60"] = "H60",
-			["A220"] = "A220/M",
+			["A220"] = "A220",
 			["A330"] = "A330/H",
 			["A340"] = "A340/H",
 			["A350"] = "A350/H",
 			["A380"] = "A380/J",
-			["Boeing 737"] = "B734/M",
+			["Boeing 737"] = "B734",
 			["Boeing 747"] = "B748/H",
 			["Boeing 767"] = "B763/H",
 			["Concorde"] = "CONC/H",
@@ -8405,14 +8405,14 @@ do -- ATCScreen.PlayerData
 			["Bell 412"] = "B412",
 			["Chinook"] = "H47",
 			["H135"] = "EC35",
-			["Cessna 172"] = "C172/L",
-			["Cessna 182"] = "C182/L",
-			["Cessna Caravan"] = "C208/L",
-			["Cirrus Vision SF50"] = "SF50/M",
-			["DHC-6 Twin Otter"] = "DHC6/L",
-			["Extra 300s"] = "E300/L",
-			["Piper Cub"] = "J3/L",
-			["Piper PA-28"] = "P28A/L",
+			["Cessna 172"] = "C172",
+			["Cessna 182"] = "C182",
+			["Cessna Caravan"] = "C208",
+			["Cirrus Vision SF50"] = "SF50",
+			["DHC-6 Twin Otter"] = "DHC6",
+			["Extra 300s"] = "E300",
+			["Piper Cub"] = "J3",
+			["Piper PA-28"] = "P28A",
 			["A-10 Warthog"] = "A10",
 			["B2 Spirit"] = "B2",
 			["Eurofighter Typhoon"] = "EUFI",
@@ -8428,7 +8428,7 @@ do -- ATCScreen.PlayerData
 			["F4 Phantom"] = "F4",
 			["English Electric Lightning"] = "LTGN",
 			["F4U Corsair"] = "CORS",
-			["Fokker Dr1"] = "DR1/M",
+			["Fokker Dr1"] = "DR1",
 			["Hawker Siddeley Harrier"] = "HAR",
 			["Hawker Hurricane"] = "HURI",
 			["Mig-15"] = "MG15",
@@ -8441,11 +8441,19 @@ do -- ATCScreen.PlayerData
         
         local function GetPlaneFromPlayer(player)
         	for i,plane in pairs(game:GetService("Workspace").Aircraft:GetChildren()) do
-        		if player.Character:FindFirstChild("HumanoidRootPart") and plane:IsA("Model")  then 
+        		if player.Character:FindFirstChild("HumanoidRootPart") and plane:IsA("Model") then 
+
         			local distance = (plane:WaitForChild("Main"):WaitForChild("Seats"):WaitForChild("PilotSeat").Position - player.Character.HumanoidRootPart.Position).Magnitude
-        			if distance < 2 then
-        				return plane
-        			end
+					if plane:FindFirstChild("Main"):FindFirstChild("Seats"):FindFirstChild("CoPilotSeat") then
+						local coDistance = (plane:WaitForChild("Main"):WaitForChild("Seats"):WaitForChild("CoPilotSeat").Position - player.Character.HumanoidRootPart.Position).Magnitude
+						if distance < 2 and coDistance > distance then
+							return plane
+						end
+					else
+						if distance < 2 then
+							return plane
+						end
+					end	
         		end
         	end
         end
@@ -8736,7 +8744,7 @@ BindWaveV.Value = "F3"
 
 local BindSettingsV = Instance.new("StringValue")
 BindSettingsV.Name = "BindSettings"
-BindSettingsV.Value = "K"
+BindSettingsV.Value = "F4"
 
 do -- ATCScreen.Keybinds
 	local script = Instance.new('ModuleScript', ATCScreen)
@@ -8975,8 +8983,22 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		local newHeading
 		local newScale = 1/((math.pow(1.25, mapScale.Value-5)*100)*.9)
 		local playerDot
-
 		local Aircraft = plane:GetAttribute("Name")
+
+		if(script.Parent) then
+			if not playerList.ScrollingFrame:FindFirstChild(player.Name) then
+				print(player.Name .. " Added")
+				local newItem = listTemplate:Clone()
+				newItem.Parent = playerList.ScrollingFrame
+				newItem.Name = player.Name
+				newItem.Visible = true
+
+				newItem.Player.Text = player.Name
+				task.wait(.1)
+				newItem.Tag.Text = player.tag.Value
+			end
+		end
+		
 
 		if content.Dots:WaitForChild(player.Name, .1) then --Using existing dot
 			 playerDot = content.Dots[player.Name]
@@ -8985,16 +9007,22 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 			playerDot.Parent = content.Dots
 			playerDot.Name = (player.Name)
 
-			playerDot.TextLabel.Active = true
-			playerDot.TextLabel.Draggable = true 
-			playerDot.TextLabel.Archivable = true
+			playerDot.TextLabel.ZIndex = math.random(8, 12)
 
 			playerDot.TextLabel.MouseEnter:Connect(function()
+				if content.Draggable == true then --Ensures only 1 is dragable at a time
+					playerDot.TextLabel.Active = true
+					playerDot.TextLabel.Draggable = true 
+					playerDot.TextLabel.Archivable = true
+				end
 				content.Active = false
 				content.Draggable = false 
 				content.Archivable = false
 			end)
 			playerDot.TextLabel.MouseLeave:Connect(function()
+				playerDot.TextLabel.Active = false
+				playerDot.TextLabel.Draggable = false 
+				playerDot.TextLabel.Archivable = false
 				content.Active = true
 				content.Draggable = true 
 				content.Archivable = true
@@ -9122,46 +9150,20 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 	print("7")
 
 	game.Players.PlayerAdded:Connect(function(t)
-		if(script.Parent) and t.Character then
-			print(t.Name .. " Added")
-			local newItem = listTemplate:Clone()
-			newItem.Parent = playerList.ScrollingFrame
-			newItem.Name = t.Name
-			newItem.Visible = true
-
-			newItem.Player.Text = t.Name
-			task.wait(.1)
-			newItem.Tag.Text = t.tag.Value
-		end
+		
 	end)
 
 	game.Players.PlayerRemoving:Connect(function(t)
 		if(script.Parent) and content.Dots:FindFirstChild(t.Name) then
 			content.Dots[t.Name]:Destroy()
-			print(t.Name.." Dot Destroyed")
+			playerList.ScrollingFrame[t.Name]:Destroy()
+			print("Player Left")
 		end
 	end)
 
 	------Initializing the Playerlist----------
 	
 	print("8")
-
-
-	for i,t in pairs(game:GetService("Players"):GetPlayers()) do
-		if t.Character then
-			local newItem = listTemplate:Clone()
-			newItem.Parent = playerList.ScrollingFrame
-			newItem.Name = t.Name
-			newItem.Visible = true
-			newItem.Player.Text = t.Name
-			newItem.Tag.Text = PlayerData.GetPlayerDefaultTag(t)
-			if PlayerData.GetPlaneFromPlayer(t) then
-				newItem.Aircraft.Text = PlayerData.GetPlaneFromPlayer(t):GetAttribute("Name")
-			else
-				newItem.Aircraft.Text = "No Plane"
-			end
-		end
-	end 
 
 	-----Main Run loop--------
 	print("Start")
@@ -9191,7 +9193,7 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 				
 				local nameGUI = game.workspace[player.Name].Head.clonegui.TextLabel
 				
-				if PlayerData.GetPlaneFromPlayer(player) ~= nil and playerList.ScrollingFrame:FindFirstChild(player.Name) then
+				if PlayerData.GetPlaneFromPlayer(player) ~= nil then
 
 					if os.time()-baseTime == 2 then
 						local Default = TextStyle.Default
@@ -9609,8 +9611,18 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 		return math.deg(Rotation)
 	end
 
+	local hovering = false
+	Content.MouseEnter:Connect(function()
+		hovering = true
+	end)
+	Content.MouseLeave:Connect(function()
+		hovering = false
+	end)
+
+
+
 	inputService.InputBegan:Connect(function(input, behavior)
-		if input.UserInputType.Name == "MouseButton2" then
+		if input.UserInputType.Name == "MouseButton2" and hovering then
 			print("Mouse2")
 			if not Calculating then
 				StartPos = Vector2.new(Mouse.X, Mouse.Y)
