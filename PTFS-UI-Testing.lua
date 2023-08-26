@@ -9087,7 +9087,7 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 				end
 			else
 				if Iteration%2==0 then
-					playerDot.TextLabel.Text = tag.."<br/> Taxi "..math.floor(Speed/10)
+					playerDot.TextLabel.Text = tag.."<br/> Taxi "..math.floor(Speed)
 				else
 					if PlayerData.AircraftCode[Aircraft] then
 						playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. PlayerData.AircraftCode[Aircraft]
