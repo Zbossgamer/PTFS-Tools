@@ -82,7 +82,6 @@ local SizeUp = Instance.new("TextButton")
 local SizeDown = Instance.new("TextButton")
 local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
 local Wavepoint = Instance.new("TextButton")
-local Heading = Instance.new("TextButton")
 local TextBox_2 = Instance.new("TextBox")
 local Reset = Instance.new("TextButton")
 local Taxi = Instance.new("TextButton")
@@ -102,6 +101,7 @@ ATCScreen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ATCScreen.DisplayOrder = 2
 ATCScreen.ResetOnSpawn = true
 
+-------------------------------------------------------------------Player Dot
 Player.Name = "Player"
 Player.Parent = ATCScreen
 Player.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -112,17 +112,39 @@ Player.Visible = false
 Player.ZIndex = 8
 
 TextLabel.Parent = Player
+TextLabel.AnchorPoint = Vector2.new(1, 0.5)
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(1, 0, 0, 0)
-TextLabel.Size = UDim2.new(5, 0, 5, 0)
+TextLabel.Position = UDim2.new(4, 20, 1, -20)
+TextLabel.Size = UDim2.new(5, 0, 3, 0)
 TextLabel.ZIndex = 8
-TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Font = Enum.Font.Roboto
+TextLabel.FontFace.Bold = true
 TextLabel.Text = "- Delta-2945 ALT SP"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextSize = 11.000
 TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 TextLabel.TextYAlignment = Enum.TextYAlignment.Top
+
+local TextLine = Instance.new("Frame")
+local Balls = Instance.new("Frame")
+
+TextLine.Name = "TextLine"
+TextLine.Parent = Player
+TextLine.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLine.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLine.BackgroundTransparency = 1.000
+TextLine.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLine.Rotation = 55.000
+TextLine.Size = UDim2.new(0.100000001, 0, 3, 0)
+TextLine.ZIndex = 8
+
+Balls.Parent = TextLine
+Balls.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Balls.BorderSizePixel = 0
+Balls.Position = UDim2.new(0, 0, 0.6, 0)
+Balls.Size = UDim2.new(.5, 0, 0.4, 0)
+Balls.ZIndex = 7
 
 Direction.Name = "Direction"
 Direction.Parent = Player
@@ -139,6 +161,8 @@ Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
 Frame.Position = UDim2.new(0, 0, 0.5, 0)
 Frame.Size = UDim2.new(1, 0, 0.5, 0)
 Frame.ZIndex = 8
+
+-------------------------------------------------------------------Player Dot ^^
 
 Toggle.Name = "Toggle"
 Toggle.Parent = ATCScreen
@@ -160,7 +184,7 @@ HeadingTool.BackgroundTransparency = 1.000
 HeadingTool.Position = UDim2.new(0.25, 0, 0.5, 0)
 HeadingTool.Size = UDim2.new(0.00999999978, 0, 0.200000003, 0)
 HeadingTool.Visible = false
-HeadingTool.ZIndex = 8
+HeadingTool.ZIndex = 9
 
 ImageLabel.Parent = HeadingTool
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -168,7 +192,7 @@ ImageLabel.BackgroundTransparency = 1.000
 ImageLabel.BorderSizePixel = 0
 ImageLabel.Rotation = 180.000
 ImageLabel.Size = UDim2.new(1, 0, 0.5, 0)
-ImageLabel.ZIndex = 8
+ImageLabel.ZIndex = 9
 ImageLabel.Image = "http://www.roblox.com/asset/?id=10934094532"
 ImageLabel.ImageColor3 = Color3.fromRGB(27, 42, 53)
 
@@ -179,7 +203,7 @@ Top.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
 Top.BorderSizePixel = 0
 Top.Position = UDim2.new(0.5, 0, 0, 0)
 Top.Size = UDim2.new(0.5, 0, 0.100000001, 0)
-Top.ZIndex = 8
+Top.ZIndex = 9
 
 UICorner.CornerRadius = UDim.new(1, 0)
 UICorner.Parent = Top
@@ -193,7 +217,7 @@ Bottom.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
 Bottom.BorderSizePixel = 0
 Bottom.Position = UDim2.new(0.5, 0, 0.5, 0)
 Bottom.Size = UDim2.new(0.5, 0, 0.100000001, 0)
-Bottom.ZIndex = 8
+Bottom.ZIndex = 9
 
 UIAspectRatioConstraint_2.Parent = Bottom
 
@@ -203,7 +227,8 @@ TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.Position = UDim2.new(0.5, 0, 0.5, 0)
 TextLabel_2.Size = UDim2.new(5, 0, 0.194000006, 0)
-TextLabel_2.ZIndex = 8
+TextLabel_2.ZIndex = 9
+
 TextLabel_2.Font = Enum.Font.SourceSansBold
 TextLabel_2.Text = "360"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -216,7 +241,7 @@ PlayerList.Name = "PlayerList"
 PlayerList.Parent = ATCScreen
 PlayerList.AnchorPoint = Vector2.new(1, 0)
 PlayerList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PlayerList.Position = UDim2.new(1, 0, 0, 0)
+PlayerList.Position = UDim2.new(1, 0, 0.85, 0)
 PlayerList.Size = UDim2.new(0.400000006, 0, 0.150000006, 0)
 
 ScrollingFrame.Parent = PlayerList
@@ -232,7 +257,7 @@ UIListLayout.FillDirection = Enum.FillDirection.Horizontal
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
 UIAspectRatioConstraint_4.Parent = PlayerList
-UIAspectRatioConstraint_4.AspectRatio = 9.000
+UIAspectRatioConstraint_4.AspectRatio = 7.000
 
 Template.Name = "Template"
 Template.Parent = ATCScreen
@@ -263,23 +288,53 @@ TextBox.Parent = Template
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.BackgroundTransparency = 0.900
 TextBox.Position = UDim2.new(0, 0, 0.660000026, 0)
-TextBox.Size = UDim2.new(1, 0, 0.300000012, 0)
+TextBox.Size = UDim2.new(1, 0, 0.15, 0)
 TextBox.Font = Enum.Font.SourceSans
 TextBox.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.Text = ""
 TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.TextSize = 14.000
+TextBox.PlaceholderText = "<Callsign>"
+
+local Destination = Instance.new("TextBox")
+
+
+Destination.Name = "Destination"
+Destination.Parent = Template
+Destination.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Destination.BackgroundTransparency = 0.900
+Destination.Position = UDim2.new(0, 0, 0.810000002, 0)
+Destination.Size = UDim2.new(1, 0, 0.150000006, 0)
+Destination.Font = Enum.Font.SourceSans
+Destination.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+Destination.Text = "----"
+Destination.TextColor3 = Color3.fromRGB(0, 0, 0)
+Destination.TextSize = 14.000
+Destination.PlaceholderText = "<Destination>"
 
 Tag.Name = "Tag"
 Tag.Parent = Template
 Tag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Tag.BackgroundTransparency = 1.000
 Tag.Position = UDim2.new(0, 0, 0.330000013, 0)
-Tag.Size = UDim2.new(1, 0, 0.330000013, 0)
+Tag.Size = UDim2.new(1, 0, 0.15, 0)
 Tag.Font = Enum.Font.SourceSansBold
 Tag.Text = "Gyro-2245"
 Tag.TextColor3 = Color3.fromRGB(0, 0, 0)
 Tag.TextSize = 14.000
+
+local Aircraft = Instance.new("TextLabel")
+
+Aircraft.Name = "Aircraft"
+Aircraft.Parent = Template
+Aircraft.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Aircraft.BackgroundTransparency = 1.000
+Aircraft.Position = UDim2.new(0, 0, 0.477999985, 0)
+Aircraft.Size = UDim2.new(1, 0, 0.150000006, 0)
+Aircraft.Font = Enum.Font.SourceSansBold
+Aircraft.Text = "A320"
+Aircraft.TextColor3 = Color3.fromRGB(0, 0, 0)
+Aircraft.TextSize = 14.000
 
 RouteLine.Name = "RouteLine"
 RouteLine.Parent = ATCScreen
@@ -294,7 +349,7 @@ Frame_2.BackgroundColor3 = Color3.fromRGB(138, 0, 0)
 Frame_2.BorderSizePixel = 0
 Frame_2.Size = UDim2.new(1, 0, 0.5, 0)
 Frame_2.BackgroundTransparency = 1
-Frame_2.ZIndex = 5
+Frame_2.ZIndex = 1
 
 SettingFrame.Name = "SettingFrame"
 SettingFrame.Parent = ATCScreen
@@ -365,7 +420,7 @@ Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Version.BackgroundTransparency = 1.000
 Version.Size = UDim2.new(0.200000003, 0, 0.100000001, 0)
 Version.Font = Enum.Font.SourceSans
-Version.Text = "V4.3"
+Version.Text = "V5"
 Version.TextColor3 = Color3.fromRGB(0, 0, 0)
 Version.TextSize = 14.000
 Version.TextYAlignment = Enum.TextYAlignment.Top
@@ -382,29 +437,65 @@ CloseButton.Text = "X"
 CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.TextSize = 14.000
 
+---------------
+
+local Theme = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local Maps = Instance.new("Frame")
+local Default = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Button = Instance.new("Frame")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UICorner_2 = Instance.new("UICorner")
+local Ground = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Button_2 = Instance.new("Frame")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local UICorner_4 = Instance.new("UICorner")
+local VStars = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Button_3 = Instance.new("Frame")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local UICorner_6 = Instance.new("UICorner")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local UICorner_7 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
 Theme.Name = "Theme"
 Theme.Parent = Settings
 Theme.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Theme.BackgroundTransparency = 1.000
 Theme.Position = UDim2.new(0, 0, 0.25, 5)
 Theme.Size = UDim2.new(1, 0, 0.75, 0)
+Theme.CanvasSize = UDim2.new(0,0,2,0)
 
-UIListLayout_2.Parent = Theme
-UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout_2.Padding = UDim.new(0, 5)
+UIListLayout.Parent = Theme
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 4)
+
+Maps.Name = "Maps"
+Maps.Parent = Theme
+Maps.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+Maps.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Maps.BorderSizePixel = 0
+Maps.Size = UDim2.new(0.899999976, 0, 0.25, 0)
 
 Default.Name = "Default"
-Default.Parent = Theme
+Default.Parent = Maps
+Default.AnchorPoint = Vector2.new(0.5, 0.5)
 Default.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
-Default.Size = UDim2.new(0.800000012, 0, 0.150000006, 0)
+Default.LayoutOrder = 2
+Default.Size = UDim2.new(0.800000012, 0, 0.25, 0)
 Default.Font = Enum.Font.SourceSans
 Default.Text = "     Default"
 Default.TextColor3 = Color3.fromRGB(255, 255, 255)
 Default.TextSize = 18.000
 Default.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_4.Parent = Default
+UICorner.Parent = Default
 
 Button.Name = "Button"
 Button.Parent = Default
@@ -413,32 +504,148 @@ Button.BackgroundColor3 = Color3.fromRGB(60, 255, 0)
 Button.Position = UDim2.new(0.800000012, 0, 0.5, 0)
 Button.Size = UDim2.new(0.5, 0, 0.800000012, 0)
 
-UIAspectRatioConstraint_5.Parent = Button
+UIAspectRatioConstraint.Parent = Button
 
-UICorner_5.Parent = Button
+UICorner_2.Parent = Button
+
+Ground.Name = "Ground"
+Ground.Parent = Maps
+Ground.AnchorPoint = Vector2.new(0.5, 0.5)
+Ground.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
+Ground.LayoutOrder = 4
+Ground.Size = UDim2.new(0.800000012, 0, 0.25, 0)
+Ground.Font = Enum.Font.SourceSans
+Ground.Text = "    Ground"
+Ground.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ground.TextSize = 18.000
+Ground.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_3.Parent = Ground
+
+Button_2.Name = "Button"
+Button_2.Parent = Ground
+Button_2.AnchorPoint = Vector2.new(0, 0.5)
+Button_2.BackgroundColor3 = Color3.new(0.415686, 0.415686, 0.415686)
+Button_2.Position = UDim2.new(0.800000012, 0, 0.5, 0)
+Button_2.Size = UDim2.new(0.5, 0, 0.800000012, 0)
+
+UIAspectRatioConstraint_2.Parent = Button_2
+
+UICorner_4.Parent = Button_2
 
 VStars.Name = "VStars"
-VStars.Parent = Theme
+VStars.Parent = Maps
+VStars.AnchorPoint = Vector2.new(0.5, 0.5)
 VStars.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
-VStars.Size = UDim2.new(0.800000012, 0, 0.150000006, 0)
+VStars.LayoutOrder = 3
+VStars.Size = UDim2.new(0.800000012, 0, 0.25, 0)
 VStars.Font = Enum.Font.SourceSans
 VStars.Text = "     VStars"
 VStars.TextColor3 = Color3.fromRGB(255, 255, 255)
 VStars.TextSize = 18.000
 VStars.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_6.Parent = VStars
+UICorner_5.Parent = VStars
 
-Button_2.Name = "Button"
-Button_2.Parent = VStars
-Button_2.AnchorPoint = Vector2.new(0, 0.5)
-Button_2.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
-Button_2.Position = UDim2.new(0.800000012, 0, 0.5, 0)
-Button_2.Size = UDim2.new(0.5, 0, 0.800000012, 0)
+Button_3.Name = "Button"
+Button_3.Parent = VStars
+Button_3.AnchorPoint = Vector2.new(0, 0.5)
+Button_3.BackgroundColor3 = Color3.new(0.415686, 0.415686, 0.415686)
+Button_3.Position = UDim2.new(0.800000012, 0, 0.5, 0)
+Button_3.Size = UDim2.new(0.5, 0, 0.800000012, 0)
 
-UIAspectRatioConstraint_6.Parent = Button_2
+UIAspectRatioConstraint_3.Parent = Button_3
 
-UICorner_7.Parent = Button_2
+UICorner_6.Parent = Button_3
+
+UIListLayout_2.Parent = Maps
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_2.Padding = UDim.new(0.0399999991, 0)
+
+UICorner_7.Parent = Maps
+
+TextLabel.Parent = Maps
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.LayoutOrder = 1
+TextLabel.Size = UDim2.new(1, 0, 0.0500000007, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Maps"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+
+----------------
+
+local TextStyle = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local Default = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Short = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+TextStyle.Name = "TextStyle"
+TextStyle.Parent = Theme
+TextStyle.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+TextStyle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextStyle.BorderSizePixel = 0
+TextStyle.Size = UDim2.new(0.899999976, 0, 0.100000001, 0)
+
+UICorner.Parent = TextStyle
+
+TextLabel.Parent = TextStyle
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.LayoutOrder = 1
+TextLabel.Size = UDim2.new(1, 0, 0.25, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Text Style"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+Default.Name = "Default"
+Default.Parent = TextStyle
+Default.AnchorPoint = Vector2.new(0.5, 0.5)
+Default.BackgroundColor3 = Color3.new(0, 0.5, 0)
+Default.LayoutOrder = 2
+Default.Position = UDim2.new(0.25, 0, 0.5, 0)
+Default.Size = UDim2.new(0.600000024, 0, 0.699999988, 0)
+Default.Font = Enum.Font.SourceSans
+Default.Text = "Delta-1234 \n HED ALT SP"
+Default.TextColor3 = Color3.fromRGB(255, 255, 255)
+Default.TextSize = 10.000
+
+UICorner_2.Parent = Default
+
+UIAspectRatioConstraint.Parent = Default
+
+Short.Name = "Short"
+Short.Parent = TextStyle
+Short.AnchorPoint = Vector2.new(0.5, 0.5)
+Short.BackgroundColor3 = Color3.new(0.415686, 0.415686, 0.415686)
+Short.LayoutOrder = 2
+Short.Position = UDim2.new(0.75, 0, 0.5, 0)
+Short.Size = UDim2.new(0.550000012, 0, 0.699999988, 0)
+Short.Font = Enum.Font.SourceSans
+Short.Text = "DAL1234 \n ALT SP"
+Short.TextColor3 = Color3.fromRGB(255, 255, 255)
+Short.TextSize = 10.000
+
+UICorner_3.Parent = Short
+
+UIAspectRatioConstraint_2.Parent = Short
+
 
 Preset.Name = "Preset"
 Preset.Parent = Settings
@@ -719,7 +926,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.949999988, 0, 0.5, 0)
 TextLabel.Size = UDim2.new(0.5, 0, 0.800000012, 0)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "K"
+TextLabel.Text = "F4"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextSize = 14.000
 
@@ -735,7 +942,7 @@ NewMiniMap.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
 NewMiniMap.BorderColor3 = Color3.fromRGB(27, 42, 53)
 NewMiniMap.BorderSizePixel = 4
 NewMiniMap.ClipsDescendants = true
-NewMiniMap.Position = UDim2.new(1, 0, 1, 0)
+NewMiniMap.Position = UDim2.new(1, 0, .85, 0)
 NewMiniMap.Size = UDim2.new(0.400000006, 0, 0.850000024, 0)
 
 SizeUp.Name = "SizeUp"
@@ -776,22 +983,11 @@ Wavepoint.Text = "W"
 Wavepoint.TextColor3 = Color3.fromRGB(255, 255, 255)
 Wavepoint.TextSize = 14.000
 
-Heading.Name = "Heading"
-Heading.Parent = NewMiniMap
-Heading.AnchorPoint = Vector2.new(0, 1)
-Heading.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
-Heading.Position = UDim2.new(0.200000003, 0, 1, 0)
-Heading.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
-Heading.ZIndex = 5
-Heading.Font = Enum.Font.SourceSansBold
-Heading.Text = "H"
-Heading.TextColor3 = Color3.fromRGB(255, 255, 255)
-Heading.TextSize = 14.000
 
 TextBox_2.Parent = NewMiniMap
 TextBox_2.AnchorPoint = Vector2.new(0, 1)
 TextBox_2.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
-TextBox_2.Position = UDim2.new(0.25, 0, 1, 0)
+TextBox_2.Position = UDim2.new(0.2, 0, 1, 0)
 TextBox_2.Size = UDim2.new(0.209999993, 0, 0.0500000007, 0)
 TextBox_2.ZIndex = 5
 TextBox_2.Font = Enum.Font.SourceSans
@@ -919,6 +1115,18 @@ ATC_ARTCC.Size = UDim2.new(1, 0, 1, 0)
 ATC_ARTCC.ZIndex = 2
 ATC_ARTCC.Image = "rbxassetid://11949145252"
 ATC_ARTCC.ImageColor3 = Color3.fromRGB(0, 0, 0)
+
+
+local Routing = Instance.new("Folder")
+local Dots = Instance.new("Folder")
+
+--Properties:
+
+Routing.Name = "Routing"
+Routing.Parent = Content
+
+Dots.Name = "Dots"
+Dots.Parent = Content
 
 ---------------------------------------------------------------------------------------------The Image Frame
 
@@ -2505,7 +2713,7 @@ local Gui = {
 	TextLabel_78 = Instance.new("TextLabel"),
 	RFD = Instance.new("ImageLabel"),
 	TextLabel_79 = Instance.new("TextLabel"),
-	TRC = Instance.new("ImageLabel"),
+	TRN = Instance.new("ImageLabel"),
 	TextLabel_80 = Instance.new("TextLabel"),
 	GULEG = Instance.new("ImageLabel"),
 	TextLabel_81 = Instance.new("TextLabel"),
@@ -4562,19 +4770,19 @@ Gui.TextLabel_79.TextSize = 10.000
 Gui.TextLabel_79.TextXAlignment = Enum.TextXAlignment.Right
 Gui.TextLabel_79.TextYAlignment = Enum.TextYAlignment.Top
 
-Gui.TRC.Name = "TRC"
-Gui.TRC.Parent = Gui.Wavepoints
-Gui.TRC.AnchorPoint = Vector2.new(0.5, 0.5)
-Gui.TRC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Gui.TRC.BackgroundTransparency = 1.000
-Gui.TRC.Position = UDim2.new(0.42900005, 0, 0.788491428, 0)
-Gui.TRC.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
-Gui.TRC.ZIndex = 2
-Gui.TRC.Image = "rbxassetid://12827049702"
-Gui.TRC.ImageColor3 = Color3.fromRGB(0, 0, 0)
-Gui.TRC.ScaleType = Enum.ScaleType.Fit
+Gui.TRN.Name = "TRN"
+Gui.TRN.Parent = Gui.Wavepoints
+Gui.TRN.AnchorPoint = Vector2.new(0.5, 0.5)
+Gui.TRN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gui.TRN.BackgroundTransparency = 1.000
+Gui.TRN.Position = UDim2.new(0.42900005, 0, 0.788491428, 0)
+Gui.TRN.Size = UDim2.new(0.0199999828, 0, 0.0199999996, 0)
+Gui.TRN.ZIndex = 2
+Gui.TRN.Image = "rbxassetid://12827049702"
+Gui.TRN.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Gui.TRN.ScaleType = Enum.ScaleType.Fit
 
-Gui.TextLabel_80.Parent = Gui.TRC
+Gui.TextLabel_80.Parent = Gui.TRN
 Gui.TextLabel_80.AnchorPoint = Vector2.new(1, 0)
 Gui.TextLabel_80.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.TextLabel_80.BackgroundTransparency = 1.000
@@ -4582,7 +4790,7 @@ Gui.TextLabel_80.Position = UDim2.new(1, 0, 0.800000012, 0)
 Gui.TextLabel_80.Size = UDim2.new(5, 0, 5, 0)
 Gui.TextLabel_80.ZIndex = 2
 Gui.TextLabel_80.Font = Enum.Font.SourceSans
-Gui.TextLabel_80.Text = "TRC"
+Gui.TextLabel_80.Text = "TRN"
 Gui.TextLabel_80.TextColor3 = Color3.fromRGB(0, 0, 0)
 Gui.TextLabel_80.TextSize = 10.000
 Gui.TextLabel_80.TextXAlignment = Enum.TextXAlignment.Right
@@ -5469,41 +5677,7 @@ scaleValue1.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen
 scaleValue1.Value = 6
 
 
--- Gui to Lua
--- Version: 3.5
 
--- Instances:
-
-local Ground = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
-local Button = Instance.new("Frame")
-local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-local UICorner_2 = Instance.new("UICorner")
-
---Properties:
-
-Ground.Name = "Ground"
-Ground.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.SettingFrame.Settings.Theme
-Ground.BackgroundColor3 = Color3.fromRGB(59, 90, 126)
-Ground.Size = UDim2.new(0.800000012, 0, 0.150000006, 0)
-Ground.Font = Enum.Font.SourceSans
-Ground.Text = "    Ground"
-Ground.TextColor3 = Color3.fromRGB(255, 255, 255)
-Ground.TextSize = 18.000
-Ground.TextXAlignment = Enum.TextXAlignment.Left
-
-UICorner.Parent = Ground
-
-Button.Name = "Button"
-Button.Parent = Ground
-Button.AnchorPoint = Vector2.new(0, 0.5)
-Button.BackgroundColor3 = Color3.fromRGB(106, 106, 106)
-Button.Position = UDim2.new(0.800000012, 0, 0.5, 0)
-Button.Size = UDim2.new(0.5, 0, 0.800000012, 0)
-
-UIAspectRatioConstraint.Parent = Button
-
-UICorner_2.Parent = Button
 
 -- Gui to Lua
 -- Version: 3.5
@@ -7947,19 +8121,18 @@ do -- ATCScreen.Players
             1781698028, --NULL / N815 (10$)
             225814032, --F35 / avjome / Aviator / XBGamer (10$)
             346414927,  --Gooey / NUKE (690)
-	    3423448035, --SYNTH (599)
-	    1572849198, --Play (599)
-	    2918276131, --bkip/beef (599)
+        3423448035, --SYNTH (599)
+        1572849198, --Play (599)
+        2918276131, --bkip/beef (599)
             502002593, --PILOT/Noobthenoob (599)
-	    224702919, --Wingless/Alan (Free -Competition)
-	    3700792089, --Bloodstone ($10)
-	    254658903, --gamergang / desis (599)
+        224702919, --Wingless/Alan (Free -Competition)
+        3700792089, --Bloodstone ($10)
+        254658903, --gamergang / desis (599)
             273079054, --Forest / Black ($10)
-	    2592661840, --Joshua ($11)
-	    4142105384, --LilTator / dogPixel (Free -Giveaway)
-	    4753297211, --Quickknight / Jackss (280 -Discount for helping)
-	    1653554400 --Tony / Griffin (280 -Discount for helping)
-
+        2592661840, --Joshua ($11)
+        4142105384, --LilTator / dogPixel (Free -Giveaway)
+        4753297211, --Quickknight / Jackss (280 -Discount for helping)
+        1653554400 --Tony / Griffin (280 -Discount for helping)
             }
 		return module
 	end
@@ -8029,60 +8202,258 @@ do -- ATCScreen.PlayerData
 		local module = {}
 
 
-        local Callsigns = {					--Every Time a plane has a special calsign that isnt "Firebird/Eagle"
-        	--Airlines
-        
-        	["AirBalistic"] = "AirBaltic",
-        	["Air Canadian"] = "AirCanada",
-        	["AirFrench"] = "AirFrans",
-        	["Americano"] = "American",
-        	["BritainAirways"] = "Speedbird",
-        	["CafePacific"] = "Cathay",
-        	["Doncor"] = "Condor",
-        	["Belta"] = "Delta",
-        	["Byanair"] = "Ryanair",
-        	["Scandialien"] = "Scandinavian",
-        	["Singadoor"] = "Singapore",
-        	["Northeast"] = "Southwest",
-        	["Sprit"] = "Spirit Wings",
-        	["Bliss"] = "Swiss",
-        	["Thay"] = "Thai",
-        	["HardJet"] = "Easy",
-        	["Emarates"] = "Emirates",
-        	["Flybee"] = "Jersey",
-        	["Jet3"] = "Channex",
-        	["JetBloo"] = "JetBlue",
-        	["KLN"] = "KLM",
-        	["Koreen"] = "KoreanAir",
-        	["KoreenCargo"] = "KoreanAir",
-        	["KOT"] = "Pollot",
-        	["Lifthansa"] = "Lufthansa",
-        	["OldZealand"] = "NewZealand",
-        	["Oantas"] = "Qantas",
-        	["Oatar"] = "Qatari",
-        	["Lui"] = "Tomjet",
-        	["Turkey"] = "Turkish",
-        	["Reunited"] = "United",
-        	["Bizz"] = "WizzAir",
-        	["AerDingus"] = "Shamrock",
-        
-        	--Cargo
-        
-        	["VHL"] = "Worldstar",
-        	["TedEx"] = "FedEx",
-        	["SUS"] = "Ups",
-        	["Airbus Beluga"] = "Supertransport",
-        
-        }
-        
+		Callsigns = { 
+			["AirBalistic"] = {
+			   default = "AirBaltic",
+			   short = "BTI" 
+			},
+			["Air Canadian"] = {
+			   default = "AirCanada",
+			   short = "ACA"
+			},
+			["AirFrench"] = {
+			   default = "AirFrans",
+			   short = "AFR"
+			},
+			["Americano"] = {
+			   default = "American",
+			   short = "AAL"
+			},
+			["BritainAirways"] = {
+			   default = "Speedbird",
+			   short = "BAW"
+			},
+			["CafePacific"] = {
+			   default = "Cathay",
+			   short = "CPA"
+			},
+			["Doncor"] = {
+			   default = "Condor",
+			   short = "CFG"
+			},
+			["Belta"] = {
+			   default = "Delta",
+			   short = "DAL"
+			},
+			["Byanair"] = {
+			   default = "Ryanair",
+			   short = "RYR"
+			},
+			["Scandialien"] = {
+			   default = "Scandinavian",
+			   short = "SZS"
+			},
+			["Singadoor"] = {
+			   default = "Singapore",
+			   short = "SIN"
+			},
+			["Northeast"] = {
+			   default = "Southwest",
+			   short = "SWA"
+			},
+			["Sprit"] = {
+			   default = "Spirit",
+			   short = "NKS"
+			},
+			["Bliss"] = {
+			   default = "Swiss",
+			   short = "SWR"
+			},
+			["Thay"] = {
+			   default = "Thai",
+			   short = "THA"
+			},
+			["HardJet"] = {
+			   default = "Easy",
+			   short = "EZY"
+			},
+			["Emarates"] = {
+			   default = "Emirates",
+			   short = "UAE"
+			},
+			["Flybee"] = {
+			   default = "Jersey",
+			   short = "BEE"
+			},
+			["Jet3"] = {
+			   default = "Channex",
+			   short = "EXS"
+			},
+			["JetBloo"] = {
+			   default = "JetBlue",
+			   short = "JBU"
+			},
+			["KLN"] = {
+			   default = "KLM",
+			   short = "KLM"
+			},
+			["Koreen"] = {
+			   default = "KoreanAir",
+			   short = "KAL"
+			},
+			["KoreenCargo"] = {
+			   default = "KoreanAir",
+			   short = "KAL"
+			},
+			["KOT"] = {
+			   default = "Pollot",
+			   short = "LOT"
+			},
+			["Lifthansa"] = {
+			   default = "Lufthansa",
+			   short = "DLH"
+			},
+			["OldZealand"] = {
+			   default = "NewZealand",
+			   short = "ANZ"
+			},
+			["Oantas"] = {
+			   default = "Qantas",
+			   short = "QFA"
+			},
+			["Oatar"] = {
+			   default = "Qatari",
+			   short = "QTR"
+			},
+			["Lui"] = {
+			   default = "Tomjet",
+			   short = "TOM"
+			},
+			["Turkey"] = {
+			   default = "Turkish",
+			   short = "THY"
+			},
+			["Reunited"] = {
+			   default = "United",
+			   short = "UAL"
+			},
+			["Bizz"] = {
+			   default = "WizzAir",
+			   short = "WZZ"
+			},
+			["AerDingus"] = {
+			   default = "Shamrock",
+			   short = "EIN"
+			},
+			["VHL"] = {
+			   default = "Worldstar",
+			   short = "DHL"
+			},
+			["TedEx"] = {
+			   default = "FedEx",
+			   short = "FDX"
+			},
+			["SUS"] = {
+			   default = "Ups",
+			   short = "UPS"
+			},
+			["Airbus Beluga"] = {
+			   default = "Supertransport",
+			   short = "A3ST"
+			}
+		 }
+
+		 local baseTags = {
+			["Apollo"] = "APO", --Aeropro (Canada) / Air Posh (Serbia)
+			["Baron"] = "BRO", --2Excel (UK) / Browser Flight Service (US)
+			["Cobra"] = "COB", --C0BRA JET (Egypt)
+			["Dolphin"] = "DOL", --Million Air - Dollar Sign (USA)
+			["Eagle"] = "EAG", --like 5 diffrent companies (UK)
+			["Firebird"] = "FIR", --Not a thing
+			["Gyro"] = "GYR", --Gyrafrance (France)
+			["Havoc"] = "HAV", --Havilah (Nigeria) / Hamlin (UK)
+			["Iceburg"] = "ICB", --Iceberg Aurways (Iceland)
+			["Jester"] = "JSR", --AVA Air (Matrinique) / JetStar Moldova
+			["Kestral"] = "KES", -- Kallat (Libyan Arab Jamahiriya)
+			["Lancer"] = "LCR", --Libac (Libyan Arab Jamahiriya)
+			["Mantis"] = "MAN", --Mannion (USA)
+			["Nitro"] = "NTR",
+			["Osprey"] = "OSP", --Not a thing
+			["Python"] = "PYT", --Not a thing
+			["Quake"] = "QUA", --Quessar (Mexico)
+			["Raider"] = "RAD", --Alada (Angola)
+			["Striker"] = "STR", --Like 4 difrent ones (Kazastan / France / Jordan / Brazil
+			["Talon"] = "TAL",
+			["Uplift"] = "UPL", --Pilot School (Ukraine)
+			["Vixen"] = "VIX", --Not a thing
+			["Warlock"] = "WRL", --Not a thing
+			["Xenon"] = "XON", --Not a thing
+			["Yeti"] = "YTI", --Not a thing
+			["Zenith"] = "ZEN" --Not a thing
+		}
+
+        module.AircraftCode = {
+			["Boeing 777"] = "B773/H",
+			["MD-90"] = "MD90/H",
+			["Bombardier Learjet 45"] = "LJ45",
+			["Boeing 787"] = "B789/H",
+			["Bombardier CRJ700"] = "CL65",
+			["Boeing 757"] = "B753/H",
+			["A320"] = "A320",
+			["UH-60"] = "H60",
+			["A220"] = "A220",
+			["A330"] = "A330/H",
+			["A340"] = "A340/H",
+			["A350"] = "A350/H",
+			["A380"] = "A380/J",
+			["Boeing 737"] = "B734",
+			["Boeing 747"] = "B748/H",
+			["Boeing 767"] = "B763/H",
+			["Concorde"] = "CONC/H",
+			["MD-11"] = "MD11/H",
+			["Airbus Beluga"] = "A3ST/H",
+			["Bell 412"] = "B412",
+			["Chinook"] = "H47",
+			["H135"] = "EC35",
+			["Cessna 172"] = "C172",
+			["Cessna 182"] = "C182",
+			["Cessna Caravan"] = "C208",
+			["Cirrus Vision SF50"] = "SF50",
+			["DHC-6 Twin Otter"] = "DHC6",
+			["Extra 300s"] = "E300",
+			["Piper Cub"] = "J3",
+			["Piper PA-28"] = "P28A",
+			["A-10 Warthog"] = "A10",
+			["B2 Spirit"] = "B2",
+			["Eurofighter Typhoon"] = "EUFI",
+			["F/A-18 Super Hornet"] = "F18S",
+			["F-14 Tomcat"] = "F14",
+			["F15"] = "F15",
+			["Hawk T1"] = "HAWK",
+			["SU27"] = "SU27",
+			["A6m Zero"] = "ZERO",
+			["Avro Vulcan"] = "VULC",
+			["B29 SuperFortress"] = "B29",
+			["C-130 Hercules"] = "C130",
+			["F4 Phantom"] = "F4",
+			["English Electric Lightning"] = "LTGN",
+			["F4U Corsair"] = "CORS",
+			["Fokker Dr1"] = "DR1",
+			["Hawker Siddeley Harrier"] = "HAR",
+			["Hawker Hurricane"] = "HURI",
+			["Mig-15"] = "MG15",
+			["P38 Lightning"] = "P38",
+			["P51 Mustang"] = "P51",
+			["SR-71 Blackbird"] = "SR71",
+			["UFO"] = "UFO"
+		}
+
         
         local function GetPlaneFromPlayer(player)
         	for i,plane in pairs(game:GetService("Workspace").Aircraft:GetChildren()) do
-        		if player.Character:FindFirstChild("HumanoidRootPart") and plane:IsA("Model")  then 
+        		if player.Character:FindFirstChild("HumanoidRootPart") and plane:IsA("Model") then 
+
         			local distance = (plane:WaitForChild("Main"):WaitForChild("Seats"):WaitForChild("PilotSeat").Position - player.Character.HumanoidRootPart.Position).Magnitude
-        			if distance < 2 then
-        				return plane
-        			end
+					if plane:FindFirstChild("Main"):FindFirstChild("Seats"):FindFirstChild("CoPilotSeat") then
+						local coDistance = (plane:WaitForChild("Main"):WaitForChild("Seats"):WaitForChild("CoPilotSeat").Position - player.Character.HumanoidRootPart.Position).Magnitude
+						if distance < 2 and coDistance > distance then
+							return plane
+						end
+					else
+						if distance < 2 then
+							return plane
+						end
+					end	
         		end
         	end
         end
@@ -8116,9 +8487,24 @@ do -- ATCScreen.PlayerData
         		return plane.Internal:GetAttribute("Speed")
         	end
         end
-        
+
+
+
+		module.GetPlayerDefaultTag = function(player)        	
+        	if(GetPlaneFromPlayer(player) ~= nil) then
+        		local plane = GetPlaneFromPlayer(player)
+        		
+        		if Callsigns[plane.Name] then
+        			return Callsigns[plane.Name].default.." - ".. string.sub(player.tag.Value, string.len(player.tag.Value)-3)
+        		end
+        	end
+        	return player.tag.Value --default
+        end
+
         module.GetPlayerTAG = function(player)
         	local playerList = script.Parent.PlayerList
+
+			local TextStyle = script.Parent.SettingFrame.Settings.Theme.TextStyle
         	
         	if(GetPlaneFromPlayer(player) ~= nil) then
         		local plane = GetPlaneFromPlayer(player)
@@ -8131,9 +8517,21 @@ do -- ATCScreen.PlayerData
         				end 
         			end
         		end
-        
+				
         		if Callsigns[plane.Name] then
-        			return Callsigns[plane.Name].." - ".. string.sub(player.tag.Value, string.len(player.tag.Value)-3)
+					if TextStyle.Default.BackgroundColor3 == Color3.new(0, 0.5, 0) then
+						return Callsigns[plane.Name].default.." - ".. string.sub(player.tag.Value, string.len(player.tag.Value)-3)
+					else
+						return Callsigns[plane.Name].short.."".. string.sub(player.tag.Value, string.len(player.tag.Value)-3)
+					end
+				
+				elseif TextStyle.Default.BackgroundColor3 ~= Color3.new(0, 0.5, 0) then
+					local tag = string.sub(player.tag.value, 1, string.len(player.tag.value)-5)
+
+					if baseTags[tag] then
+						return baseTags[tag]..string.sub(player.tag.Value, string.len(player.tag.Value)-3)
+					end
+					
         		end
         	end
         	return player.tag.Value --default
@@ -8194,7 +8592,9 @@ do -- ATCScreen.MapState
 				module.itemScale = newScale
 
 				
-				localPlayer.PlayerGui.ATCScreen.Player.Size = UDim2.new(newScale,0,newScale,0)
+				for _,child in pairs(content.Dots:GetChildren()) do
+					child.Size = UDim2.new(newScale,0,newScale,0)
+				end
 				
 
 				local currentPos = Vector2.new(content.Position.X.Offset, content.Position.Y.Offset)
@@ -8217,7 +8617,9 @@ do -- ATCScreen.MapState
 				module.mapScale = mapScale
 				module.itemScale = newScale
 				
-				localPlayer.PlayerGui.ATCScreen.Player.Size = UDim2.new(newScale,0,newScale,0)
+				for _,child in pairs(content.Dots:GetChildren()) do
+					child.Size = UDim2.new(newScale,0,newScale,0)
+				end
 
 				local currentPos = Vector2.new(content.Position.X.Offset, content.Position.Y.Offset)
 				content.Size = UDim2.new(mapScale,0,mapScale,0)
@@ -8252,12 +8654,16 @@ do -- ATCScreen.MapState
 		module.ScaleDown = ScaleDown
 
 
+		local defaultPosition = UDim2.new(1,0,.85,0)
+		local lowPosition = UDim2.new(1,0,1,0)
+
 		module.setState = function(State)
 			if State == "Pilot" then --ATC > Pilot
 				module.State = "Pilot"
 
 				NewMiniMap.Visible = true
 				NewMiniMap.Size = pilotSize
+				NewMiniMap.Position = lowPosition
 				playerList.Visible = false
 				oldMap.Enabled = false
 
@@ -8267,6 +8673,7 @@ do -- ATCScreen.MapState
 
 				NewMiniMap.Visible = false
 				NewMiniMap.Size = ATCSize
+				NewMiniMap.Position = lowPosition
 				playerList.Visible = false
 				oldMap.Enabled = true
 
@@ -8276,6 +8683,7 @@ do -- ATCScreen.MapState
 
 				NewMiniMap.Visible = true
 				NewMiniMap.Size = ATCSize
+				NewMiniMap.Position = defaultPosition
 				playerList.Visible = true
 				oldMap.Enabled = false
 
@@ -8288,6 +8696,7 @@ do -- ATCScreen.MapState
 
 				NewMiniMap.Visible = true
 				NewMiniMap.Size = pilotSize
+				NewMiniMap.Position = lowPosition
 				playerList.Visible = false
 				oldMap.Enabled = false
 
@@ -8297,6 +8706,7 @@ do -- ATCScreen.MapState
 
 					NewMiniMap.Visible = false
 					NewMiniMap.Size = ATCSize
+					NewMiniMap.Position = lowPosition
 					playerList.Visible = false
 					oldMap.Enabled = true
 
@@ -8306,6 +8716,7 @@ do -- ATCScreen.MapState
 
 					NewMiniMap.Visible = true
 					NewMiniMap.Size = ATCSize
+					NewMiniMap.Position = defaultPosition
 					playerList.Visible = true
 					oldMap.Enabled = false
 
@@ -8333,7 +8744,7 @@ BindWaveV.Value = "F3"
 
 local BindSettingsV = Instance.new("StringValue")
 BindSettingsV.Name = "BindSettings"
-BindSettingsV.Value = "K"
+BindSettingsV.Value = "F4"
 
 do -- ATCScreen.Keybinds
 	local script = Instance.new('ModuleScript', ATCScreen)
@@ -8391,6 +8802,7 @@ do -- ATCScreen.Keybinds
 	fake_module_scripts[script] = module_script
 end
 
+
 BindToggleV.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.Keybinds
 BindTaxiV.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.Keybinds
 BindWaveV.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ATCScreen.Keybinds
@@ -8436,11 +8848,17 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 	local image = content.Image
 	local taxi = NewMiniMap.Taxi
 	local oldMap = localPlayer.PlayerGui.MiniMap
-	local playerList = script.Parent.PlayerList
 	local pilotScreen = false
 
 	local updateState = false
 	local taxiState = true
+
+	local TextStyle = settingFrame.Settings.Theme.TextStyle
+	local textStyle = "Default"
+
+	local baseTime = os.time()
+	local Iteration = 0
+
     
     print("3")
     
@@ -8454,7 +8872,6 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 	template.TextLabel.RichText = true
 
 	-------Map State / Keybinds --------
-
 
 	toggle.MouseButton1Down:Connect(function()
 		MapState.CycleState()
@@ -8471,6 +8888,7 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 		if inputReturned == "Settings" then
 			settingFrame.Visible = not settingFrame.Visible
 		end
+	
 	end)
 
 
@@ -8498,6 +8916,20 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 	sizeUp.MouseButton1Down:Connect(MapState.ScaleUp)
 	sizeDown.MouseButton1Down:Connect(MapState.ScaleDown)
 
+	------Themes -----
+	
+	TextStyle.Default.MouseButton1Down:Connect(function()
+		textStyle = "Default"
+		TextStyle.Default.BackgroundColor3 = Color3.new(0, 0.5, 0)
+		TextStyle.Short.BackgroundColor3 = Color3.new(0.415686, 0.415686, 0.415686)
+	end)
+
+	TextStyle.Short.MouseButton1Down:Connect(function ()
+		textStyle = "Short"
+		TextStyle.Short.BackgroundColor3 = Color3.new(0, 0.5, 0)
+		TextStyle.Default.BackgroundColor3 = Color3.new(0.415686, 0.415686, 0.415686)
+	end)
+
 
 	------Checking Whitelist -----
 	
@@ -8519,18 +8951,93 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
     
     print("5")
     
+	local function findRotaton(Delta)
+		local AbsDelta = Vector2.new(math.abs(Delta.X), math.abs(Delta.Y))
+		local Rotatoion
+
+		if Delta.X > 0 and Delta.Y >= 0 then -- (+,+) Top Right X=Op Y=Ag +0
+			Rotation = math.atan2(AbsDelta.X, AbsDelta.Y)
+			Rotation = Rotation + 0
+		end
+		if Delta.X >= 0 and Delta.Y < 0 then -- (+,-) Bot Right X=Ag Y=Op +90
+			Rotation = math.atan2(AbsDelta.Y, AbsDelta.X)
+			Rotation = Rotation + math.pi/2
+		end
+		if Delta.X <= 0 and Delta.Y <= 0 then -- (-,-) Bot Left X=Op Y=Ag +180
+			Rotation = math.atan2(AbsDelta.X, AbsDelta.Y)
+			Rotation = Rotation + math.pi
+		end
+		if Delta.X < 0 and Delta.Y > 0 then -- (-,+) Top Left X=Ag Y=Op +270
+			Rotation = math.atan2(AbsDelta.Y, AbsDelta.X)
+			Rotation = Rotation + math.pi + math.pi/2
+		end
+
+		return math.deg(Rotation)
+	end
+
 	--Dot Creator
 
-	local function newPlayerDot(plane, tag, HDG, ALT, Speed, Position, isLocalPlayer)
+	local function updatePlayerDot(player, plane, tag, HDG, ALT, Speed, Position, isLocalPlayer)
 
-		local newPlayer = template:Clone() --creating new dot
-		
 		local newAltitude
 		local newHeading
-		newPlayer.Parent = content
-		newPlayer.Direction.Rotation = HDG +180
-		newPlayer.Position = Position
+		local newScale = 1/((math.pow(1.25, mapScale.Value-5)*100)*.9)
+		local playerDot
+		local Aircraft = plane:GetAttribute("Name")
 
+		if(script.Parent) then
+			if not playerList.ScrollingFrame:FindFirstChild(player.Name) then
+				print(player.Name .. " Added")
+				local newItem = listTemplate:Clone()
+				newItem.Parent = playerList.ScrollingFrame
+				newItem.Name = player.Name
+				newItem.Visible = true
+
+				newItem.Player.Text = player.Name
+				task.wait(.1)
+				newItem.Tag.Text = player.tag.Value
+			end
+		end
+		
+
+		if content.Dots:WaitForChild(player.Name, .1) then --Using existing dot
+			 playerDot = content.Dots[player.Name]
+		else
+			playerDot = template:Clone() --creating new dot
+			playerDot.Parent = content.Dots
+			playerDot.Name = (player.Name)
+
+			playerDot.TextLabel.ZIndex = math.random(8, 12)
+
+			playerDot.TextLabel.MouseEnter:Connect(function()
+				if content.Draggable == true then --Ensures only 1 is dragable at a time
+					playerDot.TextLabel.Active = true
+					playerDot.TextLabel.Draggable = true 
+					playerDot.TextLabel.Archivable = true
+				end
+				content.Active = false
+				content.Draggable = false 
+				content.Archivable = false
+			end)
+			playerDot.TextLabel.MouseLeave:Connect(function()
+				playerDot.TextLabel.Active = false
+				playerDot.TextLabel.Draggable = false 
+				playerDot.TextLabel.Archivable = false
+				content.Active = true
+				content.Draggable = true 
+				content.Archivable = true
+			end)
+
+		end
+		playerDot.Direction.Rotation = HDG +180
+		playerDot.Position = Position
+		playerDot.Size = UDim2.new(newScale,0,newScale,0)
+
+		local delta = Vector2.new(playerDot.TextLabel.Position.X.Offset,-playerDot.TextLabel.Position.Y.Offset)
+		local rotation = findRotaton(delta)
+		local scale = delta.Magnitude
+		playerDot.TextLine.Rotation = rotation +180
+		playerDot.TextLine.Size = UDim2.new(.3,0,0,scale*1.25)
 
 		if(ALT< 1000) then --Updating how altitude looks
 			newAltitude = "00".. math.floor(ALT/100)
@@ -8550,32 +9057,66 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 			end
 		end
 
-		if not plane.Internal:GetAttribute("Taxi") then
-			newPlayer.TextLabel.Text =  tag.."<br/>".. newHeading.." "..newAltitude.." ".. math.floor(Speed/10)
-		else if image.Ground.Visible == true then
-    			newPlayer.TextLabel.Text =  tag.. "<br/>".. math.floor(Speed) .." kts"
+		
+		if playerList.ScrollingFrame:FindFirstChild(player.Name) then
+			if textStyle == "Default" then
+				if Iteration%2==0 then
+					playerDot.TextLabel.Text = tag.."<br/>"..newHeading.." "..newAltitude.." "..math.floor(Speed/10)
+				else
+					playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. Aircraft
+				end
 			else
-			    newPlayer.TextLabel.Text =  tag.. "<br/> Taxi"
+				if Iteration%2==0 then
+					playerDot.TextLabel.Text = tag.."<br/>".." "..newAltitude.." "..math.floor(Speed/10)
+				else
+					if PlayerData.AircraftCode[Aircraft] then
+						playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. PlayerData.AircraftCode[Aircraft]
+					else
+						playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. Aircraft
+					end
+				end
+			end
+		end
+
+		if plane.Internal:GetAttribute("Taxi") then
+			if textStyle == "Default" then
+				if Iteration%2==0 then
+					playerDot.TextLabel.Text = tag.."<br/> Taxi "..math.floor(Speed)
+				else
+					playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. Aircraft
+				end
+			else
+				if Iteration%2==0 then
+					playerDot.TextLabel.Text = tag.."<br/> Taxi "..math.floor(Speed)
+				else
+					if PlayerData.AircraftCode[Aircraft] then
+						playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. PlayerData.AircraftCode[Aircraft]
+					else
+						playerDot.TextLabel.Text = tag.."<br/>"..PlayerList.ScrollingFrame[player.Name].Destination.Text .." ".. Aircraft
+					end
+				end
 			end
 		end
 
 		--Conditions that change the look of aircraft
 		if not plane.Internal:GetAttribute("Taxi") or taxiState then
-			newPlayer.Visible = true
+			playerDot.Visible = true
+		else
+			playerDot.Visible = false
 		end
 		if plane.Internal:GetAttribute("Cruise") then
-		    if newPlayer.BackgroundColor3 == Color3.new(0.0588235, 0, 0.890196) then
-			    newPlayer.BackgroundColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-			    newPlayer.Direction.Frame.BackgroundColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+		    if playerDot.BackgroundColor3 == Color3.new(0.0588235, 0, 0.890196) then
+			    playerDot.BackgroundColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+			    playerDot.Direction.Frame.BackgroundColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 			else
-			    newPlayer.BackgroundColor3 = Color3.new(1, 0.164706, 0.180392)
-			    newPlayer.Direction.Frame.BackgroundColor3 = Color3.new(1, 0.164706, 0.180392)
+			    playerDot.BackgroundColor3 = Color3.new(1, 0.164706, 0.180392)
+			    playerDot.Direction.Frame.BackgroundColor3 = Color3.new(1, 0.164706, 0.180392)
 			end
 		end
 
 		if isLocalPlayer then
-			newPlayer.BackgroundColor3 = Color3.new(0.827451, 0.482353, 0)
-			newPlayer.Direction.Frame.BackgroundColor3 = Color3.new(0.827451, 0.482353, 0)
+			playerDot.BackgroundColor3 = Color3.new(0.827451, 0.482353, 0)
+			playerDot.Direction.Frame.BackgroundColor3 = Color3.new(0.827451, 0.482353, 0)
 		end
 	end
 
@@ -8608,60 +9149,41 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 	
 	print("7")
 
-
 	game.Players.PlayerAdded:Connect(function(t)
-		if(script.Parent) then
-			print(t.Name .. " Added")
-			local newItem = listTemplate:Clone()
-			newItem.Parent = playerList.ScrollingFrame
-			newItem.Name = t.Name
-			newItem.Visible = true
-
-			newItem.Player.Text = t.Name
-			task.wait(.1)
-			newItem.Tag.Text = t.tag.Value
-		end
+		
 	end)
 
 	game.Players.PlayerRemoving:Connect(function(t)
-		print(t.Name .. " Removed")
-		playerList.ScrollingFrame:FindFirstChild(t.Name):Destroy()
+		if(script.Parent) and content.Dots:FindFirstChild(t.Name) then
+			content.Dots[t.Name]:Destroy()
+			playerList.ScrollingFrame[t.Name]:Destroy()
+			print("Player Left")
+		end
 	end)
 
 	------Initializing the Playerlist----------
 	
 	print("8")
 
-
-	for i,t in pairs(game:GetService("Players"):GetPlayers()) do
-		if t.Character then
-			local newItem = listTemplate:Clone()
-			newItem.Parent = playerList.ScrollingFrame
-			newItem.Name = t.Name
-			newItem.Visible = true
-			newItem.Player.Text = t.Name
-			newItem.Tag.Text = PlayerData.GetPlayerTAG(t)
-		end
-	end 
-
 	-----Main Run loop--------
-
 	print("Start")
+
+	
+
 	while true do	
 		
 		for i , item in pairs(playerList.ScrollingFrame:GetChildren()) do
 			if item:IsA("Frame") then
 				local playerName = item.Player.Text
-				if game:GetService("Players")[playerName].Character then
-					item.Tag.Text = PlayerData.GetPlayerTAG(game:GetService("Players")[playerName])
-				end
-			end
-		end
-		
+				if game:GetService("Players"):FindFirstChild(playerName) and game:GetService("Players")[playerName].Character then
+					item.Tag.Text = PlayerData.GetPlayerDefaultTag(game:GetService("Players")[playerName])
 
-		for i,v in pairs(content:GetChildren()) do
-			if(v.Name == "Player") then
-				v:Destroy()
+					if PlayerData.GetPlaneFromPlayer(game:GetService("Players")[item.name]) then
+						item.Aircraft.Text = PlayerData.GetPlaneFromPlayer(game:GetService("Players")[item.name]):GetAttribute("Name")
+					else
+						item.Aircraft.Text = "No Plane"
+					end
+				end
 			end
 		end
 		
@@ -8672,6 +9194,22 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 				local nameGUI = game.workspace[player.Name].Head.clonegui.TextLabel
 				
 				if PlayerData.GetPlaneFromPlayer(player) ~= nil then
+
+					if os.time()-baseTime == 2 then
+						local Default = TextStyle.Default
+						local Short = TextStyle.Short
+						Iteration += 1
+						baseTime = os.time()
+
+						if Iteration%2==0 then
+							Default.Text = "Delta-1234 \n HED ALT SP"
+							Short.Text = "DAL1234 \n ALT SP"
+						else
+							Default.Text = "Delta-1234 \n DEST AIRCRAFT"
+							Short.Text = "DAL1234 \n DEST AIRC"
+						end
+					end
+
 					local isLocalPlayer = false
 					if player.Name == localPlayer.Name then
 						isLocalPlayer = true
@@ -8679,23 +9217,18 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 					
 					local plane = PlayerData.GetPlaneFromPlayer(player)
 					local a = PlayerData.GetPlayerTAG(player)
-					
-					nameGUI.Text = (a.. "\n".. player.Name)
-
 					local b = PlayerData.GetPlayerHDG(player)
-					
 					local c = PlayerData.GetPlayerALT(player)
-					
 					local d = PlayerData.GetPlayerSpeed(player)
-					
 					local e = PlayerData.GetPlayerPosition(player,1)
 					
-					newPlayerDot(plane,a,b,c,d,e, isLocalPlayer)
+					nameGUI.Text = (a.. "\n".. player.Name)
+					updatePlayerDot(player, plane,a,b,c,d,e, isLocalPlayer)
 				else
-					
 					nameGUI.Text = (player.Name)
-					
-
+					if content.Dots:FindFirstChild(player.Name) then
+						content.Dots[player.Name]:Destroy()
+					end
 				end
 				
 			end
@@ -8738,9 +9271,9 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 	local KeybindButton = settingFrame.Settings.KeybindButton
 	local Close = settingFrame.Settings.CloseButton
 
-	local defaultButton = Themes.Default.Button
-	local VStarButton = Themes.VStars.Button
-	local GroundButton = Themes.Ground.Button
+	local defaultButton = Themes.Maps.Default.Button
+	local VStarButton = Themes.Maps.VStars.Button
+	local GroundButton = Themes.Maps.Ground.Button
 
 	--Colors
 
@@ -8808,6 +9341,13 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		ATCScreen.Player.BackgroundColor3 = playerRedColor
 		ATCScreen.Player.Direction.Frame.BackgroundColor3 = playerRedColor
 		ATCScreen.Player.TextLabel.TextColor3 = Color3.new(0,0,0)
+		ATCScreen.Player.TextLine.BackgroundColor3 = Color3.new(0,0,0)
+		for i,Dot in pairs(Content.Dots:GetChildren()) do
+			Dot.BackgroundColor3 = playerRedColor
+			Dot.Direction.Frame.BackgroundColor3 = playerRedColor
+			Dot.TextLine.Frame.BackgroundColor3 = Color3.new(0,0,0)
+			Dot.TextLabel.TextColor3 = Color3.new(0,0,0)
+		end
 		
 		ATCScreen.HeadingTool.TextLabel.TextColor3 = Color3.new(0,0,0)
 		
@@ -8836,6 +9376,13 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		ATCScreen.Player.BackgroundColor3 = playerBlueColor
 		ATCScreen.Player.Direction.Frame.BackgroundColor3 = playerBlueColor
 		ATCScreen.Player.TextLabel.TextColor3 = Color3.new(1,1,1)
+		ATCScreen.Player.TextLine.BackgroundColor3 = Color3.new(1,1,1)
+		for i,Dot in pairs(Content.Dots:GetChildren()) do
+			Dot.BackgroundColor3 = playerBlueColor
+			Dot.Direction.Frame.BackgroundColor3 = playerBlueColor
+			Dot.TextLine.Frame.BackgroundColor3 = Color3.new(1,1,1)
+			Dot.TextLabel.TextColor3 = Color3.new(1,1,1)
+		end
 		
 		ATCScreen.HeadingTool.TextLabel.TextColor3 = Color3.new(1,1,1)
 		
@@ -8864,6 +9411,13 @@ local function XIUMDBU_fake_script() -- SettingFrame.settingsScript
 		ATCScreen.Player.BackgroundColor3 = playerGreenColor
 		ATCScreen.Player.Direction.Frame.BackgroundColor3 = playerGreenColor
 		ATCScreen.Player.TextLabel.TextColor3 = Color3.new(1,1,1)
+		ATCScreen.Player.TextLine.BackgroundColor3 = Color3.new(1,1,1)
+		for i,Dot in pairs(Content.Dots:GetChildren()) do
+			Dot.BackgroundColor3 = playerGreenColor
+			Dot.Direction.Frame.BackgroundColor3 = playerGreenColor
+			Dot.TextLine.Frame.BackgroundColor3 = Color3.new(1,1,1)
+			Dot.TextLabel.TextColor3 = Color3.new(1,1,1)
+		end
 		
 		ATCScreen.HeadingTool.TextLabel.TextColor3 = Color3.new(1,1,1)
 		
@@ -8951,7 +9505,6 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 	local Wavepoints = Content.Image.Wavepoints
 	local Ground = Content.Image.Ground
 	local B_Wavepoints = NewMiniMap.Wavepoint
-	local B_Heading = NewMiniMap.Heading
 	local B_Remove = NewMiniMap.Reset
 	local T_Search = NewMiniMap.TextBox
 	local B_Settings = NewMiniMap.Settings
@@ -9058,13 +9611,25 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 		return math.deg(Rotation)
 	end
 
-	inputService.InputBegan:Connect(function(input)
-		if input.UserInputType.Name == "MouseButton3" then
+	local hovering = false
+	Content.MouseEnter:Connect(function()
+		hovering = true
+	end)
+	Content.MouseLeave:Connect(function()
+		hovering = false
+	end)
+
+
+
+	inputService.InputBegan:Connect(function(input, behavior)
+		if input.UserInputType.Name == "MouseButton2" and hovering then
+			print("Mouse2")
 			if not Calculating then
 				StartPos = Vector2.new(Mouse.X, Mouse.Y)
 				HeadingTool.Position = UDim2.new(0,StartPos.X,0,StartPos.Y)
 				Calculating = true
 				HeadingTool.Visible = true
+				print("Heading On")
 			end
 		end
 		
@@ -9090,7 +9655,7 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 	end)
 
 	inputService.InputEnded:Connect(function(input)
-		if input.UserInputType.Name == "MouseButton3" then
+		if input.UserInputType.Name == "MouseButton2" then
 
 			Calculating = false
 			HeadingTool.Visible = false
@@ -9121,7 +9686,7 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 					local newLine = RouteLine:Clone()
 					newLine.Parent = Content
 					newLine.Name = "Routing"
-					newLine.Position = wavepoint.Position
+					newLine.Position = wavepoint.Position - UDim2.new(.01,0,0,0)
 					newLine.Frame.BackgroundTransparency = 0
 					local nextPoint = routePoints[i+1]
 
@@ -9141,7 +9706,7 @@ local function SVSQEHB_fake_script() -- NewMiniMap.UIButtons
 
 	--Settings
 	local function settingToggle()
-		local settingsFrame =script.Parent.Parent.SettingFrame
+		local settingsFrame = script.Parent.Parent.SettingFrame
 		settingsFrame.Visible = not settingsFrame.Visible
 
 	end
