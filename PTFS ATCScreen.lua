@@ -8132,7 +8132,8 @@ do -- ATCScreen.Players
         2592661840, --Joshua ($11)
         4142105384, --LilTator / dogPixel (Free -Giveaway)
         4753297211, --Quickknight / Jackss (280 -Discount for helping)
-        1653554400 --Tony / Griffin (280 -Discount for helping)
+        1653554400, --Tony / Griffin (280 -Discount for helping)
+        1241148609 --NsNox (10$)
             }
 		return module
 	end
