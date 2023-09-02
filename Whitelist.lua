@@ -27,5 +27,6 @@ Whitelist = {
   4142105384, --LilTator / dogPixel (Free -Giveaway)
   4753297211, --Quickknight / Jackss (280 -Discount for helping)
   1653554400, --Tony / Griffin (280 -Discount for helping)
-  1241148609 --NsNox ($10)
+  1241148609, --NsNox ($10)
+  1761594278 --soon / MBlox ($10)
 }
