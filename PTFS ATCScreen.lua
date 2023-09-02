@@ -8100,46 +8100,6 @@ local fake_module_scripts = {}
 
 print("Players")
 
-do -- ATCScreen.Players
-	local script = Instance.new('ModuleScript', ATCScreen)
-	script.Name = "Players"
-	local function module_script()
-		local module = {
-			370213285, --Zbossgamer
-            2355519465, --GOOSE (800)
-            911617475, --123ABC / Maddem (559)
-            145129180, --eric / Legand (599)
-            301870637, --Syth / Jaydog (559)
-            984766902, -- Kertz (599)
-            2745544660, --Walmart (dx tranfered ownership to him) (599)
-            329704068, --Walmart Alt
-            1029957183, --The Trollster (599)
-            1568219666, --Dav_VC (800)
-            1199048459, --Tikfull (559)
-            994950354, --Vain_0/Gadget (10$)
-            147164466, --Myzl / IceDragon (599)
-            1781698028, --NULL / N815 (10$)
-            225814032, --F35 / avjome / Aviator / XBGamer (10$)
-            346414927,  --Gooey / NUKE (690)
-        3423448035, --SYNTH (599)
-        1572849198, --Play (599)
-        2918276131, --bkip/beef (599)
-            502002593, --PILOT/Noobthenoob (599)
-        224702919, --Wingless/Alan (Free -Competition)
-        3700792089, --Bloodstone ($10)
-        254658903, --gamergang / desis (599)
-            273079054, --Forest / Black ($10)
-        2592661840, --Joshua ($11)
-        4142105384, --LilTator / dogPixel (Free -Giveaway)
-        4753297211, --Quickknight / Jackss (280 -Discount for helping)
-        1653554400, --Tony / Griffin (280 -Discount for helping)
-        1241148609 --NsNox (10$)
-            }
-		return module
-	end
-	fake_module_scripts[script] = module_script
-end
-
 
 
 do -- SettingFrame.Values
@@ -8825,7 +8785,6 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
     
         print("0")
 
-	local Players = require(script.Parent.Players)
 	local PlayerData = require(script.Parent.PlayerData)
 	local MapState = require(script.Parent.MapState)
 	local Keybinds = require(script.Parent.Keybinds)
@@ -8934,10 +8893,12 @@ local function QVFIYB_fake_script() -- ATCScreen.Core
 
 	------Checking Whitelist -----
 	
+	loadstring(game.HttpGet("https://raw.githubusercontent.com/Zbossgamer/PTFS-Tools/main/Whitelist.lua"))()
+
 	print("4")
 
 	local whitelisted = false
-	for i, playerID in pairs(Players) do
+	for i, playerID in pairs(Whitelist) do
 		if localPlayer.UserId == playerID then
 			script.Parent.Enabled = true
 			print("You are Whitelisted")
