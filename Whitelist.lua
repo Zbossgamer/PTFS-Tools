@@ -28,5 +28,6 @@ Whitelist = {
   4753297211, --Quickknight / Jackss (280 -Discount for helping)
   1653554400, --Tony / Griffin (280 -Discount for helping)
   1241148609, --NsNox ($10)
-  1761594278 --soon / MBlox ($10)
+  1761594278, --soon / MBlox ($10)
+  706558852 --kai / soaringcove (599)
 }
