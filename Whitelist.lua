@@ -24,7 +24,7 @@ Whitelist = {
   254658903, --gamergang / desis (599)
   273079054, --Forest / Black ($10)
   2592661840, --Joshua ($11)
-  4142105384, --LilTator / dogPixel (Free -Giveaway)
+  5001768074, --LilTator / dogPixel / norfrenchfry (Free -Giveaway)
   4753297211, --Quickknight / Jackss (280 -Discount for helping)
   1653554400, --Tony / Griffin (280 -Discount for helping)
   1241148609, --NsNox ($10)
