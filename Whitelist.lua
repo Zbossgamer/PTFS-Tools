@@ -31,5 +31,6 @@ Whitelist = {
   1761594278, --soon / MBlox ($10)
   706558852, --kai / soaringcove (599)
   --9/26
-  22713148 --DoggyHunggar206 ($10)
+  22713148, --DoggyHunggar206 ($10)
+  1054208891 --CamoCam (599R$)
 }
