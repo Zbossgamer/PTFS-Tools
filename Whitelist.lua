@@ -32,5 +32,7 @@ Whitelist = {
   706558852, --kai / soaringcove (599)
   --9/26
   22713148, --DoggyHunggar206 ($10)
-  1054208891 --CamoCam (599R$)
+  1054208891, --CamoCam (599R$)
+  --9/29
+  104946758 --MrPog (599)
 }
