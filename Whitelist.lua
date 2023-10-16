@@ -1,5 +1,6 @@
 Whitelist = {
   370213285, --Zbossgamer
+  3560328288, --Zboss Alt Appr0priate_4R0bl0x
   2355519465, --GOOSE (800)
   911617475, --123ABC / Maddem (559)
   145129180, --eric / Legand (599)
