@@ -41,5 +41,7 @@ Whitelist = {
   --10/4
   1167020270, --TigerStar (599)
   --10/14
-  1048377716 --klexy, theyloving (599)
+  1048377716, --klexy, theyloving (599)
+  --10/19
+  1107961952 --Lincon (599)
 }
