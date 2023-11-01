@@ -9,7 +9,7 @@ Whitelist = {
   2745544660, --Walmart (dx tranfered ownership to him) (599)
   329704068, --Walmart Alt
   1029957183, --The Trollster (599)
-  1568219666, --Dav_VC (800)
+  --Dav_VC (800) Tranfered to Yolts
   1199048459, --Tikfull (559)
   994950354, --Vain_0/Gadget (10$)
   147164466, --Myzl / IceDragon (599)
@@ -47,5 +47,7 @@ Whitelist = {
   --10/20
   554605582, --lol82323 (10$0
   --10/22
-  2927399329 --X10game / mr107 (599) 
+  2927399329, --X10game / mr107 (599) 
+  --11/1
+  353680085 --Yoltsme (Tranfer)
 }
