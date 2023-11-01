@@ -49,5 +49,5 @@ Whitelist = {
   --10/22
   2927399329, --X10game / mr107 (599) 
   --11/1
-  353680085 --Yoltsme (Tranfer)
+  155664623 --Yoltsme (Tranfer)
 }
