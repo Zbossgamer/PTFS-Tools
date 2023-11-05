@@ -51,5 +51,7 @@ Whitelist = {
   --11/1
   155664623, --Yoltsme (Tranfer)
   --11/4
-  5203096606 --TrpJake / 74Gear (800R$)
+  5203096606, --TrpJake / 74Gear (800R$)
+  --11/5
+  825789867 --CladRacer / Nemu
 }
