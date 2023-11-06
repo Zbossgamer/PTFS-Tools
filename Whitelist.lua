@@ -54,5 +54,6 @@ Whitelist = {
   5203096606, --TrpJake / 74Gear (800R$)
   --11/5
   825789867, --CladRacer / Nemu (599R$)
-  329554436 --AfterFluff (599R$)
+  329554436, --AfterFluff (599R$)
+  750721671 --nycjalen (10USD)
 }
