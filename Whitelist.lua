@@ -55,5 +55,7 @@ Whitelist = {
   --11/5
   825789867, --CladRacer / Nemu (599R$)
   328838444, --AfterFluff / Ice Syrup (599R$)
-  750721671 --nycjalen (10USD)
+  750721671, --nycjalen (10USD)
+  --11/6
+  2405699575 --Quanto (599R$)
 }
