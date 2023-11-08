@@ -57,5 +57,6 @@ Whitelist = {
   328838444, --AfterFluff / Ice Syrup (599R$)
   750721671, --nycjalen (10USD)
   --11/6
-  2405699575 --Quanto (599R$)
+  2405699575, --Quanto (599R$)
+  940299930 --Wolf (599R$
 }
