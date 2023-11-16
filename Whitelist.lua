@@ -60,6 +60,6 @@ Whitelist = {
   2405699575, --Quanto (599R$)
   940299930, --Wolf (599R$)
   --11/11
-  143724606 --loffu /coy (599R$)
-  
+  143724606, --loffu /coy (599R$)
+  3311667111 --dolphin 10$ mazon gift card)
 }
