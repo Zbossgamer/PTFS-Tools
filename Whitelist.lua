@@ -51,5 +51,15 @@ Whitelist = {
   --11/1
   155664623, --Yoltsme (Tranfer)
   --11/4
-  2201853365 --TrpJake (800R$)
+  5203096606, --TrpJake / 74Gear (800R$)
+  --11/5
+  825789867, --CladRacer / Nemu (599R$)
+  328838444, --AfterFluff / Ice Syrup (599R$)
+  750721671, --nycjalen (10USD)
+  --11/6
+  2405699575, --Quanto (599R$)
+  940299930, --Wolf (599R$)
+  --11/11
+  143724606, --loffu /coy (599R$)
+  3311667111 --dolphin 10$ mazon gift card)
 }
