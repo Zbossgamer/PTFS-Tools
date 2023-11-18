@@ -65,6 +65,6 @@ Whitelist = {
   --11/16
   880025886, --royumu (599R$)
   --11/17
-  968082320 --benneh (599R$)
+   --benneh (599R$) ~Refunded~
 )
 }
