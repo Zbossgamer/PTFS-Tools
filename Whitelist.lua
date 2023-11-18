@@ -63,6 +63,8 @@ Whitelist = {
   143724606, --loffu /coy (599R$)
   3311667111, --dolphin 10$ mazon gift card)
   --11/16
-  880025886 --royumu (599R$
+  880025886, --royumu (599R$)
+  --11/17
+  968082320 --benneh (599R$)
 )
 }
