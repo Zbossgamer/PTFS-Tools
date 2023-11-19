@@ -66,5 +66,7 @@ Whitelist = {
   880025886, --royumu (599R$)
   --11/17
    --benneh (599R$) ~Refunded~
+  --11/18
+  909843052 --Minecrafter (10$)
 )
 }
