@@ -69,5 +69,4 @@ Whitelist = {
   --11/18
   909843052, --Minecrafter (10$)
   2328194502 --Frzsted (800R$)
-)
 }
