@@ -65,7 +65,7 @@ Whitelist = {
   --11/16
   880025886, --royumu (599R$)
   --11/17
-   --benneh (599R$) ~Refunded~
+   110833249, --fpsBlues (599R$) ~Refunded~ Repurchased
   --11/18
   909843052, --Minecrafter (10$)
   2328194502 --Frzsted (800R$)
