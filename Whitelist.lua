@@ -68,5 +68,6 @@ Whitelist = {
    110833249, --fpsBlues (599R$) ~Refunded~ Repurchased
   --11/18
   909843052, --Minecrafter (10$)
-  2328194502 --Frzsted (800R$)
+  2328194502, --Frzsted (800R$)
+  5408442569 --Invakid ($10)
 }
