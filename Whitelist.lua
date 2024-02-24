@@ -69,5 +69,7 @@ Whitelist = {
   --11/18
   909843052, --Minecrafter (10$)
   2328194502, --Frzsted (800R$)
-  5408442569 --Invakid ($10)
+  5408442569, --Invakid ($10)
+  --2/24
+  4455419256 --CoolihahhGHG (R$599)
 }
