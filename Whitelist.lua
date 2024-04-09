@@ -10,7 +10,7 @@ Whitelist = {
   329704068, --Walmart Alt
   1029957183, --The Trollster (599)
   --Dav_VC (800) Tranfered to Yolts
-  1199048459, --Tikfull (559)
+  131994301, --Tikfull (559)
   994950354, --Vain_0/Gadget (10$)
   147164466, --Myzl / IceDragon (599)
   1781698028, --NULL / N815 (10$)
