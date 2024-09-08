@@ -1,7 +1,12 @@
+--Created By Zbossgamer Discord: zbossgamer Roblox:zbossgamer007
+--Project Name: PTFS Radar Addon for use in ATC-24
+--Started Work on: 7/04/2022
+--Origional Release: 3/23/2023
+--Open Source Release: 9/8/2024
+
+
 -- Gui to Lua
 -- Version: 3.2
-
--- Instances:
 
 local ATCScreen = Instance.new("ScreenGui")
 TextLabel = Instance.new("TextLabel")
